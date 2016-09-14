@@ -22,14 +22,6 @@ function owner_content_width() {
 }
 add_action( 'after_setup_theme', 'owner_content_width', 0 );
 
-/**
- * Load theme updater functions.
- */
-function owner_theme_updater() {
-	require( get_template_directory() . '/inc/updater/theme-updater.php' );
-}
-add_action( 'after_setup_theme', 'owner_theme_updater' );
-
 if ( ! function_exists( 'owner_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

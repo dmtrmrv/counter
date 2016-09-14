@@ -33,23 +33,23 @@ msgstr ""
 msgid "Submit Comment"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:79
 msgid "Primary"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:110
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:112
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:131 inc/customizer.php:575
+#: functions.php:123 inc/customizer.php:575
 msgid "Footer"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:125
 msgid "Appears in the footer."
 msgstr ""
 
@@ -525,88 +525,6 @@ msgstr ""
 msgid "Installed & Activated"
 msgstr ""
 
-#: inc/updater/theme-updater.php:27
-msgid "Theme License"
-msgstr ""
-
-#: inc/updater/theme-updater.php:28
-msgid "Enter the license key."
-msgstr ""
-
-#: inc/updater/theme-updater.php:29
-msgid "License Key"
-msgstr ""
-
-#: inc/updater/theme-updater.php:30
-msgid "License Action"
-msgstr ""
-
-#: inc/updater/theme-updater.php:31
-msgid "Deactivate"
-msgstr ""
-
-#: inc/updater/theme-updater.php:32
-msgid "Activate"
-msgstr ""
-
-#: inc/updater/theme-updater.php:33 inc/updater/theme-updater.php:45
-msgid "License status is unknown."
-msgstr ""
-
-#: inc/updater/theme-updater.php:34
-msgid "Renew?"
-msgstr ""
-
-#: inc/updater/theme-updater.php:35
-msgid "&infin;"
-msgstr ""
-
-#: inc/updater/theme-updater.php:36
-msgid "Active."
-msgstr ""
-
-#: inc/updater/theme-updater.php:37
-msgid "Expires %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:38
-msgid "You have %1$s / %2$s sites activated."
-msgstr ""
-
-#: inc/updater/theme-updater.php:39
-msgid "License expired %s."
-msgstr ""
-
-#: inc/updater/theme-updater.php:40
-msgid "License has expired."
-msgstr ""
-
-#: inc/updater/theme-updater.php:41
-msgid "License keys do not match."
-msgstr ""
-
-#: inc/updater/theme-updater.php:42
-msgid "Inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:43
-msgid "License is disabled."
-msgstr ""
-
-#: inc/updater/theme-updater.php:44
-msgid "Site is inactive."
-msgstr ""
-
-#: inc/updater/theme-updater.php:46
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-
-#: inc/updater/theme-updater.php:51
-msgid "Where do I get it?"
-msgstr ""
-
 #: search.php:15
 msgid "Search Results for: %s"
 msgstr ""
@@ -687,7 +605,7 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:160
+#: functions.php:152
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
@@ -725,26 +643,6 @@ msgstr ""
 #: inc/customizer-custom-css.php:87
 msgctxt "Color scheme"
 msgid "Olive"
-msgstr ""
-
-#: inc/updater/theme-updater.php:47
-msgctxt "Theme Name X.X.X is available."
-msgid "%s is available."
-msgstr ""
-
-#: inc/updater/theme-updater.php:48
-msgctxt "Part of the sentence: Check out what's new or update now."
-msgid "Check out what's new"
-msgstr ""
-
-#: inc/updater/theme-updater.php:49
-msgctxt "Part of the sentence: Check out what's new or update now."
-msgid "or"
-msgstr ""
-
-#: inc/updater/theme-updater.php:50
-msgctxt "Part of the sentence: Check out what's new or update now."
-msgid "update now"
 msgstr ""
 
 #: inc/widget-options.php:27
