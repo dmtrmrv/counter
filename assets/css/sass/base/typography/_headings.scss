@@ -1,0 +1,82 @@
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin: 0 0 13.5px 0;
+	margin: 0 0 0.75rem 0;
+	color: $color__headings;
+	font-family: $font__headings;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 1.5em; // 27px
+	line-height: 1.25; // 33.75px
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.5em; // 27px
+	line-height: 1.1; // 29.7px
+}
+
+h3 {
+	font-size: 1.2em; // 21.6px
+	line-height: 1.25; // 27px
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 1.35em; // 24.3px
+	line-height: 1.125; // 27px
+}
+
+h5 {
+	font-size: 1em; // 18px
+	font-weight: 400;
+	line-height: 1.25; // 22.25px
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 1em; // 18px
+	font-weight: 300;
+	line-height: 1.25; // 22.25px
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.entry-content,
+.comment-content,
+.panel-content {
+	h1,
+	h2,
+	h3 {
+		margin-top: 54px;
+		margin-top: 3rem;
+	}
+	h4,
+	h5,
+	h6 {
+		margin-top: 36px;
+		margin-top: 2rem;
+		margin-bottom: 13.5px;
+		margin-bottom: 0.75rem;
+	}
+}
+
+.entry-content,
+.comment-content,
+.panel-content {
+	> h1:first-child, > h2:first-child, > h3:first-child {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,60 @@
+/* Entry Meta */
+
+.entry-meta {
+	@extend .clear;
+	line-height: 1;
+}
+
+.entry-meta-item {
+	display: inline-block;
+	margin-right: 0.5em;
+	color: $color__text;
+	opacity: $opacity;
+	font-size: 0.8333333333em; // 15px
+	line-height: 1.5; // 22.5
+	&:after {
+		margin-left: 0.5em;
+		content:'\00B7';
+	}
+	&.last,
+	&:last-child {
+		&:after {
+			margin: 0;
+			content: '';
+		}
+	}
+	a {
+		color: $color__text;
+	}
+}
+
+.entry-footer {
+	margin-bottom: 1.5em;
+	.blog &,
+	.search &,
+	.archive & {
+		display: none;
+	}
+	@media screen and ( min-width: $sm ) {
+		margin-bottom: 3em;
+	}
+}
+
+.tags-links {
+	a {
+		display: inline-block;
+		margin-right: 0.5em;
+		&:before {
+			content: '#';
+		}
+	}
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

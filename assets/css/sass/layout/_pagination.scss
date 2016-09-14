@@ -1,0 +1,46 @@
+/* Posts Navigation (Newer/Older Post) */
+
+.posts-navigation {
+	overflow: hidden;
+	margin: 0 0 2.5em;
+	word-wrap: break-word;
+	.nav-previous {
+		@include span( 6 );
+		a {
+			@include button;
+			@include button-color( $color__headings );
+			float: right;
+			padding-left: 1em;
+			&:before {
+				@extend %icon;
+				margin: 0 0.5em;
+				content: '\e802';
+			}
+		}
+	}
+	.nav-next {
+		@include span( 6 last );
+		a {
+			@include button;
+			@include button-color( $color__headings );
+			float: left;
+			padding-right: 1em;
+			&:after {
+				@extend %icon;
+				margin: 0 0.5em;
+				content: '\e803';
+			}
+		}
+	}
+}
+
+.paged-last .nav-next,
+.paged-first .nav-previous {
+	width: 100%;
+	text-align: center;
+	a {
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

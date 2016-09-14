@@ -1,0 +1,38 @@
+.customize-control select,
+.customize-control input[type=range] {
+	width: 100%;
+}
+
+.owner-empty-panel .customize-control:nth-child(n+3),
+.owner-no-bg-panel li[id^='customize-control-panel_bg_repeat_'],
+.owner-no-bg-panel li[id^='customize-control-panel_bg_position_'],
+.owner-no-bg-panel li[id^='customize-control-panel_bg_attachment_'],
+.owner-no-bg-panel li[id^='customize-control-panel_bg_size_type_'],
+.owner-no-bg-panel li[id^='customize-control-panel_bg_size_'],
+.owner-no-bg-panel li[id^='customize-control-panel_bg_opacity_'] {
+	visibility: hidden;
+	position: absolute;
+}
+
+#accordion-section-frontpage_options,
+#accordion-section-frontpage_invisible {
+	margin: 15px 12px;
+}
+
+.customize-control input[type='number'].owner-panel-count {
+	width: 60px;
+}
+
+[id^="customize-control-panel_title_alignment_"],
+[id^="customize-control-panel_post_count_"] {
+	width: 48%;
+	clear: none;
+	float: left;
+}
+
+[id^="customize-control-panel_text_alignment_"],
+[id^="customize-control-panel_column_count_"] {
+	width: 48%;
+	clear: none;
+	float: right;
+}

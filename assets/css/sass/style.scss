@@ -1,0 +1,161 @@
+/*
+Theme Name:  Owner
+Theme URI:   https://themepatio.com/themes/owner/
+Author:      ThemePatio
+Author URI:  https://themepatio.com
+Description: Theme for coffee shops, restaurants, cafes, barbershops and other kinds of small businesses. Has a flexible customizer-controlled front page template.
+Version:     0.1.1
+License:     GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: owner
+Tags:        blog, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, grid-layout, accessibility-ready, custom-background, custom-colors, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, food-and-drink, holiday, news, photography
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Owner is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/**
+ * Table of Contents
+ *
+ * 0.1 - Normalize
+ * 0.2 - Typography
+ *       Headings
+ *       Copy
+ *       Links
+ *       Blockquotes
+ *       Lists
+ *       Tables
+ *       Code
+ *       Helpers
+ * 0.3 - Components
+ *       Buttons
+ *       Forms
+ *       Alignments
+ *       Images
+ *       Icons
+ *       Lines
+ *       Alerts
+ *       Media
+ *       Captions
+ *       Accessibility
+ *       Clearings
+ * 0.4 - Layout
+ *       Structure
+ *       Grid
+ *       Header
+ *       Footer
+ *       Menu Primary
+ *       Menu Social
+ *       Pagination
+ *       Page Title
+ *       Post Thumbnail
+ *       Entry Title
+ *       Entry Meta
+ *       Entry Content
+ *       Comments
+ *       Galleries
+ *       Post Navigation
+ *       Widgets
+ *       Widgets Footer
+ * 0.6 - Templates
+ *       Blog
+ *       Single
+ *       Page
+ *       Page Front
+ *       Page 404
+ *       Search
+ * 0.7 - Plugins
+ *       Jetpack
+ *       Contact Form 7
+ * 0.8 - Print
+ * 0.9 - Media Queries
+ */
+
+// Dependencies
+@import 'susy';
+
+// Variables, mixins and functions
+@import 'abstracts/variables/_variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Theme Styles start here
+@import 'base/normalize';
+
+/**
+ * Typography
+ */
+@import 'base/typography/headings';
+@import 'base/typography/copy';
+@import 'base/typography/links';
+@import 'base/typography/blockquotes';
+@import 'base/typography/lists';
+@import 'base/typography/tables';
+@import 'base/typography/code';
+@import 'base/typography/helpers';
+
+/**
+ * Components
+ */
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/alignments';
+@import 'components/images';
+@import 'components/icons';
+@import 'components/lines';
+@import 'components/alerts';
+@import 'components/media';
+@import 'components/captions';
+@import 'components/accessibility';
+@import 'components/clearings';
+
+/**
+ * Layout
+ */
+@import 'layout/structure';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/menu-primary';
+@import 'layout/menu-social';
+@import 'layout/pagination';
+@import 'layout/page-title';
+@import 'layout/post-thumbnail';
+@import 'layout/entry-title';
+@import 'layout/entry-meta';
+@import 'layout/entry-content';
+@import 'layout/comments';
+@import 'layout/galleries';
+@import 'layout/post-navigation';
+@import 'layout/widgets';
+@import 'layout/widgets-footer';
+
+/**
+ * Templates
+ */
+@import 'templates/blog';
+@import 'templates/single';
+@import 'templates/page';
+@import 'templates/page-front';
+@import 'templates/page-404';
+@import 'templates/search';
+
+/**
+ * Plugins
+ */
+@import 'plugins/infinite-scroll';
+@import 'plugins/contact-form-7.scss';
+
+/**
+ * Print
+ */
+@import 'base/print';
+
+/**
+ * Media Queries
+ */

@@ -1,0 +1,25 @@
+/* Grid */
+
+.owner-grid {
+	@extend .clear;
+}
+
+.owner-grid-item {
+	@include with-layout( $susy-static ) {
+		max-width: span( 6 );
+	}
+	width: 100%;
+	margin: 0 auto 2.5em;
+	@media screen and ( min-width: $sm ) {
+		float: left;
+		max-width: span( 4 );
+		margin-right: gutter();
+		margin-left: 0;
+		&:nth-of-type( 3n ) {
+			margin-right: 0;
+		}
+		&:nth-of-type( 3n-2 ) {
+			clear: left;
+		}
+	}
+}

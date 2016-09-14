@@ -1,0 +1,22 @@
+/* Not found */
+
+
+.not-found {
+	@include with_layout( $susy-static ) {
+		max-width: span( 6 );
+	}
+	margin: 10% auto 20%;
+	text-align: center;
+	.search-form {
+		position: relative;
+		margin-bottom: 1.5em;
+	}
+	.search-field {
+		padding-right: 10em;
+	}
+	.search-submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

@@ -1,0 +1,80 @@
+/* Post Navigation (Next/Previous Post) */
+
+.post-navigation {
+	display: block;
+	overflow: hidden;
+	margin: 0 0 1.5em;
+	word-wrap: break-word;
+	@media screen and ( min-width: $sm ) {
+		margin-bottom: 0;
+		.nav-pre-link {
+			display: none;
+			margin: 0;
+		}
+		.nav-link {
+			position: fixed;
+			z-index: 50;
+			top: 50%;
+			margin-top: -2.25em;
+			border: 1px solid $color__gray;
+			background-color: #fff;
+			a {
+				display: block;
+				overflow: hidden;
+				width: 3em;
+				max-width: 20em;
+				height: 4.5em;
+				color: transparent;
+				white-space: nowrap;
+				text-decoration: none;
+				text-overflow: ellipsis;
+				transition: width 0.1s, border-color 0.1s, opacity 0.1s;
+				&:before {
+					display: block;
+					position: absolute;
+					top: 1px;
+					width: em_minus_px( 3em, 2px );
+					height: em_minus_px( 4.5em, 2px );
+					margin: 0;
+					opacity: $opacity;
+					color: $color__text;
+					font-family: 'fontello';
+					line-height: 4.5;
+					text-align: center;
+					text-decoration: none;
+					text-transform: none;
+				}
+				&:hover {
+					width: 20em;
+					color: $color__text;
+				}
+			}
+		}
+		.nav-next {
+			right: -1px;
+			a {
+				padding: em_minus_px( 1.5em, 1px ) 3em em_minus_px( 1.5em, 1px ) 0;
+				&:before {
+					right: 1px;
+					content: '\e815';
+				}
+				&:hover {
+					padding-left: 1.5em;
+				}
+			}
+		}
+		.nav-previous {
+			left: -1px;
+			a {
+				padding: em_minus_px( 1.5em, 1px ) 0 em_minus_px( 1.5em, 1px ) 3em;
+				&:before {
+					left: 1px;
+					content: '\e813';
+				}
+				&:hover {
+					padding-right: 1.5em;
+				}
+			}
+		}
+	}
+}

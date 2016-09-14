@@ -1,0 +1,20 @@
+/* Links */
+
+a {
+	color: $color__accent;
+	background-color: transparent; // Do not remove. !normalize
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		outline: 0; // Do not remove. !normalize
+		color: $color__accent;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		@include focus();
+		color: $color__accent;
+		text-decoration: underline;
+	}
+}

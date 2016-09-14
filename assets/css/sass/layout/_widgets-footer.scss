@@ -1,0 +1,36 @@
+/**
+ * Widgets Footer
+ */
+
+.site-footer-widgets {
+	padding-top: 2.5em;
+	border-top: 1px solid $color__gray;
+	@media screen and ( min-width: $sm ) {
+		padding-top: 4.5em;
+		padding-bottom: 1.5em;
+	}
+}
+
+.site-footer-widget-column {
+	@include with_layout( $susy-static ) {
+		max-width: span( 6 );
+		margin-right: auto;
+		margin-left: auto;
+	}
+	@media screen and ( min-width: $sm ) {
+		.footer-columns-4 & {
+			@include span( 3 of 12 );
+		}
+		.footer-columns-3 & {
+			@include span( 4 of 12 );
+		}
+		.footer-columns-2 & {
+			@include span( 6 of 12 );
+		}
+		.footer-columns & {
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}

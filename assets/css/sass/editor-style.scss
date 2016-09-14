@@ -1,0 +1,92 @@
+/*
+Theme Name: Owner
+Description: Used to style the TinyMCE editor.
+*/
+
+/**
+ * Table of Contents
+ *
+ * 0.1 - Normalize
+ * 0.2 - Typography
+ *       Headings
+ *       Copy
+ *       Links
+ *       Blockquotes
+ *       Lists
+ *       Tables
+ *       Code
+ * 0.3 - Repeatable Patterns
+ *       Images
+ *       Lines
+ *       Media
+ *       Captions
+ *       Alignments
+ *       Clearings
+ * 0.4 - Content
+ *       Galleries
+ */
+
+// Dependencies
+@import 'susy';
+
+// Variables, mixins and functions
+@import 'abstracts/variables/_variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Editor styles start here.
+@import 'editor/editor-normalize';
+
+/**
+ * Typography
+ */
+@import 'base/typography/headings';
+
+.mce-content-body {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 54px;
+		margin-top: 3rem;
+	}
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 13.5px;
+		margin-bottom: 0.75rem;
+	}
+}
+
+@import 'base/typography/copy';
+@import 'base/typography/links';
+@import 'base/typography/blockquotes';
+@import 'base/typography/lists';
+@import 'editor/editor-tables';
+@import 'base/typography/code';
+
+/**
+ * Components
+ */
+@import 'components/images';
+@import 'components/lines';
+@import 'editor/editor-media';
+@import 'editor/editor-captions';
+@import 'components/alignments';
+@import 'components/clearings';
+
+/**
+ * Content
+ */
+.mce-content-body {
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
+}
+
+@import 'layout/galleries';
+@import 'editor/editor-galleries';

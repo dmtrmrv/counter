@@ -1,0 +1,40 @@
+/* Entry Content */
+
+.entry-content,
+.entry-summary {
+	@extend .clear;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+.entry-content,
+.comment-content {
+	h1,
+	h2,
+	h3 {
+		margin-top: 54px;
+		margin-top: 3rem;
+	}
+	h4,
+	h5,
+	h6 {
+		margin-top: 36px;
+		margin-top: 2rem;
+		margin-bottom: 13.5px;
+		margin-bottom: 0.75rem;
+	}
+}
+
+.entry-content,
+.comment-content {
+	> h1:first-child, > h2:first-child, > h3:first-child {
+		margin-top: 0;
+	}
+}
+
+.more-link {
+	&:after {
+		content: ' \2192';
+	}
+}
+

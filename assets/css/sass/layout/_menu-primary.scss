@@ -1,0 +1,166 @@
+/* Primary Menu */
+
+.main-navigation {
+	display: none;
+	position: absolute;
+	z-index: 40;
+	top: 0;
+	width: 100%;
+	min-height: 3em;
+	border-bottom: 1px solid $color__gray;
+	background-color: $color__menu-bg;
+	ul {
+		margin: 0;
+		padding: 0.6666666667em 0;
+		list-style: none;
+		ul {
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&.toggled {
+		display: block;
+	}
+	a {
+		display: block;
+		padding: 0.6666666667em 1.3333333333em;
+		color: $color__text;
+		font-size: 0.75em;
+		font-weight: 700;
+		line-height: $font__size-body-px;
+		line-height: 1rem;
+		text-align: center;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__accent;
+		}
+	}
+}
+
+@media screen and ( min-width: $sm ) {
+	.main-navigation {
+		display: block;
+		position: relative;
+		background-color: $color__menu-bg;
+		&.fixed {
+			position: fixed;
+			.admin-bar & {
+				top: 46px;
+				@media screen and ( min-width: 783px ) {
+					top: 32px;
+				}
+			}
+		}
+		ul {
+			width: auto;
+			margin: 0 auto;
+			padding: 0;
+			text-align: center;
+			list-style: none;
+			ul {
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: -999em;
+				margin: 0;
+				padding: 0.3333333333em 0 0.6666666667em;
+				border-right: 1px solid $color__gray;
+				border-bottom: 1px solid $color__gray;
+				border-left: 1px solid $color__gray;
+				background-color: #fff;
+				text-align: left;
+				ul {
+					top: -0.3888888889em;
+					left: -999em;
+					padding-top: 0.2777777778em;
+					border-top: 1px solid $color__gray;
+				}
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+				a {
+					display: block;
+					width: 12em;
+					padding: 0.3333333333em 1.3333333333em;
+				}
+			}
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
+			}
+		}
+		li {
+			display: inline-block;
+			position: relative;
+		}
+		a {
+			padding: 2em 1.3333333333em;
+			text-align: left;
+		}
+	}
+}
+
+/* Toggle Hamburger */
+
+$dash_height: 1px;
+$dash_width: 1.5em;
+
+.menu-toggle {
+	display: block;
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	right: 0;
+	width: 3em;
+	height: 3em;
+	padding: 0;
+	border-color: transparent;
+	background-color: $color__menu-bg;
+	font-size: $font__size-body-px;
+	text-align: left;
+	text-indent: -9999px;
+	&:before,
+	&:after {
+		display: block;
+		position: absolute;
+		left: 0.7222222222em;
+		width: $dash_width;
+		height: $dash_height;
+		background-color: $color__text;
+		content: '';
+	}
+	&:before {
+		top: 1.1666666667em;
+	}
+	&:after {
+		bottom: 1.1666666667em;
+	}
+	&:hover,
+	&:focus {
+		border-color: transparent;
+		background-color: $color__menu-bg;
+	}
+	@media screen and ( min-width: $sm ) {
+		display: none;
+	}
+}
+
+.menu-toggle.toggled {
+	&:before,
+	&:after {
+		top: 1.3888888889em;
+	}
+	&:before {
+		transform: rotate( 225deg );
+	}
+	&:after {
+		transform: rotate( -225deg );
+	}
+}

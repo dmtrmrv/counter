@@ -1,0 +1,26 @@
+/* Social Icons */
+
+.menu-social-container {
+	a {
+		&:before {
+			@extend %icon;
+			width: 1.2em;
+			margin-right: 0.5em;
+			color: $color__text;
+			opacity: $opacity;
+		}
+		@each $url, $i in $social-icons {
+
+			&[href*='#{$url}']:before {
+				content: char( nth( $i, 1 ));
+			}
+
+			@if length( $i ) == 2 {
+				&[href*='#{$url}']:hover:before {
+					color: nth($i, 2);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

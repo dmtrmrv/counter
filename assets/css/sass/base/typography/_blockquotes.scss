@@ -1,0 +1,34 @@
+/* Blockquotes */
+
+$bc_margin: $font__size-body-px * $font__line-height-body;
+
+blockquote,
+q {
+	@include font-size( 24/18 );
+	@include line-height( 1.5 );
+	margin: 1.125em;
+	font-family: $font__blockquote;
+	font-style: italic;
+	quotes: '' '';
+	&:before,
+	&:after {
+		content: '';
+	}
+	p {
+		margin: 0;
+	}
+	@media screen and ( min-width: $sm ) {
+		margin: 2.25em;
+	}
+}
+
+cite {
+	@include font-size( 0.625 );
+	@include line-height( 1.5 );
+	display: block;
+	margin: 0;
+	font-family: $font__main;
+	font-style: normal;
+	letter-spacing: ( 1em / 16 );
+	text-transform: uppercase;
+}

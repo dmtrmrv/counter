@@ -1,0 +1,34 @@
+/* Media */
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+	margin-bottom: 1.5em;
+	vertical-align: middle;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+	margin-bottom: 0;
+}
+
+.mejs-container {
+	margin: 0 0 1.5em;
+}
+
+#content {
+	@include owner-playlist();
+}

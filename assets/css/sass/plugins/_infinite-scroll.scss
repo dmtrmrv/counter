@@ -1,0 +1,28 @@
+/* Jetpafck Infinite Scroll*/
+
+.infinite-scroll .posts-navigation {
+	display: none;
+}
+
+#infinite-handle,
+.infinite-loader {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 3em;
+	margin-bottom: 1.5em;
+	@media screen and ( min-width: $sm ) {
+		margin-bottom: 3em;
+	}
+}
+
+#infinite-handle button,
+.infinite-loader .spinner {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#infinite-handle button {
+	@include button-color( $color__text );
+}

@@ -1,0 +1,146 @@
+/**
+ * Widgets
+ */
+
+.widget-area {
+	@include with_layout( $susy-static ) {
+		max-width: span( 6 );
+	}
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.widget {
+	margin: 0 0 2.5em;
+	word-wrap: break-word;
+	@media screen and ( min-width: $sm ) {
+		margin: 0 0 3em;
+	}
+	.widget-area & {
+		padding: 1.5em;
+		border: 1px solid $color__gray;
+	}
+	select {
+		max-width: 100%;
+	}
+	&:not( .widget_text ) {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+	&.widget-center {
+		text-align: center;
+	}
+	&.widget-right {
+		text-align: right;
+	}
+	.entry-subtitle {
+		display: none;
+	}
+}
+
+.widget.widget_search {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	.search-submit {
+		display: none;
+	}
+}
+
+.widget_calendar {
+	caption {
+		@include font-size( 0.625 );
+		@include line-height( 1.5 );
+		font-weight: normal;
+		letter-spacing: ( 1em / 16 );
+		text-transform: uppercase;
+	}
+	table {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+	td,
+	th {
+		@include font-size( 0.75 );
+		padding: 0 ;
+		line-height: 2em;
+		text-align: center;
+	}
+	td, {
+		line-height: em_minus_px( 2em, 1px, $font__size-body-px * 0.75 );
+	}
+	th {
+		line-height: em_minus_px( 2em, 2px, $font__size-body-px * 0.75 );
+	}
+	tfoot td:first-child {
+		padding-left: 0.75em;
+		text-align: left;
+	}
+	tfoot td:last-child {
+		padding-right: 0.75em;
+		text-align: right;
+	}
+}
+
+.widget.widget_recent_comments,
+.widget.widget_recent_entries,
+.widget.widget_rss {
+	li {
+		margin-bottom: 0.75em;
+		padding-bottom: em_minus_px( 0.75em, 1px );
+		border-bottom: 1px solid;
+		border-bottom-color: $color__gray;
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+}
+
+.widget_rss {
+	.widget-title {
+		a:first-child {
+			display: none;
+		}
+	}
+	li {
+		margin-bottom: 1.5em;
+	}
+	a {
+		display: block;
+	}
+	cite {
+		margin: 0;
+		opacity: $opacity;
+	}
+	.rss-date {
+		@include font-size( 0.75 );
+		@include line-height( 1.5 );
+		display: block;
+		margin: 0;
+		opacity: $opacity;
+	}
+}
+
+.widget.widget_nav_menu {
+	ul ul {
+		margin-left: 1em;
+	}
+	[class^="menu-inline-"] {
+		ul ul {
+			display: inline;
+			margin-left: 0;
+		}
+		li {
+			display: inline-block;
+			margin: 0 0.4em;
+		}
+	}
+}
+
+.widget-title {
+	margin-bottom: 0.75em;
+}

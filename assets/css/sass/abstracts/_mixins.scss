@@ -1,0 +1,105 @@
+// Rem output with px fallback.
+@mixin font-size( $sizeValue: 1 ) {
+	font-size: ( $sizeValue * $font__size-body ) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Line-height otuput with px fallback.
+@mixin line-height( $sizeValue: $font__line-height-body ) {
+	line-height: ( $sizeValue * $font__size-body ) * 1px;
+	line-height: $sizeValue * 1rem;
+}
+
+// Center block.
+@mixin center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+@mixin clearfix-before() {
+	&:before {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+@mixin clearfix-after() {
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+
+@mixin focus() {
+	// Default
+	outline: thin dotted;
+	// WebKit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+// Using a mixin here to reuse it for editor CSS file. Since somme of the
+// properties are getting overriden there.
+@mixin owner-playlist {
+	.mejs-time-current {
+		background-color: $color__accent;
+	}
+	.wp-playlist {
+		@include font-size( 1 );
+		@include line-height( 1.5 );
+		max-width: 100%;
+		margin: 0 0 1.5em;
+		padding: 0;
+		border: none;
+	}
+	.wp-playlist-tracks {
+		margin-top: 1.5em;
+	}
+	.wp-playlist-light {
+		background-color: transparent;
+	}
+	.wp-playlist-current-item {
+		height: 4.5em;
+		margin-bottom: 1.5em;
+		img {
+			max-width: 4.5em;
+			margin-right: 1.5em;
+		}
+	}
+	.wp-playlist-item,
+	.wp-playlist-item-length {
+		padding: 0.75em 0.75em 0.75em;
+	}
+	
+	.wp-playlist-tracks {
+		border-top: 1px solid $color__gray;
+	}
+
+	.wp-playlist-item {
+		border-bottom: 1px solid $color__gray;
+	}
+	.wp-playlist-caption,
+	[class*='wp-playlist-item-'] {
+		@include font-size( 1 );
+		@include line-height( 1.5 );
+		font-style: normal;
+		text-transform: none;
+	}
+	.wp-playlist-playing {
+		background-color: $color__gray;
+		font-weight: normal;
+	}
+}

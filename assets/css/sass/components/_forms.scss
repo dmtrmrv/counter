@@ -1,0 +1,83 @@
+/* Forms */
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='date'],
+input[type='number'],
+textarea {
+	@include font-size( 1 );
+	width: 100%;
+	padding: em_minus_px( 0.75em, 1px ) 1em;
+	border: 1px solid;
+	border-color: $color__gray;
+	border-radius: 0;
+	-webkit-appearance: none;
+	color: $color__text;
+	background-color: transparent;
+	box-shadow: none;
+	line-height: 1.5;
+	vertical-align: middle;
+	&:focus {
+		border-color: $color__accent;
+		outline: 0;
+	}
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='date'],
+input[type='number'], {
+	height: 3em;
+}
+
+label {
+	opacity: $opacity;
+}
+
+@mixin placeholder {
+	color:#c0392b;
+	:focus {
+		color: transparent;
+	}
+}
+
+::-webkit-input-placeholder { color: $color__text; text-overflow:ellipsis; }
+::-moz-placeholder          { color: $color__text; text-overflow:ellipsis; }
+:-moz-placeholder           { color: $color__text; text-overflow:ellipsis; }
+input:-ms-input-placeholder { color: $color__text; text-overflow:ellipsis; }
+
+:focus::-webkit-input-placeholder { color: transparent;}
+:focus::-moz-placeholder          { color: transparent;}
+:focus:-moz-placeholder           { color: transparent;}
+input:focus:-ms-input-placeholder { color: transparent;}
+
+.post-password-form {
+	position: relative;
+}
+
+.post-password-form label {
+	display: block;
+}
+
+.post-password-form input[type='submit'] {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.search-form {
+	position: relative;
+	margin-bottom: 1.5em;
+}
+
+.search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+}

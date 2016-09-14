@@ -1,0 +1,51 @@
+/* Media. Editor modifications */
+
+.wpview-wrap {
+	.toolbar .dashicons {
+		box-sizing: content-box;
+	}
+}
+
+.wp-smiley {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	border: none;
+}
+
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+	margin-bottom: 1.5em;
+	vertical-align: middle;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+	margin-bottom: 0;
+}
+
+.mejs-container {
+	margin: 0;
+}
+
+// Gray background that appears when user clicks on a media element.
+.wpview-wrap[data-wpview-type='playlist'],
+.wpview-wrap[data-wpview-type='audio'],
+.wpview-wrap[data-wpview-type='video'],
+.wpview-wrap[data-wpview-type='embedURL'] {
+	margin-bottom: 1.5em;
+	padding: 2px 2px 2px 2px;
+	iframe {
+		margin-bottom: 0;
+	}
+}
+
+// Playlist.
+.mce-content-body {
+	@include owner-playlist();
+}

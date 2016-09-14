@@ -1,0 +1,29 @@
+/* Code */
+
+pre {
+	overflow: auto;
+	max-width: 100%;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	color: $color__code-text;
+	background: $color__code-bg;
+	font-family: $font__pre;
+	font-weight: bold;
+	word-wrap: initial;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+	font-family: $font__code;
+}
+
+code {
+	display: inline-block;
+	padding: 0 0.375em;
+	background-color: $color__gray;
+	font-weight: bold;
+}

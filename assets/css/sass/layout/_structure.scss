@@ -1,0 +1,25 @@
+/* Structure */
+
+body {
+	background-color: #f0f0f0;
+}
+
+.site {
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #fff;
+}
+
+.wrap {
+	@extend .clear;
+	max-width: $lg;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 6.25%;
+	padding-left: 6.25%;
+}
+
+.site-content {
+	padding-top: 6.25%;
+	padding-bottom: 3.75%;
+}
