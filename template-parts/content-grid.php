@@ -2,17 +2,17 @@
 /**
  * The default template used for displaying posts in a grid view
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'owner-grid-item' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'counter-grid-item' ); ?>>
 
-	<?php owner_grid_item_thumbnail(); ?>
+	<?php counter_grid_item_thumbnail(); ?>
 
 	<header class="entry-header">
-		<?php owner_entry_meta_header(); ?>
+		<?php counter_entry_meta_header(); ?>
 
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 

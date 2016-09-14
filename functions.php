@@ -1,14 +1,14 @@
 <?php
 /**
- * Owner functions and definitions
+ * Counter functions and definitions
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
  * The current version of the theme.
  */
-define( 'OWNER_VERSION', '1.0.0' );
+define( 'COUNTER_VERSION', '1.0.0' );
 
 /**
  * Sets the content width in pixels.
@@ -17,12 +17,12 @@ define( 'OWNER_VERSION', '1.0.0' );
  *
  * @global int $content_width
  */
-function owner_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'owner_content_width', 936 );
+function counter_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'counter_content_width', 936 );
 }
-add_action( 'after_setup_theme', 'owner_content_width', 0 );
+add_action( 'after_setup_theme', 'counter_content_width', 0 );
 
-if ( ! function_exists( 'owner_setup' ) ) :
+if ( ! function_exists( 'counter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -30,12 +30,12 @@ if ( ! function_exists( 'owner_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function owner_setup() {
+function counter_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 */
-	load_theme_textdomain( 'owner', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'counter', get_template_directory() . '/languages' );
 
 	/*
 	 * Add default posts and comments RSS feed links to head.
@@ -65,18 +65,18 @@ function owner_setup() {
 	/*
 	 * Add necessary image sizes.
 	 */
-	add_image_size( 'owner-thumbnail',        '612',  '9999', false );
-	add_image_size( 'owner-thumbnail-grid',   '612',  '414',  true );
-	add_image_size( 'owner-thumbnail-single', '936',  '9999', false );
-	add_image_size( 'owner-panel-half',       '720',  '9999', false );
-	add_image_size( 'owner-panel-full',       '1440', '9999', false );
-	add_image_size( 'owner-panel-double',     '2880', '9999', false );
+	add_image_size( 'counter-thumbnail',        '612',  '9999', false );
+	add_image_size( 'counter-thumbnail-grid',   '612',  '414',  true );
+	add_image_size( 'counter-thumbnail-single', '936',  '9999', false );
+	add_image_size( 'counter-panel-half',       '720',  '9999', false );
+	add_image_size( 'counter-panel-full',       '1440', '9999', false );
+	add_image_size( 'counter-panel-double',     '2880', '9999', false );
 
 	/*
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary', 'owner' ),
+		'primary' => __( 'Primary', 'counter' ),
 	) );
 
 	/*
@@ -97,19 +97,19 @@ function owner_setup() {
 }
 endif;
 
-add_action( 'after_setup_theme', 'owner_setup' );
+add_action( 'after_setup_theme', 'counter_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function owner_widgets_init() {
+function counter_widgets_init() {
 	// Sidebar.
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'owner' ),
+		'name'          => __( 'Sidebar', 'counter' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Appears on posts and pages', 'owner' ),
+		'description'   => __( 'Appears on posts and pages', 'counter' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h5 class="widget-title">',
@@ -120,9 +120,9 @@ function owner_widgets_init() {
 	for ( $i = 1; $i <= 4; $i++ ) :
 
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'owner' ) . ' ' . $i,
+		'name'          => __( 'Footer', 'counter' ) . ' ' . $i,
 		'id'            => 'footer-' . $i,
-		'description'   => __( 'Appears in the footer.', 'owner' ),
+		'description'   => __( 'Appears in the footer.', 'counter' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h5 class="widget-title">',
@@ -131,15 +131,15 @@ function owner_widgets_init() {
 
 	endfor;
 }
-add_action( 'widgets_init', 'owner_widgets_init' );
+add_action( 'widgets_init', 'counter_widgets_init' );
 
-if ( ! function_exists( 'owner_fonts_url' ) ) :
+if ( ! function_exists( 'counter_fonts_url' ) ) :
 /**
- * Register Google fonts for Owner.
+ * Register Google fonts for Counter.
  *
  * @return string Google fonts URL for the theme.
  */
-function owner_fonts_url() {
+function counter_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
@@ -149,7 +149,7 @@ function owner_fonts_url() {
 	 * supported by Lato, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'owner' ) ) {
+	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'counter' ) ) {
 		$fonts[] = 'Lato:300,400,700,300italic,400italic,700italic';
 	}
 
@@ -169,69 +169,69 @@ endif;
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  */
-function owner_javascript_detection() {
+function counter_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'owner_javascript_detection', 0 );
+add_action( 'wp_head', 'counter_javascript_detection', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function owner_scripts() {
+function counter_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style(
-		'owner-fonts',
-		owner_fonts_url()
+		'counter-fonts',
+		counter_fonts_url()
 	);
 
 	wp_enqueue_style(
-		'owner-fontello',
+		'counter-fontello',
 		get_template_directory_uri() . '/assets/fonts/fontello/css/fontello.css'
 	);
 
 	wp_enqueue_style(
-		'owner-style',
+		'counter-style',
 		get_stylesheet_uri()
 	);
 
 	wp_enqueue_script(
-		'owner-navigation',
+		'counter-navigation',
 		get_template_directory_uri() . '/assets/js/src/navigation.js',
 		array(),
-		OWNER_VERSION,
+		COUNTER_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'owner-sticky-navigation',
+		'counter-sticky-navigation',
 		get_template_directory_uri() . '/assets/js/src/sticky-nav.js',
 		array(),
-		OWNER_VERSION,
+		COUNTER_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'owner-skip-link-focus-fix',
+		'counter-skip-link-focus-fix',
 		get_template_directory_uri() . '/assets/js/src/skip-link-focus-fix.js',
 		array(),
-		OWNER_VERSION,
+		COUNTER_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'owner-fitvids',
+		'counter-fitvids',
 		get_template_directory_uri() . '/assets/js/src/jquery.fitvids.js',
 		array( 'jquery' ),
-		OWNER_VERSION,
+		COUNTER_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'owner-custom',
+		'counter-custom',
 		get_template_directory_uri() . '/assets/js/src/custom.js',
 		array( 'jquery' ),
-		OWNER_VERSION,
+		COUNTER_VERSION,
 		true
 	);
 
@@ -254,7 +254,7 @@ function owner_scripts() {
 		wp_deregister_style( 'contact-form-7' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'owner_scripts' );
+add_action( 'wp_enqueue_scripts', 'counter_scripts' );
 
 /**
  * Custom template tags for this theme.

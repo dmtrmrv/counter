@@ -8,7 +8,7 @@
 	// Number of panels passed by wp_localize_script()
 	pnlCountSpacings = parseInt( pnlCountSpacings[0] );
 
-	var cssTemplate = wp.template( 'owner-panel-spacings' ),
+	var cssTemplate = wp.template( 'counter-panel-spacings' ),
 		panelSpacingSettings = [];
 
 	for ( var i = 1; i <= pnlCountSpacings; i++ ) {

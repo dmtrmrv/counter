@@ -4,7 +4,7 @@
  *
  * If the checkbox is checked, the class .widget-center is added to a widget.
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
@@ -14,24 +14,24 @@
  * @param  null   $return   Null if new fields are added.
  * @param  array  $instance Array of the widget’s settings.
  */
-function owner_widget_align_form( $widget, $return, $instance ) {
+function counter_widget_align_form( $widget, $return, $instance ) {
 	$id    = $widget->get_field_id( 'align' );
-	$value = isset( $instance['align'] ) ? owner_widget_align_sanitize( $instance['align'] ) : 'left';
+	$value = isset( $instance['align'] ) ? counter_widget_align_sanitize( $instance['align'] ) : 'left';
 	$name  = $widget->get_field_name( 'align' );
 	?>
 		<p>
 			<label for='<?php echo esc_attr( $id ); ?>'>
-				<?php esc_html_e( 'Text Alignment', 'owner' ); ?>
+				<?php esc_html_e( 'Text Alignment', 'counter' ); ?>
 			</label>
 			<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $id ); ?>" style="width: 100%;">
-				<option value="left" <?php selected( $value, 'left' );?>><?php echo esc_html_x( 'Left', 'Text Alignment', 'owner' ); ?></option>
-				<option value="center" <?php selected( $value, 'center' );?>><?php echo esc_html_x( 'Center', 'Text Alignment', 'owner' ); ?></option>
-				<option value="right" <?php selected( $value, 'right' );?>><?php echo esc_html_x( 'Right', 'Text Alignment', 'owner' ); ?></option>
+				<option value="left" <?php selected( $value, 'left' );?>><?php echo esc_html_x( 'Left', 'Text Alignment', 'counter' ); ?></option>
+				<option value="center" <?php selected( $value, 'center' );?>><?php echo esc_html_x( 'Center', 'Text Alignment', 'counter' ); ?></option>
+				<option value="right" <?php selected( $value, 'right' );?>><?php echo esc_html_x( 'Right', 'Text Alignment', 'counter' ); ?></option>
 			</select>
 		</p>
 	<?php
 }
-add_action( 'in_widget_form', 'owner_widget_align_form', 5, 3 );
+add_action( 'in_widget_form', 'counter_widget_align_form', 5, 3 );
 
 /**
  * Filter widget settings before saving.
@@ -40,15 +40,15 @@ add_action( 'in_widget_form', 'owner_widget_align_form', 5, 3 );
  * @param  array $new_instance Array of new widget settings.
  * @return array               Filtered array of new widget settings.
  */
-function owner_widget_align_update( $instance, $new_instance ) {
+function counter_widget_align_update( $instance, $new_instance ) {
 	if ( ! empty( $new_instance['align'] ) ) {
-		$new_instance['align'] = owner_widget_align_sanitize( $new_instance['align'] );
+		$new_instance['align'] = counter_widget_align_sanitize( $new_instance['align'] );
 	} else {
 		$new_instance['align'] = 'left';
 	}
 	return $new_instance;
 }
-add_filter( 'widget_update_callback', 'owner_widget_align_update', 5, 3 );
+add_filter( 'widget_update_callback', 'counter_widget_align_update', 5, 3 );
 
 /**
  * Filter the parameters passed to a widget’s display callback.
@@ -56,7 +56,7 @@ add_filter( 'widget_update_callback', 'owner_widget_align_update', 5, 3 );
  * @param  array $params Widget parameters.
  * @return array         Filtered widget parameters.
  */
-function owner_widget_align_class( $params ) {
+function counter_widget_align_class( $params ) {
 	// All registered widgets.
 	global $wp_registered_widgets;
 
@@ -75,7 +75,7 @@ function owner_widget_align_class( $params ) {
 	// Check if alignment is defined.
 	if ( isset( $option[ $num ]['align'] ) ) {
 		// Create a class literal.
-		$align_class = sprintf( 'widget-%s ', owner_widget_align_sanitize( $option[ $num ]['align'] ) );
+		$align_class = sprintf( 'widget-%s ', counter_widget_align_sanitize( $option[ $num ]['align'] ) );
 
 		// Add the class to the widget.
 		$params[0]['before_widget'] = preg_replace(
@@ -88,7 +88,7 @@ function owner_widget_align_class( $params ) {
 
 	return $params;
 }
-add_filter( 'dynamic_sidebar_params', 'owner_widget_align_class' );
+add_filter( 'dynamic_sidebar_params', 'counter_widget_align_class' );
 
 /**
  * Sanitizes text alignment options
@@ -96,7 +96,7 @@ add_filter( 'dynamic_sidebar_params', 'owner_widget_align_class' );
  * @param  string $input String with a potentially harmful data.
  * @return string        Safe to output string.
  */
-function owner_widget_align_sanitize( $input ) {
+function counter_widget_align_sanitize( $input ) {
 	$output = 'left';
 	if ( 'center' == $input || 'right' == $input ) {
 		$output = $input;

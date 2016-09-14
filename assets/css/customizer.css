@@ -3,13 +3,13 @@
 	width: 100%;
 }
 
-.owner-empty-panel .customize-control:nth-child(n+3),
-.owner-no-bg-panel li[id^='customize-control-panel_bg_repeat_'],
-.owner-no-bg-panel li[id^='customize-control-panel_bg_position_'],
-.owner-no-bg-panel li[id^='customize-control-panel_bg_attachment_'],
-.owner-no-bg-panel li[id^='customize-control-panel_bg_size_type_'],
-.owner-no-bg-panel li[id^='customize-control-panel_bg_size_'],
-.owner-no-bg-panel li[id^='customize-control-panel_bg_opacity_'] {
+.counter-empty-panel .customize-control:nth-child(n+3),
+.counter-no-bg-panel li[id^='customize-control-panel_bg_repeat_'],
+.counter-no-bg-panel li[id^='customize-control-panel_bg_position_'],
+.counter-no-bg-panel li[id^='customize-control-panel_bg_attachment_'],
+.counter-no-bg-panel li[id^='customize-control-panel_bg_size_type_'],
+.counter-no-bg-panel li[id^='customize-control-panel_bg_size_'],
+.counter-no-bg-panel li[id^='customize-control-panel_bg_opacity_'] {
 	visibility: hidden;
 	position: absolute;
 }
@@ -19,7 +19,7 @@
 	margin: 15px 12px;
 }
 
-.customize-control input[type='number'].owner-panel-count {
+.customize-control input[type='number'].counter-panel-count {
 	width: 60px;
 }
 

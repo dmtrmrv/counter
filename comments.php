@@ -2,7 +2,7 @@
 /**
  * The template for displaying comments
  *
- * @package Owner
+ * @package Counter
  */
 
 /*
@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 		<h3 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One Comment', '%s Comments', get_comments_number(), 'Comments title', 'owner' ) ),
+					esc_html( _nx( 'One Comment', '%s Comments', get_comments_number(), 'Comments title', 'counter' ) ),
 					number_format_i18n( get_comments_number() )
 				);
 			?>
@@ -37,19 +37,19 @@ if ( post_password_required() ) {
 			?>
 		</ul><!-- .comment-list -->
 
-		<?php owner_comment_navigation(); ?>
+		<?php counter_comment_navigation(); ?>
 
 	<?php endif; ?>
 
 	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'owner' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'counter' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form( array(
-		'title_reply'       => __( 'Leave a Comment', 'owner' ),
-		'title_reply_to'    => __( 'Reply to %s', 'owner' ),
-		'cancel_reply_link' => __( 'Cancel', 'owner' ),
-		'label_submit'      => __( 'Submit Comment', 'owner' ),
+		'title_reply'       => __( 'Leave a Comment', 'counter' ),
+		'title_reply_to'    => __( 'Reply to %s', 'counter' ),
+		'cancel_reply_link' => __( 'Cancel', 'counter' ),
+		'label_submit'      => __( 'Submit Comment', 'counter' ),
 		'class_submit'      => 'submit btn btn-default',
 	) ); ?>
 

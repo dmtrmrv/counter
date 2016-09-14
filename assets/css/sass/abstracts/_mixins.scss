@@ -53,7 +53,7 @@
 
 // Using a mixin here to reuse it for editor CSS file. Since somme of the
 // properties are getting overriden there.
-@mixin owner-playlist {
+@mixin counter-playlist {
 	.mejs-time-current {
 		background-color: $color__accent;
 	}

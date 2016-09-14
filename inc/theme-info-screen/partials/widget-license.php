@@ -2,7 +2,7 @@
 /**
  * Docs widget on a welcome screen.
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
@@ -35,11 +35,11 @@
 				printf(
 					'<input type="submit" class="button-primary" name="%s" value="%s"/> ',
 					esc_attr( $this->theme_slug . '_license_activate' ),
-					esc_attr( __( 'Save', 'owner' ) )
+					esc_attr( __( 'Save', 'counter' ) )
 				);
 		} else {
 			// Save Changes button.
-			submit_button( __( 'Save', 'owner' ), 'primary', false, false );
+			submit_button( __( 'Save', 'counter' ), 'primary', false, false );
 		}
 
 		echo '</p>';

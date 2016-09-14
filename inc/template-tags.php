@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @todo Remove when 4.7 is out
  */
-function owner_site_logo() {
+function counter_site_logo() {
 	if ( function_exists( 'the_custom_logo' ) ) {
 		the_custom_logo();
 	}
 }
 
-if ( ! function_exists( 'owner_entry_meta_header' ) ) :
+if ( ! function_exists( 'counter_entry_meta_header' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function owner_entry_meta_header() {
+function counter_entry_meta_header() {
 
 	$meta_items = get_theme_mod( 'entry_meta_items', array( 'cat-links', 'posted-on', 'byline', 'comments-link' ) );
 	$is_customizer = is_customize_preview();
@@ -35,9 +35,9 @@ function owner_entry_meta_header() {
 	 *
 	 * Translators: used between list items, there is a space after the comma.
 	 */
-	$categories_list = get_the_category_list( esc_html__( ', ', 'owner' ) );
-	if ( $categories_list && owner_categorized_blog() && in_array( 'cat-links', $meta_items ) || $is_customizer ) {
-		printf( '<span class="entry-meta-item cat-links">' . esc_html__( '%1$s', 'owner' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	$categories_list = get_the_category_list( esc_html__( ', ', 'counter' ) );
+	if ( $categories_list && counter_categorized_blog() && in_array( 'cat-links', $meta_items ) || $is_customizer ) {
+		printf( '<span class="entry-meta-item cat-links">' . esc_html__( '%1$s', 'counter' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 	}
 
 	/*
@@ -80,7 +80,7 @@ function owner_entry_meta_header() {
 	 */
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) && in_array( 'comments-link', $meta_items ) || $is_customizer ) {
 		echo '<span class="entry-meta-item comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'owner' ), __( '1 Comment', 'owner' ), __( '% Comments', 'owner' ) );
+		comments_popup_link( __( 'Leave a comment', 'counter' ), __( '1 Comment', 'counter' ), __( '% Comments', 'counter' ) );
 		echo '</span>';
 	}
 
@@ -91,27 +91,27 @@ function owner_entry_meta_header() {
 }
 endif;
 
-if ( ! function_exists( 'owner_entry_meta_footer' ) ) :
+if ( ! function_exists( 'counter_entry_meta_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function owner_entry_meta_footer() {
+function counter_entry_meta_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( '', 'owner' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( '', 'counter' ) );
 		if ( $tags_list ) {
-			printf( '<footer class="entry-footer"><span class="tags-links">' . esc_html__( '%1$s', 'owner' ) . '</span></footer><!-- .entry-footer -->', $tags_list ); // WPCS: XSS OK.
+			printf( '<footer class="entry-footer"><span class="tags-links">' . esc_html__( '%1$s', 'counter' ) . '</span></footer><!-- .entry-footer -->', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 }
 endif;
 
-if ( ! function_exists( 'owner_site_title' ) ) :
+if ( ! function_exists( 'counter_site_title' ) ) :
 /**
  * Displays site title.
  */
-function owner_site_title() {
+function counter_site_title() {
 	$class = 'site-title';
 	// Set the second argument to 'true' to display title by default.
 	if ( ! get_theme_mod( 'display_title', true ) ) {
@@ -125,11 +125,11 @@ function owner_site_title() {
 }
 endif;
 
-if ( ! function_exists( 'owner_site_tagline' ) ) :
+if ( ! function_exists( 'counter_site_tagline' ) ) :
 /**
  * Displays site description.
  */
-function owner_site_tagline() {
+function counter_site_tagline() {
 	$class = 'site-description';
 	// Set the second argument to 'true' to display tagline by default.
 	if ( ! get_theme_mod( 'display_tagline', true ) ) {
@@ -139,75 +139,75 @@ function owner_site_tagline() {
 }
 endif;
 
-if ( ! function_exists( 'owner_post_thumbnail' ) ) :
+if ( ! function_exists( 'counter_post_thumbnail' ) ) :
 /**
  * Displays post thumbnail.
  *
  * Wraps the post thumbnail in an anchor element on index
  * view, or a div element on single view.
  */
-function owner_post_thumbnail() {
+function counter_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
 
 	if ( is_singular( array( 'post', 'page' ) ) ) {
 		echo '<div class="post-thumbnail">';
-			the_post_thumbnail( 'owner-thumbnail-single' );
+			the_post_thumbnail( 'counter-thumbnail-single' );
 		echo '</div>';
 	} else {
 		printf( '<a class="post-thumbnail" href="%s">', esc_url( apply_filters( 'the_permalink', get_permalink() ) ) );
-			the_post_thumbnail( 'owner-thumbnail' );
+			the_post_thumbnail( 'counter-thumbnail' );
 		echo '</a>';
 	}
 }
 endif;
 
-if ( ! function_exists( 'owner_grid_item_thumbnail' ) ) :
+if ( ! function_exists( 'counter_grid_item_thumbnail' ) ) :
 /**
  * Displays post thumbnail in a grid.
  *
  * Wraps the post thumbnail in an anchor element on index
  * view, or a div element on single view.
  */
-function owner_grid_item_thumbnail() {
+function counter_grid_item_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
 
 	printf( '<a class="post-thumbnail" href="%s">', esc_url( apply_filters( 'the_permalink', get_permalink() ) ) );
-		the_post_thumbnail( 'owner-thumbnail-grid' );
+		the_post_thumbnail( 'counter-thumbnail-grid' );
 	echo '</a>';
 }
 endif;
 
-if ( ! function_exists( 'owner_posts_navigation' ) ) :
+if ( ! function_exists( 'counter_posts_navigation' ) ) :
 /**
  * Displays Posts Navigation a.k.a Older/Newer posts links on a blog page.
  */
-function owner_posts_navigation() {
+function counter_posts_navigation() {
 	$args = array(
-		'prev_text'          => __( 'Older', 'owner' ),
-		'next_text'          => __( 'Newer', 'owner' ),
-		'screen_reader_text' => __( 'Posts navigation', 'owner' ),
+		'prev_text'          => __( 'Older', 'counter' ),
+		'next_text'          => __( 'Newer', 'counter' ),
+		'screen_reader_text' => __( 'Posts navigation', 'counter' ),
 	);
 	the_posts_navigation( $args );
 }
 endif;
 
-if ( ! function_exists( 'owner_post_navigation' ) ) :
+if ( ! function_exists( 'counter_post_navigation' ) ) :
 /**
  * Displays Post Navigation a.k.a Next/Previous Post links on a single post page.
  */
-function owner_post_navigation() {
+function counter_post_navigation() {
 	$args = array(
 		'prev_text'          => '%title',
 		'next_text'          => '%title',
-		'screen_reader_text' => __( 'Post navigation', 'owner' ),
+		'screen_reader_text' => __( 'Post navigation', 'counter' ),
 	);
 
-	$previous = get_previous_post_link( '<div class="nav-link nav-previous"><span class="nav-pre-link">' . esc_html__( 'Prev:', 'owner' ) . ' </span>%link</div>', $args['prev_text'] );
-	$next     = get_next_post_link( '<div class="nav-link nav-next"><span class="nav-pre-link">' . esc_html__( 'Next:', 'owner' ) . ' </span>%link</div>', $args['next_text'] );
+	$previous = get_previous_post_link( '<div class="nav-link nav-previous"><span class="nav-pre-link">' . esc_html__( 'Prev:', 'counter' ) . ' </span>%link</div>', $args['prev_text'] );
+	$next     = get_next_post_link( '<div class="nav-link nav-next"><span class="nav-pre-link">' . esc_html__( 'Next:', 'counter' ) . ' </span>%link</div>', $args['next_text'] );
 
 	// Only add markup if there's somewhere to navigate to.
 	if ( $previous || $next ) {
@@ -216,18 +216,18 @@ function owner_post_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'owner_comment_navigation' ) ) :
+if ( ! function_exists( 'counter_comment_navigation' ) ) :
 /**
  * Displays Comment Navigation.
  */
-function owner_comment_navigation() {
+function counter_comment_navigation() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'owner' ); ?></h2>
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'counter' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'owner' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'owner' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'counter' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'counter' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -235,17 +235,17 @@ function owner_comment_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'owner_footer_text' ) ) :
+if ( ! function_exists( 'counter_footer_text' ) ) :
 /**
  * Displays Footer Text.
  */
-function owner_footer_text() {
+function counter_footer_text() {
 	if ( get_theme_mod( 'footer_text', false ) ) {
 		echo wp_kses_post( str_replace( '[year]', date( 'Y' ), get_theme_mod( 'footer_text', false ) ) );
 	} else {
 		printf(
-			esc_html__( '%1$s theme by %2$s', 'owner' ),
-			'Owner',
+			esc_html__( '%1$s theme by %2$s', 'counter' ),
+			'Counter',
 			'<a href="' . esc_url( 'https://themepatio.com/' ) . '">ThemePatio</a>'
 		);
 	}
@@ -257,8 +257,8 @@ endif;
  *
  * @return bool
  */
-function owner_categorized_blog() {
-	if ( false === ( $categories = get_transient( 'owner_categories' ) ) ) {
+function counter_categorized_blog() {
+	if ( false === ( $categories = get_transient( 'counter_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$categories = get_categories( array(
 			'fields'     => 'ids',
@@ -269,40 +269,40 @@ function owner_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$categories = count( $categories );
 
-		set_transient( 'owner_categories', $categories );
+		set_transient( 'counter_categories', $categories );
 	}
 
 	if ( $categories > 1 ) {
-		// This blog has more than 1 category so owner_categorized_blog should return true.
+		// This blog has more than 1 category so counter_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so owner_categorized_blog should return false.
+		// This blog has only 1 category so counter_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in owner_categorized_blog.
+ * Flush out the transients used in counter_categorized_blog.
  */
-function owner_category_transient_flusher() {
+function counter_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'owner_categories' );
+	delete_transient( 'counter_categories' );
 }
-add_action( 'edit_category', 'owner_category_transient_flusher' );
-add_action( 'save_post',     'owner_category_transient_flusher' );
+add_action( 'edit_category', 'counter_category_transient_flusher' );
+add_action( 'save_post',     'counter_category_transient_flusher' );
 
 /**
  * Panels on the front page.
  */
-function owner_panels() {
+function counter_panels() {
 	for ( $i = 1; $i <= 10; $i++ ) :
 		if ( get_theme_mod( 'panel_' . $i ) ) :
 			$post = get_post( get_theme_mod( 'panel_' . $i ) );
 			setup_postdata( $post );
-			set_query_var( 'owner_panel', $i );
+			set_query_var( 'counter_panel', $i );
 			get_template_part( 'template-parts/content', 'front' );
 			wp_reset_postdata();
 		endif;
@@ -312,20 +312,20 @@ function owner_panels() {
 /**
  * Displays panel thumbnail.
  */
-function owner_panel_thumbnail() {
+function counter_panel_thumbnail() {
 	if ( post_password_required() || is_attachment() ) {
 		return;
 	}
 	if ( has_post_thumbnail() ) {
 		echo '<div class="panel-thumbnail">';
-			the_post_thumbnail( 'owner-panel-half' );
+			the_post_thumbnail( 'counter-panel-half' );
 		echo '</div>';
 	} else {
 		?>
 		<div class='panel-thumbnail'>
 			<svg class='panel-thumbnail-placeholder' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox="0 0 100 100" xmlns:xlink='http://www.w3.org/1999/xlink'>
 				<rect class='shape' x='0' y='0' width='100%' height='100%' fill='#e5e5e5'></rect>
-				<text x="50%" y="50%" font-size="3" fill-opacity="0.5" alignment-baseline="middle" text-anchor="middle"><?php esc_html_e( 'No Featured Image', 'owner' ); ?></text>
+				<text x="50%" y="50%" font-size="3" fill-opacity="0.5" alignment-baseline="middle" text-anchor="middle"><?php esc_html_e( 'No Featured Image', 'counter' ); ?></text>
 			</svg>
 		</div>
 		<?php
@@ -337,7 +337,7 @@ function owner_panel_thumbnail() {
  *
  * @param int $num The number of the panel.
  */
-function owner_panel_title( $num ) {
+function counter_panel_title( $num ) {
 	// Check if we need to display title.
 	if ( is_customize_preview() ) {
 		if ( get_theme_mod( 'panel_title_display_' . $num, 1 ) ) {
@@ -356,11 +356,11 @@ function owner_panel_title( $num ) {
  *
  * @param int $num The number of the panel.
  */
-function owner_panel_content( $num ) {
+function counter_panel_content( $num ) {
 	// Check if we need to display the content first.
 	if ( get_the_content() ) { ?>
 		<div class="panel-content">
-			<?php the_content( __( 'Read more', 'owner' ) ); ?>
+			<?php the_content( __( 'Read more', 'counter' ) ); ?>
 		</div><?php
 	}
 }
@@ -371,7 +371,7 @@ function owner_panel_content( $num ) {
  * @param string $num Panel number.
  * @param string $id  Post id.
  */
-function owner_panel_meta( $num = '', $id = '' ) {
+function counter_panel_meta( $num = '', $id = '' ) {
 	if ( 'page' == get_post_type() && current_user_can( 'edit_pages' ) ) {
 		if ( is_customize_preview() ) {
 			printf( '<span class="panel-meta">#panel-%s</span>', esc_html( $num ) );
@@ -379,9 +379,9 @@ function owner_panel_meta( $num = '', $id = '' ) {
 			echo '<span class="panel-meta">';
 				printf( '<span class="panel-num">#%s</span>', esc_html( $num ) );
 				echo ' &middot; ';
-				edit_post_link( __( 'Edit', 'owner' ), '', '', $id );
+				edit_post_link( __( 'Edit', 'counter' ), '', '', $id );
 				echo ' &middot; ';
-				printf( '<a href="%s" class="panel-customize-link">%s</a>', esc_url( admin_url( 'customize.php?autofocus[section]=panel_' . $num ) ), esc_html__( 'Customize', 'owner' ) );
+				printf( '<a href="%s" class="panel-customize-link">%s</a>', esc_url( admin_url( 'customize.php?autofocus[section]=panel_' . $num ) ), esc_html__( 'Customize', 'counter' ) );
 			echo '</span>';
 		}
 	}

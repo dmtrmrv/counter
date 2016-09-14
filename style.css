@@ -1,19 +1,19 @@
 /*
-Theme Name:  Owner
-Theme URI:   https://themepatio.com/themes/owner/
+Theme Name:  Counter
+Theme URI:   https://themepatio.com/themes/counter/
 Author:      ThemePatio
 Author URI:  https://themepatio.com
 Description: Theme for coffee shops, restaurants, cafes, barbershops and other kinds of small businesses. Has a flexible customizer-controlled front page template.
 Version:     1.0.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: owner
+Text Domain: counter
 Tags:        blog, one-column, three-columns, right-sidebar, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, food-and-drink
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Owner is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Counter is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -627,11 +627,11 @@ code {
 	background-color: #fff090;
 }
 
-.owner-row .owner-col:last-of-type {
+.counter-row .counter-col:last-of-type {
 	margin-right: 0;
 }
 
-.owner-col {
+.counter-col {
 	margin-bottom: 1.5em;
 }
 
@@ -1144,9 +1144,9 @@ p > video {
 /* Clearings */
 
 .clear:after,
-.owner-row:after,
+.counter-row:after,
 .wrap:after,
-.owner-grid:after,
+.counter-grid:after,
 .site-header:after,
 .site-footer:after,
 .entry-header:after,
@@ -1156,7 +1156,7 @@ p > video {
 .comment-content:after,
 .gallery:after,
 .content-area:after,
-.owner-blog-default .hentry:after,
+.counter-blog-default .hentry:after,
 .panel-content:after,
 .search-results .hentry:after {
 	display: table;
@@ -1195,7 +1195,7 @@ body {
 
 /* Grid */
 
-.owner-grid-item {
+.counter-grid-item {
 	width: 100%;
 	max-width: 612px;
 	margin: 0 auto 2.5em;
@@ -2374,17 +2374,17 @@ body {
 	width: 100%;
 }
 
-.owner-blog-default .content-area {
+.counter-blog-default .content-area {
 	max-width: 612px;
 	margin: 0 auto;
 }
 
-.owner-blog-default .hentry {
+.counter-blog-default .hentry {
 	margin-bottom: 3em;
 	word-wrap: break-word;
 }
 
-.owner-blog-default .entry-meta {
+.counter-blog-default .entry-meta {
 	margin-bottom: 1em;
 }
 
@@ -2761,20 +2761,20 @@ body {
 		text-align: right;
 	}
 
-	.owner-col {
+	.counter-col {
 		float: left;
 		margin-right: 2.85714%;
 	}
 
-	.owner-row-2 .owner-col {
+	.counter-row-2 .counter-col {
 		width: 48.57143%;
 	}
 
-	.owner-row-3 .owner-col {
+	.counter-row-3 .counter-col {
 		width: 31.42857%;
 	}
 
-	.owner-row-4 .owner-col {
+	.counter-row-4 .counter-col {
 		width: 22.85714%;
 	}
 
@@ -2786,18 +2786,18 @@ body {
 		margin: 2.25em 0 2.25em 2.25em;
 	}
 
-	.owner-grid-item {
+	.counter-grid-item {
 		float: left;
 		max-width: 31.42857%;
 		margin-right: 2.85714%;
 		margin-left: 0;
 	}
 
-	.owner-grid-item:nth-of-type(3n) {
+	.counter-grid-item:nth-of-type(3n) {
 		margin-right: 0;
 	}
 
-	.owner-grid-item:nth-of-type(3n-2) {
+	.counter-grid-item:nth-of-type(3n-2) {
 		clear: left;
 	}
 
@@ -3168,23 +3168,23 @@ body {
 		line-height: 1.25;
 	}
 
-	.owner-blog-default .site-content.wrap {
+	.counter-blog-default .site-content.wrap {
 		max-width: 936px;
 		padding-right: 0;
 		padding-left: 0;
 	}
 
-	.owner-blog-default.is-sidebar .content-area {
+	.counter-blog-default.is-sidebar .content-area {
 		float: left;
 		width: 65.38462%;
 		margin-right: 3.84615%;
 	}
 
-	.owner-blog-default .hentry {
+	.counter-blog-default .hentry {
 		max-width: 100%;
 	}
 
-	.owner-blog-default .widget-area {
+	.counter-blog-default .widget-area {
 		float: right;
 		width: 30.76923%;
 		margin-right: 0;

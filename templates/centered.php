@@ -4,7 +4,7 @@
  *
  * Template Name: Centered
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>

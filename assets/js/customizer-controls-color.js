@@ -8,7 +8,7 @@
 	// Passed by wp_localize_script()
 	pnlCountColor = parseInt( pnlCountColor[0] );
 
-	var cssTemplate = wp.template( 'owner-color-scheme' ),
+	var cssTemplate = wp.template( 'counter-color-scheme' ),
 		colorSchemeKeys = [
 			'color_bg',
 			'color_accent',

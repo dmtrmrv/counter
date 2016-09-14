@@ -1,8 +1,8 @@
 <?php
 /**
- * Owner Theme Customizer Custom Sections
+ * Counter Theme Customizer Custom Sections
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @see WP_Customize_Section
  */
-class Owner_Frontpage_Visibility_Section extends WP_Customize_Section {
+class Counter_Frontpage_Visibility_Section extends WP_Customize_Section {
 
 	/**
 	 * Section type.

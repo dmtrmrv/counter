@@ -63,13 +63,13 @@
 			toggleSectionClass(
 				api.control( 'panel_content_' + i ),
 				api.instance( 'panel_content_' + i ).get(),
-				'owner-empty-panel'
+				'counter-empty-panel'
 			);
 
 			// On panel content change.
 			api.control( 'panel_content_' + i, function( control ) {
 				control.setting.bind( function( value ) {
-					toggleSectionClass( control, value, 'owner-empty-panel' );
+					toggleSectionClass( control, value, 'counter-empty-panel' );
 				} );
 			} );
 
@@ -81,13 +81,13 @@
 			toggleSectionClass(
 				api.control( 'panel_bg_image_' + i ),
 				api.instance( 'panel_bg_image_' + i ).get(),
-				'owner-no-bg-panel'
+				'counter-no-bg-panel'
 			);
 
 			// On background image change.
 			api.control( 'panel_bg_image_' + i, function( control ) {
 				control.setting.bind( function( value ) {
-					toggleSectionClass( control, value, 'owner-no-bg-panel' );
+					toggleSectionClass( control, value, 'counter-no-bg-panel' );
 				} );
 			} );
 		}

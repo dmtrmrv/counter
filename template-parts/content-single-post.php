@@ -2,7 +2,7 @@
 /**
  * The template used for displaying post content in single.php
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
@@ -12,23 +12,23 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-		<?php owner_entry_meta_header(); ?>
+		<?php counter_entry_meta_header(); ?>
 
 	</header><!-- .entry-header -->
 
-	<?php owner_post_thumbnail(); ?>
+	<?php counter_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'owner' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'counter' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
-	<?php owner_entry_meta_footer(); ?>
+	<?php counter_entry_meta_footer(); ?>
 
 </article><!-- #post-## -->
 

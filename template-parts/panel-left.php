@@ -2,21 +2,21 @@
 /**
  * The template used for displaying panels with featured image on the left
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
-<article id="panel-<?php echo esc_attr( $owner_panel_num ); ?>" <?php post_class( 'panel panel-left ' . owner_panel_alignment_class( $owner_panel_num ) ); ?>>
-	<?php owner_panel_thumbnail(); ?>
+<article id="panel-<?php echo esc_attr( $counter_panel_num ); ?>" <?php post_class( 'panel panel-left ' . counter_panel_alignment_class( $counter_panel_num ) ); ?>>
+	<?php counter_panel_thumbnail(); ?>
 
 	<div class="panel-data">
-		<?php owner_panel_title( $owner_panel_num ); ?>
+		<?php counter_panel_title( $counter_panel_num ); ?>
 
-		<?php owner_panel_content( $owner_panel_num ); ?>
+		<?php counter_panel_content( $counter_panel_num ); ?>
 	</div>
 
-	<?php owner_panel_meta( $owner_panel_num, get_theme_mod( 'panel_content_' . $owner_panel_num ) ); ?>
+	<?php counter_panel_meta( $counter_panel_num, get_theme_mod( 'panel_content_' . $counter_panel_num ) ); ?>
 
-	<div class="panel-background" <?php owner_panel_background_image( $owner_panel_num ); ?>></div>
+	<div class="panel-background" <?php counter_panel_background_image( $counter_panel_num ); ?>></div>
 
 </article><!-- #post-## -->

@@ -2,7 +2,7 @@
 /**
  * Custom functions independent of the theme templates
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function owner_body_classes( $classes ) {
+function counter_body_classes( $classes ) {
 
 	// No Primary Menu Case.
 	if ( ! has_nav_menu( 'primary' ) ) {
@@ -19,8 +19,8 @@ function owner_body_classes( $classes ) {
 	}
 
 	// Adds default blog layout class if default layout is chosen.
-	if ( ( owner_is_blog() || is_archive() ) && 'default' == get_theme_mod( 'blog_layout', 'default' ) ) {
-		$classes[] = 'owner-blog-default';
+	if ( ( counter_is_blog() || is_archive() ) && 'default' == get_theme_mod( 'blog_layout', 'default' ) ) {
+		$classes[] = 'counter-blog-default';
 	}
 
 	// Adds a class of group-blog to blogs with more than 1 published author.
@@ -56,9 +56,9 @@ function owner_body_classes( $classes ) {
 	}
 
 	// Adds a class with a number of active footer widget areas.
-	if ( 2 <= owner_footer_widget_areas_count() ) {
+	if ( 2 <= counter_footer_widget_areas_count() ) {
 		$classes[] = 'footer-columns';
-		$classes[] = 'footer-columns-' . esc_attr( owner_footer_widget_areas_count() );
+		$classes[] = 'footer-columns-' . esc_attr( counter_footer_widget_areas_count() );
 	}
 
 	// Adds a class for default pagination. A.k.a if Jetpack infinite scroll is disabled.
@@ -78,7 +78,7 @@ function owner_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'owner_body_classes' );
+add_filter( 'body_class', 'counter_body_classes' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -87,23 +87,23 @@ add_filter( 'body_class', 'owner_body_classes' );
  * @param array $class   An array of additional classes added to the post.
  * @param int   $post_id The post ID.
  */
-function owner_post_classes( $classes, $class, $post_id ) {
+function counter_post_classes( $classes, $class, $post_id ) {
 	// Adds a class to a post that has no content.
 	if ( ! get_post_field( 'post_content', $post_id ) ) {
 		$classes[] = 'no-content';
 	}
 	return $classes;
 }
-add_filter( 'post_class', 'owner_post_classes', 10, 3 );
+add_filter( 'post_class', 'counter_post_classes', 10, 3 );
 
 /**
  * Prints layout-specific class.
  */
-function owner_blog_layout_class() {
+function counter_blog_layout_class() {
 	$layout = get_theme_mod( 'blog_layout' );
 	if ( 'grid' == $layout ) {
-		$classes[] = 'owner-post-grid';
-		$classes[] = 'owner-grid';
+		$classes[] = 'counter-post-grid';
+		$classes[] = 'counter-grid';
 	}
 
 	if ( ! empty( $classes ) ) {
@@ -113,7 +113,7 @@ function owner_blog_layout_class() {
 /**
  * Detects blog index page.
  */
-function owner_is_blog() {
+function counter_is_blog() {
 	if ( is_front_page() && is_home() ) {
 		return true;
 	} elseif ( is_front_page() ) {
@@ -130,12 +130,12 @@ function owner_is_blog() {
  *
  * @return array Panel types for the fron page.
  */
-function owner_get_panel_types() {
-	return apply_filters( 'owner_panel_types', array(
-		'center'    => __( 'Centered', 'owner' ),
-		'fullwidth' => __( 'Fullwidth', 'owner' ),
-		'left'      => __( 'Left', 'owner' ),
-		'right'     => __( 'Right', 'owner' ),
+function counter_get_panel_types() {
+	return apply_filters( 'counter_panel_types', array(
+		'center'    => __( 'Centered', 'counter' ),
+		'fullwidth' => __( 'Fullwidth', 'counter' ),
+		'left'      => __( 'Left', 'counter' ),
+		'right'     => __( 'Right', 'counter' ),
 	) );
 }
 
@@ -144,7 +144,7 @@ function owner_get_panel_types() {
  *
  * @param int $num The number of the panel.
  */
-function owner_panel_alignment_class( $num ) {
+function counter_panel_alignment_class( $num ) {
 	$class = '';
 
 	// Title alignment.
@@ -177,7 +177,7 @@ function owner_panel_alignment_class( $num ) {
  *
  * @param string $i Panel number.
  */
-function owner_panel_background_image( $i = '' ) {
+function counter_panel_background_image( $i = '' ) {
 	// Return quickly if no panel number is set.
 	if ( ! $i ) {
 		return;
@@ -193,7 +193,7 @@ function owner_panel_background_image( $i = '' ) {
 	$opacity      = get_theme_mod( 'panel_bg_opacity_' . $i );
 
 	// Try to get the image URL.
-	$image = wp_get_attachment_image_url( $id, 'owner-panel-full' );
+	$image = wp_get_attachment_image_url( $id, 'counter-panel-full' );
 
 	/*
 	 * Return if no image or if opacity is set to zero. Note the strict
@@ -229,13 +229,13 @@ function owner_panel_background_image( $i = '' ) {
  *
  * @param string $text markup containing list of categories.
  */
-function owner_category_rel( $text ) {
+function counter_category_rel( $text ) {
 	$search  = array( 'rel="category"', 'rel="category tag"' );
 	$replace = 'rel="tag"';
 	$text    = str_replace( $search, $replace, $text );
 	return $text;
 }
-add_filter( 'the_category', 'owner_category_rel' );
+add_filter( 'the_category', 'counter_category_rel' );
 
 /**
  * Convert HEX to RGB.
@@ -244,7 +244,7 @@ add_filter( 'the_category', 'owner_category_rel' );
  * @return array         Array containing RGB (red, green, and blue) values
  *                       for the given HEX code, empty array otherwise.
  */
-function owner_hex2rgb( $color ) {
+function counter_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) == 3 ) {
@@ -265,7 +265,7 @@ function owner_hex2rgb( $color ) {
 /**
  * Returns true if the front page template is used.
  */
-function owner_is_front_page() {
+function counter_is_front_page() {
 	if ( is_page_template( 'templates/front.php' ) ) {
 		return true;
 	}
@@ -274,7 +274,7 @@ function owner_is_front_page() {
 /**
  * Returns true if the front page template is not used.
  */
-function owner_not_front_page() {
+function counter_not_front_page() {
 	if ( ! is_page_template( 'templates/front.php' ) ) {
 		return true;
 	}
@@ -283,7 +283,7 @@ function owner_not_front_page() {
 /**
  * Calculates active footer widget areas.
  */
-function owner_footer_widget_areas_count() {
+function counter_footer_widget_areas_count() {
 	$num = 0;
 	for ( $i = 1; $i <= 5; $i++ ) {
 		if ( is_active_sidebar( 'footer-' . $i ) ) {
@@ -296,31 +296,31 @@ function owner_footer_widget_areas_count() {
 /**
  * Better excerpt look.
  */
-function owner_excerpt_more() {
+function counter_excerpt_more() {
 	return ' ...';
 }
-add_filter( 'excerpt_more', 'owner_excerpt_more' );
+add_filter( 'excerpt_more', 'counter_excerpt_more' );
 
 /**
  * Replace Contact Form 7 spinner icon.
  */
-function owner_wpcf7_ajax_loader() {
+function counter_wpcf7_ajax_loader() {
 	return network_site_url( '/wp-admin/images/spinner-2x.gif' );
 }
-add_filter( 'wpcf7_ajax_loader', 'owner_wpcf7_ajax_loader' );
+add_filter( 'wpcf7_ajax_loader', 'counter_wpcf7_ajax_loader' );
 
 /**
  * Adds an admin notice if theme license is not active.
  */
-if ( is_admin() && ! owner_is_active_license() ) {
-	add_action( 'admin_notices', 'owner_license_admin_notice', 99 );
+if ( is_admin() && ! counter_is_active_license() ) {
+	add_action( 'admin_notices', 'counter_license_admin_notice', 99 );
 }
 
 /**
  * Checks if theme license is active.
  */
-function owner_is_active_license() {
-	$status = get_option( 'owner_license_key_status' );
+function counter_is_active_license() {
+	$status = get_option( 'counter_license_key_status' );
 	if ( ! $status || 'valid' != $status ) {
 		return false;
 	}
@@ -330,14 +330,14 @@ function owner_is_active_license() {
 /**
  * Displays an admin notice about inactive license.
  */
-function owner_license_admin_notice() {
+function counter_license_admin_notice() {
 	$class   = esc_attr( 'notice notice-warning is-dismissible tp-license-notification' );
-	$message = sprintf( esc_html__( 'Thanks for choosing %s! Please %sactivate%s the license key to get access to theme updates and support.', 'owner' ), 'Owner', '<a href="' . esc_url( admin_url( 'themes.php?page=owner-getting-started' ) ) . '">', '</a>' );
+	$message = sprintf( esc_html__( 'Thanks for choosing %s! Please %sactivate%s the license key to get access to theme updates and support.', 'counter' ), 'Counter', '<a href="' . esc_url( admin_url( 'themes.php?page=counter-getting-started' ) ) . '">', '</a>' );
 
 	printf( '<div class="%s"><p>%s</p></div>', $class, $message ); // WPCS: XSS OK.
 }
 
 if ( is_admin() && isset( $_GET['activated'] ) && 'themes.php' == $pagenow ) {
-	wp_redirect( admin_url( 'admin.php?page=owner-getting-started' ) );
+	wp_redirect( admin_url( 'admin.php?page=counter-getting-started' ) );
 	exit;
 }

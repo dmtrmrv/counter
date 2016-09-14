@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php owner_posts_navigation(); ?>
+		<?php counter_posts_navigation(); ?>
 
 	<?php else : ?>
 

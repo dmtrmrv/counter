@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * The template part for displaying a message that posts cannot be found
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
@@ -12,9 +12,9 @@
 		<h1 class="page-title">
 			<?php
 				if ( is_404() ) {
-					esc_html_e( 'Oops! That page can&rsquo;t be found.', 'owner' );
+					esc_html_e( 'Oops! That page can&rsquo;t be found.', 'counter' );
 				} else {
-					esc_html_e( 'Nothing Found', 'owner' );
+					esc_html_e( 'Nothing Found', 'counter' );
 				}
 			?>
 		</h1>
@@ -23,23 +23,23 @@
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'owner' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'counter' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'owner' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'counter' ); ?></p>
 
 			<?php get_search_form(); ?>
 
 		<?php elseif ( is_404() ) : ?>
 
-			<p><?php esc_html_e( 'Looks like the page you are looking for has been moved or does not exist. Click on the site logo to go to the homepage or try searching.', 'owner' ); ?></p>
+			<p><?php esc_html_e( 'Looks like the page you are looking for has been moved or does not exist. Click on the site logo to go to the homepage or try searching.', 'counter' ); ?></p>
 
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'owner' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'counter' ); ?></p>
 
 			<?php get_search_form(); ?>
 

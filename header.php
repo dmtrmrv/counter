@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * @package Owner
+ * @package Counter
  */
 
 ?><!DOCTYPE html>
@@ -18,15 +18,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">
-		<?php esc_html_e( 'Skip to content', 'owner' ); ?>
+		<?php esc_html_e( 'Skip to content', 'counter' ); ?>
 	</a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-wrap">
 			<div class="site-branding">
-				<?php owner_site_logo(); ?>
-				<?php owner_site_title(); ?>
-				<?php owner_site_tagline(); ?>
+				<?php counter_site_logo(); ?>
+				<?php counter_site_title(); ?>
+				<?php counter_site_tagline(); ?>
 			</div><!-- .site-branding -->
 		</div><!-- .site-header-wrap -->
 
@@ -44,7 +44,7 @@
 
 		<button id="site-navigation-toggle" class="menu-toggle" >
 			<span class="menu-toggle-icon"></span>
-			<?php esc_html_e( 'Primary Menu', 'owner' ); ?>
+			<?php esc_html_e( 'Primary Menu', 'counter' ); ?>
 		</button><!-- #site-navigation-menu-toggle -->
 
 		<?php endif; ?>

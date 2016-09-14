@@ -2,7 +2,7 @@
 /**
  * Set of sanitization functions used by the customizer
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_text( $input ) {
+function counter_sanitize_text( $input ) {
 	global $allowedtags;
 	return wp_kses( $input , $allowedtags );
 }
@@ -20,7 +20,7 @@ function owner_sanitize_text( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_checkbox( $input ) {
+function counter_sanitize_checkbox( $input ) {
 	if ( $input ) {
 		return 1;
 	}
@@ -32,7 +32,7 @@ function owner_sanitize_checkbox( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_image( $input ) {
+function counter_sanitize_image( $input ) {
 	$filetype = wp_check_filetype( $input );
 	if ( $filetype['ext'] && wp_ext2type( $filetype['ext'] ) === 'image' ) {
 		return esc_url( $input );
@@ -45,8 +45,8 @@ function owner_sanitize_image( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_panel_layout( $input ) {
-	$choices = owner_get_panel_types();
+function counter_sanitize_panel_layout( $input ) {
+	$choices = counter_get_panel_types();
 	if ( array_key_exists( $input, $choices ) ) {
 		return $input;
 	}
@@ -58,7 +58,7 @@ function owner_sanitize_panel_layout( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_background_size_type( $input ) {
+function counter_sanitize_background_size_type( $input ) {
 	$choices = array(
 		'cover',
 		'percent',
@@ -74,7 +74,7 @@ function owner_sanitize_background_size_type( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_alignment( $input ) {
+function counter_sanitize_alignment( $input ) {
 	$choices = array(
 		'center',
 		'right',
@@ -90,7 +90,7 @@ function owner_sanitize_alignment( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_opacity_range( $input ) {
+function counter_sanitize_opacity_range( $input ) {
 	if ( $input && is_numeric( $input ) ) {
 		if ( 1 <= $input ) {
 			return 1;
@@ -106,7 +106,7 @@ function owner_sanitize_opacity_range( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_background_repeat( $input ) {
+function counter_sanitize_background_repeat( $input ) {
 	$choices = array(
 		'repeat',
 		'repeat-x',
@@ -123,7 +123,7 @@ function owner_sanitize_background_repeat( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_background_position( $input ) {
+function counter_sanitize_background_position( $input ) {
 	$choices = array(
 		'left center',
 		'left bottom',
@@ -145,7 +145,7 @@ function owner_sanitize_background_position( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_background_attachment( $input ) {
+function counter_sanitize_background_attachment( $input ) {
 	if ( 'fixed' == $input ) {
 		return $input;
 	}
@@ -157,8 +157,8 @@ function owner_sanitize_background_attachment( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_panel_count( $input ) {
-	if ( $input >= 0 && $input <= owner_get_panel_count_max() ) {
+function counter_sanitize_panel_count( $input ) {
+	if ( $input >= 0 && $input <= counter_get_panel_count_max() ) {
 		return absint( $input );
 	}
 	return 1;
@@ -169,8 +169,8 @@ function owner_sanitize_panel_count( $input ) {
  *
  * @return int Number of panels.
  */
-function owner_get_panel_count() {
-	return apply_filters( 'owner_panel_count', 10 );
+function counter_get_panel_count() {
+	return apply_filters( 'counter_panel_count', 10 );
 }
 
 /**
@@ -178,7 +178,7 @@ function owner_get_panel_count() {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_column_count( $input ) {
+function counter_sanitize_column_count( $input ) {
 	$choices = array( 3, 4 );
 	if ( in_array( $input, $choices ) ) {
 		return $input;
@@ -191,7 +191,7 @@ function owner_sanitize_column_count( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_panel_post_count( $input ) {
+function counter_sanitize_panel_post_count( $input ) {
 	$choices = array( 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 );
 	if ( in_array( $input, $choices ) ) {
 		return $input;
@@ -204,7 +204,7 @@ function owner_sanitize_panel_post_count( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_blog_layout( $input ) {
+function counter_sanitize_blog_layout( $input ) {
 	if ( 'grid' == $input ) {
 		return $input;
 	}
@@ -216,7 +216,7 @@ function owner_sanitize_blog_layout( $input ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_meta_items( $input ) {
+function counter_sanitize_meta_items( $input ) {
 	$choices = array(
 		'cat-links',
 		'posted-on',
@@ -240,8 +240,8 @@ function owner_sanitize_meta_items( $input ) {
  *
  * @param string $value potentially dangerous data.
  */
-function owner_sanitize_color_scheme( $value ) {
-	$color_schemes = owner_get_color_scheme_choices();
+function counter_sanitize_color_scheme( $value ) {
+	$color_schemes = counter_get_color_scheme_choices();
 
 	if ( ! array_key_exists( $value, $color_schemes ) ) {
 		$value = 'default';
@@ -255,6 +255,6 @@ function owner_sanitize_color_scheme( $value ) {
  *
  * @param string $input potentially dangerous data.
  */
-function owner_sanitize_footer_text( $input ) {
+function counter_sanitize_footer_text( $input ) {
 	return wp_kses_post( $input );
 }

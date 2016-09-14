@@ -101,14 +101,14 @@
 	background-color: $color__highlight;
 }
 
-.owner-row {
+.counter-row {
 	@extend .clear;
-	.owner-col:last-of-type {
+	.counter-col:last-of-type {
 		margin-right: 0;
 	}
 }
 
-.owner-col {
+.counter-col {
 	margin-bottom: 1.5em;
 	@media screen and ( min-width: $sm ) {
 		float: left;
@@ -117,15 +117,15 @@
 }
 
 @media screen and ( min-width: $sm ) {
-	.owner-row-2 .owner-col {
+	.counter-row-2 .counter-col {
 		width: span( 6 );
 	}
 
-	.owner-row-3 .owner-col {
+	.counter-row-3 .counter-col {
 		width: span( 4 );
 	}
 
-	.owner-row-4 .owner-col {
+	.counter-row-4 .counter-col {
 		width: span( 3 );
 	}
 }

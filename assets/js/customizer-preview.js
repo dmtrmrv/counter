@@ -34,15 +34,15 @@
 	} );
 
 	// Check of we already have inline styles.
-	var $styleColor  = $( '#owner-style-color-inline-css' ),
-		$stylePanels = $( '#owner-style-panels-inline-css' );
+	var $styleColor  = $( '#counter-style-color-inline-css' ),
+		$stylePanels = $( '#counter-style-panels-inline-css' );
 
 	if ( ! $styleColor.length ) {
-		$styleColor = $( 'head' ).append( '<style type="text/css" id="owner-style-color-inline-css" />' ).find( '#owner-style-color-inline-css' );
+		$styleColor = $( 'head' ).append( '<style type="text/css" id="counter-style-color-inline-css" />' ).find( '#counter-style-color-inline-css' );
 	}
 
 	if ( ! $stylePanels.length ) {
-		$stylePanels = $( 'head' ).append( '<style type="text/css" id="owner-style-panels-inline-css" />' ).find( '#owner-style-panels-inline-css' );
+		$stylePanels = $( 'head' ).append( '<style type="text/css" id="counter-style-panels-inline-css" />' ).find( '#counter-style-panels-inline-css' );
 	}
 
 	// Color Scheme CSS.
@@ -64,7 +64,7 @@
 	 *
 	 * @param  {string} to Comma-separated list of entry meta items.
 	 */
-	function ownerRefreshPostMeta( to ) {
+	function counterRefreshPostMeta( to ) {
 		if ( '' !== to ) {
 			list = to.split( ',' );
 			$( '.entry-meta' ).each( function() {
@@ -87,11 +87,11 @@
 			var items = api( 'entry_meta_items' ).get().join();
 
 			// Update entry meta on page load.
-			ownerRefreshPostMeta( items );
+			counterRefreshPostMeta( items );
 
 			// Also update when Jetpack loads next set of posts.
 			$( document.body ).on( 'post-load', function() {
-				ownerRefreshPostMeta( items );
+				counterRefreshPostMeta( items );
 			} );
 		}
 	} ) );
@@ -99,7 +99,7 @@
 	// Update entry meta items on option change.
 	api( 'entry_meta_items', function( value ) {
 		value.bind( function( to ) {
-			ownerRefreshPostMeta( to );
+			counterRefreshPostMeta( to );
 		} );
 	} );
 

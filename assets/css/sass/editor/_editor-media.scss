@@ -47,5 +47,5 @@ p > video {
 
 // Playlist.
 .mce-content-body {
-	@include owner-playlist();
+	@include counter-playlist();
 }

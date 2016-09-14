@@ -2,12 +2,12 @@
 /**
  * The template for displaying archive pages
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php owner_blog_layout_class(); ?>">
+	<div id="primary" class="content-area <?php counter_blog_layout_class(); ?>">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php owner_posts_navigation(); ?>
+		<?php counter_posts_navigation(); ?>
 
 	<?php else : ?>
 

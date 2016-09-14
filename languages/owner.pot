@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Owner 1.0.0\n"
+"Project-Id-Version: Counter 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
 "POT-Creation-Date: 2016-02-06 07:57:15+00:00\n"
 "MIME-Version: 1.0\n"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: inc/theme-info-screen/partials/tab-getting-started.php:14
 msgid ""
-"These manuals will help you get started with the Owner theme quickly. Make "
+"These manuals will help you get started with the Counter theme quickly. Make "
 "sure to read these guides carefully to get the idea of how the theme works "
 "and what it is capable of."
 msgstr ""
@@ -493,11 +493,11 @@ msgid "Looks like this page is not yet published or was deleted."
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Owner"
+msgid "Counter"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://themepatio.com/themes/owner/"
+msgid "https://themepatio.com/themes/counter/"
 msgstr ""
 
 #. Description of the plugin/theme

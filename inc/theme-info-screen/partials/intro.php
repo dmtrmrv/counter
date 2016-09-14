@@ -2,7 +2,7 @@
 /**
  * Theme info screen intro.
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
@@ -19,7 +19,7 @@
 			printf(
 				'<h1 class="theme-name">%s <span class="theme-version">%s</span></h1>',
 				esc_html( $this->theme->get( 'Name' ) ),
-				esc_html__( 'Version: ', 'owner' ) . esc_html( $this->theme->get( 'Version' ) )
+				esc_html__( 'Version: ', 'counter' ) . esc_html( $this->theme->get( 'Version' ) )
 			);
 
 			// Theme description.

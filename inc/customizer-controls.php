@@ -1,8 +1,8 @@
 <?php
 /**
- * Owner Theme Customizer Custom Controls
+ * Counter Theme Customizer Custom Controls
  *
- * @package Owner
+ * @package Counter
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {
@@ -12,7 +12,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 /**
  * Displays custom message with a call to action link.
  */
-class Owner_Panel_Number_Control extends WP_Customize_Control {
+class Counter_Panel_Number_Control extends WP_Customize_Control {
 
 	/**
 	 * Button attributes.
@@ -71,7 +71,7 @@ class Owner_Panel_Number_Control extends WP_Customize_Control {
 /**
  * Displays custom message with a call to action link.
  */
-class Owner_Message_Control extends WP_Customize_Control {
+class Counter_Message_Control extends WP_Customize_Control {
 
 	/**
 	 * Control type.
@@ -110,7 +110,7 @@ class Owner_Message_Control extends WP_Customize_Control {
  *
  * @access public
  */
-class Owner_Multicheck_Control extends WP_Customize_Control {
+class Counter_Multicheck_Control extends WP_Customize_Control {
 
 	/**
 	 * The type of customize control being rendered.
@@ -170,7 +170,7 @@ class Owner_Multicheck_Control extends WP_Customize_Control {
 /**
  * Displays divider.
  */
-class Owner_Divider_Control extends WP_Customize_Control {
+class Counter_Divider_Control extends WP_Customize_Control {
 
 	/**
 	 * Render the content.

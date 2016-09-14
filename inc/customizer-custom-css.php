@@ -1,14 +1,14 @@
 <?php
 /**
- * Owner Custom CSS
+ * Counter Custom CSS
  *
- * @package Owner
+ * @package Counter
  */
 
 /**
- * Register color schemes for Owner.
+ * Register color schemes for Counter.
  *
- * Can be filtered with {@see 'owner_color_schemes'}.
+ * Can be filtered with {@see 'counter_color_schemes'}.
  *
  * The order of colors in a colors array:
  * 0. Body Background
@@ -21,10 +21,10 @@
  *
  * @return array An associative array of color scheme options.
  */
-function owner_get_color_schemes() {
-	return apply_filters( 'owner_color_schemes', array(
+function counter_get_color_schemes() {
+	return apply_filters( 'counter_color_schemes', array(
 		'default' => array(
-			'label'  => _x( 'Default', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Default', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#ffffff',
 				'#d17d38',
@@ -34,7 +34,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'dark' => array(
-			'label'  => _x( 'Dark', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Dark', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#555555',
 				'#d17d38',
@@ -44,7 +44,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'blueberry' => array(
-			'label'  => _x( 'Blueberry', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Blueberry', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#e6eef7',
 				'#7eaed9',
@@ -54,7 +54,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'honey' => array(
-			'label'  => _x( 'Honey', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Honey', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#ffffff',
 				'#ebc14e',
@@ -64,7 +64,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'chocolate' => array(
-			'label'  => _x( 'Chocolate', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Chocolate', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#ffefd4',
 				'#c5793f',
@@ -74,7 +74,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'raspberry' => array(
-			'label'  => _x( 'Raspberry', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Raspberry', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#f4edef',
 				'#d9526b',
@@ -84,7 +84,7 @@ function owner_get_color_schemes() {
 			),
 		),
 		'olive' => array(
-			'label'  => _x( 'Olive', 'Color scheme', 'owner' ),
+			'label'  => _x( 'Olive', 'Color scheme', 'counter' ),
 			'colors' => array(
 				'#fff8d6',
 				'#7a8c37',
@@ -101,15 +101,15 @@ function owner_get_color_schemes() {
  *
  * If passed 'actual' as a parameter, will return the actual color scheme of
  * of the website. That is the scheme stored in a database. Can return one of
- * standard color schemes defined by owner_get_color_schemes().
+ * standard color schemes defined by counter_get_color_schemes().
  *
  * @param  string $scheme_name The name of the scheme to return.
  * @return array               Multidimensional array of color values in HEX.
  */
-function owner_get_color_scheme( $scheme_name = '' ) {
+function counter_get_color_scheme( $scheme_name = '' ) {
 
 	// Get all standard color scheme.
-	$schemes = owner_get_color_schemes();
+	$schemes = counter_get_color_schemes();
 
 	// Get default color scheme.
 	$default = $schemes['default']['colors'];
@@ -134,10 +134,10 @@ function owner_get_color_scheme( $scheme_name = '' ) {
 		$scheme[3] = $default[3] !== $scheme[3] ? $scheme[3] : false;
 
 		// Generate light text color if custom text color is set.
-		$scheme[4] = $scheme[3] ? vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.15 )', owner_hex2rgb( $scheme[3] ) ) : false;
+		$scheme[4] = $scheme[3] ? vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.15 )', counter_hex2rgb( $scheme[3] ) ) : false;
 
 		// Build color scheme for panels.
-		for ( $i = 1; $i <= owner_get_panel_count(); $i++ ) {
+		for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
 			// Try to get the values from the database.
 			$panel_scheme[0] = get_theme_mod( 'panel_color_bg_' . $i, false );
 			$panel_scheme[1] = get_theme_mod( 'panel_color_accent_' . $i, false );
@@ -151,7 +151,7 @@ function owner_get_color_scheme( $scheme_name = '' ) {
 			$panel_scheme[3] = $scheme[3] == $panel_scheme[3] || $default[3] == $panel_scheme[3] ? false : $panel_scheme[3];
 
 			// Generate light text color if custom text color is set for the panel.
-			$panel_scheme[4] = $panel_scheme[3] ? vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.15 )', owner_hex2rgb( $panel_scheme[3] ) ) : false;
+			$panel_scheme[4] = $panel_scheme[3] ? vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.15 )', counter_hex2rgb( $panel_scheme[3] ) ) : false;
 
 			// Add panel colors to the color scheme.
 			$scheme[5][ $i ] = $panel_scheme;
@@ -169,7 +169,7 @@ function owner_get_color_scheme( $scheme_name = '' ) {
 	}
 
 	// Build color scheme for panels.
-	for ( $i = 1; $i <= owner_get_panel_count(); $i++ ) {
+	for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
 		$scheme[5][ $i ] = array( $scheme[0], $scheme[1], $scheme[2], $scheme[3], $scheme[4] );
 	}
 
@@ -180,18 +180,18 @@ function owner_get_color_scheme( $scheme_name = '' ) {
 /**
  * Returns spacing for panels in a form of an array.
  */
-function owner_get_panel_spacings() {
-	for ( $i = 1; $i <= owner_get_panel_count(); $i++ ) {
+function counter_get_panel_spacings() {
+	for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
 		$spacings[ $i ] = get_theme_mod( 'panel_spacing_' . $i, 0 );
 	}
 	return $spacings;
 }
 
 /**
- * Returns an array of color scheme choices registered for Owner.
+ * Returns an array of color scheme choices registered for Counter.
  */
-function owner_get_color_scheme_choices() {
-	$color_schemes                = owner_get_color_schemes();
+function counter_get_color_scheme_choices() {
+	$color_schemes                = counter_get_color_schemes();
 	$color_scheme_control_options = array();
 
 	foreach ( $color_schemes as $color_scheme => $value ) {
@@ -208,7 +208,7 @@ function owner_get_color_scheme_choices() {
  *
  * @return string Color scheme CSS.
  */
-function owner_get_color_scheme_css( $colors = array() ) {
+function counter_get_color_scheme_css( $colors = array() ) {
 
 $css = '';
 
@@ -588,7 +588,7 @@ return $css;
  *
  * @return string CSS with custom spacings.
  */
-function owner_get_panel_spacings_css( $spacings = array() ) {
+function counter_get_panel_spacings_css( $spacings = array() ) {
 
 if ( ! array_filter( $spacings ) ) {
 	return;
@@ -658,7 +658,7 @@ return $css;
  * The template generates the css dynamically for instant display in the
  * Customizer preview.
  */
-function owner_color_scheme_css_template() {
+function counter_color_scheme_css_template() {
 	$scheme = array(
 		'{{ data.color_bg }}',
 		'{{ data.color_accent }}',
@@ -668,7 +668,7 @@ function owner_color_scheme_css_template() {
 	);
 
 	// Build color scheme for panels.
-	for ( $i = 1; $i <= owner_get_panel_count(); $i++ ) {
+	for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
 		$scheme[5][ $i ] = array(
 			'{{ data.panel_color_bg_' . $i . ' }}',
 			'{{ data.panel_color_accent_' . $i . ' }}',
@@ -678,12 +678,12 @@ function owner_color_scheme_css_template() {
 		);
 	}
 	?>
-	<script type="text/html" id="tmpl-owner-color-scheme">
-		<?php echo owner_get_color_scheme_css( $scheme ); // WPCS: XSS OK. ?>
+	<script type="text/html" id="tmpl-counter-color-scheme">
+		<?php echo counter_get_color_scheme_css( $scheme ); // WPCS: XSS OK. ?>
 	</script>
 	<?php
 }
-add_action( 'customize_controls_print_footer_scripts', 'owner_color_scheme_css_template' );
+add_action( 'customize_controls_print_footer_scripts', 'counter_color_scheme_css_template' );
 
 /**
  * Return an Underscore template for generating CSS for the panels.
@@ -691,11 +691,11 @@ add_action( 'customize_controls_print_footer_scripts', 'owner_color_scheme_css_t
  * The template generates the css dynamically for instant display in the
  * Customizer preview.
  */
-function owner_get_panel_spacings_css_template() {
+function counter_get_panel_spacings_css_template() {
 
 // Create CSS template strings.
 $spacings = array();
-for ( $i = 1; $i <= owner_get_panel_count(); $i++ ) {
+for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
 	$spacings[ $i ] = '{{ data.panel_spacing_' . $i . ' }}';
 }
 
@@ -725,17 +725,17 @@ CSS;
 endforeach;
 $css .= '}'; ?>
 
-<script type="text/html" id="tmpl-owner-panel-spacings">
+<script type="text/html" id="tmpl-counter-panel-spacings">
 	<?php echo $css; // WPCS: XSS OK. ?>
 </script><?php
 }
-add_action( 'customize_controls_print_footer_scripts', 'owner_get_panel_spacings_css_template' );
+add_action( 'customize_controls_print_footer_scripts', 'counter_get_panel_spacings_css_template' );
 
 /**
  * Adds inline CSS with custom CSS.
  */
-function owner_color_scheme_css() {
-	wp_add_inline_style( 'owner-style', owner_get_color_scheme_css( owner_get_color_scheme( 'actual' ) ) );
-	wp_add_inline_style( 'owner-style', owner_get_panel_spacings_css( owner_get_panel_spacings() ) );
+function counter_color_scheme_css() {
+	wp_add_inline_style( 'counter-style', counter_get_color_scheme_css( counter_get_color_scheme( 'actual' ) ) );
+	wp_add_inline_style( 'counter-style', counter_get_panel_spacings_css( counter_get_panel_spacings() ) );
 }
-add_action( 'wp_enqueue_scripts', 'owner_color_scheme_css', 11 );
+add_action( 'wp_enqueue_scripts', 'counter_color_scheme_css', 11 );

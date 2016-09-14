@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Owner
+ * @package Counter
  */
 
 ?>
@@ -12,13 +12,13 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php owner_post_thumbnail(); ?>
+	<?php counter_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'owner' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'counter' ),
 				'after'  => '</div>',
 			) );
 		?>

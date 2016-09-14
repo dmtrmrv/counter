@@ -4,7 +4,7 @@
  *
  * Template Name: Fullwidth
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>

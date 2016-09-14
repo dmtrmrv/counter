@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package Owner
+ * @package Counter
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<?php get_template_part( 'template-parts/content-single', get_post_type() ); ?>
 
-		<?php owner_post_navigation(); ?>
+		<?php counter_post_navigation(); ?>
 
 		<?php
 			if ( comments_open() || get_comments_number() ) :

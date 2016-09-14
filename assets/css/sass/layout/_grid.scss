@@ -1,10 +1,10 @@
 /* Grid */
 
-.owner-grid {
+.counter-grid {
 	@extend .clear;
 }
 
-.owner-grid-item {
+.counter-grid-item {
 	@include with-layout( $susy-static ) {
 		max-width: span( 6 );
 	}

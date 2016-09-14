@@ -1,4 +1,4 @@
-=== Owner ===
+=== Counter ===
 Contributors:      iamdmitrymayorov
 Requires at least: WordPress 4.1
 Tested up to:      WordPress 4.6
@@ -9,11 +9,11 @@ Tags:              blog, one-column, three-columns, right-sidebar, custom-menu, 
 
 == Description ==
 
-Owner is a minimal business theme for coffee shops, bakeries, barbershops, and other cool one-of-a-kind spots with proud owners. It features a flexible front page that displays up to ten panels that can display virtually any content. You can adjust panel heights, set background images, and change text and link colors using the Customizer without having to install any third-party plugins.
+Counter is a minimal business theme for coffee shops, bakeries, barbershops, and other cool one-of-a-kind spots with proud counters. It features a flexible front page that displays up to ten panels that can display virtually any content. You can adjust panel heights, set background images, and change text and link colors using the Customizer without having to install any third-party plugins.
 
 == Copyright ==
 
-Owner is distributed under the terms of the GNU GPLv2 or later
+Counter is distributed under the terms of the GNU GPLv2 or later
 
 == Bundled Resources ==
 
