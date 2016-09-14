@@ -18,7 +18,7 @@ function owner_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	// Rearrange controls.
-	$wp_customize->get_section( 'colors' )->panel = 'appearance';
+	// $wp_customize->get_section( 'colors' )->panel = 'appearance';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'frontpage';
 
 	// Rename Static Front Page Section.
@@ -26,10 +26,10 @@ function owner_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'static_front_page' )->description = false;
 
 	// Appearance panel.
-	$wp_customize->add_panel( 'appearance' , array(
-		'title'    => __( 'Appearance', 'owner' ),
-		'priority' => 30,
-	) );
+	// $wp_customize->add_panel( 'appearance' , array(
+	// 	'title'    => __( 'Appearance', 'owner' ),
+	// 	'priority' => 30,
+	// ) );
 
 	/**
 	 * Site Identity.
@@ -64,95 +64,95 @@ function owner_customize_register( $wp_customize ) {
 	 */
 
 	// Add color scheme setting and control.
-	$wp_customize->add_setting( 'color_scheme', array(
-		'default'           => 'default',
-		'sanitize_callback' => 'owner_sanitize_color_scheme',
-		'transport'         => 'postMessage',
-	) );
+	// $wp_customize->add_setting( 'color_scheme', array(
+	// 	'default'           => 'default',
+	// 	'sanitize_callback' => 'owner_sanitize_color_scheme',
+	// 	'transport'         => 'postMessage',
+	// ) );
 
-	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => __( 'Color Scheme', 'owner' ),
-		'section'  => 'colors',
-		'type'     => 'select',
-		'choices'  => owner_get_color_scheme_choices(),
-		'priority' => 0,
-	) );
+	// $wp_customize->add_control( 'color_scheme', array(
+	// 	'label'    => __( 'Color Scheme', 'owner' ),
+	// 	'section'  => 'colors',
+	// 	'type'     => 'select',
+	// 	'choices'  => owner_get_color_scheme_choices(),
+	// 	'priority' => 0,
+	// ) );
 
 	// Background color.
-	$wp_customize->add_setting( 'color_bg', array(
-		'default'           => $color_scheme[0],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'color_bg',
-			array(
-				'label'   => __( 'Background', 'owner' ),
-				'section' => 'colors',
-				'priority' => 80,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'color_bg', array(
+	// 	'default'           => $color_scheme[0],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'color_bg',
+	// 		array(
+	// 			'label'   => __( 'Background', 'owner' ),
+	// 			'section' => 'colors',
+	// 			'priority' => 80,
+	// 		)
+	// 	)
+	// );
 
 	// Accent Color.
-	$wp_customize->add_setting( 'color_accent', array(
-		'default'           => $color_scheme[1],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'color_accent',
-			array(
-				'label'   => __( 'Accent', 'owner' ),
-				'section' => 'colors',
-				'priority' => 100,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'color_accent', array(
+	// 	'default'           => $color_scheme[1],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'color_accent',
+	// 		array(
+	// 			'label'   => __( 'Accent', 'owner' ),
+	// 			'section' => 'colors',
+	// 			'priority' => 100,
+	// 		)
+	// 	)
+	// );
 
 	// Headings Color.
-	$wp_customize->add_setting( 'color_headings', array(
-		'default'           => $color_scheme[2],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
+	// $wp_customize->add_setting( 'color_headings', array(
+	// 	'default'           => $color_scheme[2],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
 
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'color_headings',
-			array(
-				'label'   => __( 'Headings', 'owner' ),
-				'section' => 'colors',
-				'priority' => 120,
-			)
-		)
-	);
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'color_headings',
+	// 		array(
+	// 			'label'   => __( 'Headings', 'owner' ),
+	// 			'section' => 'colors',
+	// 			'priority' => 120,
+	// 		)
+	// 	)
+	// );
 
 	// Text Color.
-	$wp_customize->add_setting( 'color_text', array(
-		'default'           => $color_scheme[3],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'color_text',
-			array(
-				'label'   => __( 'Text', 'owner' ),
-				'section' => 'colors',
-				'priority' => 140,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'color_text', array(
+	// 	'default'           => $color_scheme[3],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'color_text',
+	// 		array(
+	// 			'label'   => __( 'Text', 'owner' ),
+	// 			'section' => 'colors',
+	// 			'priority' => 140,
+	// 		)
+	// 	)
+	// );
 
 	/**
 	 * Front Page.
@@ -296,88 +296,88 @@ function owner_customize_register( $wp_customize ) {
 	) );
 
 	// Divider.
-	$wp_customize->add_control(
-		new Owner_Divider_Control(
-			$wp_customize,
-			'panel_layout_divider_' . $i,
-			array(
-				'section' => 'panel_' . $i,
-				'settings' => array(),
-			)
-		)
-	);
+	// $wp_customize->add_control(
+	// 	new Owner_Divider_Control(
+	// 		$wp_customize,
+	// 		'panel_layout_divider_' . $i,
+	// 		array(
+	// 			'section' => 'panel_' . $i,
+	// 			'settings' => array(),
+	// 		)
+	// 	)
+	// );
 
 	// Background color.
-	$wp_customize->add_setting( 'panel_color_bg_' . $i, array(
-		'default'           => $color_scheme[5][ $i ][0],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'panel_color_bg_' . $i,
-			array(
-				'label'   => __( 'Background Color', 'owner' ),
-				'section' => 'panel_' . $i,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'panel_color_bg_' . $i, array(
+	// 	'default'           => $color_scheme[5][ $i ][0],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'panel_color_bg_' . $i,
+	// 		array(
+	// 			'label'   => __( 'Background Color', 'owner' ),
+	// 			'section' => 'panel_' . $i,
+	// 		)
+	// 	)
+	// );
 
 	// Accent color.
-	$wp_customize->add_setting( 'panel_color_accent_' . $i, array(
-		'default'           => $color_scheme[5][ $i ][1],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
+	// $wp_customize->add_setting( 'panel_color_accent_' . $i, array(
+	// 	'default'           => $color_scheme[5][ $i ][1],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
 
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'panel_color_accent_' . $i,
-			array(
-				'label'   => __( 'Accent Color', 'owner' ),
-				'section' => 'panel_' . $i,
-			)
-		)
-	);
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'panel_color_accent_' . $i,
+	// 		array(
+	// 			'label'   => __( 'Accent Color', 'owner' ),
+	// 			'section' => 'panel_' . $i,
+	// 		)
+	// 	)
+	// );
 
 	// Headings color.
-	$wp_customize->add_setting( 'panel_color_headings_' . $i, array(
-		'default'           => $color_scheme[5][ $i ][2],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'panel_color_headings_' . $i,
-			array(
-				'label'   => __( 'Headings Color', 'owner' ),
-				'section' => 'panel_' . $i,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'panel_color_headings_' . $i, array(
+	// 	'default'           => $color_scheme[5][ $i ][2],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'panel_color_headings_' . $i,
+	// 		array(
+	// 			'label'   => __( 'Headings Color', 'owner' ),
+	// 			'section' => 'panel_' . $i,
+	// 		)
+	// 	)
+	// );
 
 	// Text color.
-	$wp_customize->add_setting( 'panel_color_text_' . $i, array(
-		'default'           => $color_scheme[5][ $i ][3],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'panel_color_text_' . $i,
-			array(
-				'label'   => __( 'Text Color', 'owner' ),
-				'section' => 'panel_' . $i,
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'panel_color_text_' . $i, array(
+	// 	'default'           => $color_scheme[5][ $i ][3],
+	// 	'sanitize_callback' => 'sanitize_hex_color',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Color_Control(
+	// 		$wp_customize,
+	// 		'panel_color_text_' . $i,
+	// 		array(
+	// 			'label'   => __( 'Text Color', 'owner' ),
+	// 			'section' => 'panel_' . $i,
+	// 		)
+	// 	)
+	// );
 
 	// Divider.
 	$wp_customize->add_control(
@@ -524,72 +524,72 @@ function owner_customize_register( $wp_customize ) {
 	endfor;
 
 	// Blog & Archive.
-	$wp_customize->add_section( 'blog_layout', array(
-		'title' => __( 'Blog Layout', 'owner' ),
-		'panel' => 'appearance',
-	) );
+	// $wp_customize->add_section( 'blog_layout', array(
+	// 	'title' => __( 'Blog Layout', 'owner' ),
+	// 	'panel' => 'appearance',
+	// ) );
 
 	// Layout.
-	$wp_customize->add_setting( 'blog_layout', array(
-		'default'           => 'default',
-		'sanitize_callback' => 'owner_sanitize_blog_layout',
-	) );
+	// $wp_customize->add_setting( 'blog_layout', array(
+	// 	'default'           => 'default',
+	// 	'sanitize_callback' => 'owner_sanitize_blog_layout',
+	// ) );
 
-	$wp_customize->add_control( 'blog_layout', array(
-		'label'   => __( 'Layout', 'owner' ),
-		'section' => 'blog_layout',
-		'type'    => 'select',
-		'choices' => array(
-			'default' => __( 'Default', 'owner' ),
-			'grid'    => __( 'Grid', 'owner' ),
-		),
-	) );
+	// $wp_customize->add_control( 'blog_layout', array(
+	// 	'label'   => __( 'Layout', 'owner' ),
+	// 	'section' => 'blog_layout',
+	// 	'type'    => 'select',
+	// 	'choices' => array(
+	// 		'default' => __( 'Default', 'owner' ),
+	// 		'grid'    => __( 'Grid', 'owner' ),
+	// 	),
+	// ) );
 
 	// Entry meta items.
-	$wp_customize->add_setting( 'entry_meta_items', array(
-		'default'           => array( 'cat-links', 'posted-on', 'byline', 'comments-link' ),
-		'sanitize_callback' => 'owner_sanitize_meta_items',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize -> add_control(
-		new Owner_Multicheck_Control(
-			$wp_customize,
-			'entry_meta_items',
-			array(
-				'label'   => __( 'Meta', 'owner' ),
-				'section' => 'blog_layout',
-				'type'    => 'multicheck',
-				'choices' => array(
-					'cat-links'     => __( 'Category', 'owner' ),
-					'posted-on'     => __( 'Date', 'owner' ),
-					'byline'        => __( 'Author', 'owner' ),
-					'comments-link' => __( 'Comments', 'owner' ),
-				),
-			)
-		)
-	);
+	// $wp_customize->add_setting( 'entry_meta_items', array(
+	// 	'default'           => array( 'cat-links', 'posted-on', 'byline', 'comments-link' ),
+	// 	'sanitize_callback' => 'owner_sanitize_meta_items',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize -> add_control(
+	// 	new Owner_Multicheck_Control(
+	// 		$wp_customize,
+	// 		'entry_meta_items',
+	// 		array(
+	// 			'label'   => __( 'Meta', 'owner' ),
+	// 			'section' => 'blog_layout',
+	// 			'type'    => 'multicheck',
+	// 			'choices' => array(
+	// 				'cat-links'     => __( 'Category', 'owner' ),
+	// 				'posted-on'     => __( 'Date', 'owner' ),
+	// 				'byline'        => __( 'Author', 'owner' ),
+	// 				'comments-link' => __( 'Comments', 'owner' ),
+	// 			),
+	// 		)
+	// 	)
+	// );
 
 	// Footer Text.
-	$wp_customize->add_section( 'footer' , array(
-		'title' => __( 'Footer', 'owner' ),
-	) );
-
-	$wp_customize->add_setting( 'footer_text', array(
-		'default' => '',
-		'sanitize_callback' => 'owner_sanitize_footer_text',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( 'footer_text', array(
-		'label'       => __( 'Footer Text', 'owner' ),
-		'section'     => 'footer',
-		'type'        => 'textarea',
-		'description' => __( 'Use [year] shortcode to display current year.', 'owner' ),
-		'input_attrs' => array(
-			'placeholder' => 'Jeez!',
-		),
-	) );
+	// $wp_customize->add_section( 'footer' , array(
+	// 	'title' => __( 'Footer', 'owner' ),
+	// ) );
+	//
+	// $wp_customize->add_setting( 'footer_text', array(
+	// 	'default' => '',
+	// 	'sanitize_callback' => 'owner_sanitize_footer_text',
+	// 	'transport'         => 'postMessage',
+	// ) );
+	//
+	// $wp_customize->add_control( 'footer_text', array(
+	// 	'label'       => __( 'Footer Text', 'owner' ),
+	// 	'section'     => 'footer',
+	// 	'type'        => 'textarea',
+	// 	'description' => __( 'Use [year] shortcode to display current year.', 'owner' ),
+	// 	'input_attrs' => array(
+	// 		'placeholder' => 'Jeez!',
+	// 	),
+	// ) );
 }
 add_action( 'customize_register', 'owner_customize_register' );
 

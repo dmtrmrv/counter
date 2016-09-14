@@ -45,7 +45,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:123 inc/customizer.php:575
+#: functions.php:123
 msgid "Footer"
 msgstr ""
 
@@ -65,36 +65,12 @@ msgstr ""
 msgid "Choose Front Page"
 msgstr ""
 
-#: inc/customizer.php:30
-msgid "Appearance"
-msgstr ""
-
 #: inc/customizer.php:45
 msgid "Display Title"
 msgstr ""
 
 #: inc/customizer.php:57
 msgid "Display Tagline"
-msgstr ""
-
-#: inc/customizer.php:74
-msgid "Color Scheme"
-msgstr ""
-
-#: inc/customizer.php:93
-msgid "Background"
-msgstr ""
-
-#: inc/customizer.php:112
-msgid "Accent"
-msgstr ""
-
-#: inc/customizer.php:131
-msgid "Headings"
-msgstr ""
-
-#: inc/customizer.php:150
-msgid "Text"
 msgstr ""
 
 #: inc/customizer.php:163
@@ -117,7 +93,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:225 inc/customizer.php:539
+#: inc/customizer.php:225
 msgid "Layout"
 msgstr ""
 
@@ -147,22 +123,6 @@ msgstr ""
 
 #: inc/customizer.php:288
 msgid "Panel Spacing"
-msgstr ""
-
-#: inc/customizer.php:322
-msgid "Background Color"
-msgstr ""
-
-#: inc/customizer.php:340
-msgid "Accent Color"
-msgstr ""
-
-#: inc/customizer.php:358
-msgid "Headings Color"
-msgstr ""
-
-#: inc/customizer.php:376
-msgid "Text Color"
 msgstr ""
 
 #: inc/customizer.php:404
@@ -263,46 +223,6 @@ msgstr ""
 
 #: inc/customizer.php:514
 msgid "Background Opacity"
-msgstr ""
-
-#: inc/customizer.php:528
-msgid "Blog Layout"
-msgstr ""
-
-#: inc/customizer.php:543
-msgid "Default"
-msgstr ""
-
-#: inc/customizer.php:544
-msgid "Grid"
-msgstr ""
-
-#: inc/customizer.php:560
-msgid "Meta"
-msgstr ""
-
-#: inc/customizer.php:564
-msgid "Category"
-msgstr ""
-
-#: inc/customizer.php:565
-msgid "Date"
-msgstr ""
-
-#: inc/customizer.php:566
-msgid "Author"
-msgstr ""
-
-#: inc/customizer.php:567
-msgid "Comments"
-msgstr ""
-
-#: inc/customizer.php:585
-msgid "Footer Text"
-msgstr ""
-
-#: inc/customizer.php:588
-msgid "Use [year] shortcode to display current year."
 msgstr ""
 
 #: inc/customizer.php:603 inc/template-tags.php:247
