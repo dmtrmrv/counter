@@ -1,7 +1,7 @@
 {
   "name": "owner",
   "fullname": "Owner",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",

@@ -28,9 +28,5 @@ URL: https://unsplash.com/@impatrickt?photo=f37RWPdmon4
 
 ## Changelog
 
-### v0.1.1 (September 12, 2016)
-Fixed: Enqueue Lato Font  
-Fixed: README.md line breaks
-
-### v0.1.0 (August 31, 2016)
+### v1.0.0 (September 14, 2016)
 Initial release

@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'OWNER_VERSION', '0.1.1' );
+define( 'OWNER_VERSION', '1.0.0' );
 
 /**
  * Sets the content width in pixels.
