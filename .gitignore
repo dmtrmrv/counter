@@ -48,9 +48,9 @@ node_modules
 npm-debug.log
 
 # Fontello Temp
-fonts/fontello/css/animation.css
-fonts/fontello/css/fontello-*.css
-fonts/fontello/demo.html
-fonts/fontello/config.json
-fonts/fontello/README.txt
-fonts/*.zip
+assets/fonts/fontello/css/animation.css
+assets/fonts/fontello/css/fontello-*.css
+assets/fonts/fontello/demo.html
+assets/fonts/fontello/config.json
+assets/fonts/fontello/README.txt
+assets/fonts/*.zip
