@@ -309,34 +309,6 @@ function counter_wpcf7_ajax_loader() {
 }
 add_filter( 'wpcf7_ajax_loader', 'counter_wpcf7_ajax_loader' );
 
-/**
- * Adds an admin notice if theme license is not active.
- */
-if ( is_admin() && ! counter_is_active_license() ) {
-	add_action( 'admin_notices', 'counter_license_admin_notice', 99 );
-}
-
-/**
- * Checks if theme license is active.
- */
-function counter_is_active_license() {
-	$status = get_option( 'counter_license_key_status' );
-	if ( ! $status || 'valid' != $status ) {
-		return false;
-	}
-	return true;
-}
-
-/**
- * Displays an admin notice about inactive license.
- */
-function counter_license_admin_notice() {
-	$class   = esc_attr( 'notice notice-warning is-dismissible tp-license-notification' );
-	$message = sprintf( esc_html__( 'Thanks for choosing %s! Please %sactivate%s the license key to get access to theme updates and support.', 'counter' ), 'Counter', '<a href="' . esc_url( admin_url( 'themes.php?page=counter-getting-started' ) ) . '">', '</a>' );
-
-	printf( '<div class="%s"><p>%s</p></div>', $class, $message ); // WPCS: XSS OK.
-}
-
 if ( is_admin() && isset( $_GET['activated'] ) && 'themes.php' == $pagenow ) {
 	wp_redirect( admin_url( 'admin.php?page=counter-getting-started' ) );
 	exit;
