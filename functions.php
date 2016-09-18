@@ -149,6 +149,10 @@ function counter_fonts_url() {
 	 * supported by Lato, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'counter' ) ) {
+		$fonts[] = 'Open Sans:400,400i,700,700i';
+	}
+
 	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'counter' ) ) {
 		$fonts[] = 'Lato:300,400,700,300italic,400italic,700italic';
 	}
