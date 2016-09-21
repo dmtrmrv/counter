@@ -33,12 +33,11 @@ Credit: Thierry Koblentz (http://www.alistapart.com/articles/creating-intrinsic-
 License: WTFPL (http://sam.zoy.org/wtfpl/)
 URL: http://fitvidsjs.com/
 
-== Images used in the screenshot ==
+== Image used in the screenshot ==
 
-Image of a Coffee Shop
-Author: Patrick Tomasso
+Author: Tim Wright
 License: CC0 1.0
-URL: https://unsplash.com/@impatrickt?photo=f37RWPdmon4
+URL: https://unsplash.com/@timdwright?photo=4_DHVx6OgeM
 
 == Changelog ==
 

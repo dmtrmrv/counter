@@ -520,6 +520,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: functions.php:152
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:156
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
