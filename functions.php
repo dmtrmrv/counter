@@ -145,8 +145,8 @@ function counter_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/**
-	 * Translators: If there are characters in your languagethat are not
-	 * supported by Lato, translate this to 'off'.
+	 * Translators: If there are characters in your language that are not
+	 * supported by Lato or Open Sans, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'counter' ) ) {
@@ -182,7 +182,6 @@ add_action( 'wp_head', 'counter_javascript_detection', 0 );
  * Enqueue scripts and styles.
  */
 function counter_scripts() {
-
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style(
 		'counter-fonts',
