@@ -45,7 +45,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:123 inc/customizer.php:409
 msgid "Footer"
 msgstr ""
 
@@ -65,6 +65,10 @@ msgstr ""
 msgid "Choose Front Page"
 msgstr ""
 
+#: inc/customizer.php:30
+msgid "Appearance"
+msgstr ""
+
 #: inc/customizer.php:45
 msgid "Display Title"
 msgstr ""
@@ -73,159 +77,191 @@ msgstr ""
 msgid "Display Tagline"
 msgstr ""
 
-#: inc/customizer.php:163
+#: inc/customizer.php:70 inc/customizer.php:236
+msgid "Custom Colors"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid ""
+"Upgrade Counter and set custom colors for background, links, text, and "
+"headings."
+msgstr ""
+
+#: inc/customizer.php:84
 msgid "Static Front Page"
 msgstr ""
 
-#: inc/customizer.php:168 inc/customizer.php:178
+#: inc/customizer.php:89 inc/customizer.php:99
 msgid "Navigate to Front Page"
 msgstr ""
 
-#: inc/customizer.php:181
+#: inc/customizer.php:102
 msgid "To edit the front page navigate to it in the preview screen."
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:110
 msgid "Panel "
 msgstr ""
 
-#: inc/customizer.php:201
+#: inc/customizer.php:122
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:146
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:239
+#: inc/customizer.php:160
 msgid "Display Title?"
 msgstr ""
 
-#: inc/customizer.php:252
+#: inc/customizer.php:173
 msgid "Title Alignment"
 msgstr ""
 
-#: inc/customizer.php:256 inc/customizer.php:274 inc/extras.php:137
+#: inc/customizer.php:177 inc/customizer.php:195 inc/extras.php:137
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:257 inc/customizer.php:275
+#: inc/customizer.php:178 inc/customizer.php:196
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:258 inc/customizer.php:276 inc/extras.php:138
+#: inc/customizer.php:179 inc/customizer.php:197 inc/extras.php:138
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:270 inc/widget-options.php:24
+#: inc/customizer.php:191 inc/widget-options.php:24
 msgid "Text Alignment"
 msgstr ""
 
-#: inc/customizer.php:288
+#: inc/customizer.php:209
 msgid "Panel Spacing"
 msgstr ""
 
-#: inc/customizer.php:404
+#: inc/customizer.php:239
+msgid ""
+"Upgrade Counter to set background, links, text, and heading colors for each "
+"panel."
+msgstr ""
+
+#: inc/customizer.php:266
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:418
+#: inc/customizer.php:280
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:284
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer.php:423
+#: inc/customizer.php:285
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:424
+#: inc/customizer.php:286
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:425
+#: inc/customizer.php:287
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:437
+#: inc/customizer.php:299
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:441
+#: inc/customizer.php:303
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:442
+#: inc/customizer.php:304
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:443
+#: inc/customizer.php:305
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:444
+#: inc/customizer.php:306
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:445
+#: inc/customizer.php:307
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer.php:446
+#: inc/customizer.php:308
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:447
+#: inc/customizer.php:309
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:448
+#: inc/customizer.php:310
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:449
+#: inc/customizer.php:311
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:461
+#: inc/customizer.php:323
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer.php:465
+#: inc/customizer.php:327
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer.php:466
+#: inc/customizer.php:328
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:478
+#: inc/customizer.php:340
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:344
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:483
+#: inc/customizer.php:345
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer.php:484
+#: inc/customizer.php:346
 msgid "Percent"
 msgstr ""
 
-#: inc/customizer.php:496
+#: inc/customizer.php:358
 msgid "Background Size %"
 msgstr ""
 
-#: inc/customizer.php:514
+#: inc/customizer.php:376
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:603 inc/template-tags.php:247
+#: inc/customizer.php:390
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/customizer.php:399 inc/customizer.php:417
+msgid "Blog Layout & Post Meta"
+msgstr ""
+
+#: inc/customizer.php:402
+msgid "Upgrade Counter to set three-column blog layout and control post meta."
+msgstr ""
+
+#: inc/customizer.php:420
+msgid "Upgrade Counter to set custom footer text."
+msgstr ""
+
+#: inc/customizer.php:434 inc/template-tags.php:247
 msgid "%1$s theme by %2$s"
 msgstr ""
 

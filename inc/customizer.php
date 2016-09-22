@@ -18,7 +18,7 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	// Rearrange controls.
-	// $wp_customize->get_section( 'colors' )->panel = 'appearance';
+	$wp_customize->get_section( 'colors' )->panel = 'appearance';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'frontpage';
 
 	// Rename Static Front Page Section.
@@ -26,10 +26,10 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'static_front_page' )->description = false;
 
 	// Appearance panel.
-	// $wp_customize->add_panel( 'appearance' , array(
-	// 	'title'    => __( 'Appearance', 'counter' ),
-	// 	'priority' => 30,
-	// ) );
+	$wp_customize->add_panel( 'appearance' , array(
+		'title'    => __( 'Appearance', 'counter' ),
+		'priority' => 30,
+	) );
 
 	/**
 	 * Site Identity.
@@ -62,97 +62,18 @@ function counter_customize_register( $wp_customize ) {
 	/**
 	 * Colors.
 	 */
-
-	// Add color scheme setting and control.
-	// $wp_customize->add_setting( 'color_scheme', array(
-	// 	'default'           => 'default',
-	// 	'sanitize_callback' => 'counter_sanitize_color_scheme',
-	// 	'transport'         => 'postMessage',
-	// ) );
-
-	// $wp_customize->add_control( 'color_scheme', array(
-	// 	'label'    => __( 'Color Scheme', 'counter' ),
-	// 	'section'  => 'colors',
-	// 	'type'     => 'select',
-	// 	'choices'  => counter_get_color_scheme_choices(),
-	// 	'priority' => 0,
-	// ) );
-
-	// Background color.
-	// $wp_customize->add_setting( 'color_bg', array(
-	// 	'default'           => $color_scheme[0],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'color_bg',
-	// 		array(
-	// 			'label'   => __( 'Background', 'counter' ),
-	// 			'section' => 'colors',
-	// 			'priority' => 80,
-	// 		)
-	// 	)
-	// );
-
-	// Accent Color.
-	// $wp_customize->add_setting( 'color_accent', array(
-	// 	'default'           => $color_scheme[1],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'color_accent',
-	// 		array(
-	// 			'label'   => __( 'Accent', 'counter' ),
-	// 			'section' => 'colors',
-	// 			'priority' => 100,
-	// 		)
-	// 	)
-	// );
-
-	// Headings Color.
-	// $wp_customize->add_setting( 'color_headings', array(
-	// 	'default'           => $color_scheme[2],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'color_headings',
-	// 		array(
-	// 			'label'   => __( 'Headings', 'counter' ),
-	// 			'section' => 'colors',
-	// 			'priority' => 120,
-	// 		)
-	// 	)
-	// );
-
-	// Text Color.
-	// $wp_customize->add_setting( 'color_text', array(
-	// 	'default'           => $color_scheme[3],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'color_text',
-	// 		array(
-	// 			'label'   => __( 'Text', 'counter' ),
-	// 			'section' => 'colors',
-	// 			'priority' => 140,
-	// 		)
-	// 	)
-	// );
+	$wp_customize -> add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'color_upgrade',
+			array(
+				'label'       => __( 'Custom Colors', 'counter' ),
+				'section'     => 'colors',
+				'settings'    => array(),
+				'description' => __( 'Upgrade Counter and set custom colors for background, links, text, and headings.', 'counter' ),
+			)
+		)
+	);
 
 	/**
 	 * Front Page.
@@ -296,88 +217,29 @@ function counter_customize_register( $wp_customize ) {
 	) );
 
 	// Divider.
-	// $wp_customize->add_control(
-	// 	new Counter_Divider_Control(
-	// 		$wp_customize,
-	// 		'panel_layout_divider_' . $i,
-	// 		array(
-	// 			'section' => 'panel_' . $i,
-	// 			'settings' => array(),
-	// 		)
-	// 	)
-	// );
+	$wp_customize->add_control(
+		new Counter_Divider_Control(
+			$wp_customize,
+			'panel_layout_divider_' . $i,
+			array(
+				'section' => 'panel_' . $i,
+				'settings' => array(),
+			)
+		)
+	);
 
-	// Background color.
-	// $wp_customize->add_setting( 'panel_color_bg_' . $i, array(
-	// 	'default'           => $color_scheme[5][ $i ][0],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'panel_color_bg_' . $i,
-	// 		array(
-	// 			'label'   => __( 'Background Color', 'counter' ),
-	// 			'section' => 'panel_' . $i,
-	// 		)
-	// 	)
-	// );
-
-	// Accent color.
-	// $wp_customize->add_setting( 'panel_color_accent_' . $i, array(
-	// 	'default'           => $color_scheme[5][ $i ][1],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'panel_color_accent_' . $i,
-	// 		array(
-	// 			'label'   => __( 'Accent Color', 'counter' ),
-	// 			'section' => 'panel_' . $i,
-	// 		)
-	// 	)
-	// );
-
-	// Headings color.
-	// $wp_customize->add_setting( 'panel_color_headings_' . $i, array(
-	// 	'default'           => $color_scheme[5][ $i ][2],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'panel_color_headings_' . $i,
-	// 		array(
-	// 			'label'   => __( 'Headings Color', 'counter' ),
-	// 			'section' => 'panel_' . $i,
-	// 		)
-	// 	)
-	// );
-
-	// Text color.
-	// $wp_customize->add_setting( 'panel_color_text_' . $i, array(
-	// 	'default'           => $color_scheme[5][ $i ][3],
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control(
-	// 	new WP_Customize_Color_Control(
-	// 		$wp_customize,
-	// 		'panel_color_text_' . $i,
-	// 		array(
-	// 			'label'   => __( 'Text Color', 'counter' ),
-	// 			'section' => 'panel_' . $i,
-	// 		)
-	// 	)
-	// );
+	$wp_customize -> add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'panel_color_upgrade_' . $i,
+			array(
+				'label'       => __( 'Custom Colors', 'counter' ),
+				'section'     => 'panel_' . $i,
+				'settings'    => array(),
+				'description' => __( 'Upgrade Counter to set background, links, text, and heading colors for each panel.', 'counter' ),
+			)
+		)
+	);
 
 	// Divider.
 	$wp_customize->add_control(
@@ -524,72 +386,41 @@ function counter_customize_register( $wp_customize ) {
 	endfor;
 
 	// Blog & Archive.
-	// $wp_customize->add_section( 'blog_layout', array(
-	// 	'title' => __( 'Blog Layout', 'counter' ),
-	// 	'panel' => 'appearance',
-	// ) );
+	$wp_customize->add_section( 'blog_layout', array(
+		'title' => __( 'Blog Layout', 'counter' ),
+		'panel' => 'appearance',
+	) );
 
-	// Layout.
-	// $wp_customize->add_setting( 'blog_layout', array(
-	// 	'default'           => 'default',
-	// 	'sanitize_callback' => 'counter_sanitize_blog_layout',
-	// ) );
-
-	// $wp_customize->add_control( 'blog_layout', array(
-	// 	'label'   => __( 'Layout', 'counter' ),
-	// 	'section' => 'blog_layout',
-	// 	'type'    => 'select',
-	// 	'choices' => array(
-	// 		'default' => __( 'Default', 'counter' ),
-	// 		'grid'    => __( 'Grid', 'counter' ),
-	// 	),
-	// ) );
-
-	// Entry meta items.
-	// $wp_customize->add_setting( 'entry_meta_items', array(
-	// 	'default'           => array( 'cat-links', 'posted-on', 'byline', 'comments-link' ),
-	// 	'sanitize_callback' => 'counter_sanitize_meta_items',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize -> add_control(
-	// 	new Counter_Multicheck_Control(
-	// 		$wp_customize,
-	// 		'entry_meta_items',
-	// 		array(
-	// 			'label'   => __( 'Meta', 'counter' ),
-	// 			'section' => 'blog_layout',
-	// 			'type'    => 'multicheck',
-	// 			'choices' => array(
-	// 				'cat-links'     => __( 'Category', 'counter' ),
-	// 				'posted-on'     => __( 'Date', 'counter' ),
-	// 				'byline'        => __( 'Author', 'counter' ),
-	// 				'comments-link' => __( 'Comments', 'counter' ),
-	// 			),
-	// 		)
-	// 	)
-	// );
+	$wp_customize -> add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'blog_layout_upgrade',
+			array(
+				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
+				'section'     => 'blog_layout',
+				'settings'    => array(),
+				'description' => __( 'Upgrade Counter to set three-column blog layout and control post meta.', 'counter' ),
+			)
+		)
+	);
 
 	// Footer Text.
-	// $wp_customize->add_section( 'footer' , array(
-	// 	'title' => __( 'Footer', 'counter' ),
-	// ) );
-	//
-	// $wp_customize->add_setting( 'footer_text', array(
-	// 	'default' => '',
-	// 	'sanitize_callback' => 'counter_sanitize_footer_text',
-	// 	'transport'         => 'postMessage',
-	// ) );
-	//
-	// $wp_customize->add_control( 'footer_text', array(
-	// 	'label'       => __( 'Footer Text', 'counter' ),
-	// 	'section'     => 'footer',
-	// 	'type'        => 'textarea',
-	// 	'description' => __( 'Use [year] shortcode to display current year.', 'counter' ),
-	// 	'input_attrs' => array(
-	// 		'placeholder' => 'Jeez!',
-	// 	),
-	// ) );
+	$wp_customize->add_section( 'footer' , array(
+		'title' => __( 'Footer', 'counter' ),
+	) );
+
+	$wp_customize -> add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'footer_text_upgrade',
+			array(
+				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
+				'section'     => 'footer',
+				'settings'    => array(),
+				'description' => __( 'Upgrade Counter to set custom footer text.', 'counter' ),
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'counter_customize_register' );
 
@@ -655,7 +486,7 @@ function counter_customizer_scripts() {
 	wp_localize_script( 'counter-customizer-controls-panel-spacings', 'pnlCountSpacings', array( counter_get_panel_count() ) );
 
 	wp_enqueue_script( 'counter-customizer-controls' );
-	wp_enqueue_script( 'counter-customizer-controls-color' );
+	// wp_enqueue_script( 'counter-customizer-controls-color' );
 	wp_enqueue_script( 'counter-customizer-controls-panel-spacings' );
 
 	// Custom CSS for the Customizer controls.
