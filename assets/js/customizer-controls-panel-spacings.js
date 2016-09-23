@@ -1,5 +1,5 @@
 /**
- * Theme Customizer color controls.
+ * Update panel spacings without reloading the Customizer
  */
 
 ( function( api, $ ) {

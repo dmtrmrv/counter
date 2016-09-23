@@ -459,7 +459,6 @@ add_action( 'customize_preview_init', 'counter_customize_preview_js' );
  * Enqueue custom scripts for customizer controls.
  */
 function counter_customizer_scripts() {
-
 	// Custom JavaScript for the Customizer controls.
 	wp_register_script(
 		'counter-customizer-controls',

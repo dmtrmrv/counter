@@ -22,84 +22,17 @@
 		} );
 	} );
 
-	// Footer text.
-	api( 'footer_text', function( value ) {
-		value.bind( function( to ) {
-			var date = new Date(),
-				year = date.getFullYear();
-			to = to.replace( '[year]', year );
-			to = !to ? defaultFooterMsg[0] : to;
-			$( '.site-info' ).text('').append( to );
-		} );
-	} );
-
-	// Check of we already have inline styles.
-	var $styleColor  = $( '#counter-style-color-inline-css' ),
-		$stylePanels = $( '#counter-style-panels-inline-css' );
-
-	if ( ! $styleColor.length ) {
-		$styleColor = $( 'head' ).append( '<style type="text/css" id="counter-style-color-inline-css" />' ).find( '#counter-style-color-inline-css' );
-	}
+	// Check if we already have inline styles.
+	var	$stylePanels = $( '#counter-style-panels-inline-css' );
 
 	if ( ! $stylePanels.length ) {
 		$stylePanels = $( 'head' ).append( '<style type="text/css" id="counter-style-panels-inline-css" />' ).find( '#counter-style-panels-inline-css' );
 	}
 
-	// Color Scheme CSS.
-	api.bind( 'preview-ready', function() {
-		api.preview.bind( 'update-color-scheme-css', function( css ) {
-			$styleColor.html( css );
-		} );
-	} );
-
 	// Panel spacings CSS.
 	api.bind( 'preview-ready', function() {
 		api.preview.bind( 'update-panel-spacings-css', function( css ) {
 			$stylePanels.html( css );
-		} );
-	} );
-
-	/**
-	 * Updates entry meta items.
-	 *
-	 * @param  {string} to Comma-separated list of entry meta items.
-	 */
-	function counterRefreshPostMeta( to ) {
-		if ( '' !== to ) {
-			list = to.split( ',' );
-			$( '.entry-meta' ).each( function() {
-				$( this ).show();
-				$( this ).find( '.entry-meta-item' ).each( function() {
-					$( this ).removeClass( 'last' );
-					$( this ).toggle( -1 !== list.indexOf( this.classList[1] ) );
-				} );
-				$( this ).find( '.entry-meta-item:visible' ).last().addClass( 'last' );
-			} );
-		} else {
-			$( '.entry-meta' ).hide();
-		}
-	}
-
-	// Update entry meta items on load.
-	api.bind( 'ready', _.defer( function() {
-		if ( api( 'entry_meta_items' ) ) {
-			// Get current value of entry meta items.
-			var items = api( 'entry_meta_items' ).get().join();
-
-			// Update entry meta on page load.
-			counterRefreshPostMeta( items );
-
-			// Also update when Jetpack loads next set of posts.
-			$( document.body ).on( 'post-load', function() {
-				counterRefreshPostMeta( items );
-			} );
-		}
-	} ) );
-
-	// Update entry meta items on option change.
-	api( 'entry_meta_items', function( value ) {
-		value.bind( function( to ) {
-			counterRefreshPostMeta( to );
 		} );
 	} );
 
