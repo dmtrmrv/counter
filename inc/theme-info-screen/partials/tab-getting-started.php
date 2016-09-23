@@ -11,7 +11,7 @@
 
 <h2 class="tab-heading"><?php esc_html_e( 'Getting Started', 'counter' ); ?></h2>
 
-<p><?php esc_html_e( 'These manuals will help you get started with the Counter theme quickly. Make sure to read these guides carefully to get the idea of how the theme works and what it is capable of.', 'counter' ); ?></p>
+<p><?php esc_html_e( 'These manuals will help you get started with the Counter theme quickly.', 'counter' ); ?></p>
 
 <?php
 	$tp_manuals = array(

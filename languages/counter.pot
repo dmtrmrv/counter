@@ -367,10 +367,7 @@ msgid "Getting Started"
 msgstr ""
 
 #: inc/theme-info-screen/partials/tab-getting-started.php:14
-msgid ""
-"These manuals will help you get started with the Counter theme quickly. "
-"Make sure to read these guides carefully to get the idea of how the theme "
-"works and what it is capable of."
+msgid "These manuals will help you get started with the Counter theme quickly."
 msgstr ""
 
 #: inc/theme-info-screen/partials/tab-getting-started.php:19
