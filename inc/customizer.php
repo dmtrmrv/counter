@@ -70,7 +70,9 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( 'Custom Colors', 'counter' ),
 				'section'     => 'colors',
 				'settings'    => array(),
-				'description' => __( 'Upgrade Counter and set custom colors for background, links, text, and headings.', 'counter' ),
+				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_text'   => __( 'Learn More', 'counter' ),
+				'description' => __( 'Upgrade Counter to set background, text, links, and headings colors', 'counter' ),
 			)
 		)
 	);
@@ -233,10 +235,12 @@ function counter_customize_register( $wp_customize ) {
 			$wp_customize,
 			'panel_color_upgrade_' . $i,
 			array(
-				'label'       => __( 'Custom Colors', 'counter' ),
+				'label'       => __( 'Custom Panel Colors', 'counter' ),
 				'section'     => 'panel_' . $i,
 				'settings'    => array(),
-				'description' => __( 'Upgrade Counter to set background, links, text, and heading colors for each panel.', 'counter' ),
+				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_text'   => __( 'Learn More', 'counter' ),
+				'description' => __( 'Upgrade Counter to set background, text, links, and heading colors for each panel.', 'counter' ),
 			)
 		)
 	);
@@ -399,6 +403,8 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
 				'section'     => 'blog_layout',
 				'settings'    => array(),
+				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_text'   => __( 'Learn More', 'counter' ),
 				'description' => __( 'Upgrade Counter to set three-column blog layout and control post meta.', 'counter' ),
 			)
 		)
@@ -414,8 +420,10 @@ function counter_customize_register( $wp_customize ) {
 			$wp_customize,
 			'footer_text_upgrade',
 			array(
-				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
+				'label'       => __( 'Custom Footer Text', 'counter' ),
 				'section'     => 'footer',
+				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_text'   => __( 'Learn More', 'counter' ),
 				'settings'    => array(),
 				'description' => __( 'Upgrade Counter to set custom footer text.', 'counter' ),
 			)

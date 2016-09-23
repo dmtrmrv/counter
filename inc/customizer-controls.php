@@ -12,65 +12,6 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 /**
  * Displays custom message with a call to action link.
  */
-class Counter_Panel_Number_Control extends WP_Customize_Control {
-
-	/**
-	 * Button attributes.
-	 *
-	 * @access public
-	 * @var array
-	 */
-	public $button_attrs = array();
-
-	/**
-	 * Render the custom attributes for the control's link element.
-	 *
-	 * Codesniffer picks the $attr as an XSS issue. Even though the core
-	 * input_attrs() don't escape it, I guess wrapping it with esc_attr()
-	 * won't hurt.
-	 *
-	 * @since 4.0.0
-	 * @access public
-	 */
-	public function button_attrs() {
-		foreach ( $this->button_attrs as $attr => $value ) {
-			echo esc_attr( $attr ) . '="' . esc_attr( $value ) . '" ';
-		}
-	}
-
-	/**
-	 * Render the content.
-	 */
-	public function render_content() {
-
-		// Title.
-		if ( isset( $this->label ) ) {
-			printf(
-				'<span class="customize-control-title">%s</span>',
-				esc_html( $this->label )
-			);
-		}
-
-		// Display input and button within a paragraph. ?>
-		<p class='customize-control-paragraph'>
-			<input <?php $this->input_attrs(); ?> value='<?php echo esc_attr( $this->value() ); ?>' <?php $this->link(); ?> />
-			<input <?php $this->button_attrs(); ?> />
-		</p> <?php
-
-		// Description.
-		if ( isset( $this->description ) ) {
-			printf(
-				'<p class="customize-control-paragraph">%s</p>',
-				wp_kses_post( $this->description )
-			);
-		}
-
-	}
-}
-
-/**
- * Displays custom message with a call to action link.
- */
 class Counter_Message_Control extends WP_Customize_Control {
 
 	/**
@@ -82,12 +23,28 @@ class Counter_Message_Control extends WP_Customize_Control {
 	public $type = 'message';
 
 	/**
+	 * Link URL.
+	 *
+	 * @access public
+	 * @var string
+	 */
+	public $link_url = '';
+
+	/**
+	 * Link text.
+	 *
+	 * @access public
+	 * @var string
+	 */
+	public $link_text = '';
+
+	/**
 	 * Render the content.
 	 */
 	public function render_content() {
 
 		// Title.
-		if ( isset( $this->label ) ) {
+		if ( $this->label ) {
 			printf(
 				'<span class="customize-control-title">%s</span>',
 				esc_html( $this->label )
@@ -95,13 +52,21 @@ class Counter_Message_Control extends WP_Customize_Control {
 		}
 
 		// Description.
-		if ( isset( $this->description ) ) {
+		if ( $this->description ) {
 			printf(
 				'<p class="customize-control-paragraph">%s</p>',
-				wp_kses_post( $this->description )
+				esc_html( $this->description )
 			);
 		}
 
+		// Link.
+		if ( $this->link_url && $this->link_text ) {
+			printf(
+				'<p class="customize-control-paragraph"><a href="%1$s" target="_blank" class="button button-secondary">%2$s</a></p>',
+				esc_html( $this->link_url ),
+				esc_html( $this->link_text )
+			);
+		}
 	}
 }
 
