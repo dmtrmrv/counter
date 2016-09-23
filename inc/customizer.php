@@ -472,17 +472,6 @@ function counter_customizer_scripts() {
 	);
 	wp_localize_script( 'counter-customizer-controls', 'pnlCountControls', array( counter_get_panel_count() ) );
 
-	// Color controls.
-	wp_register_script(
-		'counter-customizer-controls-color',
-		get_template_directory_uri() . '/assets/js/customizer-controls-color.js',
-		array( 'jquery', 'customize-controls', 'iris', 'wp-util' ),
-		COUNTER_VERSION,
-		true
-	);
-	wp_localize_script( 'counter-customizer-controls-color', 'colorScheme', counter_get_color_schemes() );
-	wp_localize_script( 'counter-customizer-controls-color', 'pnlCountColor', array( counter_get_panel_count() ) );
-
 	// Spacing controls.
 	wp_register_script(
 		'counter-customizer-controls-panel-spacings',
@@ -494,7 +483,6 @@ function counter_customizer_scripts() {
 	wp_localize_script( 'counter-customizer-controls-panel-spacings', 'pnlCountSpacings', array( counter_get_panel_count() ) );
 
 	wp_enqueue_script( 'counter-customizer-controls' );
-	// wp_enqueue_script( 'counter-customizer-controls-color' );
 	wp_enqueue_script( 'counter-customizer-controls-panel-spacings' );
 
 	// Custom CSS for the Customizer controls.
