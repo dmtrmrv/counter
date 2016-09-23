@@ -459,7 +459,7 @@ add_action( 'customize_preview_init', 'counter_customize_preview_js' );
  * Enqueue custom scripts for customizer controls.
  */
 function counter_customizer_scripts() {
-	// Custom JavaScript for the Customizer controls.
+	// Register custom JavaScript for Customizer controls.
 	wp_register_script(
 		'counter-customizer-controls',
 		get_template_directory_uri() . '/assets/js/customizer-controls.js',
@@ -469,7 +469,7 @@ function counter_customizer_scripts() {
 	);
 	wp_localize_script( 'counter-customizer-controls', 'pnlCountControls', array( counter_get_panel_count() ) );
 
-	// Spacing controls.
+	// Custom JavaScript for Panel Spacing controls.
 	wp_register_script(
 		'counter-customizer-controls-panel-spacings',
 		get_template_directory_uri() . '/assets/js/customizer-controls-panel-spacings.js',

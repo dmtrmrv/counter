@@ -17,7 +17,7 @@
 		var toggleables = [];
 
 		/**
-		 * Toggles section class.
+		 * Toggles the visibility of controls.
 		 *
 		 * Sometimes you need to hide/show multiple controls depending on the
 		 * value of another single control. For example if the Background Image
@@ -26,8 +26,7 @@
 		 *
 		 * This function adds or removes the class to the section in the
 		 * Customizer if the value is of a passed control is set. Later you
-		 * can dependant controls with CSS. The 'getting real' approach.
-		 * Robust, fast and clean. That's right.
+		 * can hide dependant controls with CSS.
 		 *
 		 * @param  {object} control Control object that the class i
 		 * @param  {number} value   ID of the page for the frontpage panel.
@@ -121,25 +120,4 @@
 			} );
 		} );
 	} );
-
-	/**
-	 * Handles the behavior of Multicheck panel.
-	 */
-	api.controlConstructor.multicheck = api.Control.extend( {
-		ready: function() {
-			var control = this.selector,
-				field = $( control ).find( 'input[type="hidden"]' );
-
-			$( this.selector ).on( 'change', 'input[type="checkbox"]', function() {
-				var values = $( control ).find( 'input[type="checkbox"]:checked' ).map(
-					function() {
-						return this.value;
-					}
-				).get().join( ',' );
-
-				field.val( values ).trigger( 'change' );
-			} );
-		}
-	} );
-
 } ) ( wp.customize, jQuery );

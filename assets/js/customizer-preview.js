@@ -5,9 +5,7 @@
  */
 
 ( function( api, $ ) {
-
-	console.log( defaultFooterMsg );
-
+	
 	// Site title.
 	api( 'blogname', function( value ) {
 		value.bind( function( to ) {
