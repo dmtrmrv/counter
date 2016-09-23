@@ -272,7 +272,7 @@ msgstr ""
 msgid "Upgrade Counter to set custom footer text."
 msgstr ""
 
-#: inc/customizer.php:440 inc/template-tags.php:247
+#: inc/customizer.php:440 inc/template-tags.php:244
 msgid "%1$s theme by %2$s"
 msgstr ""
 
@@ -340,19 +340,19 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:328
+#: inc/template-tags.php:324
 msgid "No Featured Image"
 msgstr ""
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:359
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:382
+#: inc/template-tags.php:378
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:384
+#: inc/template-tags.php:380
 msgid "Customize"
 msgstr ""
 

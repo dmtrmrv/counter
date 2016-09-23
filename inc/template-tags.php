@@ -240,15 +240,11 @@ if ( ! function_exists( 'counter_footer_text' ) ) :
  * Displays Footer Text.
  */
 function counter_footer_text() {
-	if ( get_theme_mod( 'footer_text', false ) ) {
-		echo wp_kses_post( str_replace( '[year]', date( 'Y' ), get_theme_mod( 'footer_text', false ) ) );
-	} else {
-		printf(
-			esc_html__( '%1$s theme by %2$s', 'counter' ),
-			'Counter',
-			'<a href="' . esc_url( 'https://themepatio.com/' ) . '">ThemePatio</a>'
-		);
-	}
+	printf(
+		esc_html__( '%1$s theme by %2$s', 'counter' ),
+		'Counter',
+		'<a href="' . esc_url( 'https://themepatio.com/' ) . '">ThemePatio</a>'
+	);
 }
 endif;
 
