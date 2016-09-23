@@ -11,8 +11,6 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function counter_customize_register( $wp_customize ) {
-	$color_scheme = counter_get_color_scheme();
-
 	// Make site title and site description update instantly.
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';

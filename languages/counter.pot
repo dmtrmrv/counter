@@ -45,7 +45,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:123 inc/customizer.php:415
+#: functions.php:123 inc/customizer.php:413
 msgid "Footer"
 msgstr ""
 
@@ -61,218 +61,218 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/customizer.php:25
+#: inc/customizer.php:23
 msgid "Choose Front Page"
 msgstr ""
 
-#: inc/customizer.php:30
+#: inc/customizer.php:28
 msgid "Appearance"
 msgstr ""
 
-#: inc/customizer.php:45
+#: inc/customizer.php:43
 msgid "Display Title"
 msgstr ""
 
-#: inc/customizer.php:57
+#: inc/customizer.php:55
 msgid "Display Tagline"
 msgstr ""
 
-#: inc/customizer.php:70
+#: inc/customizer.php:68
 msgid "Custom Colors"
 msgstr ""
 
-#: inc/customizer.php:74 inc/customizer.php:242 inc/customizer.php:407
-#: inc/customizer.php:426
+#: inc/customizer.php:72 inc/customizer.php:240 inc/customizer.php:405
+#: inc/customizer.php:424
 msgid "Learn More"
 msgstr ""
 
-#: inc/customizer.php:75
+#: inc/customizer.php:73
 msgid "Upgrade Counter to set background, text, links, and headings colors"
 msgstr ""
 
-#: inc/customizer.php:86
+#: inc/customizer.php:84
 msgid "Static Front Page"
 msgstr ""
 
-#: inc/customizer.php:91 inc/customizer.php:101
+#: inc/customizer.php:89 inc/customizer.php:99
 msgid "Navigate to Front Page"
 msgstr ""
 
-#: inc/customizer.php:104
+#: inc/customizer.php:102
 msgid "To edit the front page navigate to it in the preview screen."
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:110
 msgid "Panel "
 msgstr ""
 
-#: inc/customizer.php:124
+#: inc/customizer.php:122
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:148
+#: inc/customizer.php:146
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:162
+#: inc/customizer.php:160
 msgid "Display Title?"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:173
 msgid "Title Alignment"
 msgstr ""
 
-#: inc/customizer.php:179 inc/customizer.php:197 inc/extras.php:137
+#: inc/customizer.php:177 inc/customizer.php:195 inc/extras.php:137
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:180 inc/customizer.php:198
+#: inc/customizer.php:178 inc/customizer.php:196
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:181 inc/customizer.php:199 inc/extras.php:138
+#: inc/customizer.php:179 inc/customizer.php:197 inc/extras.php:138
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:193 inc/widget-options.php:24
+#: inc/customizer.php:191 inc/widget-options.php:24
 msgid "Text Alignment"
 msgstr ""
 
-#: inc/customizer.php:211
+#: inc/customizer.php:209
 msgid "Panel Spacing"
 msgstr ""
 
-#: inc/customizer.php:238
+#: inc/customizer.php:236
 msgid "Custom Panel Colors"
 msgstr ""
 
-#: inc/customizer.php:243
+#: inc/customizer.php:241
 msgid ""
 "Upgrade Counter to set background, text, links, and heading colors for each "
 "panel."
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:268
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:284
+#: inc/customizer.php:282
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer.php:288
+#: inc/customizer.php:286
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer.php:289
+#: inc/customizer.php:287
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:290
+#: inc/customizer.php:288
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:289
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:301
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:307
+#: inc/customizer.php:305
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:308
+#: inc/customizer.php:306
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:309
+#: inc/customizer.php:307
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:310
+#: inc/customizer.php:308
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:311
+#: inc/customizer.php:309
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer.php:312
+#: inc/customizer.php:310
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:313
+#: inc/customizer.php:311
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:314
+#: inc/customizer.php:312
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:315
+#: inc/customizer.php:313
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:325
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer.php:331
+#: inc/customizer.php:329
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer.php:332
+#: inc/customizer.php:330
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:344
+#: inc/customizer.php:342
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer.php:348
+#: inc/customizer.php:346
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:349
+#: inc/customizer.php:347
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:348
 msgid "Percent"
 msgstr ""
 
-#: inc/customizer.php:362
+#: inc/customizer.php:360
 msgid "Background Size %"
 msgstr ""
 
-#: inc/customizer.php:380
+#: inc/customizer.php:378
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:394
+#: inc/customizer.php:392
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:403
+#: inc/customizer.php:401
 msgid "Blog Layout & Post Meta"
 msgstr ""
 
-#: inc/customizer.php:408
+#: inc/customizer.php:406
 msgid "Upgrade Counter to set three-column blog layout and control post meta."
 msgstr ""
 
-#: inc/customizer.php:423
+#: inc/customizer.php:421
 msgid "Custom Footer Text"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:426
 msgid "Upgrade Counter to set custom footer text."
 msgstr ""
 
-#: inc/customizer.php:442 inc/template-tags.php:247
+#: inc/customizer.php:440 inc/template-tags.php:247
 msgid "%1$s theme by %2$s"
 msgstr ""
 
@@ -574,41 +574,6 @@ msgstr ""
 #: functions.php:156
 msgctxt "Lato font: on or off"
 msgid "on"
-msgstr ""
-
-#: inc/customizer-custom-css.php:27
-msgctxt "Color scheme"
-msgid "Default"
-msgstr ""
-
-#: inc/customizer-custom-css.php:37
-msgctxt "Color scheme"
-msgid "Dark"
-msgstr ""
-
-#: inc/customizer-custom-css.php:47
-msgctxt "Color scheme"
-msgid "Blueberry"
-msgstr ""
-
-#: inc/customizer-custom-css.php:57
-msgctxt "Color scheme"
-msgid "Honey"
-msgstr ""
-
-#: inc/customizer-custom-css.php:67
-msgctxt "Color scheme"
-msgid "Chocolate"
-msgstr ""
-
-#: inc/customizer-custom-css.php:77
-msgctxt "Color scheme"
-msgid "Raspberry"
-msgstr ""
-
-#: inc/customizer-custom-css.php:87
-msgctxt "Color scheme"
-msgid "Olive"
 msgstr ""
 
 #: inc/widget-options.php:27
