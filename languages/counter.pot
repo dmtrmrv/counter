@@ -87,7 +87,7 @@ msgid "Learn More"
 msgstr ""
 
 #: inc/customizer.php:73
-msgid "Upgrade Counter to set background, text, links, and headings colors"
+msgid "Upgrade Counter to set custom text, links, headings, and background color."
 msgstr ""
 
 #: inc/customizer.php:84
@@ -99,7 +99,7 @@ msgid "Navigate to Front Page"
 msgstr ""
 
 #: inc/customizer.php:102
-msgid "To edit the front page navigate to it in the preview screen."
+msgid "Navigate to the front page in the preview screen to edit panels."
 msgstr ""
 
 #: inc/customizer.php:110
@@ -148,8 +148,8 @@ msgstr ""
 
 #: inc/customizer.php:241
 msgid ""
-"Upgrade Counter to set background, text, links, and heading colors for each "
-"panel."
+"Upgrade Counter to set custom text, links, headings, and background color "
+"for each panel."
 msgstr ""
 
 #: inc/customizer.php:268
@@ -261,7 +261,7 @@ msgid "Blog Layout & Post Meta"
 msgstr ""
 
 #: inc/customizer.php:406
-msgid "Upgrade Counter to set three-column blog layout and control post meta."
+msgid "Upgrade Counter to set three-column grid blog layout and edit post meta."
 msgstr ""
 
 #: inc/customizer.php:421

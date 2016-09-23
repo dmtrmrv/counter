@@ -70,7 +70,7 @@ function counter_customize_register( $wp_customize ) {
 				'settings'    => array(),
 				'link_url'    => 'https://themepatio.com/themes/counter',
 				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set background, text, links, and headings colors', 'counter' ),
+				'description' => __( 'Upgrade Counter to set custom text, links, headings, and background color.', 'counter' ),
 			)
 		)
 	);
@@ -99,7 +99,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( 'Navigate to Front Page', 'counter' ),
 				'section'     => 'frontpage_invisible',
 				'settings'    => array(),
-				'description' => __( 'To edit the front page navigate to it in the preview screen.', 'counter' ),
+				'description' => __( 'Navigate to the front page in the preview screen to edit panels.', 'counter' ),
 			)
 		)
 	);
@@ -238,7 +238,7 @@ function counter_customize_register( $wp_customize ) {
 				'settings'    => array(),
 				'link_url'    => 'https://themepatio.com/themes/counter',
 				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set background, text, links, and heading colors for each panel.', 'counter' ),
+				'description' => __( 'Upgrade Counter to set custom text, links, headings, and background color for each panel.', 'counter' ),
 			)
 		)
 	);
@@ -403,7 +403,7 @@ function counter_customize_register( $wp_customize ) {
 				'settings'    => array(),
 				'link_url'    => 'https://themepatio.com/themes/counter',
 				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set three-column blog layout and control post meta.', 'counter' ),
+				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
 			)
 		)
 	);
