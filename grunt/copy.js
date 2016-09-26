@@ -13,6 +13,7 @@ module.exports = {
 			'!./assets/fonts/fontello/config.json',
 			'!./assets/fonts/fontello/demo.html',
 			'!./assets/fonts/fontello/README.txt',
+			'!./README.md',
 			'!./*.sublime-workspace',
 			'!./*.sublime-project',
 			'!./*.ruleset.xml',
