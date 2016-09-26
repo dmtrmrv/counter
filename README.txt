@@ -2,7 +2,7 @@
 Contributors:      iamdmitrymayorov
 Requires at least: WordPress 4.1
 Tested up to:      WordPress 4.6
-Version:           1.0.0
+Version:           1.0.1
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 Tags:              blog, one-column, right-sidebar, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, entertainment, food-and-drink
