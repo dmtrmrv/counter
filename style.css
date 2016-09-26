@@ -2452,6 +2452,7 @@ body {
 
 .panel {
 	position: relative;
+	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
 }
 
 .panel:before,
@@ -2459,6 +2460,10 @@ body {
 	display: table;
 	clear: both;
 	content: '';
+}
+
+.panel:last-of-type {
+	border-bottom: 0;
 }
 
 .panel-thumbnail img {

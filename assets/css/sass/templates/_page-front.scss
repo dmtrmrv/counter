@@ -10,6 +10,10 @@
 .panel {
 	@include clearfix();
 	position: relative;
+	border-bottom: 1px solid $color__gray;
+	&:last-of-type {
+		border-bottom: 0;
+	}
 }
 
 .panel-thumbnail img {
