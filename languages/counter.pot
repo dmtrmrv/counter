@@ -134,7 +134,7 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:191 inc/widget-options.php:24
+#: inc/customizer.php:191
 msgid "Text Alignment"
 msgstr ""
 
@@ -444,21 +444,6 @@ msgstr ""
 #: functions.php:156
 msgctxt "Lato font: on or off"
 msgid "on"
-msgstr ""
-
-#: inc/widget-options.php:27
-msgctxt "Text Alignment"
-msgid "Left"
-msgstr ""
-
-#: inc/widget-options.php:28
-msgctxt "Text Alignment"
-msgid "Center"
-msgstr ""
-
-#: inc/widget-options.php:29
-msgctxt "Text Alignment"
-msgid "Right"
 msgstr ""
 
 #: searchform.php:15 searchform.php:19

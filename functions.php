@@ -282,11 +282,6 @@ require get_template_directory() . '/inc/customizer-custom-css.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Widget options.
- */
-require get_template_directory() . '/inc/widget-options.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
