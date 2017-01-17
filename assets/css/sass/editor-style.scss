@@ -27,7 +27,7 @@ Description: Used to style the TinyMCE editor.
  */
 
 // Dependencies
-@import 'susy';
+@import "bower_components/susy/sass/susy";
 
 // Variables, mixins and functions
 @import 'abstracts/variables/_variables';

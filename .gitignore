@@ -42,15 +42,16 @@ intermediate
 .idea
 cache
 
-# Node.js / Grunt
+# Node.js / Grunt / Bower
 node_modules
+bower_components
 .sass-cache
 npm-debug.log
 
 # Fontello Temp
-assets/fonts/fontello/css/animation.css
-assets/fonts/fontello/css/fontello-*.css
-assets/fonts/fontello/demo.html
-assets/fonts/fontello/config.json
-assets/fonts/fontello/README.txt
-assets/fonts/*.zip
+fonts/fontello/css/animation.css
+fonts/fontello/css/fontello-*.css
+fonts/fontello/demo.html
+fonts/fontello/config.json
+fonts/fontello/README.txt
+fonts/*.zip

@@ -39,7 +39,7 @@ Description: Used to style the TinyMCE editor.
 html {
 	box-sizing: border-box;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 18px; 
 
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
@@ -49,7 +49,7 @@ body {
 	max-width: 612px;
 	margin: 3em 5%;
 	color: #555;
-	background: #fff;
+	background: #fff; 
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 1.5;
@@ -152,7 +152,7 @@ figure {
 }
 
 textarea {
-	margin: 0;
+	margin: 0; 
 	color: inherit;
 	font: inherit;
 }
@@ -227,7 +227,7 @@ h5 {
 
 h6 {
 	font-size: 1em;
-	font-weight: 300;
+	font-weight: 300; 
 	line-height: 1.25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -337,7 +337,7 @@ q {
 	margin: 1.125em;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 24px;
-	font-size: 1.33333rem;
+	font-size: 1.3333333333rem;
 	font-style: italic;
 	line-height: 27px;
 	line-height: 1.5rem;
@@ -429,7 +429,7 @@ dd {
 
 table {
 	width: 100%;
-	margin-bottom: 1.44444em;
+	margin-bottom: 1.4444444444em;
 	padding: 0;
 
 	cellspacing: 0;
@@ -443,7 +443,7 @@ th {
 }
 
 thead th {
-	padding: 1em 1em 0.92593em;
+	padding: 1em 1em 0.9259259259em;
 	background-color: rgba(85, 85, 85, 0.15);
 	font-size: 0.75em;
 	font-weight: 400;
@@ -563,7 +563,7 @@ p > video {
 	max-width: 100%;
 	margin: 0 0 1.5em;
 	padding: 0;
-	border: none;
+	border: none; 
 	font-size: 18px;
 	font-size: 1rem;
 	line-height: 27px;
@@ -632,7 +632,7 @@ p > video {
 .wp-caption .wp-caption-dt {
 	display: block;
 	margin-right: auto;
-	margin-bottom: 0.375em;
+	margin-bottom: 0.375em; 
 	margin-left: auto;
 }
 
@@ -811,7 +811,7 @@ blockquote.alignright {
 }
 
 .gallery-columns-3 .gallery-item {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .gallery-columns-4 .gallery-item {
@@ -823,11 +823,11 @@ blockquote.alignright {
 }
 
 .gallery-columns-6 .gallery-item {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .gallery-columns-7 .gallery-item {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .gallery-columns-8 .gallery-item {
@@ -835,7 +835,7 @@ blockquote.alignright {
 }
 
 .gallery-columns-9 .gallery-item {
-	width: 11.11111%;
+	width: 11.1111111111%;
 }
 
 .gallery-columns-10 .gallery-item {
@@ -890,9 +890,9 @@ blockquote.alignright {
 	display: block;
 	box-sizing: border-box;
 	margin: 0;
-	margin: 0.5em 0 0.35185em;
+	margin: 0.5em 0 0.3518518519em;
 	font-size: 0.75em;
-	font-weight: normal;
+	font-weight: normal; 
 	line-height: 20.25px;
 	line-height: 1.125rem;
 }

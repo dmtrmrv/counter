@@ -19,65 +19,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-/**
- * Table of Contents
- *
- * 0.1 - Normalize
- * 0.2 - Typography
- *       Headings
- *       Copy
- *       Links
- *       Blockquotes
- *       Lists
- *       Tables
- *       Code
- *       Helpers
- * 0.3 - Components
- *       Buttons
- *       Forms
- *       Alignments
- *       Images
- *       Icons
- *       Lines
- *       Alerts
- *       Media
- *       Captions
- *       Accessibility
- *       Clearings
- * 0.4 - Layout
- *       Structure
- *       Grid
- *       Header
- *       Footer
- *       Menu Primary
- *       Menu Social
- *       Pagination
- *       Page Title
- *       Post Thumbnail
- *       Entry Title
- *       Entry Meta
- *       Entry Content
- *       Comments
- *       Galleries
- *       Post Navigation
- *       Widgets
- *       Widgets Footer
- * 0.6 - Templates
- *       Blog
- *       Single
- *       Page
- *       Page Front
- *       Page 404
- *       Search
- * 0.7 - Plugins
- *       Jetpack
- *       Contact Form 7
- * 0.8 - Print
- * 0.9 - Media Queries
- */
-
 // Dependencies
-@import 'susy';
+@import "bower_components/susy/sass/susy";
 
 // Variables, mixins and functions
 @import 'abstracts/variables/_variables';

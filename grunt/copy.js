@@ -3,6 +3,7 @@ module.exports = {
 		src: [
 			'./**',
 			'!./node_modules/**',
+			'!./bower_components/**',
 			'!./package.json',
 			'!./.csscomb.json',
 			'!./Gruntfile.js',

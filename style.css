@@ -20,63 +20,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /**
- * Table of Contents
- *
- * 0.1 - Normalize
- * 0.2 - Typography
- *       Headings
- *       Copy
- *       Links
- *       Blockquotes
- *       Lists
- *       Tables
- *       Code
- *       Helpers
- * 0.3 - Components
- *       Buttons
- *       Forms
- *       Alignments
- *       Images
- *       Icons
- *       Lines
- *       Alerts
- *       Media
- *       Captions
- *       Accessibility
- *       Clearings
- * 0.4 - Layout
- *       Structure
- *       Grid
- *       Header
- *       Footer
- *       Menu Primary
- *       Menu Social
- *       Pagination
- *       Page Title
- *       Post Thumbnail
- *       Entry Title
- *       Entry Meta
- *       Entry Content
- *       Comments
- *       Galleries
- *       Post Navigation
- *       Widgets
- *       Widgets Footer
- * 0.6 - Templates
- *       Blog
- *       Single
- *       Page
- *       Page Front
- *       Page 404
- *       Search
- * 0.7 - Plugins
- *       Jetpack
- *       Contact Form 7
- * 0.8 - Print
- * 0.9 - Media Queries
- */
-
-/**
  * Normalize
  */
 
@@ -252,7 +195,7 @@ input[type='search']::-webkit-search-decoration {
 
 fieldset {
 	margin: 0 0 1.5em;
-	padding: 0.63889em 1em 0;
+	padding: 0.6388888889em 1em 0;
 	border: 2px solid rgba(85, 85, 85, 0.15);
 	border-radius: 3px;
 }
@@ -425,7 +368,7 @@ q {
 	margin: 1.125em;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 24px;
-	font-size: 1.33333rem;
+	font-size: 1.3333333333rem;
 	font-style: italic;
 	line-height: 27px;
 	line-height: 1.5rem;
@@ -491,7 +434,7 @@ dd {
 
 table {
 	width: 100%;
-	margin-bottom: 1.44444em;
+	margin-bottom: 1.4444444444em;
 	padding: 0;
 
 	cellspacing: 0;
@@ -505,7 +448,7 @@ th {
 }
 
 thead th {
-	padding: 1em 1em 0.92593em;
+	padding: 1em 1em 0.9259259259em;
 	background-color: rgba(85, 85, 85, 0.15);
 	font-size: 0.75em;
 	font-weight: 400;
@@ -660,7 +603,7 @@ input[type='submit'] {
 	-webkit-appearance: none;
 	background-image: none;
 	font-size: 14px;
-	font-size: 0.77778rem;
+	font-size: 0.7777777778rem;
 	font-weight: 700;
 	line-height: 1;
 	text-align: center;
@@ -753,7 +696,7 @@ input[type='date'],
 input[type='number'],
 textarea {
 	width: 100%;
-	padding: 0.69444em 1em;
+	padding: 0.6944444444em 1em;
 	border: 1px solid;
 	border-color: rgba(85, 85, 85, 0.15);
 	border-radius: 0;
@@ -1383,15 +1326,13 @@ body {
 }
 
 .menu-toggle.toggled:before {
-	-webkit-transform: rotate(225deg);
-	    -ms-transform: rotate(225deg);
-	        transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	    transform: rotate(225deg);
 }
 
 .menu-toggle.toggled:after {
-	-webkit-transform: rotate(-225deg);
-	    -ms-transform: rotate(-225deg);
-	        transform: rotate(-225deg);
+	-ms-transform: rotate(-225deg);
+	    transform: rotate(-225deg);
 }
 
 /* Social Icons */
@@ -1614,8 +1555,8 @@ body {
 
 .posts-navigation .nav-previous {
 	float: left;
-	width: 48.57143%;
-	margin-right: 2.85714%;
+	width: 48.5714285714%;
+	margin-right: 2.8571428571%;
 }
 
 .posts-navigation .nav-previous a {
@@ -1632,7 +1573,7 @@ body {
 	background-color: #1e1e1e;
 	background-image: none;
 	font-size: 14px;
-	font-size: 0.77778rem;
+	font-size: 0.7777777778rem;
 	font-weight: 700;
 	line-height: 1;
 	text-align: center;
@@ -1673,7 +1614,7 @@ body {
 
 .posts-navigation .nav-next {
 	float: right;
-	width: 48.57143%;
+	width: 48.5714285714%;
 	margin-right: 0;
 }
 
@@ -1691,7 +1632,7 @@ body {
 	background-color: #1e1e1e;
 	background-image: none;
 	font-size: 14px;
-	font-size: 0.77778rem;
+	font-size: 0.7777777778rem;
 	font-weight: 700;
 	line-height: 1;
 	text-align: center;
@@ -1904,7 +1845,7 @@ body {
 
 .comment-list {
 	margin-left: 0;
-	padding-top: 1.44444em;
+	padding-top: 1.4444444444em;
 	border-top: 1px solid rgba(85, 85, 85, 0.15);
 }
 
@@ -1914,7 +1855,7 @@ body {
 
 .comment-body {
 	position: relative;
-	margin: 0 0 1.44444em 0;
+	margin: 0 0 1.4444444444em 0;
 	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
 	word-wrap: break-word;
 }
@@ -2099,7 +2040,7 @@ body {
 }
 
 .gallery-columns-3 .gallery-item {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .gallery-columns-4 .gallery-item {
@@ -2111,11 +2052,11 @@ body {
 }
 
 .gallery-columns-6 .gallery-item {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .gallery-columns-7 .gallery-item {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .gallery-columns-8 .gallery-item {
@@ -2123,7 +2064,7 @@ body {
 }
 
 .gallery-columns-9 .gallery-item {
-	width: 11.11111%;
+	width: 11.1111111111%;
 }
 
 .gallery-columns-10 .gallery-item {
@@ -2236,11 +2177,11 @@ body {
 }
 
 .widget_calendar td {
-	line-height: 1.92593em;
+	line-height: 1.9259259259em;
 }
 
 .widget_calendar th {
-	line-height: 1.85185em;
+	line-height: 1.8518518519em;
 }
 
 .widget_calendar tfoot td:first-child {
@@ -2257,7 +2198,7 @@ body {
 .widget.widget_recent_entries li,
 .widget.widget_rss li {
 	margin-bottom: 0.75em;
-	padding-bottom: 0.69444em;
+	padding-bottom: 0.6944444444em;
 	border-bottom: 1px solid;
 	border-bottom-color: rgba(85, 85, 85, 0.15);
 }
@@ -2630,7 +2571,7 @@ body {
 
 .search-results .page-title {
 	font-size: 24px;
-	font-size: 1.33333rem;
+	font-size: 1.3333333333rem;
 	line-height: 27px;
 	line-height: 1.5rem;
 }
@@ -2652,7 +2593,7 @@ body {
 
 .search-results .entry-title {
 	font-size: 24px;
-	font-size: 1.33333rem;
+	font-size: 1.3333333333rem;
 	line-height: 27px;
 	line-height: 1.5rem;
 }
@@ -2766,19 +2707,19 @@ body {
 
 	.counter-col {
 		float: left;
-		margin-right: 2.85714%;
+		margin-right: 2.8571428571%;
 	}
 
 	.counter-row-2 .counter-col {
-		width: 48.57143%;
+		width: 48.5714285714%;
 	}
 
 	.counter-row-3 .counter-col {
-		width: 31.42857%;
+		width: 31.4285714286%;
 	}
 
 	.counter-row-4 .counter-col {
-		width: 22.85714%;
+		width: 22.8571428571%;
 	}
 
 	blockquote.alignleft {
@@ -2791,8 +2732,8 @@ body {
 
 	.counter-grid-item {
 		float: left;
-		max-width: 31.42857%;
-		margin-right: 2.85714%;
+		max-width: 31.4285714286%;
+		margin-right: 2.8571428571%;
 		margin-left: 0;
 	}
 
@@ -2921,7 +2862,7 @@ body {
 
 	.comment-list,
 	.form-submit {
-		margin-bottom: 2.94444em;
+		margin-bottom: 2.9444444444em;
 	}
 
 	.comment-navigation {
@@ -2969,8 +2910,8 @@ body {
 		display: block;
 		position: absolute;
 		top: 1px;
-		width: 2.88889em;
-		height: 4.38889em;
+		width: 2.8888888889em;
+		height: 4.3888888889em;
 		margin: 0;
 		opacity: 0.5;
 		color: #555;
@@ -2991,7 +2932,7 @@ body {
 	}
 
 	.post-navigation .nav-next a {
-		padding: 1.44444em 3em 1.44444em 0;
+		padding: 1.4444444444em 3em 1.4444444444em 0;
 	}
 
 	.post-navigation .nav-next a:before {
@@ -3008,7 +2949,7 @@ body {
 	}
 
 	.post-navigation .nav-previous a {
-		padding: 1.44444em 0 1.44444em 3em;
+		padding: 1.4444444444em 0 1.4444444444em 3em;
 	}
 
 	.post-navigation .nav-previous a:before {
@@ -3031,20 +2972,20 @@ body {
 
 	.footer-columns-4 .site-footer-widget-column {
 		float: left;
-		width: 22.85714%;
-		margin-right: 2.85714%;
+		width: 22.8571428571%;
+		margin-right: 2.8571428571%;
 	}
 
 	.footer-columns-3 .site-footer-widget-column {
 		float: left;
-		width: 31.42857%;
-		margin-right: 2.85714%;
+		width: 31.4285714286%;
+		margin-right: 2.8571428571%;
 	}
 
 	.footer-columns-2 .site-footer-widget-column {
 		float: left;
-		width: 48.57143%;
-		margin-right: 2.85714%;
+		width: 48.5714285714%;
+		margin-right: 2.8571428571%;
 	}
 
 	.footer-columns .site-footer-widget-column:last-of-type {
@@ -3065,7 +3006,7 @@ body {
 	}
 
 	.panel-all-posts-button a {
-		max-width: 31.42857%;
+		max-width: 31.4285714286%;
 		margin-bottom: 4.5em;
 	}
 
@@ -3078,9 +3019,8 @@ body {
 		max-height: 90%;
 		margin-left: 50%;
 		padding: 1.5em 8% 0;
-		-webkit-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		        transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		    transform: translateY(-50%);
 	}
 
 	.panel-left .panel-thumbnail {
@@ -3099,9 +3039,8 @@ body {
 		max-width: 50%;
 		max-height: 90%;
 		padding: 1.5em 6.25% 0;
-		-webkit-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		        transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		    transform: translateY(-50%);
 	}
 
 	.panel-right .panel-thumbnail {
@@ -3179,8 +3118,8 @@ body {
 
 	.counter-blog-default.is-sidebar .content-area {
 		float: left;
-		width: 65.38462%;
-		margin-right: 3.84615%;
+		width: 65.3846153846%;
+		margin-right: 3.8461538462%;
 	}
 
 	.counter-blog-default .hentry {
@@ -3189,7 +3128,7 @@ body {
 
 	.counter-blog-default .widget-area {
 		float: right;
-		width: 30.76923%;
+		width: 30.7692307692%;
 		margin-right: 0;
 	}
 
@@ -3201,13 +3140,13 @@ body {
 
 	.single .content-area {
 		float: left;
-		width: 65.38462%;
-		margin-right: 3.84615%;
+		width: 65.3846153846%;
+		margin-right: 3.8461538462%;
 	}
 
 	.single .widget-area {
 		float: right;
-		width: 30.76923%;
+		width: 30.7692307692%;
 		margin-right: 0;
 	}
 
@@ -3231,8 +3170,8 @@ body {
 
 	.single-page.page-template-default .content-area {
 		float: left;
-		width: 65.38462%;
-		margin-right: 3.84615%;
+		width: 65.3846153846%;
+		margin-right: 3.8461538462%;
 	}
 
 	.single-page.page-template-default.no-sidebar .content-area {
@@ -3246,7 +3185,7 @@ body {
 
 	.single-page .widget-area {
 		float: right;
-		width: 30.76923%;
+		width: 30.7692307692%;
 		margin-right: 0;
 	}
 
