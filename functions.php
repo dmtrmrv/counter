@@ -290,10 +290,3 @@ require get_template_directory() . '/inc/widget-options.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load Subtitles compatibility file.
- */
-if ( class_exists( 'Subtitles' ) ) {
-	require get_template_directory() . '/inc/subtitles.php';
-}
