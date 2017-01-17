@@ -15,20 +15,6 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
-	// Rearrange controls.
-	$wp_customize->get_section( 'colors' )->panel = 'appearance';
-	$wp_customize->get_section( 'static_front_page' )->panel = 'frontpage';
-
-	// Rename Static Front Page Section.
-	$wp_customize->get_section( 'static_front_page' )->title = __( 'Choose Front Page', 'counter' );
-	$wp_customize->get_section( 'static_front_page' )->description = false;
-
-	// Appearance panel.
-	$wp_customize->add_panel( 'appearance' , array(
-		'title'    => __( 'Appearance', 'counter' ),
-		'priority' => 30,
-	) );
-
 	/**
 	 * Site Identity.
 	 */
@@ -75,66 +61,63 @@ function counter_customize_register( $wp_customize ) {
 		)
 	);
 
-	/**
-	 * Front Page.
+	/*
+	 * Theme Options.
 	 */
 
-	// Panels Panel. Well, how else do you call it?
-	$wp_customize->add_panel( 'frontpage' , array(
-		'title'    => __( 'Static Front Page', 'counter' ),
-		'priority' => 110,
+	$wp_customize->add_panel( 'theme_options' , array(
+		'title'    => __( 'Theme Options', 'counter' ),
+		'priority' => 140,
 	) );
 
-	$wp_customize->add_section( new Counter_Frontpage_Visibility_Section( $wp_customize, 'frontpage_invisible', array(
-		'title'           => __( 'Navigate to Front Page', 'counter' ),
-		'panel'           => 'frontpage',
-		'active_callback' => 'counter_not_front_page',
-	) ) );
+	// Blog & Archive.
+	$wp_customize->add_section( 'blog_layout', array(
+		'title' => __( 'Blog Layout', 'counter' ),
+		'panel' => 'theme_options',
+	) );
 
 	$wp_customize -> add_control(
 		new Counter_Message_Control(
 			$wp_customize,
-			'frontpage_invisible',
+			'blog_layout_upgrade',
 			array(
-				'label'       => __( 'Navigate to Front Page', 'counter' ),
-				'section'     => 'frontpage_invisible',
+				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
+				'section'     => 'blog_layout',
 				'settings'    => array(),
-				'description' => __( 'Navigate to the front page in the preview screen to edit panels.', 'counter' ),
+				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_text'   => __( 'Learn More', 'counter' ),
+				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
 			)
 		)
 	);
 
-	for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) :
+	/**
+	 * Front Page.
+	 */
+
+	for ( $i = 0; $i <= counter_get_panel_count(); $i++ ) :
 
 	$wp_customize->add_section( 'panel_' . $i, array(
-		'title'           => __( 'Panel ', 'counter' ) . $i,
-		'panel'           => 'frontpage',
+		'title'           => 0 == $i ? __( 'Hero Panel', 'counter' ) : __( 'Panel ', 'counter' ) . $i,
+		'panel'           => 'theme_options',
 		'active_callback' => 'counter_is_front_page',
 	) );
 
-	// Page Dropdown.
-	$wp_customize->add_setting( 'panel_content_' . $i, array(
-		'default'           => 0,
-		'sanitize_callback' => 'absint',
-	) );
+	// Page Dropdown. Don't need it for Hero panel.
+	if ( 0 !== $i ) :
 
-	$wp_customize->add_control( 'panel_content_' . $i, array(
-		'label'   => esc_html__( 'Content', 'counter' ),
-		'section' => 'panel_' . $i,
-		'type'    => 'dropdown-pages',
-	) );
+		$wp_customize->add_setting( 'panel_content_' . $i, array(
+			'default'           => 0,
+			'sanitize_callback' => 'absint',
+		) );
 
-	// Divider.
-	$wp_customize->add_control(
-		new Counter_Divider_Control(
-			$wp_customize,
-			'panel_content_divider_' . $i,
-			array(
-				'section' => 'panel_' . $i,
-				'settings' => array(),
-			)
-		)
-	);
+		$wp_customize->add_control( 'panel_content_' . $i, array(
+			'label'   => esc_html__( 'Content', 'counter' ),
+			'section' => 'panel_' . $i,
+			'type'    => 'dropdown-pages',
+		) );
+
+	endif;
 
 	// Layout.
 	$wp_customize->add_setting( 'panel_layout_' . $i, array(
@@ -148,112 +131,6 @@ function counter_customize_register( $wp_customize ) {
 		'type'    => 'select',
 		'choices' => counter_get_panel_types(),
 	) );
-
-	// Title Display.
-	$wp_customize->add_setting( 'panel_title_display_' . $i, array(
-		'default'           => 1,
-		'sanitize_callback' => 'counter_sanitize_checkbox',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( 'panel_title_display_' . $i, array(
-		'label'   => esc_html__( 'Display Title?', 'counter' ),
-		'section' => 'panel_' . $i,
-		'type'    => 'checkbox',
-	) );
-
-	// Panel title alignment.
-	$wp_customize->add_setting( 'panel_title_alignment_' . $i, array(
-		'default'           => 'left',
-		'sanitize_callback' => 'counter_sanitize_alignment',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( 'panel_title_alignment_' . $i, array(
-		'label'   => esc_html__( 'Title Alignment', 'counter' ),
-		'section' => 'panel_' . $i,
-		'type'    => 'select',
-		'choices' => array(
-			'left'   => __( 'Left', 'counter' ),
-			'center' => __( 'Center', 'counter' ),
-			'right'  => __( 'Right', 'counter' ),
-		),
-	) );
-
-	// Panel text alignment.
-	$wp_customize->add_setting( 'panel_text_alignment_' . $i, array(
-		'default'           => 'left',
-		'sanitize_callback' => 'counter_sanitize_alignment',
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( 'panel_text_alignment_' . $i, array(
-		'label'   => esc_html__( 'Text Alignment', 'counter' ),
-		'section' => 'panel_' . $i,
-		'type'    => 'select',
-		'choices' => array(
-			'left'   => __( 'Left', 'counter' ),
-			'center' => __( 'Center', 'counter' ),
-			'right'  => __( 'Right', 'counter' ),
-		),
-	) );
-
-	// Spacing.
-	$wp_customize->add_setting( 'panel_spacing_' . $i, array(
-		'default'           => 0,
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint',
-	) );
-
-	$wp_customize->add_control( 'panel_spacing_' . $i, array(
-		'label'   => __( 'Panel Spacing', 'counter' ),
-		'section' => 'panel_' . $i,
-		'type'    => 'range',
-		'input_attrs' => array(
-			'min'  => 0,
-			'max'  => 25,
-			'step' => 1,
-		),
-	) );
-
-	// Divider.
-	$wp_customize->add_control(
-		new Counter_Divider_Control(
-			$wp_customize,
-			'panel_layout_divider_' . $i,
-			array(
-				'section' => 'panel_' . $i,
-				'settings' => array(),
-			)
-		)
-	);
-
-	$wp_customize -> add_control(
-		new Counter_Message_Control(
-			$wp_customize,
-			'panel_color_upgrade_' . $i,
-			array(
-				'label'       => __( 'Custom Panel Colors', 'counter' ),
-				'section'     => 'panel_' . $i,
-				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter',
-				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set custom text, links, headings, and background color for each panel.', 'counter' ),
-			)
-		)
-	);
-
-	// Divider.
-	$wp_customize->add_control(
-		new Counter_Divider_Control(
-			$wp_customize,
-			'panel_colors_divider_' . $i,
-			array(
-				'section' => 'panel_' . $i,
-				'settings' => array(),
-			)
-		)
-	);
 
 	// Background image.
 	$wp_customize->add_setting( 'panel_bg_image_' . $i, array(
@@ -361,9 +238,9 @@ function counter_customize_register( $wp_customize ) {
 		'section' => 'panel_' . $i,
 		'type'    => 'range',
 		'input_attrs' => array(
-			'min'   => 0,
-			'max'   => 100,
-			'step'  => 1,
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 1,
 		),
 	) );
 
@@ -387,30 +264,10 @@ function counter_customize_register( $wp_customize ) {
 
 	endfor;
 
-	// Blog & Archive.
-	$wp_customize->add_section( 'blog_layout', array(
-		'title' => __( 'Blog Layout', 'counter' ),
-		'panel' => 'appearance',
-	) );
-
-	$wp_customize -> add_control(
-		new Counter_Message_Control(
-			$wp_customize,
-			'blog_layout_upgrade',
-			array(
-				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
-				'section'     => 'blog_layout',
-				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter',
-				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
-			)
-		)
-	);
-
 	// Footer Text.
 	$wp_customize->add_section( 'footer' , array(
 		'title' => __( 'Footer', 'counter' ),
+		'panel' => 'theme_options'
 	) );
 
 	$wp_customize -> add_control(
