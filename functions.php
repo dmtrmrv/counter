@@ -297,10 +297,3 @@ require get_template_directory() . '/inc/jetpack.php';
 if ( class_exists( 'Subtitles' ) ) {
 	require get_template_directory() . '/inc/subtitles.php';
 }
-
-/**
- * Theme Info Screen
- */
-if ( is_admin() ) {
-	require get_template_directory() . '/inc/theme-info-screen/theme-info-screen.php';
-}

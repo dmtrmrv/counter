@@ -308,8 +308,3 @@ function counter_wpcf7_ajax_loader() {
 	return network_site_url( '/wp-admin/images/spinner-2x.gif' );
 }
 add_filter( 'wpcf7_ajax_loader', 'counter_wpcf7_ajax_loader' );
-
-if ( is_admin() && isset( $_GET['activated'] ) && 'themes.php' == $pagenow ) {
-	wp_redirect( admin_url( 'admin.php?page=counter-getting-started' ) );
-	exit;
-}
