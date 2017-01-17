@@ -3,13 +3,6 @@
  */
 
 ( function( $, window ) {
-	// Fitvids.
-	function fitvids() {
-		$( 'article iframe' ).not( '.fitvid iframe' ).wrap( '<div class=\'fitvid\'/>' );
-		$( '.fitvid' ).fitVids();
-	}
-	fitvids();
-
 	// Smooth scroll to anchor adjustment.
 	$( 'a[href*="#"]:not([href="#"])' ).click( function() {
 		if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname ) {

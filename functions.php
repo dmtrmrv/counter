@@ -73,6 +73,9 @@ function counter_setup() {
 		'caption',
 	) );
 
+	// Add support for Jetpack responsive videos.
+	add_theme_support( 'jetpack-responsive-videos' );
+
 	// This theme styles the visual editor to resemble theme styles.
 	add_editor_style( array( 'assets/css/editor-style.css' ) );
 }
@@ -196,14 +199,6 @@ function counter_scripts() {
 		'counter-skip-link-focus-fix',
 		get_template_directory_uri() . '/assets/js/src/skip-link-focus-fix.js',
 		array(),
-		COUNTER_VERSION,
-		true
-	);
-
-	wp_enqueue_script(
-		'counter-fitvids',
-		get_template_directory_uri() . '/assets/js/src/jquery.fitvids.js',
-		array( 'jquery' ),
 		COUNTER_VERSION,
 		true
 	);
