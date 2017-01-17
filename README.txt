@@ -9,7 +9,7 @@ Tags:              blog, one-column, right-sidebar, custom-menu, editor-style, f
 
 == Description ==
 
-Counter is a minimal business theme for coffee shops, bakeries, barbershops, and other cool one-of-a-kind spots with proud counters. It features a flexible front page that displays up to ten panels that can display virtually any content. You can adjust panel heights, set background images, and change text and link colors using the Customizer without having to install any third-party plugins.
+Counter is a minimal WordPress theme for coffee shops, bakeries, barbershops, and other one-of-a-kind businesses.
 
 == Copyright ==
 

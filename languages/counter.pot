@@ -413,8 +413,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Theme for coffee shops, restaurants, cafes, barbershops and other kinds of "
-"small businesses. Has a flexible customizer-controlled front page template."
+"Counter is a minimal WordPress theme for coffee shops, bakeries, "
+"barbershops, and other one-of-a-kind businesses."
 msgstr ""
 
 #. Author of the plugin/theme
