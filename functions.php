@@ -31,25 +31,16 @@ if ( ! function_exists( 'counter_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function counter_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 */
+	// Make theme available for translation.\
 	load_theme_textdomain( 'counter', get_template_directory() . '/languages' );
 
-	/*
-	 * Add default posts and comments RSS feed links to head.
-	 */
+	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 */
+	// Let WordPress manage the document title.
 	add_theme_support( 'title-tag' );
 
-	/**
-	 * Enable support for theme logo.
-	 */
+	// Enable support for theme logo.
 	add_theme_support( 'custom-logo', array(
 		'width'       => 648,
 		'height'      => 324,
@@ -57,14 +48,10 @@ function counter_setup() {
 		'flex-height' => true,
 	) );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 */
+	// Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 
-	/*
-	 * Add necessary image sizes.
-	 */
+	// Add necessary image sizes.
 	add_image_size( 'counter-thumbnail',        '612',  '9999', false );
 	add_image_size( 'counter-thumbnail-grid',   '612',  '414',  true );
 	add_image_size( 'counter-thumbnail-single', '936',  '9999', false );
@@ -72,16 +59,12 @@ function counter_setup() {
 	add_image_size( 'counter-panel-full',       '1440', '9999', false );
 	add_image_size( 'counter-panel-double',     '2880', '9999', false );
 
-	/*
-	 * This theme uses wp_nav_menu() in one location.
-	 */
+	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary', 'counter' ),
 	) );
 
-	/*
-	 * Switch default core markup to output valid HTML5 for listed components.
-	 */
+	// Switch default core markup to output valid HTML5 for listed components.
 	add_theme_support( 'html5', array(
 		'search-form',
 		'comment-form',
@@ -90,9 +73,7 @@ function counter_setup() {
 		'caption',
 	) );
 
-	/*
-	 * This theme styles the visual editor to resemble theme styles.
-	 */
+	// This theme styles the visual editor to resemble theme styles.
 	add_editor_style( array( 'assets/css/editor-style.css' ) );
 }
 endif;
@@ -101,8 +82,6 @@ add_action( 'after_setup_theme', 'counter_setup' );
 
 /**
  * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function counter_widgets_init() {
 	// Sidebar.
@@ -116,7 +95,7 @@ function counter_widgets_init() {
 		'after_title'   => '</h5>',
 	) );
 
-	// Five footer widgets.
+	// Footer widgets.
 	for ( $i = 1; $i <= 4; $i++ ) :
 
 	register_sidebar( array(
@@ -182,7 +161,6 @@ add_action( 'wp_head', 'counter_javascript_detection', 0 );
  * Enqueue scripts and styles.
  */
 function counter_scripts() {
-	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style(
 		'counter-fonts',
 		counter_fonts_url()
@@ -242,17 +220,12 @@ function counter_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	/*
-	 * We have styles for Jetpack infinite scroll.
-	 * Let's save one request and some bandwidth. Shall we?
-	 */
+	// Deregister styles for Jetpack's Infinite Scroll.
 	if ( wp_style_is( 'the-neverending-homepage', 'registered' ) ) {
 		wp_deregister_style( 'the-neverending-homepage' );
 	}
 
-	/*
-	 * Do the same thing with Contact Form 7.
-	 */
+	// Deregister styles for Contact Form 7.
 	if ( wp_style_is( 'contact-form-7', 'registered' ) ) {
 		wp_deregister_style( 'contact-form-7' );
 	}
@@ -272,8 +245,6 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-
-// Customizer section class needed to create custom section.
 require_once( ABSPATH . WPINC . '/class-wp-customize-section.php' );
 require get_template_directory() . '/inc/customizer-sanitization.php';
 require get_template_directory() . '/inc/customizer-sections.php';
