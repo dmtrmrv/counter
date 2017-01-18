@@ -53,12 +53,12 @@ function counter_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add necessary image sizes.
-	add_image_size( 'counter-thumbnail',        '612',  '9999', false );
-	add_image_size( 'counter-thumbnail-grid',   '612',  '414',  true );
-	add_image_size( 'counter-thumbnail-single', '936',  '9999', false );
-	add_image_size( 'counter-panel-half',       '720',  '9999', false );
-	add_image_size( 'counter-panel-full',       '1440', '9999', false );
-	add_image_size( 'counter-panel-double',     '2880', '9999', false );
+	add_image_size( '612x414', 612,  414, true );
+	add_image_size( '612x0',   612,  0,   false );
+	add_image_size( '720x0',   720,  0,   false );
+	add_image_size( '936x0',   936,  0,   false );
+	add_image_size( '1440x0',  1440, 0,   false );
+	add_image_size( '2880x0',  2880, 0,   false );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
