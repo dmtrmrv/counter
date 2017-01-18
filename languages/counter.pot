@@ -225,79 +225,72 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/template-tags.php:38
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:40 inc/template-tags.php:104
-msgid "%1$s"
-msgstr ""
-
-#: inc/template-tags.php:83
+#: inc/template-tags.php:72
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:72
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:72
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:172
+#: inc/template-tags.php:155
+#. translators: used between list items, there is a space after the comma
 msgid "Older"
 msgstr ""
 
-#: inc/template-tags.php:173
+#: inc/template-tags.php:156
 msgid "Newer"
 msgstr ""
 
-#: inc/template-tags.php:174
+#: inc/template-tags.php:157
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:171
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:191
+#: inc/template-tags.php:174
 msgid "Prev:"
 msgstr ""
 
-#: inc/template-tags.php:192
+#: inc/template-tags.php:175
 msgid "Next:"
 msgstr ""
 
-#: inc/template-tags.php:208
+#: inc/template-tags.php:191
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:211
+#: inc/template-tags.php:194
 msgid "Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:212
+#: inc/template-tags.php:195
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:226
+#: inc/template-tags.php:208
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:306
+#: inc/template-tags.php:272
 msgid "No Featured Image"
 msgstr ""
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:285
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:360
+#: inc/template-tags.php:304
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:362
+#: inc/template-tags.php:306
 msgid "Customize"
 msgstr ""
 
