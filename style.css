@@ -3,17 +3,17 @@ Theme Name:  Counter
 Theme URI:   https://themepatio.com/themes/counter/
 Author:      ThemePatio
 Author URI:  https://themepatio.com
-Description: Counter is a minimal WordPress theme for coffee shops, bakeries, barbershops, and other one-of-a-kind businesses.
+Description: Theme for coffee shops, restaurants, cafes, barbershops and other kinds of small businesses. Has a flexible customizer-controlled front page template.
 Version:     1.0.1
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: counter
-Tags:        blog, one-column, right-sidebar, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, entertainment, food-and-drink
+Tags:        blog, one-column, three-columns, right-sidebar, grid-layout, custom-colors, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, entertainment, food-and-drink,
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Counter is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Counter is based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -514,7 +514,7 @@ code {
 	float: left;
 	width: 0;
 	white-space: nowrap;
-	content: '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . ' '. . . . . . . . . . . . . . . . . . . . ';
+	content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ';
 }
 
 .lead-dots span:first-child {
@@ -528,60 +528,9 @@ code {
 	background: #fff;
 }
 
-.card {
-	display: inline-block;
-	margin-bottom: 1.5em;
-	padding: 2em 2em 0.5em;
-	background-color: #fff;
-
-	overflow-wrap: break-word;
-}
-
-.card h1,
-.card h2,
-.card h3,
-.card h4,
-.card h5,
-.card h6 {
-	margin-top: 0;
-}
-
-.card.card-black {
-	background-color: #1e1e1e;
-}
-
-.card-title {
-	margin-bottom: 0.83333333333333em;
-	font-size: 1.2em;
-	line-height: 1.25;
-	text-align: left;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-
-.panel-title-align-center .card-title {
-	text-align: center;
-}
-
 .highlight {
 	display: inline-block;
 	background-color: #fff090;
-}
-
-.counter-row .counter-col:last-of-type {
-	margin-right: 0;
-}
-
-.counter-col {
-	margin-bottom: 1.5em;
-}
-
-.mt0 {
-	margin-top: 0;
-}
-
-.mb0 {
-	margin-bottom: 0;
 }
 
 /**
@@ -693,7 +642,13 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
 input[type='number'],
+input[type='tel'],
 textarea {
 	width: 100%;
 	padding: 0.6944444444em 1em;
@@ -716,7 +671,13 @@ input[type='url']:focus,
 input[type='password']:focus,
 input[type='search']:focus,
 input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
 input[type='number']:focus,
+input[type='tel']:focus,
 textarea:focus {
 	border-color: #d17d38;
 	outline: 0;
@@ -728,12 +689,27 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 input[type='date'],
-input[type='number'] {
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='tel'] {
 	height: 3em;
 }
 
 label {
 	opacity: 0.5;
+}
+
+select {
+	display: block;
+	height: 3em;
+}
+
+input[type='range'] {
+	display: block;
 }
 
 ::-webkit-input-placeholder {
@@ -1085,7 +1061,6 @@ p > video {
 /* Clearings */
 
 .clear:after,
-.counter-row:after,
 .wrap:after,
 .counter-grid:after,
 .site-header:after,
@@ -1149,7 +1124,7 @@ body {
 	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
 }
 
-.site-header .site-header-wrap {
+.site-header-wrap {
 	position: relative;
 	z-index: 20;
 	max-width: 1024px;
@@ -1160,13 +1135,13 @@ body {
 	text-align: center;
 }
 
-.site-header .site-header-wrap:after {
+.site-header-wrap:after {
 	display: table;
 	clear: both;
 	content: '';
 }
 
-.site-header .site-header-wrap:before {
+.site-header-wrap:before {
 	display: inline-block;
 	height: 100%;
 	margin-right: -0.25em; /* Adjusts for spacing */
@@ -1180,6 +1155,12 @@ body {
 
 .site-title {
 	margin-bottom: 0;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 
 .site-title a {
@@ -1202,18 +1183,24 @@ body {
 	display: block;
 	max-width: 324px;
 	margin-right: auto;
-	margin-left: auto;
-}
-
-.is-site-title .custom-logo-link,
-.is-site-tagline .custom-logo-link {
 	margin-bottom: 0.75em;
+	margin-left: auto;
 }
 
 .custom-logo-link img {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.title-tagline-hidden .site-title,
+.title-tagline-hidden .site-description {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute;
+}
+
+.title-tagline-hidden .custom-logo-link {
+	margin-bottom: 0;
 }
 
 /* Footer */
@@ -1715,18 +1702,6 @@ body {
 
 .entry-title a {
 	color: #1e1e1e;
-}
-
-.single .entry-subtitle,
-.single-page .entry-subtitle,
-.panel-title .entry-subtitle {
-	display: block;
-	margin: 0.8333333333em 0;
-	opacity: 0.5;
-	font-size: 0.8em;
-	line-height: 1.5;
-	letter-spacing: normal;
-	text-transform: none;
 }
 
 /* Entry Meta */
@@ -2357,43 +2332,15 @@ body {
 	margin-left: auto;
 }
 
-/* Page */
-
-.single-page.page-template-default .content-area {
-	max-width: 612px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.single-page.page-template-centered .content-area {
-	max-width: 612px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.single-page .entry-title {
-	margin-bottom: 0.75em;
-	text-align: center;
-}
-
-.single-page .has-subtitle .entry-title {
-	margin-bottom: 0.6em;
-}
-
-.single-page .post-thumbnail {
-	margin-top: 0.5em;
-}
-
 /* Front Page */
 
-.page-template-front .site-content {
+.front-page .site-content {
 	max-width: 100%;
 	padding: 0;
 }
 
 .panel {
 	position: relative;
-	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
 }
 
 .panel:before,
@@ -2401,10 +2348,6 @@ body {
 	display: table;
 	clear: both;
 	content: '';
-}
-
-.panel:last-of-type {
-	border-bottom: 0;
 }
 
 .panel-thumbnail img {
@@ -2441,16 +2384,8 @@ body {
 	text-transform: uppercase;
 }
 
-.panel-title-align-center .panel-title {
-	text-align: center;
-}
-
 .panel-content {
 	position: relative;
-}
-
-.panel-align-center .panel-content {
-	text-align: center;
 }
 
 .panel-content .post-password-form {
@@ -2474,17 +2409,6 @@ body {
 	height: 100%;
 }
 
-.panel-all-posts-button a {
-	display: block;
-	margin-right: auto;
-	margin-bottom: 3em;
-	margin-left: auto;
-}
-
-.panel-empty {
-	text-align: center;
-}
-
 .panel-meta {
 	display: block;
 	position: absolute;
@@ -2499,8 +2423,26 @@ body {
 	text-align: center;
 }
 
+.panel-center {
+	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
+}
+
+.panel-center.has-background,
+.panel-center:last-of-type {
+	border-bottom: 0;
+}
+
 .panel-center .panel-data {
 	max-width: 612px;
+}
+
+.panel-fullwidth {
+	border-bottom: 1px solid rgba(85, 85, 85, 0.15);
+}
+
+.panel-fullwidth.has-background,
+.panel-fullwidth:last-of-type {
+	border-bottom: 0;
 }
 
 .panel-fullwidth .panel-data {
@@ -2535,6 +2477,33 @@ body {
 
 .panel-right .panel-thumbnail img {
 	width: 100%;
+}
+
+/* Page */
+
+.single-page.page-template-default .content-area {
+	max-width: 612px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.single-page.page-template-centered .content-area {
+	max-width: 612px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.single-page .entry-title {
+	margin-bottom: 0.75em;
+	text-align: center;
+}
+
+.single-page .has-subtitle .entry-title {
+	margin-bottom: 0.6em;
+}
+
+.single-page .post-thumbnail {
+	margin-top: 0.5em;
 }
 
 /* Not found */
@@ -2697,31 +2666,6 @@ body {
 		margin: 2.25em;
 	}
 
-	.card {
-		padding: 3em 3em 1.5em;
-	}
-
-	.panel-title-align-right .card-title {
-		text-align: right;
-	}
-
-	.counter-col {
-		float: left;
-		margin-right: 2.8571428571%;
-	}
-
-	.counter-row-2 .counter-col {
-		width: 48.5714285714%;
-	}
-
-	.counter-row-3 .counter-col {
-		width: 31.4285714286%;
-	}
-
-	.counter-row-4 .counter-col {
-		width: 22.8571428571%;
-	}
-
 	blockquote.alignleft {
 		margin: 2.25em 2.25em 2.25em 0;
 	}
@@ -2749,20 +2693,16 @@ body {
 		border-bottom: none;
 	}
 
-	.site-header .site-header-wrap {
+	.site-header-wrap {
 		padding: 1.5em 1.5em 0;
 	}
 
-	.no-primary-menu .site-header .site-header-wrap {
+	.no-primary-menu .site-header-wrap {
 		padding: 1.5em;
 	}
 
 	.site-branding {
 		margin: 10% 0;
-	}
-
-	.site-tagline .site-branding {
-		margin: 3em 0 2.25em;
 	}
 
 	.main-navigation {
@@ -2844,12 +2784,6 @@ body {
 
 	.taxonomy-description p {
 		margin: -1.25em 0 1.6666666667em;
-	}
-
-	.single .entry-subtitle,
-	.single-page .entry-subtitle,
-	.panel-title .entry-subtitle {
-		margin: 1.25em 0;
 	}
 
 	.entry-footer {
@@ -2997,19 +2931,6 @@ body {
 		padding-bottom: 3.75%;
 	}
 
-	.panel-title-align-right .panel-title {
-		text-align: right;
-	}
-
-	.panel-align-right .panel-content {
-		text-align: right;
-	}
-
-	.panel-all-posts-button a {
-		max-width: 31.4285714286%;
-		margin-bottom: 4.5em;
-	}
-
 	.panel-left .panel-data {
 		overflow: hidden;
 		position: absolute;
@@ -3104,12 +3025,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-	.card-title {
-		margin-bottom: 1em;
-		font-size: 1.5em;
-		line-height: 1.25;
-	}
-
 	.counter-blog-default .site-content.wrap {
 		max-width: 936px;
 		padding-right: 0;
@@ -3162,6 +3077,12 @@ body {
 		margin-bottom: 1.5em;
 	}
 
+	.panel-title {
+		margin-bottom: 1em;
+		font-size: 1.5em;
+		line-height: 1.25;
+	}
+
 	.single-page .site-content.wrap {
 		max-width: 936px;
 		padding-right: 0;
@@ -3199,12 +3120,6 @@ body {
 
 	.single-page .has-subtitle .entry-title {
 		margin-bottom: 1em;
-	}
-
-	.panel-title {
-		margin-bottom: 1em;
-		font-size: 1.5em;
-		line-height: 1.25;
 	}
 
 	.search-results .hentry {

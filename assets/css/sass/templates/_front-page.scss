@@ -1,6 +1,6 @@
 /* Front Page */
 
-.page-template-front {
+.front-page {
 	.site-content {
 		max-width: 100%;
 		padding: 0;
@@ -10,10 +10,6 @@
 .panel {
 	@include clearfix();
 	position: relative;
-	border-bottom: 1px solid $color__gray;
-	&:last-of-type {
-		border-bottom: 0;
-	}
 }
 
 .panel-thumbnail img {
@@ -42,7 +38,6 @@
 .panel-title {
 	margin-bottom: 0.83333333333333em;
 	font-size: 1.2em; // 21.6px
-	// font-weight: 700;
 	line-height: 1.25; // 27px
 	text-align: left;
 	letter-spacing: 2px;
@@ -52,31 +47,11 @@
 		font-size: 1.5em; // 27px
 		line-height: 1.25; // 33.75px
 	}
-	.panel-title-align-center & {
-		text-align: center;
-	}
-	@media screen and ( min-width: $sm ) {
-		.panel-title-align-right & {
-			text-align: right;
-		}
-	}
-}
-
-.panel-title .entry-subtitle {
-	@extend %entry-subtitle;
 }
 
 .panel-content {
 	@extend .clear;
 	position: relative;
-	.panel-align-center & {
-		text-align: center;
-	}
-	@media screen and ( min-width: $sm ) {
-		.panel-align-right & {
-			text-align: right;
-		}
-	}
 	.post-password-form {
 		@include with_layout( $susy-static ) {
 			max-width: span( 6 );
@@ -100,21 +75,6 @@
 	height: 100%;
 }
 
-.panel-all-posts-button a {
-	display: block;
-	margin-right: auto;
-	margin-bottom: 3em;
-	margin-left: auto;
-	@media screen and ( min-width: $sm ) {
-		max-width: span( 4 );
-		margin-bottom: 4.5em;
-	}
-}
-
-.panel-empty {
-	text-align: center;
-}
-
 .panel-meta {
 	@include font-size( 0.75 ); //13.5px
 	display: block;
@@ -130,6 +90,11 @@
 
 // Default.
 .panel-center {
+	border-bottom: 1px solid $color__gray;
+	&.has-background,
+	&:last-of-type {
+		border-bottom: 0;
+	}
 	@include with_layout( $susy-static ) {
 		.panel-data {
 			max-width: span( 6 );
@@ -139,6 +104,11 @@
 
 // Fullwidth.
 .panel-fullwidth {
+	border-bottom: 1px solid $color__gray;
+	&.has-background,
+	&:last-of-type {
+		border-bottom: 0;
+	}
 	@include with_layout( $susy-static ) {
 		.panel-data {
 			max-width: span( 9 );

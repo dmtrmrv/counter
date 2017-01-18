@@ -13,26 +13,3 @@
 	visibility: hidden;
 	position: absolute;
 }
-
-#accordion-section-frontpage_options,
-#accordion-section-frontpage_invisible {
-	margin: 15px 12px;
-}
-
-.customize-control input[type='number'].counter-panel-count {
-	width: 60px;
-}
-
-[id^="customize-control-panel_title_alignment_"],
-[id^="customize-control-panel_post_count_"] {
-	width: 48%;
-	clear: none;
-	float: left;
-}
-
-[id^="customize-control-panel_text_alignment_"],
-[id^="customize-control-panel_column_count_"] {
-	width: 48%;
-	clear: none;
-	float: right;
-}

@@ -6,7 +6,13 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
 input[type='number'],
+input[type='tel'],
 textarea {
 	@include font-size( 1 );
 	width: 100%;
@@ -32,7 +38,13 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 input[type='date'],
-input[type='number'], {
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='tel'] {
 	height: 3em;
 }
 
@@ -40,22 +52,51 @@ label {
 	opacity: $opacity;
 }
 
+select {
+	display: block;
+	height: 3em;
+}
+
+input[type='range'] {
+	display: block;
+}
+
 @mixin placeholder {
-	color:#c0392b;
+	color: #c0392b;
 	:focus {
 		color: transparent;
 	}
 }
 
-::-webkit-input-placeholder { color: $color__text; text-overflow:ellipsis; }
-::-moz-placeholder          { color: $color__text; text-overflow:ellipsis; }
-:-moz-placeholder           { color: $color__text; text-overflow:ellipsis; }
-input:-ms-input-placeholder { color: $color__text; text-overflow:ellipsis; }
+::-webkit-input-placeholder {
+	color: $color__text;
+	text-overflow: ellipsis;
+}
+::-moz-placeholder {
+	color: $color__text;
+	text-overflow: ellipsis;
+}
+:-moz-placeholder {
+	color: $color__text;
+	text-overflow: ellipsis;
+}
+input:-ms-input-placeholder {
+	color: $color__text;
+	text-overflow: ellipsis;
+}
 
-:focus::-webkit-input-placeholder { color: transparent;}
-:focus::-moz-placeholder          { color: transparent;}
-:focus:-moz-placeholder           { color: transparent;}
-input:focus:-ms-input-placeholder { color: transparent;}
+:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+:focus::-moz-placeholder {
+	color: transparent;
+}
+:focus:-moz-placeholder {
+	color: transparent;
+}
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
 
 .post-password-form {
 	position: relative;

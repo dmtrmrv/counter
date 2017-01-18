@@ -6,19 +6,6 @@
 	}
 }
 
-%entry-subtitle {
-	display: block;
-	margin: 0.8333333333em 0;
-	opacity: $opacity;
-	font-size: 0.8em;
-	line-height: 1.5;
-	letter-spacing: normal;
-	text-transform: none;
-	@media screen and ( min-width: $sm ) {
-		margin: 1.25em 0;
-	}
-}
-
 .entry-header {
 	@extend .clear;
 }

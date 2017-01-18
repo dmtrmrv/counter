@@ -21,15 +21,12 @@
 .lead-dots {
 	overflow-x: hidden;
 }
+
 .lead-dots:before {
 	float: left;
 	width: 0;
 	white-space: nowrap;
-	content: '. . . . . . . . . . . . . . . . . . . . '
-	'. . . . . . . . . . . . . . . . . . . . '
-	'. . . . . . . . . . . . . . . . . . . . '
-	'. . . . . . . . . . . . . . . . . . . . '
-	'. . . . . . . . . . . . . . . . . . . . ';
+	content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ';
 }
 
 .lead-dots span:first-child {
@@ -43,96 +40,7 @@
 	background: #fff;
 }
 
-.card {
-	display: inline-block;
-	margin-bottom: 1.5em;
-	padding: 2em 2em 0.5em;
-	background-color: #fff;
-	// word-wrap: break-word;
-	// word-break: break-word;
-	// -webkit-hyphens: normal;
-	//    -moz-hyphens: normal;
-	//     -ms-hyphens: normal;
-	//         hyphens: normal;
-
-	overflow-wrap: break-word;
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		margin-top: 0;
-	}
-	@media screen and ( min-width: $sm ) {
-		padding: 3em 3em 1.5em;
-	}
-}
-
-.card.card-black {
-	background-color: $color__headings;
-}
-
-.card-title {
-	margin-bottom: 0.83333333333333em;
-	font-size: 1.2em; // 21.6px
-	line-height: 1.25; // 27px
-	text-align: left;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	@media screen and ( min-width: $md ) {
-		margin-bottom: 1em;
-		font-size: 1.5em; // 27px
-		line-height: 1.25; // 33.75px
-	}
-	.panel-title-align-center & {
-		text-align: center;
-	}
-	@media screen and ( min-width: $sm ) {
-		.panel-title-align-right & {
-			text-align: right;
-		}
-	}
-}
-
 .highlight {
 	display: inline-block;
 	background-color: $color__highlight;
-}
-
-.counter-row {
-	@extend .clear;
-	.counter-col:last-of-type {
-		margin-right: 0;
-	}
-}
-
-.counter-col {
-	margin-bottom: 1.5em;
-	@media screen and ( min-width: $sm ) {
-		float: left;
-		margin-right: gutter();
-	}
-}
-
-@media screen and ( min-width: $sm ) {
-	.counter-row-2 .counter-col {
-		width: span( 6 );
-	}
-
-	.counter-row-3 .counter-col {
-		width: span( 4 );
-	}
-
-	.counter-row-4 .counter-col {
-		width: span( 3 );
-	}
-}
-
-.mt0 {
-	margin-top: 0;
-}
-
-.mb0 {
-	margin-bottom: 0;
 }
