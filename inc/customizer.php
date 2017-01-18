@@ -31,7 +31,7 @@ function counter_customize_register( $wp_customize ) {
 	/**
 	 * Colors.
 	 */
-	$wp_customize -> add_control(
+	$wp_customize->add_control(
 		new Counter_Message_Control(
 			$wp_customize,
 			'color_upgrade',
@@ -61,7 +61,7 @@ function counter_customize_register( $wp_customize ) {
 		'panel' => 'theme_options',
 	) );
 
-	$wp_customize -> add_control(
+	$wp_customize->add_control(
 		new Counter_Message_Control(
 			$wp_customize,
 			'blog_layout_upgrade',
@@ -247,6 +247,20 @@ function counter_customize_register( $wp_customize ) {
 		),
 	) );
 
+	$wp_customize->add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'panel_number_upgrade_' . $i,
+			array(
+				'section'     => 'panel_' . $i,
+				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=more-panels',
+				'settings'    => array(),
+				'link_text'   => __( 'Updgrade Counter', 'counter' ),
+				'description' => __( 'Need more than four panels?', 'counter' ),
+			)
+		)
+	);
+
 	endfor;
 
 	// Footer Text.
@@ -255,7 +269,7 @@ function counter_customize_register( $wp_customize ) {
 		'panel' => 'theme_options'
 	) );
 
-	$wp_customize -> add_control(
+	$wp_customize->add_control(
 		new Counter_Message_Control(
 			$wp_customize,
 			'footer_text_upgrade',

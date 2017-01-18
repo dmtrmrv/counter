@@ -41,7 +41,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:106 inc/customizer.php:254
+#: functions.php:106 inc/customizer.php:268
 msgid "Footer"
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Custom Colors"
 msgstr ""
 
-#: inc/customizer.php:43 inc/customizer.php:73 inc/customizer.php:267
+#: inc/customizer.php:43 inc/customizer.php:73 inc/customizer.php:281
 msgid "Learn More"
 msgstr ""
 
@@ -201,11 +201,19 @@ msgstr ""
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:263
+#: inc/customizer.php:258
+msgid "Updgrade Counter"
+msgstr ""
+
+#: inc/customizer.php:259
+msgid "Need more than four panels?"
+msgstr ""
+
+#: inc/customizer.php:277
 msgid "Custom Footer Text"
 msgstr ""
 
-#: inc/customizer.php:268
+#: inc/customizer.php:282
 msgid "Upgrade Counter to set custom footer text."
 msgstr ""
 
