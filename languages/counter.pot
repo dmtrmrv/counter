@@ -374,10 +374,6 @@ msgstr ""
 msgid "https://themepatio.com"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Front Page"
-msgstr ""
-
 #: comments.php:24
 msgctxt "Comments title"
 msgid "One Comment"

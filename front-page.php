@@ -2,8 +2,6 @@
 /**
  * The template for displaying front page
  *
- * Template Name: Front Page
- *
  * @package Counter
  */
 
@@ -11,6 +9,16 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<?php
+			// Hero panel goes first.
+			while ( have_posts() ) {
+				the_post();
+				$hero_layout = get_theme_mod( 'panel_layout_0', 'center' );
+				set_query_var( 'counter_panel_num', 0 );
+				set_query_var( 'counter_panel_layout', $hero_layout );
+				set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_0', false ) ? ' has-background' : '' );
+				get_template_part( 'template-parts/panel', $hero_layout );
+			}
+
 			// IDs of the pages that serve as panels.
 			$counter_panel_ids = array();
 			for ( $i = 1; $i <= counter_get_panel_count(); $i++ ) {
@@ -25,7 +33,7 @@ get_header(); ?>
 				'post__in'       => $counter_panel_ids,
 				'orderby'        => 'post__in',
 				'posts_per_page' => counter_get_panel_count(),
-				'no_found_rows'  => true, // See http://flavio.tordini.org/speed-up-wordpress-get_posts-and-query_posts-functions for details.
+				'no_found_rows'  => true, // See http://bit.ly/2dqU8jJ for details.
 			) );
 
 			/*
@@ -63,6 +71,7 @@ get_header(); ?>
 					// Set the variables that will be available within template part.
 					set_query_var( 'counter_panel_num', $k );
 					set_query_var( 'counter_panel_layout', $layout );
+					set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_' . $k, false ) ? ' has-background' : '' );
 
 					// Display panel content.
 					get_template_part( 'template-parts/panel', $layout );
@@ -76,4 +85,4 @@ get_header(); ?>
 		?>
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer();

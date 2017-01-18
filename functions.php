@@ -246,6 +246,18 @@ require get_template_directory() . '/inc/customizer-controls.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Use front-page.php when Front page displays is set to a static page.
+ *
+ * @param string $template front-page.php.
+ *
+ * @return string The template to be used: blank if is_home() is true (defaults to index.php), else $template.
+ */
+function counter_front_page_template( $template ) {
+	return is_home() ? '' : $template;
+}
+add_filter( 'frontpage_template',  'counter_front_page_template' );
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
