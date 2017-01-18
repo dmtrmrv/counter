@@ -232,6 +232,11 @@ function counter_hex2rgb( $color ) {
 	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
 }
 
+/**
+ * Checks if current page is the front page and not the blog.
+ *
+ * @return boolean True if it is the front page.
+ */
 function counter_is_front_page() {
 	if ( is_front_page() && ! is_home() ) {
 		return true;

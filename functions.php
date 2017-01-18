@@ -31,7 +31,7 @@ if ( ! function_exists( 'counter_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function counter_setup() {
-	// Make theme available for translation.\
+	// Make theme available for translation.
 	load_theme_textdomain( 'counter', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.

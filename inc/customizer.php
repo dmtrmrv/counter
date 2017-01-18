@@ -266,7 +266,7 @@ function counter_customize_register( $wp_customize ) {
 	// Footer Text.
 	$wp_customize->add_section( 'footer' , array(
 		'title' => __( 'Footer', 'counter' ),
-		'panel' => 'theme_options'
+		'panel' => 'theme_options',
 	) );
 
 	$wp_customize->add_control(
