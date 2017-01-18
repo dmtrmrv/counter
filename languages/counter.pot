@@ -13,24 +13,20 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: comments.php:45
+#: comments.php:26
+msgid "One Reply"
+msgstr ""
+
+#: comments.php:53
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:49
-msgid "Leave a Comment"
-msgstr ""
-
-#: comments.php:50
+#: comments.php:57
 msgid "Reply to %s"
 msgstr ""
 
-#: comments.php:51
+#: comments.php:58
 msgid "Cancel"
-msgstr ""
-
-#: comments.php:52
-msgid "Submit Comment"
 msgstr ""
 
 #: functions.php:65
@@ -57,7 +53,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:47
+#: header.php:46
 msgid "Primary Menu"
 msgstr ""
 
@@ -249,59 +245,59 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:190
+#: inc/template-tags.php:172
 msgid "Older"
 msgstr ""
 
-#: inc/template-tags.php:191
+#: inc/template-tags.php:173
 msgid "Newer"
 msgstr ""
 
-#: inc/template-tags.php:192
+#: inc/template-tags.php:174
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:188
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:209
+#: inc/template-tags.php:191
 msgid "Prev:"
 msgstr ""
 
-#: inc/template-tags.php:210
+#: inc/template-tags.php:192
 msgid "Next:"
 msgstr ""
 
-#: inc/template-tags.php:226
+#: inc/template-tags.php:208
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:229
+#: inc/template-tags.php:211
 msgid "Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:230
+#: inc/template-tags.php:212
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:244
+#: inc/template-tags.php:226
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:324
+#: inc/template-tags.php:306
 msgid "No Featured Image"
 msgstr ""
 
-#: inc/template-tags.php:359
+#: inc/template-tags.php:341
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:378
+#: inc/template-tags.php:360
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:380
+#: inc/template-tags.php:362
 msgid "Customize"
 msgstr ""
 
@@ -309,31 +305,31 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:15
+#: template-parts/content-none.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: template-parts/content-none.php:17
+#: template-parts/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:26
+#: template-parts/content-none.php:24
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:30
+#: template-parts/content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:36
+#: template-parts/content-none.php:34
 msgid ""
 "Looks like the page you are looking for has been moved or does not exist. "
 "Click on the site logo to go to the homepage or try searching."
 msgstr ""
 
-#: template-parts/content-none.php:42
+#: template-parts/content-none.php:40
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -374,10 +370,10 @@ msgstr ""
 msgid "https://themepatio.com"
 msgstr ""
 
-#: comments.php:24
-msgctxt "Comments title"
-msgid "One Comment"
-msgid_plural "%s Comments"
+#: comments.php:30
+msgctxt "comments title"
+msgid "%1$s Reply"
+msgid_plural "%1$s Replies"
 msgstr[0] ""
 msgstr[1] ""
 

@@ -24,9 +24,8 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-wrap">
 			<div class="site-branding">
-				<?php counter_site_logo(); ?>
-				<?php counter_site_title(); ?>
-				<?php counter_site_tagline(); ?>
+				<?php the_custom_logo(); ?>
+				<?php counter_site_title_tagline(); ?>
 			</div><!-- .site-branding -->
 		</div><!-- .site-header-wrap -->
 

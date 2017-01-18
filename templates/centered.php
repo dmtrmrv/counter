@@ -15,11 +15,11 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-			<?php
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+			<?php if ( comments_open() || get_comments_number() ) : ?>
+
+				<?php comments_template(); ?>
+
+			<?php endif; ?>
 
 		<?php endwhile; ?>
 

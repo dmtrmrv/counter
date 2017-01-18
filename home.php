@@ -27,11 +27,10 @@ get_header(); ?>
 
 	</div><!-- #primary -->
 
-	<?php
-		// Display sidebar only on deafult blog layout.
-		if ( 'default' == get_theme_mod( 'blog_layout', 'default' ) ) {
-			get_sidebar();
-		}
-	?>
+	<?php if ( 'default' == get_theme_mod( 'blog_layout', 'default' ) ) : ?>
 
-<?php get_footer(); ?>
+		<?php get_sidebar(); ?>
+
+	<?php endif; ?>
+
+<?php get_footer();

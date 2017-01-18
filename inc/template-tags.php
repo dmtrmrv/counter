@@ -163,24 +163,6 @@ function counter_post_thumbnail() {
 }
 endif;
 
-if ( ! function_exists( 'counter_grid_item_thumbnail' ) ) :
-/**
- * Displays post thumbnail in a grid.
- *
- * Wraps the post thumbnail in an anchor element on index
- * view, or a div element on single view.
- */
-function counter_grid_item_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
-
-	printf( '<a class="post-thumbnail" href="%s">', esc_url( apply_filters( 'the_permalink', get_permalink() ) ) );
-		the_post_thumbnail( 'counter-thumbnail-grid' );
-	echo '</a>';
-}
-endif;
-
 if ( ! function_exists( 'counter_posts_navigation' ) ) :
 /**
  * Displays Posts Navigation a.k.a Older/Newer posts links on a blog page.

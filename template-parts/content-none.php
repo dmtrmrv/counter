@@ -10,13 +10,11 @@
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title">
-			<?php
-				if ( is_404() ) {
-					esc_html_e( 'Oops! That page can&rsquo;t be found.', 'counter' );
-				} else {
-					esc_html_e( 'Nothing Found', 'counter' );
-				}
-			?>
+			<?php if ( is_404() ) : ?>
+				<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'counter' ); ?>
+			<?php else : ?>
+				<?php esc_html_e( 'Nothing Found', 'counter' ); ?>
+			<?php endif; ?>
 		</h1>
 	</header><!-- .page-header -->
 

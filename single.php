@@ -15,11 +15,11 @@ get_header(); ?>
 
 		<?php counter_post_navigation(); ?>
 
-		<?php
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-		?>
+		<?php if ( comments_open() || get_comments_number() ) : ?>
+
+			<?php comments_template(); ?>
+
+		<?php endif; ?>
 
 	<?php endwhile; ?>
 
@@ -27,4 +27,4 @@ get_header(); ?>
 
 	<?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
+<?php get_footer();
