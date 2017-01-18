@@ -33,23 +33,23 @@ msgstr ""
 msgid "Submit Comment"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:65
 msgid "Primary"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:95
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:105 inc/customizer.php:269
+#: functions.php:106 inc/customizer.php:254
 msgid "Footer"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:108
 msgid "Appears in the footer."
 msgstr ""
 
@@ -61,168 +61,156 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/customizer.php:29
-msgid "Display Title"
-msgstr ""
-
-#: inc/customizer.php:41
-msgid "Display Tagline"
-msgstr ""
-
-#: inc/customizer.php:54
+#: inc/customizer.php:39
 msgid "Custom Colors"
 msgstr ""
 
-#: inc/customizer.php:58 inc/customizer.php:88 inc/customizer.php:281
+#: inc/customizer.php:43 inc/customizer.php:73 inc/customizer.php:267
 msgid "Learn More"
 msgstr ""
 
-#: inc/customizer.php:59
+#: inc/customizer.php:44
 msgid "Upgrade Counter to set custom text, links, headings, and background color."
 msgstr ""
 
-#: inc/customizer.php:69
+#: inc/customizer.php:54
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:75
+#: inc/customizer.php:60
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:69
 msgid "Blog Layout & Post Meta"
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/customizer.php:74
 msgid "Upgrade Counter to set three-column grid blog layout and edit post meta."
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:86
 msgid "Hero Panel"
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:86
 msgid "Panel "
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:100
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:114
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:145
+#: inc/customizer.php:130
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:159
+#: inc/customizer.php:144
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer.php:163
+#: inc/customizer.php:148
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer.php:164
+#: inc/customizer.php:149
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:150
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:151
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:178
+#: inc/customizer.php:163
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:182
+#: inc/customizer.php:167
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:183
+#: inc/customizer.php:168
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:169
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:185
+#: inc/customizer.php:170
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:171
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:172
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:173
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:174
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:190
+#: inc/customizer.php:175
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:202
+#: inc/customizer.php:187
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:191
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer.php:207
+#: inc/customizer.php:192
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:219
+#: inc/customizer.php:204
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer.php:223
+#: inc/customizer.php:208
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:209
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:210
 msgid "Percent"
 msgstr ""
 
-#: inc/customizer.php:237
+#: inc/customizer.php:222
 msgid "Background Size %"
 msgstr ""
 
-#: inc/customizer.php:255
+#: inc/customizer.php:240
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:278
+#: inc/customizer.php:263
 msgid "Custom Footer Text"
 msgstr ""
 
-#: inc/customizer.php:283
+#: inc/customizer.php:268
 msgid "Upgrade Counter to set custom footer text."
-msgstr ""
-
-#: inc/customizer.php:297 inc/template-tags.php:244
-msgid "%1$s theme by %2$s"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -233,11 +221,11 @@ msgstr ""
 msgid "Fullwidth"
 msgstr ""
 
-#: inc/extras.php:137
+#: inc/extras.php:145
 msgid "Left"
 msgstr ""
 
-#: inc/extras.php:138
+#: inc/extras.php:146
 msgid "Right"
 msgstr ""
 
@@ -295,6 +283,10 @@ msgstr ""
 
 #: inc/template-tags.php:230
 msgid "Newer Comments"
+msgstr ""
+
+#: inc/template-tags.php:244
+msgid "%1$s theme by %2$s"
 msgstr ""
 
 #: inc/template-tags.php:324
@@ -393,12 +385,12 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:134
+#: functions.php:135
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:139
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""

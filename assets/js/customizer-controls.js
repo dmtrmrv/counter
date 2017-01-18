@@ -6,7 +6,7 @@
 	'use strict';
 
 	// Number of panels passed by wp_localize_script()
-	pnlCountControls = parseInt( pnlCountControls[0] );
+	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
 
 	api.bind( 'ready', function() {
 		/**
@@ -17,7 +17,7 @@
 		var toggleables = [];
 
 		/**
-		 * Toggles the visibility of controls.
+		 * Toggles section class.
 		 *
 		 * Sometimes you need to hide/show multiple controls depending on the
 		 * value of another single control. For example if the Background Image
@@ -43,7 +43,7 @@
 		 * hide the controls in the sectoin if the content for the panel is not
 		 * set or was removed in 'panel_content_x' control.
 		 */
-		for ( var i = 1; i <= pnlCountControls; i++ ) {
+		for ( var i = 0; i <= frontPagePanelCount; i++ ) {
 
 			// Background Size in %.
 			toggleables.push( {
@@ -58,12 +58,15 @@
 			 * Hide all controls when content for the panel is not set.
 			 */
 
-			// On load.
-			toggleSectionClass(
-				api.control( 'panel_content_' + i ),
-				api.instance( 'panel_content_' + i ).get(),
-				'counter-empty-panel'
-			);
+			// Don't need the content control for the hero panel.
+			if ( 0 !== i ) {
+				// On load.
+				toggleSectionClass(
+					api.control( 'panel_content_' + i ),
+					api.instance( 'panel_content_' + i ).get(),
+					'counter-empty-panel'
+				);
+			}
 
 			// On panel content change.
 			api.control( 'panel_content_' + i, function( control ) {

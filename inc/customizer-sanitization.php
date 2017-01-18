@@ -6,16 +6,6 @@
  */
 
 /**
- * Sanitizes Text.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_text( $input ) {
-	global $allowedtags;
-	return wp_kses( $input , $allowedtags );
-}
-
-/**
  * Sanitizes Checkbox.
  *
  * @param string $input potentially dangerous data.
@@ -67,22 +57,6 @@ function counter_sanitize_background_size_type( $input ) {
 		return $input;
 	}
 	return 'auto';
-}
-
-/**
- * Sanitizes Panel Layout.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_alignment( $input ) {
-	$choices = array(
-		'center',
-		'right',
-	);
-	if ( in_array( $input, $choices ) ) {
-		return $input;
-	}
-	return 'left';
 }
 
 /**
@@ -153,50 +127,12 @@ function counter_sanitize_background_attachment( $input ) {
 }
 
 /**
- * Sanitizes background attachment.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_panel_count( $input ) {
-	if ( $input >= 0 && $input <= counter_get_panel_count_max() ) {
-		return absint( $input );
-	}
-	return 1;
-}
-
-/**
  * Returns filtered panel count.
  *
  * @return int Number of panels.
  */
 function counter_get_panel_count() {
-	return apply_filters( 'counter_panel_count', 10 );
-}
-
-/**
- * Sanitizes panel columns.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_column_count( $input ) {
-	$choices = array( 3, 4 );
-	if ( in_array( $input, $choices ) ) {
-		return $input;
-	}
-	return 2;
-}
-
-/**
- * Sanitizes panel columns.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_panel_post_count( $input ) {
-	$choices = array( 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 );
-	if ( in_array( $input, $choices ) ) {
-		return $input;
-	}
-	return 2;
+	return apply_filters( 'counter_panel_count', 4 );
 }
 
 /**
@@ -248,13 +184,4 @@ function counter_sanitize_color_scheme( $value ) {
 	}
 
 	return $value;
-}
-
-/**
- * Sanitizes the footer text.
- *
- * @param string $input potentially dangerous data.
- */
-function counter_sanitize_footer_text( $input ) {
-	return wp_kses_post( $input );
 }

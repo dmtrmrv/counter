@@ -6,41 +6,26 @@
  */
 
 /**
- * Add postMessage support for site title and description for the Theme Customizer.
+ * Add options to Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function counter_customize_register( $wp_customize ) {
-	// Make site title and site description update instantly.
-	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-
 	/**
 	 * Site Identity.
 	 */
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_text' )->transport = 'postMessage';
 
-	// Display Title.
-	$wp_customize->add_setting( 'display_title', array(
-		'default' => true,
-		'sanitize_callback' => 'counter_sanitize_checkbox',
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector' => '.site-title a',
+		'render_callback' => 'counter_customize_partial_blogname',
 	) );
 
-	$wp_customize->add_control( 'display_title', array(
-		'label'   => __( 'Display Title', 'counter' ),
-		'section' => 'title_tagline',
-		'type'    => 'checkbox',
-	) );
-
-	// Display Tagline.
-	$wp_customize->add_setting( 'display_tagline', array(
-		'default' => true,
-		'sanitize_callback' => 'counter_sanitize_checkbox',
-	) );
-
-	$wp_customize->add_control( 'display_tagline', array(
-		'label'   => __( 'Display Tagline', 'counter' ),
-		'section' => 'title_tagline',
-		'type'    => 'checkbox',
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.site-description',
+		'render_callback' => 'counter_customize_partial_blogdescription',
 	) );
 
 	/**
@@ -54,7 +39,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( 'Custom Colors', 'counter' ),
 				'section'     => 'colors',
 				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=colors',
 				'link_text'   => __( 'Learn More', 'counter' ),
 				'description' => __( 'Upgrade Counter to set custom text, links, headings, and background color.', 'counter' ),
 			)
@@ -84,7 +69,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
 				'section'     => 'blog_layout',
 				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter',
+				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=blog-layout',
 				'link_text'   => __( 'Learn More', 'counter' ),
 				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
 			)
@@ -277,9 +262,9 @@ function counter_customize_register( $wp_customize ) {
 			array(
 				'label'       => __( 'Custom Footer Text', 'counter' ),
 				'section'     => 'footer',
-				'link_url'    => 'https://themepatio.com/themes/counter',
-				'link_text'   => __( 'Learn More', 'counter' ),
+				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=footer-text',
 				'settings'    => array(),
+				'link_text'   => __( 'Learn More', 'counter' ),
 				'description' => __( 'Upgrade Counter to set custom footer text.', 'counter' ),
 			)
 		)
@@ -291,14 +276,6 @@ add_action( 'customize_register', 'counter_customize_register' );
  * Binds js handlers to make theme customizer preview reload changes asynchronously.
  */
 function counter_customize_preview_js() {
-	// Default footer message passed to the preview screen to be displayed if
-	// the user erases the textarea completely.
-	$default_footer_msg = sprintf(
-		esc_html__( '%1$s theme by %2$s', 'counter' ),
-		'Counter',
-		'<a href="' . esc_url( 'https://themepatio.com/' ) . '">ThemePatio</a>'
-	);
-
 	wp_enqueue_script(
 		'counter_customizer',
 		get_template_directory_uri() . '/assets/js/customizer-preview.js',
@@ -306,9 +283,7 @@ function counter_customize_preview_js() {
 		COUNTER_VERSION,
 		true
 	);
-
 	wp_localize_script( 'counter_customizer', 'frontPagePanelCount', array( counter_get_panel_count() ) );
-	wp_localize_script( 'counter_customizer', 'defaultFooterMsg', array( $default_footer_msg ) );
 }
 add_action( 'customize_preview_init', 'counter_customize_preview_js' );
 
@@ -316,28 +291,14 @@ add_action( 'customize_preview_init', 'counter_customize_preview_js' );
  * Enqueue custom scripts for customizer controls.
  */
 function counter_customizer_scripts() {
-	// Register custom JavaScript for Customizer controls.
-	wp_register_script(
+	wp_enqueue_script(
 		'counter-customizer-controls',
 		get_template_directory_uri() . '/assets/js/customizer-controls.js',
 		array( 'jquery', 'customize-controls' ),
 		COUNTER_VERSION,
 		true
 	);
-	wp_localize_script( 'counter-customizer-controls', 'pnlCountControls', array( counter_get_panel_count() ) );
-
-	// Custom JavaScript for Panel Spacing controls.
-	wp_register_script(
-		'counter-customizer-controls-panel-spacings',
-		get_template_directory_uri() . '/assets/js/customizer-controls-panel-spacings.js',
-		array( 'jquery', 'customize-controls', 'iris', 'wp-util' ),
-		COUNTER_VERSION,
-		true
-	);
-	wp_localize_script( 'counter-customizer-controls-panel-spacings', 'pnlCountSpacings', array( counter_get_panel_count() ) );
-
-	wp_enqueue_script( 'counter-customizer-controls' );
-	wp_enqueue_script( 'counter-customizer-controls-panel-spacings' );
+	wp_localize_script( 'counter-customizer-controls', 'frontPagePanelCount', array( counter_get_panel_count() ) );
 
 	// Custom CSS for the Customizer controls.
 	wp_enqueue_style(

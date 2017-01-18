@@ -63,22 +63,9 @@ class Counter_Message_Control extends WP_Customize_Control {
 		if ( $this->link_url && $this->link_text ) {
 			printf(
 				'<p class="customize-control-paragraph"><a href="%1$s" target="_blank" class="button button-secondary">%2$s</a></p>',
-				esc_html( $this->link_url ),
+				esc_url( $this->link_url ),
 				esc_html( $this->link_text )
 			);
 		}
-	}
-}
-
-/**
- * Displays divider.
- */
-class Counter_Divider_Control extends WP_Customize_Control {
-
-	/**
-	 * Render the content.
-	 */
-	public function render_content() {
-		echo '<hr class="customize-control-divider" />';
 	}
 }

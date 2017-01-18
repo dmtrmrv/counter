@@ -5,7 +5,10 @@
  */
 
 ( function( api, $ ) {
-	
+
+	// Passed by wp_localize_script()
+	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
+
 	// Site title.
 	api( 'blogname', function( value ) {
 		value.bind( function( to ) {
@@ -13,29 +16,19 @@
 		} );
 	} );
 
-	// Site description
+	// Site description.
 	api( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
 		} );
 	} );
 
-	// Check if we already have inline styles.
-	var	$stylePanels = $( '#counter-style-panels-inline-css' );
-
-	if ( ! $stylePanels.length ) {
-		$stylePanels = $( 'head' ).append( '<style type="text/css" id="counter-style-panels-inline-css" />' ).find( '#counter-style-panels-inline-css' );
-	}
-
-	// Panel spacings CSS.
-	api.bind( 'preview-ready', function() {
-		api.preview.bind( 'update-panel-spacings-css', function( css ) {
-			$stylePanels.html( css );
+	// Display site title and description.
+	api( 'header_text', function( value ) {
+		value.bind( function( to ) {
+			$( 'body' ).toggleClass( 'title-tagline-hidden', ! to );
 		} );
 	} );
-
-	// Passed by wp_localize_script()
-	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
 
 	/**
 	 * Settings to bind updating to.
@@ -43,32 +36,7 @@
 	 */
 	var settings = [];
 
-	for ( var i = 1; i <= frontPagePanelCount; i++ ) {
-		settings.push( {
-			index: i,
-			settingID: 'panel_title_display_' + i,
-			callback: function( to ) {
-				$( '#panel-' + this.index + ' .panel-title' ).toggle( to );
-			}
-		} );
-		settings.push( {
-			index: i,
-			settingID: 'panel_text_alignment_' + i,
-			callback: function( to ) {
-				$( '#panel-' + this.index ).
-					removeClass( 'panel-align-center panel-align-right' ).
-					addClass( 'panel-align-' + to );
-			}
-		} );
-		settings.push( {
-			index: i,
-			settingID: 'panel_title_alignment_' + i,
-			callback: function( to ) {
-				$( '#panel-' + this.index ).
-					removeClass( 'panel-title-align-center panel-title-align-right' ).
-					addClass( 'panel-title-align-' + to );
-			}
-		} );
+	for ( var i = 0; i <= frontPagePanelCount; i++ ) {
 		settings.push( {
 			index: i,
 			settingID: 'panel_bg_repeat_' + i,

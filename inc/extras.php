@@ -35,23 +35,17 @@ function counter_body_classes( $classes ) {
 		$classes[] = 'is-sidebar';
 	}
 
-	// Adds a class when site title is displayed.
-	if ( get_theme_mod( 'display_title' ) ) {
-		$classes[] = 'is-site-title';
-	}
-
-	// Adds a class when site tagline is displayed.
-	if ( get_theme_mod( 'display_tagline' ) ) {
-		$classes[] = 'is-site-tagline';
+	// Add class if the site title and tagline is hidden.
+	if ( 0 == get_theme_mod( 'header_text', 1 ) ) {
+		$classes[] = 'title-tagline-hidden';
 	}
 
 	// Adds class to all single pages regardless of template.
-	if ( is_page() && ! is_page_template( 'templates/front.php' ) ) {
+	if ( is_page() && ! is_front_page() ) {
 		$classes[] = 'single-page';
 	}
 
-	// Adds a class of front-page if front-page.php is used.
-	if ( is_page_template( 'templates/front.php' ) ) {
+	if ( is_front_page() && ! is_home() ) {
 		$classes[] = 'front-page';
 	}
 
@@ -126,6 +120,20 @@ function counter_is_blog() {
 }
 
 /**
+ * Render the site title for the selective refresh partial.
+ */
+function counter_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ */
+function counter_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+/**
  * Returns array of panel types.
  *
  * @return array Panel types for the fron page.
@@ -140,49 +148,11 @@ function counter_get_panel_types() {
 }
 
 /**
- * Outputs panel alignment classes.
- *
- * @param int $num The number of the panel.
- */
-function counter_panel_alignment_class( $num ) {
-	$class = '';
-
-	// Title alignment.
-	switch ( get_theme_mod( 'panel_title_alignment_' . $num ) ) {
-		case 'center':
-			$class .= 'panel-title-align-center ';
-			break;
-
-		case 'right':
-			$class .= 'panel-title-align-right ';
-			break;
-	}
-
-	// Text alignment.
-	switch ( get_theme_mod( 'panel_text_alignment_' . $num ) ) {
-		case 'center':
-			$class .= 'panel-align-center';
-			break;
-
-		case 'right':
-			$class .= 'panel-align-right';
-			break;
-	}
-
-	return $class;
-}
-
-/**
  * Outputs inline background style for each panel.
  *
  * @param string $i Panel number.
  */
-function counter_panel_background_image( $i = '' ) {
-	// Return quickly if no panel number is set.
-	if ( ! $i ) {
-		return;
-	}
-
+function counter_panel_background( $i = 0 ) {
 	// Collect the data for the background.
 	$id           = get_theme_mod( 'panel_bg_image_' . $i );
 	$repeat       = get_theme_mod( 'panel_bg_repeat_' . $i );
@@ -192,8 +162,8 @@ function counter_panel_background_image( $i = '' ) {
 	$size_percent = get_theme_mod( 'panel_bg_size_' . $i );
 	$opacity      = get_theme_mod( 'panel_bg_opacity_' . $i );
 
-	// Try to get the image URL.
-	$image = wp_get_attachment_image_url( $id, 'counter-panel-full' );
+	// Get the image URL.
+	$image = wp_get_attachment_image_url( $id, '2880x0' );
 
 	/*
 	 * Return if no image or if opacity is set to zero. Note the strict
@@ -248,9 +218,9 @@ function counter_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) == 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+		$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
 	} else if ( strlen( $color ) == 6 ) {
 		$r = hexdec( substr( $color, 0, 2 ) );
 		$g = hexdec( substr( $color, 2, 2 ) );
@@ -262,11 +232,8 @@ function counter_hex2rgb( $color ) {
 	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
 }
 
-/**
- * Returns true if the front page template is used.
- */
 function counter_is_front_page() {
-	if ( is_page_template( 'templates/front.php' ) ) {
+	if ( is_front_page() && ! is_home() ) {
 		return true;
 	}
 }
@@ -275,7 +242,7 @@ function counter_is_front_page() {
  * Returns true if the front page template is not used.
  */
 function counter_not_front_page() {
-	if ( ! is_page_template( 'templates/front.php' ) ) {
+	if ( ! is_front_page() ) {
 		return true;
 	}
 }

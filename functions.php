@@ -46,6 +46,7 @@ function counter_setup() {
 		'height'      => 324,
 		'flex-width'  => true,
 		'flex-height' => true,
+		'header-text' => true,
 	) );
 
 	// Enable support for Post Thumbnails on posts and pages.
@@ -238,13 +239,10 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * Customizer.
  */
-require_once( ABSPATH . WPINC . '/class-wp-customize-section.php' );
 require get_template_directory() . '/inc/customizer-sanitization.php';
-require get_template_directory() . '/inc/customizer-sections.php';
 require get_template_directory() . '/inc/customizer-controls.php';
-require get_template_directory() . '/inc/customizer-custom-css.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
