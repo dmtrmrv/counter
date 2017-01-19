@@ -100,6 +100,7 @@ function counter_customize_register( $wp_customize ) {
 			'label'   => esc_html__( 'Content', 'counter' ),
 			'section' => 'panel_' . $i,
 			'type'    => 'dropdown-pages',
+			'allow_addition' => true,
 		) );
 
 	endif;
