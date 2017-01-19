@@ -1,29 +1,30 @@
 default:
   - 'css'
-  - 'js'
+  # - 'js'
 
 css:
-  - 'sass:default'
+  - 'sass'
   - 'autoprefixer'
-  - 'combine_mq:default'
+  - 'combine_mq'
   - 'replace:line_after_brace'
   - 'replace:line_after_docblock'
   - 'csscomb'
 
-js:
-  - 'concat:default'
-  - 'uglify:default'
+# js:
+  # - 'concat:default'
+  # - 'uglify:default'
 
 release:
   - 'replace:version_style'
   - 'replace:version_readme'
   - 'replace:version_functions'
+  - 'replace:version_updater'
 
   - 'css'
-  - 'js'
+  # - 'js'
 
   - 'makepot'
 
-  - 'clean:release'
-  - 'copy:release'
-  - 'compress:release'
+  - 'clean'
+  - 'copy'
+  - 'compress'

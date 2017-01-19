@@ -1,5 +1,5 @@
 module.exports = {
-	release: {
+	default: {
 		options: {
 			archive: '../build/<%= package.name %>-<%= package.version %>.zip',
 			mode: 'zip'

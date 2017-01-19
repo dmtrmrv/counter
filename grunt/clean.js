@@ -2,7 +2,7 @@ module.exports = {
 	options: {
 		force: true
 	},
-	release: {
+	default: {
 		src: '../build/'
 	}
 }

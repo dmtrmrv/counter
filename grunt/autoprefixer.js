@@ -5,7 +5,7 @@ module.exports = {
 			'ie 9'
 		]
 	},
-	files: {
+	default: {
 		src: [
 			'style.css',
 			'assets/css/editor-style.css'

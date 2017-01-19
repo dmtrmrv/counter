@@ -1,5 +1,5 @@
 module.exports = {
-	target: {
+	default: {
 		options: {
 			domainPath: '/languages/',
 			potFilename: '<%= package.name %>.pot',

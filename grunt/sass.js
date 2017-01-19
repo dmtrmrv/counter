@@ -3,7 +3,6 @@ module.exports = {
 		options: {
 			style:     'expanded',
 			sourcemap: 'none',
-			require:   'susy'
 		},
 		files: {
 			'style.css': 'assets/css/sass/style.scss',

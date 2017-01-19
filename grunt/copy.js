@@ -1,25 +1,20 @@
 module.exports = {
-	release: {
+	default: {
 		src: [
-			'./**',
-			'!./node_modules/**',
-			'!./bower_components/**',
-			'!./package.json',
-			'!./.csscomb.json',
-			'!./Gruntfile.js',
-			'!./grunt/**',
-			'!./assets/css/sass/**',
-			'!./assets/fonts/fontello/css/fontello-*.css',
-			'!./assets/fonts/fontello/css/animation.css',
-			'!./assets/fonts/fontello/config.json',
-			'!./assets/fonts/fontello/demo.html',
-			'!./assets/fonts/fontello/README.txt',
-			'!./README.md',
-			'!./*.sublime-workspace',
-			'!./*.sublime-project',
-			'!./*.ruleset.xml',
-			'!./.DS_Store',
-			'!./**/.DS_Store'
+			'./*.php',
+			'./templates/*.php',
+			'./template-parts/*.php',
+			'./inc/*.php',
+			'./inc/**/*.php',
+			'./style.css',
+			'./assets/css/*.css',
+			'./assets/js/*.js',
+			'./assets/fonts/fontello/font/**',
+			'./assets/fonts/fontello/css/fontello.css',
+			'./languages/<%= package.name %>.pot',
+			'./languages/readme.txt',
+			'./README.txt',
+			'./screenshot.png'
 		],
 		dest: '../build/<%= package.name %>',
 		expand: true
