@@ -341,7 +341,7 @@ function counter_panel( $partial = null, $i = 0 ) {
 
 	if ( 0 == $i ) {
 		// Get the page on front.
-		$post = get_post( get_option( 'page_on_front' ) );
+		$post = get_post( get_option( 'page_on_front' ) ); // wpcs: override ok.
 		setup_postdata( $post );
 
 		set_query_var( 'counter_panel_num', $i );
@@ -352,7 +352,7 @@ function counter_panel( $partial = null, $i = 0 ) {
 		get_template_part( 'template-parts/panel', $layout );
 
 	} elseif ( get_theme_mod( 'panel_content_' . $i ) ) {
-		$post = get_post( get_theme_mod( 'panel_content_' . $i ) );
+		$post = get_post( get_theme_mod( 'panel_content_' . $i ) ); // wpcs: override ok.
 		setup_postdata( $post );
 
 		// Set the variables that will be available within template part.
