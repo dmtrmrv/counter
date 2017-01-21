@@ -1,6 +1,6 @@
 #Counter WordPress Theme
 
-Counter is a minimal WordPress theme for coffee shops, bakeries, barbershops, and other one-of-a-kind businesses.
+Counter is a minimal theme for coffee shops, restaurants, cafes, barbershops, and other kinds of small businesses.
 
 ## Bundled Resources
 
