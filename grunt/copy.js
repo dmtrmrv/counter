@@ -14,7 +14,8 @@ module.exports = {
 			'./languages/<%= package.name %>.pot',
 			'./languages/readme.txt',
 			'./README.txt',
-			'./screenshot.png'
+			'./screenshot.png',
+			// './codesniffer.ruleset.xml'
 		],
 		dest: '../build/<%= package.name %>',
 		expand: true
