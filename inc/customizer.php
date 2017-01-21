@@ -51,7 +51,7 @@ function counter_customize_register( $wp_customize ) {
 	 */
 
 	$wp_customize->add_panel( 'theme_options' , array(
-		'title'    => __( 'Theme Options', 'counter' ),
+		'title' => __( 'Theme Options', 'counter' ),
 		'priority' => 140,
 	) );
 
@@ -59,6 +59,7 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'blog_layout', array(
 		'title' => __( 'Blog Layout', 'counter' ),
 		'panel' => 'theme_options',
+		'active_callback' => 'counter_is_blog',
 	) );
 
 	$wp_customize->add_control(
@@ -66,11 +67,11 @@ function counter_customize_register( $wp_customize ) {
 			$wp_customize,
 			'blog_layout_upgrade',
 			array(
-				'label'       => __( 'Blog Layout & Post Meta', 'counter' ),
-				'section'     => 'blog_layout',
-				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=blog-layout',
-				'link_text'   => __( 'Learn More', 'counter' ),
+				'label' => __( 'Blog Layout & Post Meta', 'counter' ),
+				'section' => 'blog_layout',
+				'settings' => array(),
+				'link_url' => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=blog-layout',
+				'link_text' => __( 'Learn More', 'counter' ),
 				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
 			)
 		)
@@ -88,38 +89,52 @@ function counter_customize_register( $wp_customize ) {
 		'active_callback' => 'counter_is_front_page',
 	) );
 
-	// Page Dropdown. Don't need it for Hero panel.
 	if ( 0 !== $i ) :
 
 		$wp_customize->add_setting( 'panel_content_' . $i, array(
-			'default'           => 0,
+			'default' => 0,
+			'transport' => 'postMessage',
 			'sanitize_callback' => 'absint',
 		) );
 
 		$wp_customize->add_control( 'panel_content_' . $i, array(
-			'label'   => esc_html__( 'Content', 'counter' ),
+			'type' => 'dropdown-pages',
+			'label' => esc_html__( 'Content', 'counter' ),
 			'section' => 'panel_' . $i,
-			'type'    => 'dropdown-pages',
 			'allow_addition' => true,
+		) );
+
+		$wp_customize->selective_refresh->add_partial( 'panel_content_' . $i, array(
+			'selector' => '#panel-' . $i,
+			'render_callback' => 'counter_panel',
+			'container_inclusive' => true,
 		) );
 
 	endif;
 
 	// Layout.
 	$wp_customize->add_setting( 'panel_layout_' . $i, array(
-		'default'           => 'center',
+		'default' => 'center',
+		'transport' => 'postMessage',
 		'sanitize_callback' => 'counter_sanitize_panel_layout',
 	) );
 
 	$wp_customize->add_control( 'panel_layout_' . $i, array(
-		'label'   => esc_html__( 'Layout', 'counter' ),
+		'type' => 'select',
+		'label' => esc_html__( 'Layout', 'counter' ),
 		'section' => 'panel_' . $i,
-		'type'    => 'select',
 		'choices' => counter_get_panel_types(),
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'panel_layout_' . $i, array(
+		'selector' => '#panel-' . $i,
+		'render_callback' => 'counter_panel',
+		'container_inclusive' => true,
 	) );
 
 	// Background image.
 	$wp_customize->add_setting( 'panel_bg_image_' . $i, array(
+		'transport' => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -128,11 +143,17 @@ function counter_customize_register( $wp_customize ) {
 			$wp_customize,
 			'panel_bg_image_' . $i,
 			array(
-				'label'   => __( 'Background Image', 'counter' ),
+				'label' => __( 'Background Image', 'counter' ),
 				'section' => 'panel_' . $i,
 			)
 		)
 	);
+
+	$wp_customize->selective_refresh->add_partial( 'panel_bg_image_' . $i, array(
+		'selector' => '#panel-' . $i,
+		'render_callback' => 'counter_panel',
+		'container_inclusive' => true,
+	) );
 
 	// Background repeat.
 	$wp_customize->add_setting( 'panel_bg_repeat_' . $i, array(
