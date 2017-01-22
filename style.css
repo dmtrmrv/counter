@@ -1203,6 +1203,14 @@ body {
 	margin-bottom: 0;
 }
 
+.custom-logo-link .customize-partial-edit-shortcut {
+	display: block;
+}
+
+.custom-logo-link .customize-partial-edit-shortcut button {
+	left: 0;
+}
+
 /* Footer */
 
 .site-info {
