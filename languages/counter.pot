@@ -33,19 +33,19 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:96
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:98
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:106 inc/customizer.php:290
+#: functions.php:109 inc/customizer.php:290
 msgid "Footer"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:111
 msgid "Appears in the footer."
 msgstr ""
 
@@ -378,12 +378,12 @@ msgid_plural "%1$s Replies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:135
+#: functions.php:138
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:142
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""

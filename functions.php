@@ -77,6 +77,9 @@ function counter_setup() {
 	// Add support for Jetpack responsive videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
+	// Add support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
 	// This theme styles the visual editor to resemble theme styles.
 	add_editor_style( array( 'assets/css/editor-style.css' ) );
 }
