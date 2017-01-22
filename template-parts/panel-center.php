@@ -21,7 +21,7 @@
 
 	</div>
 
-	<?php counter_panel_meta( $counter_panel_num, get_theme_mod( 'panel_content_' . $counter_panel_num, 0 ) ); ?>
+	<?php counter_panel_meta( $counter_panel_num, get_theme_mod( 'panel_content_' . $counter_panel_num ) ); ?>
 
 	<div class="panel-background" <?php counter_panel_background( $counter_panel_num ); ?>></div>
 
