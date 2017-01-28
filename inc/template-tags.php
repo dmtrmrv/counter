@@ -316,9 +316,9 @@ function counter_panel_meta( $num = '', $id = '' ) {
  * background image from the Customizer.
  *
  * Keep in mind that it is used to render the hero panel as well as other panels
- * in the Customizer. It looks like it's not being executed from within the
- * loop, so we have to explicitly check what page is used as a front page.
- * Otherwise the_content() doesn't work in Customizer.
+ * in the Customizer, meaning that it's not being executed from within the
+ * loop, so we have to check what page is used as a front page otherwise
+ * the_content() won't work in Customizer preview.
  *
  * It would be an overkill to call this function from the front-page.php to
  * display the hero panel because the_content() does work there. That's why
@@ -328,7 +328,8 @@ function counter_panel_meta( $num = '', $id = '' ) {
  * @param  integer $i       Number of the panel.
  */
 function counter_panel( $partial = null, $i = 0 ) {
-
+	// If this function is called from the Customizer, get the panel number
+	// from the theme mod option.
 	if ( is_a( $partial, 'WP_Customize_Partial' ) ) {
 		$i = preg_replace( '/panel_(content|layout|bg_image)_/', '', $partial->id );
 	}
@@ -339,30 +340,37 @@ function counter_panel( $partial = null, $i = 0 ) {
 	// Temporarily modify the post object.
 	global $post;
 
+	// Set the variables that will be available within the template part.
+	set_query_var( 'counter_panel_num', $i );
+	set_query_var( 'counter_panel_layout', $layout );
+	set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_' . $i, false ) ? ' has-background' : '' );
+
+	// Hero panel case.
 	if ( 0 == $i ) {
-		// Get the page on front.
+		// Get the static front page id.
 		$post = get_post( get_option( 'page_on_front' ) ); // wpcs: override ok.
+
+		// Set the post object to the static front page.
 		setup_postdata( $post );
 
-		set_query_var( 'counter_panel_num', $i );
-		set_query_var( 'counter_panel_layout', $layout );
-		set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_' . $i, false ) ? ' has-background' : '' );
-
-		// Display panel content.
+		// Display the panel.
 		get_template_part( 'template-parts/panel', $layout );
 
+	// Regular panel case.
 	} elseif ( get_theme_mod( 'panel_content_' . $i ) ) {
+		// Get the page id assigned to the current panel.
 		$post = get_post( get_theme_mod( 'panel_content_' . $i ) ); // wpcs: override ok.
+
+		// Set the post object to the page assigned to the current panel.
 		setup_postdata( $post );
 
-		// Set the variables that will be available within template part.
-		set_query_var( 'counter_panel_num', $i );
-		set_query_var( 'counter_panel_layout', $layout );
-		set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_' . $i, false ) ? ' has-background' : '' );
-
-		// Display panel content.
+		// Display the panel.
 		get_template_part( 'template-parts/panel', $layout );
 
+	// Empty panel in Cutomizer.
+	} elseif ( ! get_theme_mod( 'panel_content_' . $i ) && is_customize_preview() ) {
+		// Display panel content.
+		get_template_part( 'template-parts/panel', 'empty' );
 	}
 
 	// Reset the whole thing.

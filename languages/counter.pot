@@ -345,7 +345,7 @@ msgstr ""
 msgid "Read more %s"
 msgstr ""
 
-#: template-parts/panel-none.php:18
+#: template-parts/panel-empty.php:18
 msgid "Looks like this page is not yet published or was deleted."
 msgstr ""
 

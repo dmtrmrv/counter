@@ -184,6 +184,14 @@ function counter_scripts() {
 	);
 
 	wp_enqueue_script(
+		'jquery-scrollto',
+		get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ),
+		array( 'jquery' ),
+		'2.1.2',
+		true
+	);
+
+	wp_enqueue_script(
 		'counter-navigation',
 		get_template_directory_uri() . '/assets/js/navigation.js',
 		array(),

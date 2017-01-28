@@ -26,7 +26,8 @@
 		 *
 		 * This function adds or removes the class to the section in the
 		 * Customizer if the value is of a passed control is set. Later you
-		 * can hide dependant controls with CSS.
+		 * can dependant controls with CSS. The 'getting real' approach.
+		 * Robust, fast and clean. That's right.
 		 *
 		 * @param  {object} control Control object that the class i
 		 * @param  {number} value   ID of the page for the frontpage panel.
@@ -58,7 +59,7 @@
 			 * Hide all controls when content for the panel is not set.
 			 */
 
-			// Don't need the content control for the hero panel.
+			// Don't hide panel controls for Hero panel.
 			if ( 0 !== i ) {
 				// On load.
 				toggleSectionClass(
@@ -66,14 +67,14 @@
 					api.instance( 'panel_content_' + i ).get(),
 					'counter-empty-panel'
 				);
-			}
 
-			// On panel content change.
-			api.control( 'panel_content_' + i, function( control ) {
-				control.setting.bind( function( value ) {
-					toggleSectionClass( control, value, 'counter-empty-panel' );
+				// On panel content change.
+				api.control( 'panel_content_' + i, function( control ) {
+					control.setting.bind( function( value ) {
+						toggleSectionClass( control, value, 'counter-empty-panel' );
+					} );
 				} );
-			} );
+			}
 
 			/**
 			 * Hide all background controls if no background image is set.
@@ -123,4 +124,38 @@
 			} );
 		} );
 	} );
+
+	// Detect when the 'Theme Options' panel is opened or closed and send the
+	// event to the preview screen.
+	api.panel( 'theme_options', function( panel ) {
+		panel.expanded.bind( function( isExpanding ) {
+			api.previewer.send( 'theme-options-highlight', {
+				expanded: isExpanding
+			} );
+		} );
+	} );
+
+	// Detect when the front page panel sections are opened or closed so we can
+	// scroll to the panel that is being configured.
+	for ( var i = 0; i <= frontPagePanelCount; i++ ) {
+		api.section( 'panel_' + i , function( section ) {
+			section.expanded.bind( function( isExpanding ) {
+				api.previewer.send( 'panel-highlight', {
+					expanded: isExpanding,
+					id: section.id
+				} );
+			} );
+		} );
+	}
+
+	// Detect when the 'Footer' section is opened or closed and send the
+	// event to the preview screen.
+	api.section( 'footer', function( section ) {
+		section.expanded.bind( function( isExpanding ) {
+			api.previewer.send( 'footer-highlight', {
+				expanded: isExpanding
+			} );
+		} );
+	} );
+
 } ) ( wp.customize, jQuery );

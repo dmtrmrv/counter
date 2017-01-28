@@ -79,8 +79,8 @@
 	display: block;
 	position: absolute;
 	z-index: 30;
-	bottom: 8px;
 	right: 6px;
+	bottom: 8px;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0.25em 0.75em 0.25em 0.5em;
@@ -196,5 +196,13 @@
 		z-index: 40;
 		top: 18px;
 		left: 18px;
+	}
+}
+
+.panel-empty {
+	border-bottom: 1px solid $color__gray;
+	text-align: center;
+	&:last-of-type {
+		border-bottom: 0;
 	}
 }

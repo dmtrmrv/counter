@@ -4,10 +4,78 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function( api, $ ) {
+( function( api, $, window ) {
+	'use strict';
 
 	// Passed by wp_localize_script()
 	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
+
+	// Adjust the preview screen when editing panels and footer message.
+	api.bind( 'preview-ready', function() {
+
+		// Hide all empty panels.
+		$( '.panel-empty' ).hide();
+
+		// Show panels if on the front page and the 'Theme Options' section is open
+		api.preview.bind( 'theme-options-highlight', function( data ) {
+
+			// Only on the front page.
+			if ( ! $( 'body' ).hasClass( 'front-page' ) ) {
+				return;
+			}
+
+			if ( true === data.expanded ) {
+				$( '.panel-empty' ).slideDown( 200 );
+			} else {
+				$( '.panel-empty' ).slideUp( 200 );
+			}
+
+		} );
+
+		// Scroll to a panel that is being edited.
+		api.preview.bind( 'panel-highlight', function( data ) {
+
+			// Only on the front page.
+			if ( ! $( 'body' ).hasClass( 'front-page' ) ) {
+				return;
+			}
+
+			if ( true === data.expanded ) {
+				// Define variables and cache the DOM.
+				var $panel = $( '#' + data.id.replace( '_', '-' ) ),
+					navBarHeight = $( '#site-navigation' ).outerHeight(),
+					adminBarHeight = $( '#wpadminbar' ).outerHeight(),
+					offset;
+
+				// Calculate Menu Bar and Admin Bar height.
+				if ( 600 < $( window ).width() && 768 > $( window ).width() ) {
+					offset = adminBarHeight - 1;
+				} else {
+					offset = adminBarHeight + navBarHeight - 1;
+				}
+
+				// Scroll to the current panel.
+				$.scrollTo( $panel, {
+					duration: 600,
+					offset: { 'top': -offset }
+				} );
+			}
+		} );
+
+		// Scroll down when the footer message is being edited.
+		api.preview.bind( 'footer-highlight', function( data ) {
+			if ( true === data.expanded ) {
+				// Define variables and cache the DOM.
+				var $footer = $( '#colophon' );
+
+				// Scroll to footer.
+				$.scrollTo( $footer, {
+					duration: 600
+				} );
+			}
+		} );
+
+	} );
 
 	// Site title.
 	api( 'blogname', function( value ) {
@@ -32,6 +100,7 @@
 
 	/**
 	 * Settings to bind updating to.
+	 *
 	 * @type {array}
 	 */
 	var settings = [];
@@ -94,4 +163,4 @@
 		} );
 	} );
 
-} ) ( wp.customize, jQuery );
+} ) ( wp.customize, jQuery, window );
