@@ -108,60 +108,69 @@
 	}
 }
 
-/* Toggle Hamburger */
-
-$dash_height: 1px;
-$dash_width: 1.5em;
+/* Toggle Hamburger Icon */
 
 .menu-toggle {
-	display: block;
 	position: absolute;
 	z-index: 50;
-	top: 0;
-	right: 0;
-	width: 3em;
-	height: 3em;
+	top: 1em;
+	right: 1em;
+	width: 1.5em;
+	height: 1.5em;
 	padding: 0;
 	border-color: transparent;
-	background-color: $color__menu-bg;
-	font-size: $font__size-body-px;
+	background-color: transparent;
 	text-align: left;
 	text-indent: -9999px;
+	@media screen and ( min-width: $sm ) {
+		display: none;
+	}
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.menu-toggle-icon {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1.5em;
+	height: 1px;
+	margin-top: -1px;
+	margin-left: -0.75em;
+	background-color: $color__headings;
 	&:before,
 	&:after {
 		display: block;
 		position: absolute;
-		left: 0.7222222222em;
-		width: $dash_width;
-		height: $dash_height;
-		background-color: $color__text;
+		width: 1.5em;
+		height: 1px;
+		background-color: $color__headings;
 		content: '';
 	}
 	&:before {
-		top: 1.1666666667em;
+		top: -7px;
 	}
 	&:after {
-		bottom: 1.1666666667em;
-	}
-	&:hover,
-	&:focus {
-		border-color: transparent;
-		background-color: $color__menu-bg;
-	}
-	@media screen and ( min-width: $sm ) {
-		display: none;
+		top: 7px;
 	}
 }
 
 .menu-toggle.toggled {
-	&:before,
-	&:after {
-		top: 1.3888888889em;
-	}
-	&:before {
-		transform: rotate( 225deg );
-	}
-	&:after {
-		transform: rotate( -225deg );
+	.menu-toggle-icon {
+		background-color: transparent;
+		&:before,
+		&:after {
+			top: 0;
+			background-color: $color__headings;
+		}
+		&:before {
+			transform: rotate( 225deg );
+		}
+		&:after {
+			transform: rotate( -225deg );
+		}
 	}
 }

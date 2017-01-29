@@ -44,7 +44,7 @@
 		<button id="site-navigation-toggle" class="menu-toggle" >
 			<span class="menu-toggle-icon"></span>
 			<?php esc_html_e( 'Primary Menu', 'counter' ); ?>
-		</button><!-- #site-navigation-menu-toggle -->
+		</button><!-- #site-navigation-toggle -->
 
 		<?php endif; ?>
 
