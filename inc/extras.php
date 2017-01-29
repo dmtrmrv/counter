@@ -272,11 +272,3 @@ function counter_excerpt_more() {
 	return ' ...';
 }
 add_filter( 'excerpt_more', 'counter_excerpt_more' );
-
-/**
- * Replace Contact Form 7 spinner icon.
- */
-function counter_wpcf7_ajax_loader() {
-	return network_site_url( '/wp-admin/images/spinner-2x.gif' );
-}
-add_filter( 'wpcf7_ajax_loader', 'counter_wpcf7_ajax_loader' );

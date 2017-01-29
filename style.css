@@ -2667,19 +2667,25 @@ body {
 	display: none;
 }
 
-.wpcf7 img.ajax-loader {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 20px;
-	height: 20px;
-	margin: 17px;
-	border: none;
-	vertical-align: middle;
-}
-
 .wpcf7 .placeheld {
 	color: #555;
+}
+
+.wpcf7 .ajax-loader {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 1em;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: #555;
+	animation: scale-fade-out 1s infinite ease-in-out;
+}
+
+.wpcf7 .ajax-loader.is-active {
+	visibility: visible;
 }
 
 /**
@@ -3149,5 +3155,16 @@ body {
 	.search-results .hentry {
 		margin-bottom: 3em;
 		padding-bottom: 1.5em;
+	}
+}
+
+@keyframes scale-fade-out {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1);
 	}
 }
