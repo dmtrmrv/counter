@@ -23,10 +23,10 @@ module.exports = {
 		} ]
 	},
 
-	// Replace theme version in style.scss
+	// Replace theme version in project.scss
 	version_style: {
 		src: [
-			'assets/css/sass/style.scss',
+			'assets/css/sass/project.scss',
 		],
 		overwrite: true,
 		replacements: [ {

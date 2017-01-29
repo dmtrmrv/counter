@@ -16,7 +16,7 @@ Description: Used to style the TinyMCE editor.
 html {
 	box-sizing: border-box;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 18px; 
+	font-size: 18px;
 
 	-webkit-text-size-adjust: 100%;
 	    -ms-text-size-adjust: 100%;
@@ -26,7 +26,7 @@ body {
 	max-width: 612px;
 	margin: 3em 5%;
 	color: #555;
-	background: #fff; 
+	background: #fff;
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 1.5;
@@ -129,7 +129,7 @@ figure {
 }
 
 textarea {
-	margin: 0; 
+	margin: 0;
 	color: inherit;
 	font: inherit;
 }
@@ -204,7 +204,7 @@ h5 {
 
 h6 {
 	font-size: 1em;
-	font-weight: 300; 
+	font-weight: 300;
 	line-height: 1.25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -540,7 +540,7 @@ p > video {
 	max-width: 100%;
 	margin: 0 0 1.5em;
 	padding: 0;
-	border: none; 
+	border: none;
 	font-size: 18px;
 	font-size: 1rem;
 	line-height: 27px;
@@ -609,7 +609,7 @@ p > video {
 .wp-caption .wp-caption-dt {
 	display: block;
 	margin-right: auto;
-	margin-bottom: 0.375em; 
+	margin-bottom: 0.375em;
 	margin-left: auto;
 }
 
@@ -869,7 +869,7 @@ blockquote.alignright {
 	margin: 0;
 	margin: 0.5em 0 0.3518518519em;
 	font-size: 0.75em;
-	font-weight: normal; 
+	font-weight: normal;
 	line-height: 20.25px;
 	line-height: 1.125rem;
 }
