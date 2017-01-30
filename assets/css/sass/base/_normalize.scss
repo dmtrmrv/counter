@@ -17,7 +17,7 @@ html {
 	-ms-text-size-adjust:     100%;
 	// Addition.
 	box-sizing: border-box;
-	font-size: $font__size-body-px;
+	font-size: $font__size;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -25,7 +25,7 @@ body {
 	margin: 0;
 	// Addition. Styling. 
 	color: $color__text;
-	line-height: $font__line-height-body;
+	line-height: $font__line-height;
 	background: $color__background-body;
 }
 

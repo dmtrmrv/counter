@@ -15,7 +15,7 @@ th {
 }
 
 thead th {
-	padding: 1em 1em em_minus_px( 1em, 1px, $font__size-body-px * 0.75 );
+	padding: 1em 1em em_minus_px( 1em, 1px, $font__size * 0.75 );
 	background-color: $color__gray;
 	font-size: 0.75em;
 	font-weight: 400;

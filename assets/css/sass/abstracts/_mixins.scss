@@ -1,13 +1,13 @@
-// Rem output with px fallback.
-@mixin font-size( $sizeValue: 1 ) {
-	font-size: ( $sizeValue * $font__size-body ) * 1px;
-	font-size: $sizeValue * 1rem;
+/// Rem output with px fallback.
+@mixin font-size( $val: 1 ) {
+	font-size: $val * $font__size;
+	font-size: $val * 1rem;
 }
 
 // Line-height otuput with px fallback.
-@mixin line-height( $sizeValue: $font__line-height-body ) {
-	line-height: ( $sizeValue * $font__size-body ) * 1px;
-	line-height: $sizeValue * 1rem;
+@mixin line-height( $val: $font__line-height ) {
+	line-height: $val * $font__size;
+	line-height: $val * 1rem;
 }
 
 // Center block.
@@ -51,7 +51,7 @@
 	outline-offset: -2px;
 }
 
-// Using a mixin here to reuse it for editor CSS file. Since somme of the
+// Using a mixin here to reuse it for editor CSS file. Since some of the
 // properties are getting overriden there.
 @mixin counter-playlist {
 	.mejs-time-current {
@@ -83,7 +83,7 @@
 	.wp-playlist-item-length {
 		padding: 0.75em 0.75em 0.75em;
 	}
-	
+
 	.wp-playlist-tracks {
 		border-top: 1px solid $color__gray;
 	}

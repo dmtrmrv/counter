@@ -70,10 +70,10 @@
 		text-align: center;
 	}
 	td, {
-		line-height: em_minus_px( 2em, 1px, $font__size-body-px * 0.75 );
+		line-height: em_minus_px( 2em, 1px, $font__size * 0.75 );
 	}
 	th {
-		line-height: em_minus_px( 2em, 2px, $font__size-body-px * 0.75 );
+		line-height: em_minus_px( 2em, 2px, $font__size * 0.75 );
 	}
 	tfoot td:first-child {
 		padding-left: 0.75em;

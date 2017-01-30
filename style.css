@@ -495,12 +495,9 @@ code {
 .dropcap {
 	float: left;
 	position: relative;
-	height: 81;
 	height: 4.5rem;
-	margin: 0 18 0 0;
 	margin: 0 1rem 0 0;
 	color: #1e1e1e;
-	font-size: 90;
 	font-size: 5rem;
 	font-weight: 700;
 	line-height: 0.85;
@@ -1893,7 +1890,6 @@ body {
 }
 
 .comment-metadata {
-	margin-bottom: 27px;
 	margin-bottom: 1.5rem;
 	font-size: 15.75px;
 	font-size: 0.875rem;
