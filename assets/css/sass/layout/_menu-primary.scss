@@ -8,7 +8,7 @@
 	width: 100%;
 	min-height: 3em;
 	border-bottom: 1px solid $color__gray;
-	background-color: $color__menu-bg;
+	background-color: #ffffff;
 	ul {
 		margin: 0;
 		padding: 0.6666666667em 0;
@@ -46,7 +46,7 @@
 	.main-navigation {
 		display: block;
 		position: relative;
-		background-color: $color__menu-bg;
+		background-color: #ffffff;
 		&.fixed {
 			position: fixed;
 			.admin-bar & {

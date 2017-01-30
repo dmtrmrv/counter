@@ -1,0 +1,89 @@
+// Colors. ------------------------------------------------------------------ //
+
+// Basic Text Colors.
+$color__headings: #1e1e1e; // r:30 g:30 b:30
+$color__text: #555555; // r:85 g:85 b:85
+
+// Shades of gray.
+$color__gray: rgba( $color__text, 0.15 );
+
+// Body.
+$color__background-body: #fff;
+
+// Theme Accent Color.
+$color__accent: #d17d38;
+
+// State colors.
+$color__success: #1fc281;
+$color__info: #00b9f2;
+$color__warning: #f4cc31;
+$color__danger: #e83337;
+
+// Default Opacity.
+$opacity: 0.5;
+
+// Layout. ------------------------------------------------------------------ //
+
+// Breakpoints.
+$xs: 360px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1440px;
+
+$susy: (
+	columns: 12,
+	gutters: 36/72,
+	math: fluid,
+	output: float,
+	gutter-position: after
+);
+
+$susy-static: (
+	columns: 12,
+	column-width: 72px,
+	gutters: 36/72,
+	math: static,
+	output: float,
+	gutter-position: after,
+);
+
+// Typography. -------------------------------------------------------------- //
+
+$font__main:             "Open Sans", Helvetica, Arial, sans-serif;
+$font__headings:         'Lato', Helvetica, Arial, sans-serif;
+$font__code:             'Courier New', Courier, monospace;
+$font__blockquote:       $font__main;
+$font__pre:              'Courier New', Courier, monospace;
+$font__size-body:        18;
+$font__size-body-px:     $font__size-body * 1px;
+$font__line-height-body: 1.5;
+$font__line-height-pre:  1.6;
+
+// Social icons. ------------------------------------------------------------ //
+
+$social-icons:(
+	'behance.net':       ( 'e807', #1769FF ),
+	'bitbucket.org':     ( 'e806', #205081 ),
+	'codepen.io':        ( 'e805' ),
+	'delicious.com':     ( 'e808' ),
+	'dribbble.com':      ( 'e80a', #ea4c89 ),
+	'facebook.com':      ( 'e80b', #3b5998 ),
+	'flickr.com':        ( 'e80c' ),
+	'foursquare.com':    ( 'e80d', #25a0ca ),
+	'github.com':        ( 'e80e', #4183c4 ),
+	'instagram.com':     ( 'e810', #c08d64 ),
+	'last.fm':           ( 'e811', #c3000d ),
+	'linkedin.com':      ( 'e812', #0e76a8 ),
+	'pinterest.com':     ( 'e814', #c8232c ),
+	'plus.google.com':   ( 'e80f', #dd4b39 ),
+	'soundcloud.com':    ( 'e81a', #ff7700 ),
+	'spotify.com':       ( 'e819', #81b71a ),
+	'stackoverflow.com': ( 'e817', #fe7a15 ),
+	'twitter.com':       ( 'e81f', #00a0d1 ),
+	'vimeo.com':         ( 'e820', #86c9ef ),
+	'vine.co':           ( 'e821', #00bf8f ),
+	'vk.com':            ( 'e822', #45668e ),
+	'wordpress.com':     ( 'e823', #1e8cbe ),
+	'wordpress.org':     ( 'e823', #21759b ),
+	'youtube.com':       ( 'e825', #c4302b )
+);
