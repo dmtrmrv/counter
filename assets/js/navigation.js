@@ -1,29 +1,31 @@
 /**
  * navigation.js
  *
- * Handles toggling the navigation menu for small screens
+ * Primary navigation enhancements.
  */
 
 ( function( $ ) {
 	'use strict'
 
-	var container, button, menu, links, subMenus;
+	// Define variables.
+	var container, containerHeight, header, headerHeight, links, menu, menuToggle, subMenus, scrollPos;
 
+	// Get the header and the menu container.
+	header = document.getElementById( 'masthead' ),
 	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
+
+	// If no header or container, return early.
+	if ( ! header || ! container ) {
 		return;
 	}
 
+	// Get the menu list and the toggle button
 	menu = container.getElementsByTagName( 'ul' )[0];
+	menuToggle = document.getElementById( 'site-navigation-toggle' );
 
-	button = document.getElementById( 'site-navigation-toggle' );
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	// Hide menu toggle button if menu is empty and return early.
+	// Hide menu toggle if the menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
+		menuToggle.style.display = 'none';
 		return;
 	}
 
@@ -32,20 +34,20 @@
 		menu.className += ' nav-menu';
 	}
 
-	button.onclick = function() {
+	menuToggle.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
-			button.className    = button.className.replace( ' toggled', '' );
+			menuToggle.className    = menuToggle.className.replace( ' toggled', '' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
-			button.className += ' toggled';
+			menuToggle.className += ' toggled';
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
 
 	// Get all the link elements within the menu.
-	links    = menu.getElementsByTagName( 'a' );
+	links = menu.getElementsByTagName( 'a' );
 	subMenus = menu.getElementsByTagName( 'ul' );
 
 	// Set menu items with submenus to aria-haspopup="true".
@@ -63,13 +65,13 @@
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus() {
-
+		// Cache 'this'.
 		var self = this;
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
+		// Walk up through ancestors until we hit 'nav-menu' class.
 		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
 
-			// On li elements toggle the class .focus.
+			// Toggle the 'focus' class on 'li' elements.
 			if ( 'li' === self.tagName.toLowerCase() ) {
 				if ( -1 !== self.className.indexOf( 'focus' ) ) {
 					self.className = self.className.replace( ' focus', '' );
@@ -86,11 +88,11 @@
 	 * Adds dropdown toggle icon to menu items that have children.
 	 */
 	function initSubMenuToggles( container ) {
-		// Create the button.
-		var button = '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>'
+		// Create the dropdown toggle string.
+		var dropdownToggle = '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>'
 
-		// Add the button to menu items that have children.
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( button );
+		// Add the dropdown toggle to menu items that have children.
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
 		// Add/remove toggle-related classes and attributes when clicked on the toggle.
 		container.find( '.dropdown-toggle' ).click( function( e ) {
@@ -118,6 +120,27 @@
 				var containerId = $( this ).parent().prop( 'id' );
 				$( params.newContainer ).find( '#' + containerId + ' > .dropdown-toggle' ).triggerHandler( 'click' );
 			} );
+		}
+	} );
+
+	/**
+	 * Make the menu sticky.
+	 */
+	window.addEventListener( 'scroll', function() {
+		containerHeight = container.offsetHeight;
+		headerHeight = header.offsetHeight - container.offsetHeight;
+		scrollPos = window.pageYOffset;
+
+		if ( scrollPos > headerHeight ) {
+			if ( -1 === container.className.indexOf( 'fixed' ) ) {
+				container.className += ' fixed';
+				header.style.paddingBottom = containerHeight + 'px';
+			}
+		} else if ( scrollPos <= headerHeight ) {
+			if ( -1 !== container.className.indexOf( 'fixed' ) ) {
+				container.className = container.className.replace( ' fixed', '' );
+				header.style.paddingBottom = '0';
+			}
 		}
 	} );
 
