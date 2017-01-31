@@ -48,9 +48,9 @@ Removal: Subtitles support.
 Removal: Concatenated and minified JavaScript styles.
 Removal: FitVids in favor of Jetpack responsive videos.
 
-= v1.0.1 (September 26, 2016) =
+= v1.0.1 =
 Fix: Broken links on the Getting Started screen.
 Improvement: Updated the Getting Started screen.
 
-= v1.0.0 (September 14, 2016) =
+= v1.0.0 =
 Initial release.
