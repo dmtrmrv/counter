@@ -4,7 +4,9 @@
  * Handles toggling the navigation menu for small screens
  */
 
-( function() {
+( function( $ ) {
+	'use strict'
+
 	var container, button, menu, links, subMenus;
 
 	container = document.getElementById( 'site-navigation' );
@@ -61,6 +63,7 @@
 	 * Sets or removes .focus class on an element.
 	 */
 	function toggleFocus() {
+
 		var self = this;
 
 		// Move up through the ancestors of the current link until we hit .nav-menu.
@@ -78,4 +81,44 @@
 			self = self.parentElement;
 		}
 	}
-} )();
+
+	/**
+	 * Adds dropdown toggle icon to menu items that have children.
+	 */
+	function initSubMenuToggles( container ) {
+		// Create the button.
+		var button = '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>'
+
+		// Add the button to menu items that have children.
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( button );
+
+		// Add/remove toggle-related classes and attributes when clicked on the toggle.
+		container.find( '.dropdown-toggle' ).click( function( e ) {
+			var $this = $( this );
+			e.preventDefault();
+			$this.toggleClass( 'toggle-on' );
+			$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+			$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			$this.html( $this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+		} );
+	}
+
+	// Initialize the dropdown-toggle.
+	initSubMenuToggles( $( '.main-navigation' ) );
+
+	/**
+	 * Re-initialize the menu in customizer when it is updated.
+	 */
+	$( document ).on( 'customize-preview-menu-refreshed', function( e, params ) {
+		if ( 'primary' === params.wpNavMenuArgs.theme_location ) {
+			initSubMenuToggles( params.newContainer );
+
+			// Re-sync expanded states from oldContainer.
+			params.oldContainer.find( '.dropdown-toggle.toggle-on' ).each(function() {
+				var containerId = $( this ).parent().prop( 'id' );
+				$( params.newContainer ).find( '#' + containerId + ' > .dropdown-toggle' ).triggerHandler( 'click' );
+			} );
+		}
+	} );
+
+} )( jQuery );

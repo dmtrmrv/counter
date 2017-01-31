@@ -194,7 +194,7 @@ function counter_scripts() {
 	wp_enqueue_script(
 		'counter-navigation',
 		get_template_directory_uri() . '/assets/js/navigation.js',
-		array(),
+		array( 'jquery' ),
 		COUNTER_VERSION,
 		true
 	);
@@ -202,7 +202,7 @@ function counter_scripts() {
 	wp_enqueue_script(
 		'counter-sticky-navigation',
 		get_template_directory_uri() . '/assets/js/sticky-nav.js',
-		array(),
+		array( 'jquery' ),
 		COUNTER_VERSION,
 		true
 	);
@@ -222,6 +222,12 @@ function counter_scripts() {
 		COUNTER_VERSION,
 		true
 	);
+
+	wp_localize_script( 'counter-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'Expand child menu', 'popper' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'Collapse child menu', 'popper' ) . '</span>',
+	) );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

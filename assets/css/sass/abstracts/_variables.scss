@@ -5,7 +5,7 @@ $color__headings: #1e1e1e; // r:30 g:30 b:30
 $color__text: #555555; // r:85 g:85 b:85
 
 // Shades of gray.
-$color__gray: rgba( $color__text, 0.15 );
+$color__gray: #e6e6e6; // rgba( $color__text, 0.15 ) // r:230 g:230 b:230
 
 // Body.
 $color__background-body: #fff;
@@ -49,12 +49,12 @@ $susy-static: (
 
 // Typography. -------------------------------------------------------------- //
 
-$font__main:             "Open Sans", Helvetica, Arial, sans-serif;
-$font__headings:         'Lato', Helvetica, Arial, sans-serif;
-$font__code:             'Courier New', Courier, monospace;
-$font__blockquote:       $font__main;
-$font__pre:              'Courier New', Courier, monospace;
-$font__size:             18px;
+$font__main: "Open Sans", Helvetica, Arial, sans-serif;
+$font__headings: 'Lato', Helvetica, Arial, sans-serif;
+$font__code: 'Courier New', Courier, monospace;
+$font__blockquote: $font__main;
+$font__pre: 'Courier New', Courier, monospace;
+$font__size: 18px;
 $font__line-height: 1.5;
 
 // Social icons. ------------------------------------------------------------ //
