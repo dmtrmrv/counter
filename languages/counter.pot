@@ -323,22 +323,26 @@ msgid "Nothing Found"
 msgstr ""
 
 #: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post?"
 msgstr ""
 
-#: template-parts/content-none.php:28
+#: template-parts/content-none.php:25
+msgid "Get started here &rarr;"
+msgstr ""
+
+#: template-parts/content-none.php:30
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:34
+#: template-parts/content-none.php:36
 msgid ""
 "Looks like the page you are looking for has been moved or does not exist. "
 "Click on the site logo to go to the homepage or try searching."
 msgstr ""
 
-#: template-parts/content-none.php:40
+#: template-parts/content-none.php:42
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
