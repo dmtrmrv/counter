@@ -36,9 +36,6 @@
 	&.widget-right {
 		text-align: right;
 	}
-	.entry-subtitle {
-		display: none;
-	}
 }
 
 .widget.widget_search {
@@ -129,7 +126,7 @@
 	ul ul {
 		margin-left: 1em;
 	}
-	[class^="menu-inline-"] {
+	[class^='menu-inline-'] {
 		ul ul {
 			display: inline;
 			margin-left: 0;
@@ -143,4 +140,5 @@
 
 .widget-title {
 	margin-bottom: 0.75em;
+	font-weight: 700;
 }

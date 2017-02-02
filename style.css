@@ -2205,10 +2205,6 @@ body {
 	text-align: right;
 }
 
-.widget .entry-subtitle {
-	display: none;
-}
-
 .widget.widget_search {
 	padding: 0;
 	border: none;
@@ -2320,6 +2316,7 @@ body {
 
 .widget-title {
 	margin-bottom: 0.75em;
+	font-weight: 700;
 }
 
 /**
@@ -2480,7 +2477,7 @@ body {
 .panel-title {
 	margin-bottom: 0.83333333333333em;
 	font-size: 1.2em;
-	font-weight: 900;
+	font-weight: 700;
 	line-height: 1.25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
