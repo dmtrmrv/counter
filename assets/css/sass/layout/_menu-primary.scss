@@ -5,6 +5,7 @@
 	z-index: 50;
 	top: 0;
 	width: 100%;
+	max-width: $lg;
 	min-height: 3em;
 	border-bottom: 1px solid $color__gray;
 	background-color: #fff;
@@ -216,7 +217,7 @@
 		}
 	}
 	&:hover,
- 	&:focus {
+	&:focus {
 		&:before {
 			background-color: $color__accent;
 		}

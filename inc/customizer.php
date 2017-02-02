@@ -112,26 +112,6 @@ function counter_customize_register( $wp_customize ) {
 
 	endif;
 
-	// Layout.
-	$wp_customize->add_setting( 'panel_layout_' . $i, array(
-		'default' => 'center',
-		'transport' => 'postMessage',
-		'sanitize_callback' => 'counter_sanitize_panel_layout',
-	) );
-
-	$wp_customize->add_control( 'panel_layout_' . $i, array(
-		'type' => 'select',
-		'label' => esc_html__( 'Layout', 'counter' ),
-		'section' => 'panel_' . $i,
-		'choices' => counter_get_panel_types(),
-	) );
-
-	$wp_customize->selective_refresh->add_partial( 'panel_layout_' . $i, array(
-		'selector' => '#panel-' . $i,
-		'render_callback' => 'counter_panel',
-		'container_inclusive' => true,
-	) );
-
 	// Background image.
 	$wp_customize->add_setting( 'panel_bg_image_' . $i, array(
 		'transport' => 'postMessage',
@@ -267,6 +247,30 @@ function counter_customize_register( $wp_customize ) {
 			'max'   => 1,
 			'step'  => 0.02,
 		),
+	) );
+
+	// CSS class.
+	$wp_customize->add_setting( 'panel_class_' . $i, array(
+		'default' => '',
+		'transport' => 'postMessage',
+		'sanitize_callback' => 'esc_attr',
+	) );
+
+	$wp_customize->add_control( 'panel_class_' . $i, array(
+		'type' => 'text',
+		'label' => esc_html__( 'Additional CSS Classes', 'counter' ),
+		'section' => 'panel_' . $i,
+		'description' => sprintf(
+			'%1$s <a href="https://docs.themepatio.com/counter-customizing-panels-front-page/" target="_blank">%2$s</a>',
+			esc_html__( 'Space-separated list of CSS classes applied to the panel.', 'counter' ),
+			esc_html__( 'Learn more &rarr;', 'counter' )
+		),
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'panel_class_' . $i, array(
+		'selector' => '#panel-' . $i,
+		'render_callback' => 'counter_panel',
+		'container_inclusive' => true,
 	) );
 
 	$wp_customize->add_control(

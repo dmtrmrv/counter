@@ -1,13 +1,15 @@
 <?php
 /**
- * The template used for displaying centered panels on the front page
+ * The template used for displaying panels on the front page
  *
  * @package Counter
  */
 
 ?>
 
-<article id="panel-<?php echo esc_attr( $counter_panel_num ); ?>" <?php post_class( 'panel panel-center' . $counter_panel_has_background ); ?>>
+<article id="panel-<?php echo esc_attr( $counter_panel_num ); ?>" <?php post_class( 'panel ' . $counter_panel_class ); ?>>
+
+	<?php counter_panel_thumbnail(); ?>
 
 	<div class="wrap">
 

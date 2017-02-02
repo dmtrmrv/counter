@@ -1084,6 +1084,8 @@ p > video {
 /* Structure */
 
 body {
+	max-width: 1440px;
+	margin: 0 auto;
 	background-color: #f0f0f0;
 }
 
@@ -1228,6 +1230,7 @@ body {
 	z-index: 50;
 	top: 0;
 	width: 100%;
+	max-width: 1440px;
 	min-height: 3em;
 	border-bottom: 1px solid #e6e6e6;
 	background-color: #fff;
@@ -2430,6 +2433,7 @@ body {
 
 .panel {
 	position: relative;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .panel:before,
@@ -2437,6 +2441,15 @@ body {
 	display: table;
 	clear: both;
 	content: '';
+}
+
+.panel .panel-data {
+	max-width: 612px;
+}
+
+.panel.has-background,
+.panel:last-of-type {
+	border-bottom: 0;
 }
 
 .panel-thumbnail img {
@@ -2453,8 +2466,8 @@ body {
 	z-index: 20;
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: 1.5em;
-	padding-bottom: 0;
+	padding-top: 2.5em;
+	padding-bottom: 1.5em;
 }
 
 .panel-data:before,
@@ -2467,6 +2480,7 @@ body {
 .panel-title {
 	margin-bottom: 0.83333333333333em;
 	font-size: 1.2em;
+	font-weight: 900;
 	line-height: 1.25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -2511,60 +2525,77 @@ body {
 	text-align: center;
 }
 
-.panel-center {
-	border-bottom: 1px solid #e6e6e6;
-}
-
-.panel-center .panel-data {
-	max-width: 612px;
-}
-
-.panel-center.has-background,
-.panel-center:last-of-type {
-	border-bottom: 0;
-}
-
-.panel-fullwidth {
-	border-bottom: 1px solid #e6e6e6;
-}
-
-.panel-fullwidth .panel-data {
+.panel.fullwidth .panel-data {
 	max-width: 936px;
 }
 
-.panel-fullwidth.has-background,
-.panel-fullwidth:last-of-type {
-	border-bottom: 0;
+.panel.split-left.has-post-thumbnail .wrap {
+	width: 100%;
+	padding: 0;
 }
 
-.panel-left .panel-data {
+.panel.split-left.has-post-thumbnail .panel-data {
 	padding-right: 6.25%;
 	padding-left: 6.25%;
 }
 
-.panel-left .panel-thumbnail {
+.panel.split-left.has-post-thumbnail .panel-thumbnail {
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.panel-left .panel-thumbnail img {
+.panel.split-left.has-post-thumbnail .panel-thumbnail img {
 	width: 100%;
 }
 
-.panel-right .panel-data {
+.panel.split-right.has-post-thumbnail .wrap {
+	width: 100%;
+	padding: 0;
+}
+
+.panel.split-right.has-post-thumbnail .panel-data {
 	padding-right: 6.25%;
 	padding-left: 6.25%;
 }
 
-.panel-right .panel-thumbnail {
+.panel.split-right.has-post-thumbnail .panel-thumbnail {
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.panel-right .panel-thumbnail img {
+.panel.split-right.has-post-thumbnail .panel-thumbnail img {
 	width: 100%;
+}
+
+.panel.align-center,
+.panel.align-center .panel-title {
+	text-align: center;
+}
+
+.panel.tall {
+	padding-top: 12%;
+	padding-bottom: 12%;
+}
+
+.panel.dark {
+	background-color: #1e1e1e;
+}
+
+.panel.dark,
+.panel.dark .panel-title,
+.panel.dark h1,
+.panel.dark h2,
+.panel.dark h3,
+.panel.dark h4,
+.panel.dark h5,
+.panel.dark h6 {
+	color: #fff;
+}
+
+.panel.no-border {
+	border-bottom: none;
 }
 
 .panel .customize-partial-edit-shortcut {
@@ -3045,7 +3076,7 @@ body {
 		padding-bottom: 3.75%;
 	}
 
-	.panel-left .panel-data {
+	.panel.split-left.has-post-thumbnail .panel-data {
 		overflow: hidden;
 		position: absolute;
 		top: 50%;
@@ -3058,7 +3089,7 @@ body {
 		    transform: translateY(-50%);
 	}
 
-	.panel-left .panel-thumbnail {
+	.panel.split-left.has-post-thumbnail .panel-thumbnail {
 		position: relative;
 		z-index: 30;
 		width: 50%;
@@ -3066,7 +3097,7 @@ body {
 		margin: 0;
 	}
 
-	.panel-right .panel-data {
+	.panel.split-right.has-post-thumbnail .panel-data {
 		overflow: hidden;
 		position: absolute;
 		top: 50%;
@@ -3078,7 +3109,7 @@ body {
 		    transform: translateY(-50%);
 	}
 
-	.panel-right .panel-thumbnail {
+	.panel.split-right.has-post-thumbnail .panel-thumbnail {
 		position: relative;
 		z-index: 30;
 		width: 50%;

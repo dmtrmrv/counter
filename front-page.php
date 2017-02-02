@@ -11,11 +11,9 @@ get_header(); ?>
 		<?php
 			// Hero panel goes first.
 			while ( have_posts() ) { the_post();
-				$counter_hero_layout = get_theme_mod( 'panel_layout_0', 'center' );
 				set_query_var( 'counter_panel_num', 0 );
-				set_query_var( 'counter_panel_layout', $counter_hero_layout );
-				set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_0', false ) ? ' has-background' : '' );
-				get_template_part( 'template-parts/panel', $counter_hero_layout );
+				set_query_var( 'counter_panel_class', get_theme_mod( 'panel_class_0' ) );
+				get_template_part( 'template-parts/panel' );
 			}
 
 			// Then the rest of panels.

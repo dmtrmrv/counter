@@ -41,7 +41,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:109 inc/customizer.php:290
+#: functions.php:109 inc/customizer.php:294
 msgid "Footer"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Custom Colors"
 msgstr ""
 
-#: inc/customizer.php:43 inc/customizer.php:74 inc/customizer.php:303
+#: inc/customizer.php:43 inc/customizer.php:74 inc/customizer.php:307
 msgid "Learn More"
 msgstr ""
 
@@ -105,123 +105,131 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:124
-msgid "Layout"
-msgstr ""
-
-#: inc/customizer.php:146
+#: inc/customizer.php:126
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:146
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:150
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:151
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:172
+#: inc/customizer.php:152
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:153
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:185
+#: inc/customizer.php:165
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:169
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:190
+#: inc/customizer.php:170
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:191
+#: inc/customizer.php:171
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:172
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:173
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:174
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:195
+#: inc/customizer.php:175
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:196
+#: inc/customizer.php:176
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:197
+#: inc/customizer.php:177
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:209
+#: inc/customizer.php:189
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer.php:213
+#: inc/customizer.php:193
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer.php:214
+#: inc/customizer.php:194
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:206
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:210
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:211
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer.php:232
+#: inc/customizer.php:212
 msgid "Percent"
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:224
 msgid "Background Size %"
 msgstr ""
 
-#: inc/customizer.php:262
+#: inc/customizer.php:242
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:280
+#: inc/customizer.php:261
+msgid "Additional CSS Classes"
+msgstr ""
+
+#: inc/customizer.php:265
+msgid "Space-separated list of CSS classes applied to the panel."
+msgstr ""
+
+#: inc/customizer.php:266
+msgid "Learn more &rarr;"
+msgstr ""
+
+#: inc/customizer.php:284
 msgid "Updgrade Counter"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:285
 msgid "Need more than four panels?"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:303
 msgid "Custom Footer Text"
 msgstr ""
 
-#: inc/customizer.php:304
+#: inc/customizer.php:308
 msgid "Upgrade Counter to set custom footer text."
 msgstr ""
 
@@ -294,19 +302,15 @@ msgstr ""
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:272
-msgid "No Featured Image"
-msgstr ""
-
-#: inc/template-tags.php:285
+#: inc/template-tags.php:276
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:304
+#: inc/template-tags.php:295
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:306
+#: inc/template-tags.php:297
 msgid "Customize"
 msgstr ""
 

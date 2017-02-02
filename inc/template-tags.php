@@ -262,17 +262,8 @@ function counter_panel_thumbnail() {
 	}
 	if ( has_post_thumbnail() ) {
 		echo '<div class="panel-thumbnail">';
-			the_post_thumbnail( '720x0' );
+			the_post_thumbnail( '1440x0' );
 		echo '</div>';
-	} else {
-		?>
-		<div class='panel-thumbnail'>
-			<svg class='panel-thumbnail-placeholder' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox="0 0 100 100" xmlns:xlink='http://www.w3.org/1999/xlink'>
-				<rect class='shape' x='0' y='0' width='100%' height='100%' fill='#e5e5e5'></rect>
-				<text x="50%" y="50%" font-size="3" fill-opacity="0.5" alignment-baseline="middle" text-anchor="middle"><?php esc_html_e( 'No Featured Image', 'counter' ); ?></text>
-			</svg>
-		</div>
-		<?php
 	}
 }
 
@@ -312,41 +303,37 @@ function counter_panel_meta( $num = '', $id = '' ) {
 /**
  * Displays the template part for panels on the frontpage.
  *
- * Also used as a render callback to update the panel content, layout, or
+ * Also used as a render callback to update the panel content, CSS class, and
  * background image from the Customizer.
  *
  * Keep in mind that it is used to render the hero panel as well as other panels
  * in the Customizer, meaning that it's not being executed from within the
- * loop, so we have to check what page is used as a front page otherwise
- * the_content() won't work in Customizer preview.
+ * loop, so we have to check what page is used as the front page, otherwise
+ * the_content() won't work in the preview.
  *
  * It would be an overkill to call this function from the front-page.php to
  * display the hero panel because the_content() does work there. That's why
  * front-page.php uses this funciton to only display secondary panels.
  *
- * @param  object  $partial The partial object.
- * @param  integer $i       Number of the panel.
+ * @param object $partial The partial object.
+ * @param int    $num     Number of the panel.
  */
-function counter_panel( $partial = null, $i = 0 ) {
+function counter_panel( $partial = null, $num = 0 ) {
 	// If this function is called from the Customizer, get the panel number
 	// from the theme mod option.
 	if ( is_a( $partial, 'WP_Customize_Partial' ) ) {
-		$i = preg_replace( '/panel_(content|layout|bg_image)_/', '', $partial->id );
+		$num = preg_replace( '/panel_(content|class|bg_image)_/', '', $partial->id );
 	}
-
-	// Get the layout for the current panel.
-	$layout = get_theme_mod( 'panel_layout_' . $i, 'center' );
 
 	// Temporarily modify the post object.
 	global $post;
 
 	// Set the variables that will be available within the template part.
-	set_query_var( 'counter_panel_num', $i );
-	set_query_var( 'counter_panel_layout', $layout );
-	set_query_var( 'counter_panel_has_background', get_theme_mod( 'panel_bg_image_' . $i, false ) ? ' has-background' : '' );
+	set_query_var( 'counter_panel_num', $num );
+	set_query_var( 'counter_panel_class', get_theme_mod( 'panel_class_' . $num, '' ) );
 
 	// Hero panel case.
-	if ( 0 == $i ) {
+	if ( 0 == $num ) {
 		// Get the static front page id.
 		$post = get_post( get_option( 'page_on_front' ) ); // wpcs: override ok.
 
@@ -354,21 +341,21 @@ function counter_panel( $partial = null, $i = 0 ) {
 		setup_postdata( $post );
 
 		// Display the panel.
-		get_template_part( 'template-parts/panel', $layout );
+		get_template_part( 'template-parts/panel' );
 
 	// Regular panel case.
-	} elseif ( get_theme_mod( 'panel_content_' . $i ) ) {
+	} elseif ( get_theme_mod( 'panel_content_' . $num ) ) {
 		// Get the page id assigned to the current panel.
-		$post = get_post( get_theme_mod( 'panel_content_' . $i ) ); // wpcs: override ok.
+		$post = get_post( get_theme_mod( 'panel_content_' . $num ) ); // wpcs: override ok.
 
 		// Set the post object to the page assigned to the current panel.
 		setup_postdata( $post );
 
 		// Display the panel.
-		get_template_part( 'template-parts/panel', $layout );
+		get_template_part( 'template-parts/panel' );
 
 	// Empty panel in Cutomizer.
-	} elseif ( ! get_theme_mod( 'panel_content_' . $i ) && is_customize_preview() ) {
+	} elseif ( ! get_theme_mod( 'panel_content_' . $num ) && is_customize_preview() ) {
 		// Display panel content.
 		get_template_part( 'template-parts/panel', 'empty' );
 	}
