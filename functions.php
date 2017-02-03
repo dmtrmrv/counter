@@ -82,6 +82,193 @@ function counter_setup() {
 
 	// This theme styles the visual editor to resemble theme styles.
 	add_editor_style( array( 'assets/css/editor-style.css' ) );
+
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		// Add pages.
+		'posts' => array(
+			'about',
+			'blog',
+			'contact',
+			'hero' => array(
+				'post_type' => 'page',
+				'post_title' => esc_html_x( 'Coffee &amp; Pastry', 'Theme starter content', 'counter' ),
+				'post_content' => join( '', array(
+					'<p>' . esc_html_x( 'Come in and get a taste of our great coffee with pastries, baked daily with locally milled organic flours', 'Theme starter content', 'counter' ) . '</p>',
+					'<p><a href="#" class="btn btn-default">' . esc_html_x( 'View the Menu', 'Theme starter content', 'counter' ) . '</a></p>',
+				) ),
+			),
+			'menu' => array(
+				'post_type' => 'page',
+				'post_title' => esc_html_x( 'Menu', 'Theme starter content', 'counter' ),
+				'post_content' => join( '', array(
+					'<h5>' . esc_html_x( 'Americano 2.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Prepared by brewing espresso with added hot water. The strength varies with the number of shots of espresso and the amount of water.', 'Theme starter content', 'counter' ) . '</p>',
+					'<h5>' . esc_html_x( 'Espresso 2.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Generally thicker than coffee brewed by other methods. Has a higher concentration of suspended and dissolved solids.', 'Theme starter content', 'counter' ) . '</p>',
+					'<h5>' . esc_html_x( 'Cappucino 3.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Composed of espresso and hot milk, with the surface topped with foamed milk. Cream may be used instead of milk and is often topped with cinnamon.', 'Theme starter content', 'counter' ) . '</p>',
+					'<h5>' . esc_html_x( 'Latte 4', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Made with espresso and steamed milk. The term as used in English is a shortened form of the Italian caffè latte, which means milk coffee.', 'Theme starter content', 'counter' ) . '</p>',
+					'<p><a href="#">' . esc_html_x( 'View the full menu &rarr;', 'Theme starter content', 'counter' ) . '</a></p>',
+				) ),
+			),
+			'coffee' => array(
+				'post_type' => 'page',
+				'post_title' => esc_html_x( 'Finest Coffee', 'Theme starter content', 'counter' ),
+				'post_content' => join( '', array(
+					'<p>' . esc_html_x( 'It\'s our pleasure to find beautiful coffees, hand-roast them in our vintage steel roaster, and offer them to you.', 'Theme starter content', 'counter' ) . '</p>',
+					'<p><a href="#">' . esc_html_x( 'Learn more &rarr;', 'Theme starter content', 'counter' ) . '</a></p>',
+				) ),
+				'thumbnail' => '{{image-coffee}}',
+			),
+			'pastry' => array(
+				'post_type' => 'page',
+				'post_title' => esc_html_x( 'Delicious Pastries', 'Theme starter content', 'counter' ),
+				'post_content' => join( '', array(
+					'<p>' . esc_html_x( 'Our pastries are baked daily with locally milled organic flours. Muffins, cakes, and tarts vary with the seasons.', 'Theme starter content', 'counter' ) . '</p>',
+					'<p><a href="#">' . esc_html_x( 'Learn more &rarr;', 'Theme starter content', 'counter' ) . '</a></p>',
+				) ),
+				'thumbnail' => '{{image-pastry}}',
+			),
+			'visit-us' => array(
+				'post_type' => 'page',
+				'post_title' => esc_html_x( 'Come Visit Us!', 'Theme starter content', 'counter' ),
+				'post_content' => join( '', array(
+					'<p>' . esc_html_x( 'Stop by our coffee shop, we\'ll be glad to see you from 7am to 7pm on weekdays and from 8am to 6pm on weekends.', 'Theme starter content', 'counter' ) . '</p>',
+					'<p><a href="#" class="btn btn-default">' . esc_html_x( 'View on the map', 'Theme starter content', 'counter' ) . '</a></p>',
+				) ),
+			),
+		),
+
+		// Add attachments.
+		'attachments' => array(
+			'image-coffee-pastry' => array(
+				'post_title' => esc_html_x( 'Coffee &amp; Pastry', 'Theme starter content', 'counter' ),
+				'file' => 'assets/img/coffee-pastry.jpg',
+			),
+			'image-coffee' => array(
+				'post_title' => esc_html_x( 'Coffee', 'Theme starter content', 'counter' ),
+				'file' => 'assets/img/coffee.jpg',
+			),
+			'image-pastry' => array(
+				'post_title' => esc_html_x( 'Pastry', 'Theme starter content', 'counter' ),
+				'file' => 'assets/img/pastry.jpg',
+			),
+			'image-visit-us' => array(
+				'post_title' => esc_html_x( 'Visit Us', 'Theme starter content', 'counter' ),
+				'file' => 'assets/img/visit-us.jpg',
+			),
+		),
+
+		// Add widgets.
+		'widgets' => array(
+			'sidebar-1' => array(
+				'text_about',
+				'cafe' => array( 'text', array(
+					'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
+					'text' => join( '', array(
+						'<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
+					) ),
+				) ),
+				'roastery' => array( 'text', array(
+					'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
+					'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
+				) ),
+			),
+			'footer-1' => array(
+				'cafe' => array( 'text', array(
+					'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
+					'text' => join( '', array(
+						'<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
+					) ),
+				) ),
+			),
+			'footer-2' => array(
+				'roastery' => array( 'text', array(
+					'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
+					'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
+				) ),
+			),
+			'footer-3' => array(
+				'hours' => array( 'text', array(
+					'title' => esc_html_x( 'Hours', 'Theme starter content', 'counter' ),
+					'text' => '<p>' . esc_html_x( 'Mon–Fri: 7am–7pm', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Sat–Sun: 8am–6pm', 'Theme starter content', 'counter' ) . '</p>',
+				) ),
+			),
+			'footer-4' => array(
+				'contact' => array( 'text', array(
+					'title' => esc_html_x( 'Contact', 'Theme starter content', 'counter' ),
+					'text' => '<p>' . esc_html_x( 'info@example.com', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( '(212) 123-4567', 'Theme starter content', 'counter' ) . '</p>',
+				) ),
+			),
+		),
+
+		// Set the options.
+		'options' => array(
+			'show_on_front' => 'page',
+			'page_on_front' => '{{hero}}',
+			'page_for_posts' => '{{blog}}',
+		),
+
+		// Set the theme mods.
+		'theme_mods' => array(
+			// Panlel 0.
+			'panel_class_0' => 'tall dark align-center no-border',
+			'panel_bg_image_0' => '{{image-coffee-pastry}}',
+			'panel_bg_repeat_0' => 'no-repeat',
+			'panel_bg_position_0' => 'center center',
+			'panel_bg_attachment_0' => 'scroll',
+			'panel_bg_attachment_0' => 'scroll',
+			'panel_bg_size_type_0' => 'cover',
+
+			// Panel 1.
+			'panel_content_1' => '{{menu}}',
+			'panel_class_1' => 'align-center no-border',
+
+			// Panel 2.
+			'panel_content_2' => '{{coffee}}',
+			'panel_class_2' => 'split-left dark align-center no-border',
+
+			// Panel 3.
+			'panel_content_3' => '{{pastry}}',
+			'panel_class_3' => 'split-right align-center no-border',
+
+			// Panel 4.
+			'panel_content_4' => '{{visit-us}}',
+			'panel_class_4' => 'tall dark align-center',
+			'panel_bg_image_4' => '{{image-visit-us}}',
+			'panel_bg_repeat_4' => 'no-repeat',
+			'panel_bg_position_4' => 'center center',
+			'panel_bg_attachment_4' => 'scroll',
+			'panel_bg_attachment_4' => 'scroll',
+			'panel_bg_size_type_4' => 'cover',
+		),
+
+		// Set up menus.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'primary' => array(
+				'name' => __( 'Primary', 'counter' ),
+				'items' => array(
+					'link_home',
+					'page_menu' => array(
+						'type' => 'post_type',
+						'object' => 'page',
+						'object_id' => '{{menu}}',
+					),
+					'page_blog',
+					'page_about',
+					'page_contact',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters the array of starter content.
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'counter_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 

@@ -14,10 +14,27 @@ Author: Dave Gandy
 License: SIL (http://scripts.sil.org/OFL)  
 URL: http://fortawesome.github.com/Font-Awesome/
 
-## Image used in the screenshot  
+## Images used in the theme
+
+Coffee, succulent, and a muffin  
+Author: Rob Bye  
+License: CC0 1.0  
+Source: https://unsplash.com/photos/5LBIuI7c_ps
+
+Barista making coffee  
 Author: Tim Wright  
 License: CC0 1.0  
-URL: https://unsplash.com/@timdwright?photo=4_DHVx6OgeM
+Source: https://unsplash.com/photos/EsisOkXogdY
+
+Pastries  
+Author: Mink Mingle  
+License: CC0 1.0  
+Source: https://unsplash.com/photos/qZ5lPCPvdXE
+
+Cafe interior  
+Author: Dogancan Ozturan  
+License: CC0 1.0  
+Source: https://unsplash.com/photos/94taEmdowRw
 
 ## Changelog
 

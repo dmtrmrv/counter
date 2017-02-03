@@ -29,31 +29,31 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: functions.php:65
+#: functions.php:65 functions.php:248
 msgid "Primary"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:283
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:285
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:109 inc/customizer.php:294
+#: functions.php:296 inc/customizer.php:294
 msgid "Footer"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:298
 msgid "Appears in the footer."
 msgstr ""
 
-#: functions.php:219
+#: functions.php:406
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:407
 msgid "Collapse child menu"
 msgstr ""
 
@@ -394,12 +394,208 @@ msgid_plural "%1$s Replies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:138
+#: functions.php:95 functions.php:143
+msgctxt "Theme starter content"
+msgid "Coffee &amp; Pastry"
+msgstr ""
+
+#: functions.php:97
+msgctxt "Theme starter content"
+msgid ""
+"Come in and get a taste of our great coffee with pastries, baked daily with "
+"locally milled organic flours"
+msgstr ""
+
+#: functions.php:98
+msgctxt "Theme starter content"
+msgid "View the Menu"
+msgstr ""
+
+#: functions.php:103
+msgctxt "Theme starter content"
+msgid "Menu"
+msgstr ""
+
+#: functions.php:105
+msgctxt "Theme starter content"
+msgid "Americano 2.5"
+msgstr ""
+
+#: functions.php:105
+msgctxt "Theme starter content"
+msgid ""
+"Prepared by brewing espresso with added hot water. The strength varies with "
+"the number of shots of espresso and the amount of water."
+msgstr ""
+
+#: functions.php:106
+msgctxt "Theme starter content"
+msgid "Espresso 2.5"
+msgstr ""
+
+#: functions.php:106
+msgctxt "Theme starter content"
+msgid ""
+"Generally thicker than coffee brewed by other methods. Has a higher "
+"concentration of suspended and dissolved solids."
+msgstr ""
+
+#: functions.php:107
+msgctxt "Theme starter content"
+msgid "Cappucino 3.5"
+msgstr ""
+
+#: functions.php:107
+msgctxt "Theme starter content"
+msgid ""
+"Composed of espresso and hot milk, with the surface topped with foamed "
+"milk. Cream may be used instead of milk and is often topped with cinnamon."
+msgstr ""
+
+#: functions.php:108
+msgctxt "Theme starter content"
+msgid "Latte 4"
+msgstr ""
+
+#: functions.php:108
+msgctxt "Theme starter content"
+msgid ""
+"Made with espresso and steamed milk. The term as used in English is a "
+"shortened form of the Italian caffè latte, which means milk coffee."
+msgstr ""
+
+#: functions.php:109
+msgctxt "Theme starter content"
+msgid "View the full menu &rarr;"
+msgstr ""
+
+#: functions.php:114
+msgctxt "Theme starter content"
+msgid "Finest Coffee"
+msgstr ""
+
+#: functions.php:116
+msgctxt "Theme starter content"
+msgid ""
+"It's our pleasure to find beautiful coffees, hand-roast them in our vintage "
+"steel roaster, and offer them to you."
+msgstr ""
+
+#: functions.php:117 functions.php:126
+msgctxt "Theme starter content"
+msgid "Learn more &rarr;"
+msgstr ""
+
+#: functions.php:123
+msgctxt "Theme starter content"
+msgid "Delicious Pastries"
+msgstr ""
+
+#: functions.php:125
+msgctxt "Theme starter content"
+msgid ""
+"Our pastries are baked daily with locally milled organic flours. Muffins, "
+"cakes, and tarts vary with the seasons."
+msgstr ""
+
+#: functions.php:132
+msgctxt "Theme starter content"
+msgid "Come Visit Us!"
+msgstr ""
+
+#: functions.php:134
+msgctxt "Theme starter content"
+msgid ""
+"Stop by our coffee shop, we'll be glad to see you from 7am to 7pm on "
+"weekdays and from 8am to 6pm on weekends."
+msgstr ""
+
+#: functions.php:135
+msgctxt "Theme starter content"
+msgid "View on the map"
+msgstr ""
+
+#: functions.php:147
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr ""
+
+#: functions.php:151
+msgctxt "Theme starter content"
+msgid "Pastry"
+msgstr ""
+
+#: functions.php:155
+msgctxt "Theme starter content"
+msgid "Visit Us"
+msgstr ""
+
+#: functions.php:165 functions.php:177
+msgctxt "Theme starter content"
+msgid "Cafe"
+msgstr ""
+
+#: functions.php:167 functions.php:179
+msgctxt "Theme starter content"
+msgid "123 Main Street"
+msgstr ""
+
+#: functions.php:167 functions.php:179
+msgctxt "Theme starter content"
+msgid "New York, NY 10001"
+msgstr ""
+
+#: functions.php:171 functions.php:185
+msgctxt "Theme starter content"
+msgid "Roastery"
+msgstr ""
+
+#: functions.php:172 functions.php:186
+msgctxt "Theme starter content"
+msgid "321 Second Street"
+msgstr ""
+
+#: functions.php:172 functions.php:186
+msgctxt "Theme starter content"
+msgid "Brooklyn, NY 11230"
+msgstr ""
+
+#: functions.php:191
+msgctxt "Theme starter content"
+msgid "Hours"
+msgstr ""
+
+#: functions.php:192
+msgctxt "Theme starter content"
+msgid "Mon–Fri: 7am–7pm"
+msgstr ""
+
+#: functions.php:192
+msgctxt "Theme starter content"
+msgid "Sat–Sun: 8am–6pm"
+msgstr ""
+
+#: functions.php:197
+msgctxt "Theme starter content"
+msgid "Contact"
+msgstr ""
+
+#: functions.php:198
+msgctxt "Theme starter content"
+msgid "info@example.com"
+msgstr ""
+
+#: functions.php:198
+msgctxt "Theme starter content"
+msgid "(212) 123-4567"
+msgstr ""
+
+#: functions.php:325
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:329
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""

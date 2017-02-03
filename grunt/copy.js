@@ -11,6 +11,7 @@ module.exports = {
 			'./assets/js/*.js',
 			'./assets/fonts/fontello/font/**',
 			'./assets/fonts/fontello/css/fontello.css',
+			'./assets/img/*.jpg',
 			'./languages/<%= package.name %>.pot',
 			'./languages/readme.txt',
 			'./README.txt',
