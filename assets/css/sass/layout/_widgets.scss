@@ -30,12 +30,10 @@
 			list-style: none;
 		}
 	}
-	&.widget-center {
-		text-align: center;
-	}
-	&.widget-right {
-		text-align: right;
-	}
+}
+
+.widget.widget_text.textwidget p:last-child {
+	margin-bottom: 0;
 }
 
 .widget.widget_search {
@@ -139,5 +137,6 @@
 }
 
 .widget-title {
+	margin-top: 0;
 	margin-bottom: 0.75em;
 }

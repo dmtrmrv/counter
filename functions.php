@@ -327,7 +327,7 @@ function counter_fonts_url() {
 	}
 
 	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'counter' ) ) {
-		$fonts[] = 'Lato:300,400,700,300italic,400italic,700italic';
+		$fonts[] = 'Lato:400,700,400italic,700italic';
 	}
 
 	if ( $fonts ) {

@@ -239,86 +239,56 @@ h6 {
 	margin: 0 0 0.75rem 0;
 	color: #1e1e1e;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	line-height: 1.1;
 }
 
 h1 {
-	font-size: 1.5em;
-	line-height: 1.25;
+	font-size: 1.75em;
+	font-weight: 700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 }
 
 h2 {
-	font-size: 1.5em;
-	line-height: 1.1;
+	font-size: 1.75em;
+	font-weight: 700;
 }
 
 h3 {
 	font-size: 1.2em;
-	line-height: 1.25;
+	font-weight: 700;
+	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 h4 {
-	font-size: 1.35em;
-	line-height: 1.125;
+	font-size: 1.2em;
+	font-weight: 400;
 }
 
 h5 {
 	font-size: 1em;
-	line-height: 1.25;
+	font-weight: 400;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 h6 {
 	font-size: 1em;
-	font-weight: 300;
-	line-height: 1.25;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+	font-weight: 700;
 }
 
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3,
-.panel-content h1,
-.panel-content h2,
-.panel-content h3 {
-	margin-top: 54px;
+* + h1,
+* + h2,
+* + h3 {
 	margin-top: 3rem;
 }
 
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6,
-.panel-content h4,
-.panel-content h5,
-.panel-content h6 {
-	margin-top: 36px;
+* + h4,
+* + h5,
+* + h6 {
 	margin-top: 2rem;
-	margin-bottom: 13.5px;
-	margin-bottom: 0.75rem;
-}
-
-.entry-content > h1:first-child,
-.entry-content > h2:first-child,
-.entry-content > h3:first-child,
-.comment-content > h1:first-child,
-.comment-content > h2:first-child,
-.comment-content > h3:first-child,
-.panel-content > h1:first-child,
-.panel-content > h2:first-child,
-.panel-content > h3:first-child {
-	margin-top: 0;
 }
 
 /* Copy */
@@ -1767,6 +1737,7 @@ body {
 /* Page Title */
 
 .page-title {
+	margin-top: 0;
 	margin-bottom: 0.75em;
 }
 
@@ -1792,6 +1763,10 @@ body {
 }
 
 /* Entry Title */
+
+.entry-title {
+	margin-top: 0;
+}
 
 .entry-title a {
 	color: #1e1e1e;
@@ -1863,37 +1838,6 @@ body {
 	-webkit-hyphens: auto;
 	    -ms-hyphens: auto;
 	        hyphens: auto;
-}
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3 {
-	margin-top: 54px;
-	margin-top: 3rem;
-}
-
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6 {
-	margin-top: 36px;
-	margin-top: 2rem;
-	margin-bottom: 13.5px;
-	margin-bottom: 0.75rem;
-}
-
-.entry-content > h1:first-child,
-.entry-content > h2:first-child,
-.entry-content > h3:first-child,
-.comment-content > h1:first-child,
-.comment-content > h2:first-child,
-.comment-content > h3:first-child {
-	margin-top: 0;
 }
 
 .more-link:after {
@@ -2197,12 +2141,8 @@ body {
 	list-style: none;
 }
 
-.widget.widget-center {
-	text-align: center;
-}
-
-.widget.widget-right {
-	text-align: right;
+.widget.widget_text.textwidget p:last-child {
+	margin-bottom: 0;
 }
 
 .widget.widget_search {
@@ -2315,6 +2255,7 @@ body {
 }
 
 .widget-title {
+	margin-top: 0;
 	margin-bottom: 0.75em;
 }
 
