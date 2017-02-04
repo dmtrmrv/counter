@@ -38,7 +38,19 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 ## Changelog
 
+### v1.2.0
+
+Addition: Added starter content  
+Addition: Added scroll-to functionality to panels in the Customizer  
+Addition: Added sub-menu indicator to the primary menu  
+Removal: Remove panel layouts in favor of custom classes  
+Removal: Leave only light and dark color schemes  
+Fix: Escaping issue on 404 page  
+Fix: Fix missing spinner for Contact Form 7  
+Fix: Minor panel and widget styling fixes
+
 ### v1.1.0
+
 Improvement: Use front-page.php instead of custom template.  
 Improvement: SEO-ready site logo and title.  
 Improvement: Selective refresh for widgets.  
@@ -52,8 +64,10 @@ Removal: Concatenated and minified JavaScript styles.
 Removal: FitVids in favor of Jetpack responsive videos.
 
 ### v1.0.1
+
 Fix: Broken links on the Getting Started screen.  
 Improvement: Updated the Getting Started screen.
 
 ### v1.0.0
+
 Initial release.
