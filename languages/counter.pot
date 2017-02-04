@@ -461,7 +461,7 @@ msgstr ""
 msgctxt "Theme starter content"
 msgid ""
 "Made with espresso and steamed milk. The term as used in English is a "
-"shortened form of the Italian caffè latte, which means milk coffee."
+"shortened form of the Italian caff&egrave; latte, which means milk coffee."
 msgstr ""
 
 #: functions.php:109
@@ -567,12 +567,12 @@ msgstr ""
 
 #: functions.php:192
 msgctxt "Theme starter content"
-msgid "Mon–Fri: 7am–7pm"
+msgid "Mon&ndash;Fri: 7am&ndash;7pm"
 msgstr ""
 
 #: functions.php:192
 msgctxt "Theme starter content"
-msgid "Sat–Sun: 8am–6pm"
+msgid "Sat&ndash;Sun: 8am&ndash;6pm"
 msgstr ""
 
 #: functions.php:197

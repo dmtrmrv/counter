@@ -105,7 +105,7 @@ function counter_setup() {
 					'<h5>' . esc_html_x( 'Americano 2.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Prepared by brewing espresso with added hot water. The strength varies with the number of shots of espresso and the amount of water.', 'Theme starter content', 'counter' ) . '</p>',
 					'<h5>' . esc_html_x( 'Espresso 2.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Generally thicker than coffee brewed by other methods. Has a higher concentration of suspended and dissolved solids.', 'Theme starter content', 'counter' ) . '</p>',
 					'<h5>' . esc_html_x( 'Cappucino 3.5', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Composed of espresso and hot milk, with the surface topped with foamed milk. Cream may be used instead of milk and is often topped with cinnamon.', 'Theme starter content', 'counter' ) . '</p>',
-					'<h5>' . esc_html_x( 'Latte 4', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Made with espresso and steamed milk. The term as used in English is a shortened form of the Italian caffè latte, which means milk coffee.', 'Theme starter content', 'counter' ) . '</p>',
+					'<h5>' . esc_html_x( 'Latte 4', 'Theme starter content', 'counter' ) . '</h5><p>' . esc_html_x( 'Made with espresso and steamed milk. The term as used in English is a shortened form of the Italian caff&egrave; latte, which means milk coffee.', 'Theme starter content', 'counter' ) . '</p>',
 					'<p><a href="#">' . esc_html_x( 'View the full menu &rarr;', 'Theme starter content', 'counter' ) . '</a></p>',
 				) ),
 			),
@@ -189,7 +189,7 @@ function counter_setup() {
 			'footer-3' => array(
 				'hours' => array( 'text', array(
 					'title' => esc_html_x( 'Hours', 'Theme starter content', 'counter' ),
-					'text' => '<p>' . esc_html_x( 'Mon–Fri: 7am–7pm', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Sat–Sun: 8am–6pm', 'Theme starter content', 'counter' ) . '</p>',
+					'text' => '<p>' . esc_html_x( 'Mon&ndash;Fri: 7am&ndash;7pm', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Sat&ndash;Sun: 8am&ndash;6pm', 'Theme starter content', 'counter' ) . '</p>',
 				) ),
 			),
 			'footer-4' => array(
