@@ -239,7 +239,7 @@ h6 {
 	margin: 0 0 0.75rem 0;
 	color: #1e1e1e;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 h1 {
@@ -1156,7 +1156,7 @@ body {
 	margin-bottom: 0;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 1.25;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -2316,7 +2316,6 @@ body {
 
 .widget-title {
 	margin-bottom: 0.75em;
-	font-weight: 700;
 }
 
 /**
@@ -2477,7 +2476,6 @@ body {
 .panel-title {
 	margin-bottom: 0.83333333333333em;
 	font-size: 1.2em;
-	font-weight: 700;
 	line-height: 1.25;
 	letter-spacing: 2px;
 	text-transform: uppercase;
