@@ -367,6 +367,7 @@ msgid ""
 msgstr ""
 
 #: template-parts/content-page.php:21 template-parts/content-single-post.php:25
+#: template-parts/content.php:30
 msgid "Pages:"
 msgstr ""
 

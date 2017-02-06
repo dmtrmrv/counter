@@ -25,6 +25,12 @@
 				__( 'Read more %s', 'counter' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'counter' ),
+				'after'  => '</div>',
+			) );
+
 		?>
 	</div><!-- .entry-content -->
 
