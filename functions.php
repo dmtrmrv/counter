@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'COUNTER_VERSION', '1.2.0' );
+define( 'COUNTER_VERSION', '1.2.1' );
 
 /**
  * Sets the content width in pixels.
