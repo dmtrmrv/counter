@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="panel-<?php echo esc_attr( $counter_panel_num ); ?>" <?php post_class( 'panel ' . $counter_panel_class ); ?>>
+<article id="panel-<?php echo esc_attr( $counter_panel_num ); ?>" <?php post_class( 'panel ' . esc_attr( $counter_panel_class ) ); ?>>
 
 	<?php counter_panel_thumbnail(); ?>
 
