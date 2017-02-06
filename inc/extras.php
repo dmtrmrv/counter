@@ -163,7 +163,7 @@ function counter_panel_background( $i = 0 ) {
 	$opacity      = get_theme_mod( 'panel_bg_opacity_' . $i );
 
 	// Get the image URL.
-	$image = wp_get_attachment_image_url( $id, '2880x0' );
+	$image = wp_get_attachment_image_url( $id, 'counter-panel-2x' );
 
 	/*
 	 * Return if no image or if opacity is set to zero. Note the strict

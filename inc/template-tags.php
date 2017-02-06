@@ -134,13 +134,15 @@ function counter_post_thumbnail() {
 		return;
 	}
 
-	if ( is_singular( array( 'post', 'page' ) ) ) {
+	$size = is_active_sidebar( 'sidebar-1' ) ? 'counter-thumbnail' : 'counter-thumbnail-full';
+
+	if ( is_singular( array() ) ) {
 		echo '<div class="post-thumbnail">';
-			the_post_thumbnail( '936x0' );
+			the_post_thumbnail( $size );
 		echo '</div>';
 	} else {
 		printf( '<a class="post-thumbnail" href="%s">', esc_url( apply_filters( 'the_permalink', get_permalink() ) ) );
-			the_post_thumbnail( '612x0' );
+			the_post_thumbnail( $size );
 		echo '</a>';
 	}
 }
@@ -262,7 +264,7 @@ function counter_panel_thumbnail() {
 	}
 	if ( has_post_thumbnail() ) {
 		echo '<div class="panel-thumbnail">';
-			the_post_thumbnail( '1440x0' );
+			the_post_thumbnail( 'counter-panel-full' );
 		echo '</div>';
 	}
 }
