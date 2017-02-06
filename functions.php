@@ -407,7 +407,7 @@ function counter_scripts() {
 		true
 	);
 
-	wp_localize_script( 'counter-navigation', 'screenReaderText', array(
+	wp_localize_script( 'counter-navigation', 'counterScreenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'Expand child menu', 'counter' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'Collapse child menu', 'counter' ) . '</span>',
 	) );

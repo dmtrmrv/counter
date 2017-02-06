@@ -8,7 +8,7 @@
 	'use strict';
 
 	// Passed by wp_localize_script()
-	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
+	counterPanelCount = parseInt( counterPanelCount[0] );
 
 	// Adjust the preview screen when editing panels and footer message.
 	api.bind( 'preview-ready', function() {
@@ -105,7 +105,7 @@
 	 */
 	var settings = [];
 
-	for ( var i = 0; i <= frontPagePanelCount; i++ ) {
+	for ( var i = 0; i <= counterPanelCount; i++ ) {
 		settings.push( {
 			index: i,
 			settingID: 'panel_bg_repeat_' + i,

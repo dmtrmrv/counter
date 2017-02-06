@@ -6,7 +6,7 @@
 	'use strict';
 
 	// Number of panels passed by wp_localize_script()
-	frontPagePanelCount = parseInt( frontPagePanelCount[0] );
+	counterPanelCount = parseInt( counterPanelCount[0] );
 
 	api.bind( 'ready', function() {
 		/**
@@ -44,7 +44,7 @@
 		 * hide the controls in the sectoin if the content for the panel is not
 		 * set or was removed in 'panel_content_x' control.
 		 */
-		for ( var i = 0; i <= frontPagePanelCount; i++ ) {
+		for ( var i = 0; i <= counterPanelCount; i++ ) {
 
 			// Background Size in %.
 			toggleables.push( {
@@ -137,7 +137,7 @@
 
 	// Detect when the front page panel sections are opened or closed so we can
 	// scroll to the panel that is being configured.
-	for ( var i = 0; i <= frontPagePanelCount; i++ ) {
+	for ( var i = 0; i <= counterPanelCount; i++ ) {
 		api.section( 'panel_' + i , function( section ) {
 			section.expanded.bind( function( isExpanding ) {
 				api.previewer.send( 'panel-highlight', {

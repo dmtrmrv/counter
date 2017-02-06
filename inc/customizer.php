@@ -323,7 +323,7 @@ function counter_customize_preview_js() {
 		COUNTER_VERSION,
 		true
 	);
-	wp_localize_script( 'counter_customizer', 'frontPagePanelCount', array( counter_get_panel_count() ) );
+	wp_localize_script( 'counter_customizer', 'counterPanelCount', array( counter_get_panel_count() ) );
 }
 add_action( 'customize_preview_init', 'counter_customize_preview_js' );
 
@@ -338,7 +338,7 @@ function counter_customizer_scripts() {
 		COUNTER_VERSION,
 		true
 	);
-	wp_localize_script( 'counter-customizer-controls', 'frontPagePanelCount', array( counter_get_panel_count() ) );
+	wp_localize_script( 'counter-customizer-controls', 'counterPanelCount', array( counter_get_panel_count() ) );
 
 	// Custom CSS for the Customizer controls.
 	wp_enqueue_style(

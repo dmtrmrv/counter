@@ -89,7 +89,7 @@
 	 */
 	function initSubMenuToggles( container ) {
 		// Create the dropdown toggle string.
-		var dropdownToggle = '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>'
+		var dropdownToggle = '<button class="dropdown-toggle" aria-expanded="false">' + counterScreenReaderText.expand + '</button>'
 
 		// Add the dropdown toggle to menu items that have children.
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
@@ -101,7 +101,7 @@
 			$this.toggleClass( 'toggle-on' );
 			$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 			$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-			$this.html( $this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+			$this.html( $this.html() === counterScreenReaderText.expand ? counterScreenReaderText.collapse : counterScreenReaderText.expand );
 		} );
 	}
 
