@@ -4,15 +4,30 @@ Counter is a minimal theme for coffee shops, restaurants, cafes, barbershops, an
 
 ## Bundled Resources
 
-### Typicons  
+Typicons  
 Author: Stephen Hutchings  
 License: SIL (http://scripts.sil.org/OFL)  
-URL: http://typicons.com/
+Source: http://typicons.com/
 
-### Font Awesome  
+Font Awesome  
 Author: Dave Gandy  
 License: SIL (http://scripts.sil.org/OFL)  
-URL: http://fortawesome.github.com/Font-Awesome/
+Source: http://fortawesome.github.com/Font-Awesome/
+
+Fontello CSS  
+Authors: Roman Shmelev, Vitaly Puzrin, Aleksey Zapparov, Evgeny Shkuropat, Vladimir Zapparov  
+License: MIT  
+Source: http://fontello.com/
+
+jQuery scrollTo  
+Author: Ariel Flesler  
+License: MIT  
+Source: https://github.com/flesler/jquery.scrollTo
+
+normalize.css  
+Author: Nicolas Gallagher and Jonathan Neal  
+License: MIT  
+Source: https://necolas.github.io/normalize.css/
 
 ## Images used in the theme
 
