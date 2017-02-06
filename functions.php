@@ -166,42 +166,56 @@ function counter_setup() {
 		'widgets' => array(
 			'sidebar-1' => array(
 				'text_about',
-				'cafe' => array( 'text', array(
-					'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
-					'text' => join( '', array(
-						'<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
-					) ),
-				) ),
-				'roastery' => array( 'text', array(
-					'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
-					'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
-				) ),
+				'cafe' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
+				'roastery' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
 			),
 			'footer-1' => array(
-				'cafe' => array( 'text', array(
-					'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
-					'text' => join( '', array(
-						'<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
-					) ),
-				) ),
+				'cafe' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Cafe', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( '123 Main Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'New York, NY 10001', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
 			),
 			'footer-2' => array(
-				'roastery' => array( 'text', array(
-					'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
-					'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
-				) ),
+				'roastery' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Roastery', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( '321 Second Street', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Brooklyn, NY 11230', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
 			),
 			'footer-3' => array(
-				'hours' => array( 'text', array(
-					'title' => esc_html_x( 'Hours', 'Theme starter content', 'counter' ),
-					'text' => '<p>' . esc_html_x( 'Mon&ndash;Fri: 7am&ndash;7pm', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Sat&ndash;Sun: 8am&ndash;6pm', 'Theme starter content', 'counter' ) . '</p>',
-				) ),
+				'hours' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Hours', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( 'Mon&ndash;Fri: 7am&ndash;7pm', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( 'Sat&ndash;Sun: 8am&ndash;6pm', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
 			),
 			'footer-4' => array(
-				'contact' => array( 'text', array(
-					'title' => esc_html_x( 'Contact', 'Theme starter content', 'counter' ),
-					'text' => '<p>' . esc_html_x( 'info@example.com', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( '(212) 123-4567', 'Theme starter content', 'counter' ) . '</p>',
-				) ),
+				'contact' => array(
+					'text',
+					array(
+						'title' => esc_html_x( 'Contact', 'Theme starter content', 'counter' ),
+						'text' => '<p>' . esc_html_x( 'info@example.com', 'Theme starter content', 'counter' ) . '<br />' . esc_html_x( '(212) 123-4567', 'Theme starter content', 'counter' ) . '</p>',
+					),
+				),
 			),
 		),
 
