@@ -41,7 +41,7 @@ msgstr ""
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:301 inc/customizer.php:294
+#: functions.php:301
 msgid "Footer"
 msgstr ""
 
@@ -65,172 +65,186 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/customizer.php:39
-msgid "Custom Colors"
-msgstr ""
-
-#: inc/customizer.php:43 inc/customizer.php:74 inc/customizer.php:307
-msgid "Learn More"
-msgstr ""
-
-#: inc/customizer.php:44
-msgid "Upgrade Counter to set custom text, links, headings, and background color."
-msgstr ""
-
-#: inc/customizer.php:54
+#: inc/customizer.php:36
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:60
-msgid "Blog Layout"
-msgstr ""
-
-#: inc/customizer.php:70
-msgid "Blog Layout & Post Meta"
-msgstr ""
-
-#: inc/customizer.php:75
-msgid "Upgrade Counter to set three-column grid blog layout and edit post meta."
-msgstr ""
-
-#: inc/customizer.php:87
+#: inc/customizer.php:47
 msgid "Hero Panel"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:47
 msgid "Panel "
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/customizer.php:62
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:126
+#: inc/customizer.php:86
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer.php:146
+#: inc/customizer.php:106
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer.php:150
+#: inc/customizer.php:110
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer.php:151
+#: inc/customizer.php:111
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:152
+#: inc/customizer.php:112
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:113
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:125
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer.php:129
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:130
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:171
+#: inc/customizer.php:131
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:172
+#: inc/customizer.php:132
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:133
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:134
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:135
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:176
+#: inc/customizer.php:136
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:177
+#: inc/customizer.php:137
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:149
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:153
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer.php:194
+#: inc/customizer.php:154
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:166
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer.php:210
+#: inc/customizer.php:170
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:211
+#: inc/customizer.php:171
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer.php:212
+#: inc/customizer.php:172
 msgid "Percent"
 msgstr ""
 
-#: inc/customizer.php:224
+#: inc/customizer.php:184
 msgid "Background Size %"
 msgstr ""
 
-#: inc/customizer.php:242
+#: inc/customizer.php:202
 msgid "Background Opacity"
 msgstr ""
 
-#: inc/customizer.php:261
+#: inc/customizer.php:221
 msgid "Additional CSS Classes"
 msgstr ""
 
-#: inc/customizer.php:265
+#: inc/customizer.php:225
 msgid "Space-separated list of CSS classes applied to the panel."
 msgstr ""
 
-#: inc/customizer.php:266
+#: inc/customizer.php:226
 msgid "Learn more &rarr;"
 msgstr ""
 
-#: inc/customizer.php:284
-msgid "Updgrade Counter"
+#: inc/customizer.php:240
+msgid "Extra Features"
 msgstr ""
 
-#: inc/customizer.php:285
-msgid "Need more than four panels?"
+#: inc/customizer.php:242
+msgid ""
+"Like using Counter? There's also a paid version that is even better and has "
+"some extra features to help you make your website unique. Check them out!"
 msgstr ""
 
-#: inc/customizer.php:303
-msgid "Custom Footer Text"
+#: inc/customizer.php:250
+msgid "1. More Panels"
 msgstr ""
 
-#: inc/customizer.php:308
-msgid "Upgrade Counter to set custom footer text."
+#: inc/customizer.php:253
+msgid ""
+"Need more panels? With the paid version of Counter, you can have up to 24 "
+"panels on the front page."
+msgstr ""
+
+#: inc/customizer.php:263
+msgid "2. Custom Colors"
+msgstr ""
+
+#: inc/customizer.php:266
+msgid ""
+"Paid version of Counter lets you set your our own color scheme, changing "
+"the color of the text, headings, links, and the background."
+msgstr ""
+
+#: inc/customizer.php:276
+msgid "3. Grid Blog Layout"
+msgstr ""
+
+#: inc/customizer.php:279
+msgid ""
+"With the paid version of Counter, you can change the blog layout to display "
+"posts in a grid layout."
+msgstr ""
+
+#: inc/customizer.php:289
+msgid "4. Footer Message"
+msgstr ""
+
+#: inc/customizer.php:292
+msgid ""
+"Paid version of Counter allows you to set your own footer message and "
+"remove the link to ThemePatio website."
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Learn More"
 msgstr ""
 
 #. Template Name of the plugin/theme

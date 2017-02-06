@@ -28,24 +28,6 @@ function counter_customize_register( $wp_customize ) {
 		'render_callback' => 'counter_customize_partial_blogdescription',
 	) );
 
-	/**
-	 * Colors.
-	 */
-	$wp_customize->add_control(
-		new Counter_Message_Control(
-			$wp_customize,
-			'color_upgrade',
-			array(
-				'label'       => __( 'Custom Colors', 'counter' ),
-				'section'     => 'colors',
-				'settings'    => array(),
-				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=colors',
-				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set custom text, links, headings, and background color.', 'counter' ),
-			)
-		)
-	);
-
 	/*
 	 * Theme Options.
 	 */
@@ -54,28 +36,6 @@ function counter_customize_register( $wp_customize ) {
 		'title' => __( 'Theme Options', 'counter' ),
 		'priority' => 140,
 	) );
-
-	// Blog & Archive.
-	$wp_customize->add_section( 'blog_layout', array(
-		'title' => __( 'Blog Layout', 'counter' ),
-		'panel' => 'theme_options',
-		'active_callback' => 'counter_is_blog',
-	) );
-
-	$wp_customize->add_control(
-		new Counter_Message_Control(
-			$wp_customize,
-			'blog_layout_upgrade',
-			array(
-				'label' => __( 'Blog Layout & Post Meta', 'counter' ),
-				'section' => 'blog_layout',
-				'settings' => array(),
-				'link_url' => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=blog-layout',
-				'link_text' => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set three-column grid blog layout and edit post meta.', 'counter' ),
-			)
-		)
-	);
 
 	/**
 	 * Front Page.
@@ -273,39 +233,66 @@ function counter_customize_register( $wp_customize ) {
 		'container_inclusive' => true,
 	) );
 
-	$wp_customize->add_control(
-		new Counter_Message_Control(
-			$wp_customize,
-			'panel_number_upgrade_' . $i,
-			array(
-				'section'     => 'panel_' . $i,
-				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=more-panels',
-				'settings'    => array(),
-				'link_text'   => __( 'Updgrade Counter', 'counter' ),
-				'description' => __( 'Need more than four panels?', 'counter' ),
-			)
-		)
-	);
-
 	endfor;
 
-	// Footer Text.
-	$wp_customize->add_section( 'footer' , array(
-		'title' => __( 'Footer', 'counter' ),
-		'panel' => 'theme_options',
+	// Extra Features.
+	$wp_customize->add_section( 'upgrade' , array(
+		'title' => __( 'Extra Features', 'counter' ),
+		'priority' => 300,
+		'description' => __( 'Like using Counter? There\'s also a paid version that is even better and has some extra features to help you make your website unique. Check them out!', 'counter' )
 	) );
 
 	$wp_customize->add_control(
 		new Counter_Message_Control(
 			$wp_customize,
-			'footer_text_upgrade',
+			'panels',
 			array(
-				'label'       => __( 'Custom Footer Text', 'counter' ),
-				'section'     => 'footer',
-				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=footer-text',
+				'label'       => __( '1. More Panels', 'counter' ),
+				'section'     => 'upgrade',
 				'settings'    => array(),
+				'description' => __( 'Need more panels? With the paid version of Counter, you can have up to 24 panels on the front page.', 'counter' ),
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'colors',
+			array(
+				'label'       => __( '2. Custom Colors', 'counter' ),
+				'section'     => 'upgrade',
+				'settings'    => array(),
+				'description' => __( 'Paid version of Counter lets you set your our own color scheme, changing the color of the text, headings, links, and the background.', 'counter' ),
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'blog',
+			array(
+				'label'       => __( '3. Grid Blog Layout', 'counter' ),
+				'section'     => 'upgrade',
+				'settings'    => array(),
+				'description' => __( 'With the paid version of Counter, you can change the blog layout to display posts in a grid layout.', 'counter' ),
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new Counter_Message_Control(
+			$wp_customize,
+			'footer',
+			array(
+				'label'       => __( '4. Footer Message', 'counter' ),
+				'section'     => 'upgrade',
+				'settings'    => array(),
+				'description' => __( 'Paid version of Counter allows you to set your own footer message and remove the link to ThemePatio website.', 'counter' ),
+				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=upgrade-section',
 				'link_text'   => __( 'Learn More', 'counter' ),
-				'description' => __( 'Upgrade Counter to set custom footer text.', 'counter' ),
+				'link_class'   => 'button button-primary',
 			)
 		)
 	);

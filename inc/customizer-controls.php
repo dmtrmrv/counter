@@ -39,6 +39,14 @@ class Counter_Message_Control extends WP_Customize_Control {
 	public $link_text = '';
 
 	/**
+	 * Link class.
+	 *
+	 * @access public
+	 * @var string
+	 */
+	public $link_class = '';
+
+	/**
 	 * Render the content.
 	 */
 	public function render_content() {
@@ -62,9 +70,10 @@ class Counter_Message_Control extends WP_Customize_Control {
 		// Link.
 		if ( $this->link_url && $this->link_text ) {
 			printf(
-				'<p class="customize-control-paragraph"><a href="%1$s" target="_blank" class="button button-secondary">%2$s</a></p>',
+				'<p class="customize-control-paragraph"><a href="%1$s" target="_blank" class="%3$s">%2$s</a></p>',
 				esc_url( $this->link_url ),
-				esc_html( $this->link_text )
+				esc_html( $this->link_text ),
+				esc_attr( $this->link_class )
 			);
 		}
 	}
