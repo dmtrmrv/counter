@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying front page
+ * The template for displaying the front page
  *
  * @package Counter
  */
@@ -12,7 +12,7 @@ get_header(); ?>
 			// Hero panel goes first.
 			while ( have_posts() ) { the_post();
 				set_query_var( 'counter_panel_num', 0 );
-				set_query_var( 'counter_panel_class', get_theme_mod( 'panel_class_0' ) );
+				set_query_var( 'counter_panel_class', counter_panel_class( 0 ) );
 				get_template_part( 'template-parts/panel' );
 			}
 

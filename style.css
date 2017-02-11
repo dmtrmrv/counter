@@ -3203,6 +3203,12 @@ body {
 	}
 }
 
+@media screen and (min-width: 1025px) {
+	.panel-bg-fixed .panel-background {
+		background-attachment: fixed;
+	}
+}
+
 @keyframes scale-fade-out {
 	0% {
 		transform: scale(0);

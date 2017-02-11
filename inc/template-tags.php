@@ -332,7 +332,7 @@ function counter_panel( $partial = null, $num = 0 ) {
 
 	// Set the variables that will be available within the template part.
 	set_query_var( 'counter_panel_num', $num );
-	set_query_var( 'counter_panel_class', get_theme_mod( 'panel_class_' . $num, '' ) );
+	set_query_var( 'counter_panel_class', counter_panel_class( $num ) );
 
 	// Hero panel case.
 	if ( 0 == $num ) {

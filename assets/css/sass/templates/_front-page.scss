@@ -82,6 +82,13 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	// Only allow fixed background on screens larger than 1024px because it
+	// isn't supported on iOS devices.
+	@media screen and ( min-width: $md + 1 ) {
+		.panel-bg-fixed & {
+			background-attachment: fixed;
+		}
+	}
 }
 
 .panel-meta {

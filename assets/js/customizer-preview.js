@@ -124,7 +124,7 @@
 			index: i,
 			settingID: 'panel_bg_attachment_' + i,
 			callback: function( to ) {
-				$( '#panel-' + this.index + ' .panel-background' ).css( 'background-attachment', to );
+				$( '#panel-' + this.index ).toggleClass( 'panel-bg-fixed', ( 'fixed' === to ) );
 			}
 		} );
 		settings.push( {

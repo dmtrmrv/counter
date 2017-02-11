@@ -157,7 +157,6 @@ function counter_panel_background( $i = 0 ) {
 	$id           = get_theme_mod( 'panel_bg_image_' . $i );
 	$repeat       = get_theme_mod( 'panel_bg_repeat_' . $i );
 	$position     = get_theme_mod( 'panel_bg_position_' . $i );
-	$attachment   = get_theme_mod( 'panel_bg_attachment_' . $i );
 	$size_type    = get_theme_mod( 'panel_bg_size_type_' . $i );
 	$size_percent = get_theme_mod( 'panel_bg_size_' . $i );
 	$opacity      = get_theme_mod( 'panel_bg_opacity_' . $i );
@@ -187,11 +186,28 @@ function counter_panel_background( $i = 0 ) {
 	$html = sprintf( 'background-image: url(%s); ', esc_url( $image ) );
 	$html .= $repeat     ? sprintf( 'background-repeat: %s; ', $repeat ) : '';
 	$html .= $position   ? sprintf( 'background-position: %s; ', $position ) : '';
-	$html .= $attachment ? sprintf( 'background-attachment: %s; ', $attachment ) : '';
 	$html .= $size       ? sprintf( 'background-size: %s; ', $size ) : '';
 	$html .= $opacity    ? sprintf( 'opacity: %s;', $opacity ) : '';
 
 	echo 'style="' . esc_attr( $html ) . '"';
+}
+
+/**
+ * Creates panel class string.
+ */
+function counter_panel_class( $num ) {
+	// Check if we have a user-defined panel class.
+	$class = get_theme_mod( 'panel_class_' . $num, '' );
+
+	// Check background image id, and attachment.
+	$bg_id         = get_theme_mod( 'panel_bg_image_' . $num );
+	$bg_attachment = get_theme_mod( 'panel_bg_attachment_' . $num );
+
+	if ( $bg_id && 'fixed' == $bg_attachment ) {
+		$class .= ' panel-bg-fixed';
+	}
+
+	return $class;
 }
 
 /**
