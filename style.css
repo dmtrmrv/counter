@@ -2268,6 +2268,10 @@ body {
 	border-top: 1px solid #e6e6e6;
 }
 
+.front-page .site-footer-widgets {
+	border-top: 0;
+}
+
 .site-footer-widget-column {
 	max-width: 612px;
 	margin-right: auto;
@@ -2382,11 +2386,6 @@ body {
 
 .panel .panel-data {
 	max-width: 612px;
-}
-
-.panel.has-background,
-.panel:last-of-type {
-	border-bottom: 0;
 }
 
 .panel-thumbnail img {
