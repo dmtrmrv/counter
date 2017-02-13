@@ -66,6 +66,12 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 == Changelog ==
 
+= v1.2.2 =
+
+Fix: Background attachment on small screens.
+Fix: Minor CSS fixes.
+Fix: Typo in the Customizer.
+
 = 1.2.1 =
 
 Change: Move upsell links to aseparate section.
