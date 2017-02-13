@@ -199,8 +199,8 @@ msgstr ""
 
 #: inc/customizer.php:242
 msgid ""
-"Like using Counter? There's also a paid version that is even better and has "
-"some extra features to help you make your website unique. Check them out!"
+"Like Counter? Then you might like the pro version even more. It has some "
+"extra features to help you make your website unique. Check them out:"
 msgstr ""
 
 #: inc/customizer.php:250
@@ -209,8 +209,8 @@ msgstr ""
 
 #: inc/customizer.php:253
 msgid ""
-"Need more panels? With the paid version of Counter, you can have up to 24 "
-"panels on the front page."
+"With the pro version, you can have up to 24 panels on the front page. It "
+"should be enough, right?"
 msgstr ""
 
 #: inc/customizer.php:263
@@ -219,8 +219,8 @@ msgstr ""
 
 #: inc/customizer.php:266
 msgid ""
-"Paid version of Counter lets you set your our own color scheme, changing "
-"the color of the text, headings, links, and the background."
+"Pro version allows you to set your own color scheme, changing the color of "
+"the text, headings, links, and the background."
 msgstr ""
 
 #: inc/customizer.php:276
@@ -229,8 +229,8 @@ msgstr ""
 
 #: inc/customizer.php:279
 msgid ""
-"With the paid version of Counter, you can change the blog layout to display "
-"posts in a grid layout."
+"With the pro version, you can change the blog layout to display posts in a "
+"nice three-column grid."
 msgstr ""
 
 #: inc/customizer.php:289
@@ -239,8 +239,8 @@ msgstr ""
 
 #: inc/customizer.php:292
 msgid ""
-"Paid version of Counter allows you to set your own footer message and "
-"remove the link to ThemePatio website."
+"Pro version allows you to set your own footer message, removing the link to "
+"ThemePatio website."
 msgstr ""
 
 #: inc/customizer.php:294

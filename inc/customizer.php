@@ -239,7 +239,7 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'upgrade' , array(
 		'title' => __( 'Extra Features', 'counter' ),
 		'priority' => 300,
-		'description' => __( 'Like using Counter? There\'s also a paid version that is even better and has some extra features to help you make your website unique. Check them out!', 'counter' )
+		'description' => __( 'Like Counter? Then you might like the pro version even more. It has some extra features to help you make your website unique. Check them out:', 'counter' )
 	) );
 
 	$wp_customize->add_control(
@@ -250,7 +250,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( '1. More Panels', 'counter' ),
 				'section'     => 'upgrade',
 				'settings'    => array(),
-				'description' => __( 'Need more panels? With the paid version of Counter, you can have up to 24 panels on the front page.', 'counter' ),
+				'description' => __( 'With the pro version, you can have up to 24 panels on the front page. It should be enough, right?', 'counter' ),
 			)
 		)
 	);
@@ -263,7 +263,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( '2. Custom Colors', 'counter' ),
 				'section'     => 'upgrade',
 				'settings'    => array(),
-				'description' => __( 'Paid version of Counter lets you set your our own color scheme, changing the color of the text, headings, links, and the background.', 'counter' ),
+				'description' => __( 'Pro version allows you to set your own color scheme, changing the color of the text, headings, links, and the background.', 'counter' ),
 			)
 		)
 	);
@@ -276,7 +276,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( '3. Grid Blog Layout', 'counter' ),
 				'section'     => 'upgrade',
 				'settings'    => array(),
-				'description' => __( 'With the paid version of Counter, you can change the blog layout to display posts in a grid layout.', 'counter' ),
+				'description' => __( 'With the pro version, you can change the blog layout to display posts in a nice three-column grid.', 'counter' ),
 			)
 		)
 	);
@@ -289,7 +289,7 @@ function counter_customize_register( $wp_customize ) {
 				'label'       => __( '4. Footer Message', 'counter' ),
 				'section'     => 'upgrade',
 				'settings'    => array(),
-				'description' => __( 'Paid version of Counter allows you to set your own footer message and remove the link to ThemePatio website.', 'counter' ),
+				'description' => __( 'Pro version allows you to set your own footer message, removing the link to ThemePatio website.', 'counter' ),
 				'link_url'    => 'https://themepatio.com/themes/counter?utm_source=counter-lite&utm_medium=upgrade-section',
 				'link_text'   => __( 'Learn More', 'counter' ),
 				'link_class'   => 'button button-primary',
