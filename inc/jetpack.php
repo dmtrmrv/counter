@@ -24,12 +24,12 @@ if ( ! is_customize_preview() ) {
 }
 
 /**
- * Loads necessary template part during infinite scroll.
+ * Loads necessary template part during the infinite scroll.
  */
 function counter_infinite_scroll_render() {
 	while ( have_posts() ) : the_post();
 		if ( counter_is_blog() ) {
-			get_template_part( 'template-parts/content', get_theme_mod( 'blog_layout' ) );
+			get_template_part( 'template-parts/content' );
 		} elseif ( is_search() ) {
 			get_template_part( 'template-parts/content', 'search' );
 		} else {

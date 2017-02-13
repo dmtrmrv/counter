@@ -56,9 +56,6 @@ function counter_setup() {
 	add_image_size( 'counter-thumbnail', 612, 0, false );
 	add_image_size( 'counter-thumbnail-2x', 1224, 0, false );
 
-	add_image_size( 'counter-thumbnail-grid', 396, 297, true );
-	add_image_size( 'counter-thumbnail-grid-2x', 792, 594, true );
-
 	add_image_size( 'counter-thumbnail-full', 936, 0, false );
 	add_image_size( 'counter-thumbnail-full-2x', 1872, 0, false );
 
