@@ -66,6 +66,11 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 == Changelog ==
 
+### v1.2.3
+
+Change: Footer widget ids to comply with sidebar-* style.
+Fix: Minor code improvements.
+
 = v1.2.2 =
 
 Fix: Background attachment on small screens.
