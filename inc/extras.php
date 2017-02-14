@@ -273,8 +273,8 @@ function counter_not_front_page() {
  */
 function counter_footer_widget_areas_count() {
 	$num = 0;
-	for ( $i = 1; $i <= 5; $i++ ) {
-		if ( is_active_sidebar( 'footer-' . $i ) ) {
+	for ( $i = 2; $i <= 5 ; $i++ ) {
+		if ( is_active_sidebar( 'sidebar-' . $i ) ) {
 			$num++;
 		}
 	}

@@ -12,7 +12,7 @@
 function counter_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'posts_per_page' => get_option( 'posts_per_page', 9 ),
-		'footer_widgets' => array( 'footer-1', 'footer-2', 'footer-3', 'footer-4' ),
+		'footer_widgets' => array( 'sidebar-2', 'sidebar-3', 'sidebar-4', 'sidebar-5' ),
 		'container'      => 'primary',
 		'wrapper'        => false,
 		'render'         => 'counter_infinite_scroll_render',

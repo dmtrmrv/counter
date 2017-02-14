@@ -5,17 +5,17 @@
  * @package Counter
  */
 
-if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
+if ( is_active_sidebar( 'sidebar-2' ) || is_active_sidebar( 'sidebar-3' ) || is_active_sidebar( 'sidebar-4' ) || is_active_sidebar( 'sidebar-5' ) ) : ?>
 
 	<div class="site-footer-widgets">
 		<div class="wrap">
 
-			<?php for ( $i = 1; $i <= 4; $i++ ) : ?>
+			<?php for ( $i = 2; $i <= 5; $i++ ) : ?>
 
-				<?php if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
+				<?php if ( is_active_sidebar( 'sidebar-' . $i ) ) : ?>
 
 					<div class="site-footer-widget-column">
-						<?php dynamic_sidebar( 'footer-' . $i ); ?>
+						<?php dynamic_sidebar( 'sidebar-' . $i ); ?>
 					</div>
 
 				<?php endif; ?>

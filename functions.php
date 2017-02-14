@@ -304,11 +304,11 @@ function counter_widgets_init() {
 	) );
 
 	// Footer widgets.
-	for ( $i = 1; $i <= 4; $i++ ) :
+	for ( $i = 2; $i <= 5; $i++ ) :
 
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'counter' ) . ' ' . $i,
-		'id'            => 'footer-' . $i,
+		'name'          => __( 'Footer', 'counter' ) . ' ' . ( $i - 1 ),
+		'id'            => 'sidebar-' . $i,
 		'description'   => __( 'Appears in the footer.', 'counter' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
