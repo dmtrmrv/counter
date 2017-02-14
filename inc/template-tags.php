@@ -63,15 +63,6 @@ function counter_entry_meta_header() {
 		echo '</span>';
 	}
 
-	/*
-	 * Comments.
-	 */
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) && in_array( 'comments-link', $meta_items ) || $is_customizer ) {
-		echo '<span class="entry-meta-item comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'counter' ), __( '1 Comment', 'counter' ), __( '% Comments', 'counter' ) );
-		echo '</span>';
-	}
-
 	// Print the closing tag.
 	echo '</div><!-- .entry-meta -->';
 

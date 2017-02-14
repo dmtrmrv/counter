@@ -462,7 +462,7 @@ require get_template_directory() . '/inc/customizer.php';
 function counter_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
-add_filter( 'frontpage_template',  'counter_front_page_template' );
+add_filter( 'frontpage_template', 'counter_front_page_template' );
 
 /**
  * Load Jetpack compatibility file.
