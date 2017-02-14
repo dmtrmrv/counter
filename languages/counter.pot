@@ -29,31 +29,31 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: functions.php:68 functions.php:264
+#: functions.php:67 functions.php:263
 msgid "Primary"
 msgstr ""
 
-#: functions.php:299
+#: functions.php:297
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:301
+#: functions.php:299
 msgid "Appears on posts and pages"
 msgstr ""
 
-#: functions.php:312
+#: functions.php:310
 msgid "Footer"
 msgstr ""
 
-#: functions.php:314
+#: functions.php:312
 msgid "Appears in the footer."
 msgstr ""
 
-#: functions.php:422
+#: functions.php:418
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:423
+#: functions.php:419
 msgid "Collapse child menu"
 msgstr ""
 
@@ -263,68 +263,68 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/template-tags.php:72
+#: inc/template-tags.php:71
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:72
+#: inc/template-tags.php:71
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:72
+#: inc/template-tags.php:71
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:148
 #. translators: used between list items, there is a space after the comma
 msgid "Older"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:149
 msgid "Newer"
 msgstr ""
 
-#: inc/template-tags.php:159
+#: inc/template-tags.php:150
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:173
+#: inc/template-tags.php:162
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:176
+#: inc/template-tags.php:165
 msgid "Prev:"
 msgstr ""
 
-#: inc/template-tags.php:177
+#: inc/template-tags.php:166
 msgid "Next:"
 msgstr ""
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:180
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:196
+#: inc/template-tags.php:183
 msgid "Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:197
+#: inc/template-tags.php:184
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:210
+#: inc/template-tags.php:196
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:278
+#: inc/template-tags.php:264
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:297
+#: inc/template-tags.php:283
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:299
+#: inc/template-tags.php:285
 msgid "Customize"
 msgstr ""
 
@@ -409,208 +409,208 @@ msgid_plural "%1$s Replies"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:97 functions.php:145
+#: functions.php:96 functions.php:144
 msgctxt "Theme starter content"
 msgid "Coffee &amp; Pastry"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:98
 msgctxt "Theme starter content"
 msgid ""
 "Come in and get a taste of our great coffee with pastries, baked daily with "
 "locally milled organic flours"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:99
 msgctxt "Theme starter content"
 msgid "View the Menu"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:104
 msgctxt "Theme starter content"
 msgid "Menu"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:106
 msgctxt "Theme starter content"
 msgid "Americano 2.5"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:106
 msgctxt "Theme starter content"
 msgid ""
 "Prepared by brewing espresso with added hot water. The strength varies with "
 "the number of shots of espresso and the amount of water."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:107
 msgctxt "Theme starter content"
 msgid "Espresso 2.5"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:107
 msgctxt "Theme starter content"
 msgid ""
 "Generally thicker than coffee brewed by other methods. Has a higher "
 "concentration of suspended and dissolved solids."
 msgstr ""
 
-#: functions.php:109
+#: functions.php:108
 msgctxt "Theme starter content"
 msgid "Cappucino 3.5"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:108
 msgctxt "Theme starter content"
 msgid ""
 "Composed of espresso and hot milk, with the surface topped with foamed "
 "milk. Cream may be used instead of milk and is often topped with cinnamon."
 msgstr ""
 
-#: functions.php:110
+#: functions.php:109
 msgctxt "Theme starter content"
 msgid "Latte 4"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:109
 msgctxt "Theme starter content"
 msgid ""
 "Made with espresso and steamed milk. The term as used in English is a "
 "shortened form of the Italian caff&egrave; latte, which means milk coffee."
 msgstr ""
 
-#: functions.php:111
+#: functions.php:110
 msgctxt "Theme starter content"
 msgid "View the full menu &rarr;"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:115
 msgctxt "Theme starter content"
 msgid "Finest Coffee"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:117
 msgctxt "Theme starter content"
 msgid ""
 "It's our pleasure to find beautiful coffees, hand-roast them in our vintage "
 "steel roaster, and offer them to you."
 msgstr ""
 
-#: functions.php:119 functions.php:128
+#: functions.php:118 functions.php:127
 msgctxt "Theme starter content"
 msgid "Learn more &rarr;"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:124
 msgctxt "Theme starter content"
 msgid "Delicious Pastries"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:126
 msgctxt "Theme starter content"
 msgid ""
 "Our pastries are baked daily with locally milled organic flours. Muffins, "
 "cakes, and tarts vary with the seasons."
 msgstr ""
 
-#: functions.php:134
+#: functions.php:133
 msgctxt "Theme starter content"
 msgid "Come Visit Us!"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:135
 msgctxt "Theme starter content"
 msgid ""
 "Stop by our coffee shop, we'll be glad to see you from 7am to 7pm on "
 "weekdays and from 8am to 6pm on weekends."
 msgstr ""
 
-#: functions.php:137
+#: functions.php:136
 msgctxt "Theme starter content"
 msgid "View on the map"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:148
 msgctxt "Theme starter content"
 msgid "Coffee"
 msgstr ""
 
-#: functions.php:153
+#: functions.php:152
 msgctxt "Theme starter content"
 msgid "Pastry"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:156
 msgctxt "Theme starter content"
 msgid "Visit Us"
 msgstr ""
 
-#: functions.php:169 functions.php:185
+#: functions.php:168 functions.php:184
 msgctxt "Theme starter content"
 msgid "Cafe"
 msgstr ""
 
-#: functions.php:170 functions.php:186
+#: functions.php:169 functions.php:185
 msgctxt "Theme starter content"
 msgid "123 Main Street"
 msgstr ""
 
-#: functions.php:170 functions.php:186
+#: functions.php:169 functions.php:185
 msgctxt "Theme starter content"
 msgid "New York, NY 10001"
 msgstr ""
 
-#: functions.php:176 functions.php:194
+#: functions.php:175 functions.php:193
 msgctxt "Theme starter content"
 msgid "Roastery"
 msgstr ""
 
-#: functions.php:177 functions.php:195
+#: functions.php:176 functions.php:194
 msgctxt "Theme starter content"
 msgid "321 Second Street"
 msgstr ""
 
-#: functions.php:177 functions.php:195
+#: functions.php:176 functions.php:194
 msgctxt "Theme starter content"
 msgid "Brooklyn, NY 11230"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:202
 msgctxt "Theme starter content"
 msgid "Hours"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:203
 msgctxt "Theme starter content"
 msgid "Mon&ndash;Fri: 7am&ndash;7pm"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:203
 msgctxt "Theme starter content"
 msgid "Sat&ndash;Sun: 8am&ndash;6pm"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:211
 msgctxt "Theme starter content"
 msgid "Contact"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:212
 msgctxt "Theme starter content"
 msgid "info@example.com"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:212
 msgctxt "Theme starter content"
 msgid "(212) 123-4567"
 msgstr ""
 
-#: functions.php:341
+#: functions.php:338
 msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:345
+#: functions.php:342
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""

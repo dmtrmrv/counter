@@ -5,7 +5,6 @@
  * @package Counter
  */
 
-if ( ! function_exists( 'counter_entry_meta_header' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -78,9 +77,7 @@ function counter_entry_meta_header() {
 
 	endif;
 }
-endif;
 
-if ( ! function_exists( 'counter_entry_meta_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
@@ -94,9 +91,7 @@ function counter_entry_meta_footer() {
 		}
 	}
 }
-endif;
 
-if ( ! function_exists( 'counter_site_title_tagline' ) ) :
 /**
  * Displays site title and tagline.
  */
@@ -120,9 +115,7 @@ function counter_site_title_tagline() {
 		);
 	}
 }
-endif;
 
-if ( ! function_exists( 'counter_post_thumbnail' ) ) :
 /**
  * Displays post thumbnail.
  *
@@ -146,9 +139,7 @@ function counter_post_thumbnail() {
 		echo '</a>';
 	}
 }
-endif;
 
-if ( ! function_exists( 'counter_posts_navigation' ) ) :
 /**
  * Displays Posts Navigation a.k.a Older/Newer posts links on a blog page.
  */
@@ -160,9 +151,7 @@ function counter_posts_navigation() {
 	);
 	the_posts_navigation( $args );
 }
-endif;
 
-if ( ! function_exists( 'counter_post_navigation' ) ) :
 /**
  * Displays Post Navigation a.k.a Next/Previous Post links on a single post page.
  */
@@ -181,9 +170,7 @@ function counter_post_navigation() {
 		echo _navigation_markup( $next . $previous, 'post-navigation', $args['screen_reader_text'] ); // WPCS: XSS OK.
 	}
 }
-endif;
 
-if ( ! function_exists( 'counter_comment_navigation' ) ) :
 /**
  * Displays Comment Navigation.
  */
@@ -200,7 +187,6 @@ function counter_comment_navigation() {
 		</nav><!-- #comment-nav-above -->
 	<?php endif;
 }
-endif;
 
 /**
  * Displays Footer Text.

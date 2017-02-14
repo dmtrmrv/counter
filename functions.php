@@ -22,7 +22,6 @@ function counter_content_width() {
 }
 add_action( 'after_setup_theme', 'counter_content_width', 0 );
 
-if ( ! function_exists( 'counter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -286,7 +285,6 @@ function counter_setup() {
 
 	add_theme_support( 'starter-content', $starter_content );
 }
-endif;
 
 add_action( 'after_setup_theme', 'counter_setup' );
 
@@ -322,7 +320,6 @@ function counter_widgets_init() {
 }
 add_action( 'widgets_init', 'counter_widgets_init' );
 
-if ( ! function_exists( 'counter_fonts_url' ) ) :
 /**
  * Register Google fonts for Counter.
  *
@@ -353,9 +350,8 @@ function counter_fonts_url() {
 		), 'https://fonts.googleapis.com/css' );
 	}
 
-	return $fonts_url;
+	return apply_filters( 'counter_fonts_url', $fonts_url );
 }
-endif;
 
 /**
  * Handles JavaScript detection.
