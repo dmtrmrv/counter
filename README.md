@@ -55,7 +55,7 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 ### v1.2.3
 
-Change: Footer widget ids to comply with sidebar-* style.
+Change: Footer widget ids to comply with sidebar-* style.  
 Fix: Minor code improvements.
 
 ### v1.2.2
