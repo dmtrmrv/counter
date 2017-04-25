@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying centered pages
  *
  * Template Name: Centered
  *

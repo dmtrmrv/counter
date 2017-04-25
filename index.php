@@ -1,13 +1,13 @@
 <?php
 /**
- * The main template file
+ * Template for displaying blog index
  *
  * @package Counter
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php counter_blog_layout_class(); ?>">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -27,6 +27,10 @@ get_header(); ?>
 
 	</div><!-- #primary -->
 
-	<?php get_sidebar(); ?>
+	<?php if ( have_posts() && 'default' == get_theme_mod( 'blog_layout', 'default' ) ) : ?>
+
+		<?php get_sidebar(); ?>
+
+	<?php endif; ?>
 
 <?php get_footer();

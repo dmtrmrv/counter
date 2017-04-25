@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme
+ * The template for displaying the header
  *
  * @package Counter
  */

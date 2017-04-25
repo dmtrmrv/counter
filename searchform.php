@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the searchform.
+ * The template for displaying the searchform
  *
  * Since the theme uses dynamic colors it is beter to utilize the color classes
  * instead of generating many inline CSS rules to color the button.

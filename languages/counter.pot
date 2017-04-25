@@ -320,47 +320,34 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:14
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
 #: template-parts/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:24
-msgid "Ready to publish your first post?"
-msgstr ""
-
-#: template-parts/content-none.php:25
-msgid "Get started here &rarr;"
+#: template-parts/content-none.php:26
+msgid "Publish your first post"
 msgstr ""
 
 #: template-parts/content-none.php:30
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Nothing found. Try again with different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:36
 msgid ""
-"Looks like the page you are looking for has been moved or does not exist. "
-"Click on the site logo to go to the homepage or try searching."
+"The page you are looking for has been moved or does not exist. Click on the "
+"site logo to go to the homepage or try searching."
 msgstr ""
 
 #: template-parts/content-none.php:42
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "Nothing found. Perhaps searching will help."
 msgstr ""
 
-#: template-parts/content-page.php:21 template-parts/content-single-post.php:25
-#: template-parts/content.php:30
+#: template-parts/content-page.php:26 template-parts/content-single-post.php:28
+#: template-parts/content.php:28
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content.php:25
-#. translators: %s: Name of current post
+#: template-parts/content.php:24
 msgid "Read more %s"
 msgstr ""
 
