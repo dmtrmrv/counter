@@ -177,7 +177,7 @@ function counter_setup() {
 					),
 				),
 			),
-			'footer-1' => array(
+			'sidebar-2' => array(
 				'cafe' => array(
 					'text',
 					array(
@@ -186,7 +186,7 @@ function counter_setup() {
 					),
 				),
 			),
-			'footer-2' => array(
+			'sidebar-3' => array(
 				'roastery' => array(
 					'text',
 					array(
@@ -195,7 +195,7 @@ function counter_setup() {
 					),
 				),
 			),
-			'footer-3' => array(
+			'sidebar-4' => array(
 				'hours' => array(
 					'text',
 					array(
@@ -204,7 +204,7 @@ function counter_setup() {
 					),
 				),
 			),
-			'footer-4' => array(
+			'sidebar-5' => array(
 				'contact' => array(
 					'text',
 					array(

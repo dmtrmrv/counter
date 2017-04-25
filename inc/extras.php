@@ -134,6 +134,15 @@ function counter_customize_partial_blogdescription() {
 }
 
 /**
+ * Returns filtered panel count.
+ *
+ * @return int Number of panels.
+ */
+function counter_get_panel_count() {
+	return 4;
+}
+
+/**
  * Returns array of panel types.
  *
  * @return array Panel types for the fron page.

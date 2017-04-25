@@ -255,11 +255,11 @@ msgstr ""
 msgid "Fullwidth"
 msgstr ""
 
-#: inc/extras.php:145
+#: inc/extras.php:154
 msgid "Left"
 msgstr ""
 
-#: inc/extras.php:146
+#: inc/extras.php:155
 msgid "Right"
 msgstr ""
 
