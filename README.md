@@ -1,4 +1,4 @@
-#Counter WordPress Theme
+# Counter WordPress Theme
 
 Counter is a minimal theme for coffee shops, restaurants, cafes, barbershops, and other kinds of small businesses.
 
@@ -52,6 +52,11 @@ License: CC0 1.0
 Source: https://unsplash.com/photos/94taEmdowRw
 
 ## Changelog
+
+### v1.2.4
+
+Improvement: Clean-up template files.  
+Improvement: Minor code improvements.
 
 ### v1.2.3
 

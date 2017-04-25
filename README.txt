@@ -66,7 +66,12 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 == Changelog ==
 
-### v1.2.3
+= v1.2.4 =
+
+Improvement: Clean-up template files.
+Improvement: Minor code improvements.
+
+= v1.2.3 =
 
 Change: Footer widget ids to comply with sidebar-* style.
 Fix: Minor code improvements.
