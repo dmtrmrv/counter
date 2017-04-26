@@ -27,7 +27,7 @@ get_header(); ?>
 
 	</div><!-- #primary -->
 
-	<?php if ( have_posts() && 'default' == get_theme_mod( 'blog_layout', 'default' ) ) : ?>
+	<?php if ( 'default' == get_theme_mod( 'blog_layout', 'default' ) ) : ?>
 
 		<?php get_sidebar(); ?>
 

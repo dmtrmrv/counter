@@ -18,11 +18,7 @@
 			max-width: span( 6 );
 		}
 		margin-right: auto;
-		margin-bottom: 1.5em;
 		margin-left: auto;
-		@media screen and ( min-width: $sm ) {
-			margin-bottom: 4.5em;
-		}
 	}
 	.hentry {
 		@extend .clear;
@@ -33,10 +29,6 @@
 		margin-bottom: 1.5em;
 		margin-left: auto;
 		word-wrap: break-word;
-		@media screen and ( min-width: $md ) {
-			margin-bottom: 3em;
-			padding-bottom: 1.5em;
-		}
 	}
 	.entry-title {
 		@include font-size( 24/18 );

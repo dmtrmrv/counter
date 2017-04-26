@@ -48,10 +48,6 @@ input[type='tel'] {
 	height: 3em;
 }
 
-label {
-	opacity: $opacity;
-}
-
 select {
 	display: block;
 	height: 3em;
@@ -110,15 +106,4 @@ input:focus:-ms-input-placeholder {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-}
-
-.search-form {
-	position: relative;
-	margin-bottom: 1.5em;
-}
-
-.search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
 }

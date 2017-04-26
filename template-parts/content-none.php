@@ -23,7 +23,9 @@
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<?php printf( '<p><a href="%1$s">%2$s</a></p>', esc_url( admin_url( 'post-new.php' ) ), esc_html__( 'Publish your first post', 'counter' ) ); ?>
+			<?php printf( '<p>%s</p>', esc_html__( 'Looks like you don\'t have any posts published yet.', 'counter' ) ); ?>
+
+			<?php printf( '<p><a class="btn btn-accent" href="%1$s">%2$s</a></p>', esc_url( admin_url( 'post-new.php' ) ), esc_html__( 'Publish New Post', 'counter' ) ); ?>
 
 		<?php elseif ( is_search() ) : ?>
 
@@ -39,7 +41,7 @@
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'Nothing found. Perhaps searching will help.', 'counter' ); ?></p>
+			<p><?php esc_html_e( 'Nothing found. Click on the site logo to go to the homepage or try searching.', 'counter' ); ?></p>
 
 			<?php get_search_form(); ?>
 
