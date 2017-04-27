@@ -65,10 +65,10 @@
 		text-align: center;
 	}
 	td, {
-		line-height: em_minus_px( 2em, 1px, $font__size * 0.75 );
+		line-height: 2em;
 	}
 	th {
-		line-height: em_minus_px( 2em, 2px, $font__size * 0.75 );
+		line-height: 2em;
 	}
 	tfoot td:first-child {
 		padding-left: 0.75em;
@@ -85,7 +85,7 @@
 .widget.widget_rss {
 	li {
 		margin-bottom: 0.75em;
-		padding-bottom: em_minus_px( 0.75em, 1px );
+		padding-bottom: 0.75em;
 		border-bottom: 1px solid;
 		border-bottom-color: $color__gray;
 		&:last-child {

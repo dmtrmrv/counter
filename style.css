@@ -195,7 +195,7 @@ input[type='search']::-webkit-search-decoration {
 
 fieldset {
 	margin: 0 0 1.5em;
-	padding: 0.6388888889em 1em 0;
+	padding: 0.75em 1em 0;
 	border: 2px solid #e6e6e6;
 	border-radius: 3px;
 }
@@ -404,7 +404,7 @@ dd {
 
 table {
 	width: 100%;
-	margin-bottom: 1.4444444444em;
+	margin-bottom: 1.5em;
 	padding: 0;
 
 	cellspacing: 0;
@@ -418,7 +418,7 @@ th {
 }
 
 thead th {
-	padding: 1em 1em 0.9259259259em;
+	padding: 1em;
 	background-color: #e6e6e6;
 	font-size: 0.75em;
 	font-weight: 400;
@@ -1856,7 +1856,7 @@ body {
 
 .comment-list {
 	margin-left: 0;
-	padding-top: 1.4444444444em;
+	padding-top: 1.5em;
 	border-top: 1px solid #e6e6e6;
 }
 
@@ -1866,7 +1866,7 @@ body {
 
 .comment-body {
 	position: relative;
-	margin: 0 0 1.4444444444em 0;
+	margin: 0 0 1.5em 0;
 	border-bottom: 1px solid #e6e6e6;
 	word-wrap: break-word;
 }
@@ -2179,11 +2179,11 @@ body {
 }
 
 .widget_calendar td {
-	line-height: 1.9259259259em;
+	line-height: 2em;
 }
 
 .widget_calendar th {
-	line-height: 1.8518518519em;
+	line-height: 2em;
 }
 
 .widget_calendar tfoot td:first-child {
@@ -2200,7 +2200,7 @@ body {
 .widget.widget_recent_entries li,
 .widget.widget_rss li {
 	margin-bottom: 0.75em;
-	padding-bottom: 0.6944444444em;
+	padding-bottom: 0.75em;
 	border-bottom: 1px solid;
 	border-bottom-color: #e6e6e6;
 }
@@ -2853,7 +2853,7 @@ body {
 
 	.comment-list,
 	.form-submit {
-		margin-bottom: 2.9444444444em;
+		margin-bottom: 3em;
 	}
 
 	.comment-navigation {
@@ -2923,7 +2923,7 @@ body {
 	}
 
 	.post-navigation .nav-next a {
-		padding: 1.4444444444em 3em 1.4444444444em 0;
+		padding: 1.5em 3em 1.5em 0;
 	}
 
 	.post-navigation .nav-next a:before {
@@ -2940,7 +2940,7 @@ body {
 	}
 
 	.post-navigation .nav-previous a {
-		padding: 1.4444444444em 0 1.4444444444em 3em;
+		padding: 1.5em 0 1.5em 3em;
 	}
 
 	.post-navigation .nav-previous a:before {

@@ -53,7 +53,7 @@
 		.nav-next {
 			right: -1px;
 			a {
-				padding: em_minus_px( 1.5em, 1px ) 3em em_minus_px( 1.5em, 1px ) 0;
+				padding: 1.5em 3em 1.5em 0;
 				&:before {
 					right: 1px;
 					content: '\e815';
@@ -66,7 +66,7 @@
 		.nav-previous {
 			left: -1px;
 			a {
-				padding: em_minus_px( 1.5em, 1px ) 0 em_minus_px( 1.5em, 1px ) 3em;
+				padding: 1.5em 0 1.5em 3em;
 				&:before {
 					left: 1px;
 					content: '\e813';

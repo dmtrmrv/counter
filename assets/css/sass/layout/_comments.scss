@@ -11,7 +11,7 @@
 
 .comment-list {
 	margin-left: 0;
-	padding-top: em_minus_px( 1.5em, 1px );
+	padding-top: 1.5em;
 	border-top: 1px solid $color__gray;
 }
 
@@ -22,7 +22,7 @@
 .comment-body {
 	word-wrap: break-word;
 	position: relative;
-	margin: 0 0 em_minus_px( 1.5em, 1px ) 0;
+	margin: 0 0 1.5em 0;
 	border-bottom: 1px solid $color__gray;
 	.pingback & {
 		margin: 0 0 1.5em 0;
@@ -132,7 +132,7 @@
 
 	.comment-list,
 	.form-submit {
-		margin-bottom: em_minus_px( 3em, 1px );
+		margin-bottom: 3em;
 	}
 }
 

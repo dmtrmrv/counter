@@ -2,7 +2,7 @@
 
 table {
 	width: 100%;
-	margin-bottom: em_minus_px( 1.5em, 1px );
+	margin-bottom: 1.5em;
 	padding: 0;
 	cellspacing: 0;
 }
@@ -15,7 +15,7 @@ th {
 }
 
 thead th {
-	padding: 1em 1em em_minus_px( 1em, 1px, $font__size * 0.75 );
+	padding: 1em;
 	background-color: $color__gray;
 	font-size: 0.75em;
 	font-weight: 400;
