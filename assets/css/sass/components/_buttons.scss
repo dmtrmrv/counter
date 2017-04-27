@@ -33,7 +33,7 @@
 @mixin button {
 	@include button-core;
 	@include font-size( 14/18 );
-	padding: 1.3571428571em 2em;
+	padding: em_minus_px( 0.75em, 1px ) 2em;
 	border: 1px solid transparent;
 	border-radius: 0;
 	font-weight: 700;

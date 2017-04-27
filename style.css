@@ -361,12 +361,12 @@ cite {
 	display: block;
 	margin: 0;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 11.25px;
-	font-size: 0.625rem;
+	font-size: 12px;
+	font-size: 0.6666666667rem;
 	font-style: normal;
 	line-height: 27px;
 	line-height: 1.5rem;
-	letter-spacing: 0.0625em;
+	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
 
@@ -374,8 +374,8 @@ cite {
 
 ul,
 ol {
-	margin: 0 0 1.5em 1.5em;
-	padding-left: 1.5em;
+	margin: 0 0 1.5em 0.75em;
+	padding-left: 0.75em;
 }
 
 ul {
@@ -389,7 +389,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 0.5em;
+	margin-left: 0.75em;
 }
 
 dt {
@@ -513,7 +513,7 @@ input[type='reset'],
 input[type='submit'] {
 	display: inline-block;
 	margin: 0;
-	padding: 1.3571428571em 2em;
+	padding: 0.6944444444em 2em;
 	border: 1px solid transparent;
 	border-radius: 0;
 	-webkit-appearance: none;
@@ -1612,7 +1612,7 @@ body {
 	display: inline-block;
 	float: right;
 	margin: 0;
-	padding: 1.3571428571em 2em;
+	padding: 0.6944444444em 2em;
 	padding-left: 1em;
 	border: 1px solid transparent;
 	border-color: #1e1e1e;
@@ -1671,7 +1671,7 @@ body {
 	display: inline-block;
 	float: left;
 	margin: 0;
-	padding: 1.3571428571em 2em;
+	padding: 0.6944444444em 2em;
 	padding-right: 1em;
 	border: 1px solid transparent;
 	border-color: #1e1e1e;
