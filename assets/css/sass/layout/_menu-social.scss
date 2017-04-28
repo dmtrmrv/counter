@@ -3,10 +3,12 @@
 .menu-social-container {
 	a {
 		&:before {
-			@extend %icon;
+			@include counter-fa-icon();
 			width: 1.2em;
 			margin-right: 0.5em;
-			color: $color__text;
+		}
+		&:hover,
+ 		&:focus {
 			opacity: $opacity;
 		}
 		@each $url, $i in $social-icons {
@@ -16,9 +18,8 @@
 			}
 
 			@if length( $i ) == 2 {
-				&[href*='#{$url}']:hover:before {
-					color: nth($i, 2);
-					opacity: 1;
+				&[href*='#{$url}']:before {
+					color: nth( $i, 2 );
 				}
 			}
 		}

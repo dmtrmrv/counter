@@ -2,7 +2,7 @@
 
 // Basic Text Colors.
 $color__headings: #1e1e1e; // r:30 g:30 b:30
-$color__text: #555555; // r:85 g:85 b:85
+$color__text: #555; // r:85 g:85 b:85
 
 // Shades of gray.
 $color__gray: #e6e6e6; // rgba( $color__text, 0.15 ) // r:230 g:230 b:230
@@ -29,7 +29,6 @@ $xs: 360px;
 $sm: 768px;
 $md: 1024px;
 $lg: 1440px;
-
 $susy: (
 	columns: 12,
 	gutters: 36/72,
@@ -37,7 +36,6 @@ $susy: (
 	output: float,
 	gutter-position: after
 );
-
 $susy-static: (
 	columns: 12,
 	column-width: 72px,
@@ -49,7 +47,7 @@ $susy-static: (
 
 // Typography. -------------------------------------------------------------- //
 
-$font__main: "Open Sans", Helvetica, Arial, sans-serif;
+$font__main: 'Open Sans', Helvetica, Arial, sans-serif;
 $font__headings: 'Lato', Helvetica, Arial, sans-serif;
 $font__code: 'Courier New', Courier, monospace;
 $font__blockquote: $font__main;
@@ -59,29 +57,32 @@ $font__line-height: 1.5;
 
 // Social icons. ------------------------------------------------------------ //
 
-$social-icons:(
-	'behance.net':       ( 'e807', #1769FF ),
-	'bitbucket.org':     ( 'e806', #205081 ),
-	'codepen.io':        ( 'e805' ),
-	'delicious.com':     ( 'e808' ),
-	'dribbble.com':      ( 'e80a', #ea4c89 ),
-	'facebook.com':      ( 'e80b', #3b5998 ),
-	'flickr.com':        ( 'e80c' ),
-	'foursquare.com':    ( 'e80d', #25a0ca ),
-	'github.com':        ( 'e80e', #4183c4 ),
-	'instagram.com':     ( 'e810', #c08d64 ),
-	'last.fm':           ( 'e811', #c3000d ),
-	'linkedin.com':      ( 'e812', #0e76a8 ),
-	'pinterest.com':     ( 'e814', #c8232c ),
-	'plus.google.com':   ( 'e80f', #dd4b39 ),
-	'soundcloud.com':    ( 'e81a', #ff7700 ),
-	'spotify.com':       ( 'e819', #81b71a ),
-	'stackoverflow.com': ( 'e817', #fe7a15 ),
-	'twitter.com':       ( 'e81f', #00a0d1 ),
-	'vimeo.com':         ( 'e820', #86c9ef ),
-	'vine.co':           ( 'e821', #00bf8f ),
-	'vk.com':            ( 'e822', #45668e ),
-	'wordpress.com':     ( 'e823', #1e8cbe ),
-	'wordpress.org':     ( 'e823', #21759b ),
-	'youtube.com':       ( 'e825', #c4302b )
+$social-icons: (
+	'500px.com':         ( 'f26e', #0099e5 ),
+	'behance.net':       ( 'f1b4', #1769ff ),
+	'bitbucket.org':     ( 'f171', #205081 ),
+	'codepen.io':        ( 'f1cb' ),
+	'delicious.com':     ( 'f1a5' ),
+	'dribbble.com':      ( 'f17d', #ea4c89 ),
+	'facebook.com':      ( 'f082', #3b5998 ),
+	'flickr.com':        ( 'f16e' ),
+	'foursquare.com':    ( 'f180', #25a0ca ),
+	'github.com':        ( 'f09b', #4183c4 ),
+	'instagram.com':     ( 'f16d', #c08d64 ),
+	'last.fm':           ( 'f202', #c3000d ),
+	'linkedin.com':      ( 'f0e1', #0e76a8 ),
+	'pinterest.com':     ( 'f0d2', #c8232c ),
+	'plus.google.com':   ( 'f0d5', #dd4b39 ),
+	'soundcloud.com':    ( 'f1be', #f70 ),
+	'spotify.com':       ( 'f1bc', #81b71a ),
+	'stackoverflow.com': ( 'f16c', #fe7a15 ),
+	'twitter.com':       ( 'f099', #00a0d1 ),
+	'vimeo.com':         ( 'f27d', #86c9ef ),
+	'vine.co':           ( 'f1ca', #00bf8f ),
+	'vk.com':            ( 'f189', #45668e ),
+	'web.wechat.com':    ( 'f1d7', #1e8cbe ),
+	'wordpress.com':     ( 'f19a', #1e8cbe ),
+	'wordpress.org':     ( 'f19a', #21759b ),
+	'yelp.com':          ( 'f16a', #d32323 ),
+	'youtube.com':       ( 'f16a', #c4302b ),
 );

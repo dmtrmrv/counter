@@ -12,9 +12,9 @@
 			float: right;
 			padding-left: 1em;
 			&:before {
-				@extend %icon;
+				@include counter-fa-icon();
 				margin: 0 0.5em;
-				content: '\e802';
+				content: '\f104';
 			}
 		}
 	}
@@ -26,9 +26,9 @@
 			float: left;
 			padding-right: 1em;
 			&:after {
-				@extend %icon;
+				@include counter-fa-icon();
 				margin: 0 0.5em;
-				content: '\e803';
+				content: '\f105';
 			}
 		}
 	}

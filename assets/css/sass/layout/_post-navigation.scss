@@ -30,6 +30,7 @@
 				text-overflow: ellipsis;
 				transition: width 0.1s, border-color 0.1s, opacity 0.1s;
 				&:before {
+					@include counter-fa-icon();
 					display: block;
 					position: absolute;
 					top: 1px;
@@ -38,7 +39,6 @@
 					margin: 0;
 					opacity: $opacity;
 					color: $color__text;
-					font-family: 'fontello';
 					line-height: 4.5;
 					text-align: center;
 					text-decoration: none;
@@ -56,7 +56,7 @@
 				padding: 1.5em 3em 1.5em 0;
 				&:before {
 					right: 1px;
-					content: '\e815';
+					content: '\f105';
 				}
 				&:hover {
 					padding-left: 1.5em;
@@ -69,7 +69,7 @@
 				padding: 1.5em 0 1.5em 3em;
 				&:before {
 					left: 1px;
-					content: '\e813';
+					content: '\f104';
 				}
 				&:hover {
 					padding-right: 1.5em;

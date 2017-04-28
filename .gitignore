@@ -47,11 +47,3 @@ node_modules
 bower_components
 .sass-cache
 npm-debug.log
-
-# Fontello Temp
-fonts/fontello/css/animation.css
-fonts/fontello/css/fontello-*.css
-fonts/fontello/demo.html
-fonts/fontello/config.json
-fonts/fontello/README.txt
-fonts/*.zip

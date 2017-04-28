@@ -373,8 +373,8 @@ function counter_scripts() {
 	);
 
 	wp_enqueue_style(
-		'counter-fontello',
-		get_template_directory_uri() . '/assets/fonts/fontello/css/fontello.css'
+		'counter-font-awesome',
+		get_template_directory_uri() . '/assets/fonts/font-awesome/css/font-awesome.css'
 	);
 
 	wp_enqueue_style(

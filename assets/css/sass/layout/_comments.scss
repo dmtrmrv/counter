@@ -103,9 +103,9 @@
 	a {
 		color: $color__danger;
 		&:before {
-			@extend %icon;
+			@include counter-fa-icon();
 			margin: 0 0.5em;
-			content: '\e801';
+			content: '\f057';
 		}
 	}
 }
@@ -149,35 +149,31 @@
 	.nav-links {
 		overflow: hidden;
 		width: 100%;
-	}
-	.nav-previous,
-	.nav-next {
-		display: inline-block;
-		float: left;
 		a {
 			display: block;
 			float: left;
 		}
 	}
-	.nav-pages {
-		display: inline-block;
+	.nav-previous {
+		float: left;
+	}
+
+	.nav-next {
 		float: right;
-		text-align: right;
 	}
-	.nav-previous a {
-		margin-right: 1em;
-	}
+
 	.nav-previous a:before,
 	.nav-next a:after {
-		@extend %icon;
-		margin: 0 0.2em;
+		@include counter-fa-icon();
 	}
+
 	.nav-previous a:before {
 		margin: 0 0.5em 0 0;
-		content: '\e802';
+		content: '\f104';
 	}
+
 	.nav-next a:after {
 		margin: 0 0 0 0.5em;
-		content: '\e803';
+		content: '\f105';
 	}
 }

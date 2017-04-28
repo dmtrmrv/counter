@@ -173,56 +173,36 @@
 	position: absolute;
 	top: 8px;
 	right: 1em;
-	width: 1.5em;
-	height: 1.5em;
+	width: 1rem;
+	height: 1rem;
 	padding: 0;
 	border: none;
 	background-color: transparent;
 	text-align: center;
 	@media screen and ( min-width: $sm ) {
-		top: 1.75em;
+		top: 1.8571428571em;
 		.sub-menu & {
 			top: 11px;
 			right: 11px;
 		}
 	}
-	&:before {
-		position: absolute;
-		top: 5px;
-		left: 6px;
-		width: 1px;
-		height: 11px;
-		background-color: $color__text;
-		content: '';
-		transform: rotate( -225deg );
-	}
 	&:after {
-		position: absolute;
-		top: 5px;
-		right: 6px;
-		width: 1px;
-		height: 11px;
-		background-color: $color__text;
-		content: '';
-		transform: rotate( 225deg );
+		@include counter-fa-icon();
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		content: '\f107';
 	}
 	&.toggle-on {
-		&:before {
-			background-color: $color__accent;
-			transform: rotate( 225deg );
-		}
 		&:after {
-			background-color: $color__accent;
-			transform: rotate( -225deg );
+			content: '\f106';
 		}
 	}
 	&:hover,
 	&:focus {
-		&:before {
-			background-color: $color__accent;
-		}
 		&:after {
-			background-color: $color__accent;
+			color: $color__accent;
+			background-color: trasparent;
 		}
 	}
 }

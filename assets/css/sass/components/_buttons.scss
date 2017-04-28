@@ -12,6 +12,7 @@
 	white-space: nowrap;
 	text-decoration: none;
 	cursor: pointer;
+
 	touch-action: manipulation;
 	&:hover {
 		box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.2);
@@ -33,7 +34,9 @@
 @mixin button {
 	@include button-core;
 	@include font-size( 14/18 );
+	@include line-height( 1.5 );
 	padding: em_minus_px( 0.75em, 1px ) 2em;
+	padding: 0.8928571429em 2em; // 12.5px
 	border: 1px solid transparent;
 	border-radius: 0;
 	font-weight: 700;
