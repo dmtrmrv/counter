@@ -7,6 +7,7 @@ module.exports = {
 			'./inc/*.php',
 			'./inc/**/*.php',
 			'./style.css',
+			'./style-rtl.css',
 			'./assets/css/*.css',
 			'./assets/js/*.js',
 			'./assets/fonts/font-awesome/fonts/**',
@@ -20,5 +21,9 @@ module.exports = {
 		],
 		dest: '../build/<%= package.name %>',
 		expand: true
+	},
+	rtl: {
+		src: './rtl/style.css',
+		dest: './style-rtl.css'
 	}
 }

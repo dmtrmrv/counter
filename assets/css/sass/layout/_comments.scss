@@ -166,14 +166,28 @@
 	.nav-next a:after {
 		@include counter-fa-icon();
 	}
-
-	.nav-previous a:before {
-		margin: 0 0.5em 0 0;
-		content: '\f104';
-	}
-
-	.nav-next a:after {
-		margin: 0 0 0 0.5em;
-		content: '\f105';
-	}
 }
+
+/*rtl:begin:remove*/
+.comment-navigation .nav-previous a:before {
+	margin: 0 0.5em 0 0;
+	content: '\f104';
+}
+
+.comment-navigation .nav-next a:after {
+	margin: 0 0 0 0.5em;
+	content: '\f105';
+}
+/*rtl:end:remove*/
+
+/*rtl:raw:
+.comment-navigation .nav-previous a:before {
+	margin: 0 0 0 0.5em;
+	content: '\f105';
+}
+
+.comment-navigation .nav-next a:after {
+	margin: 0 0.5em 0 0;
+	content: '\f104';
+}
+*/

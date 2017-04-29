@@ -4,5 +4,8 @@ module.exports = {
 	},
 	default: {
 		src: '../build/'
+	},
+	rtl: {
+		src: './rtl'
 	}
 }

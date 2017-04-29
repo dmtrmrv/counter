@@ -14,7 +14,6 @@
 			&:before {
 				@include counter-fa-icon();
 				margin: 0 0.5em;
-				content: '\f104';
 			}
 		}
 	}
@@ -28,11 +27,28 @@
 			&:after {
 				@include counter-fa-icon();
 				margin: 0 0.5em;
-				content: '\f105';
 			}
 		}
 	}
 }
+
+/*rtl:begin:remove*/
+.posts-navigation .nav-previous a:before {
+	content: "\f104";
+}
+.posts-navigation .nav-next a:after {
+	content: "\f105";
+}
+/*rtl:end:remove*/
+
+/*rtl:raw:
+.posts-navigation .nav-previous a:before {
+	content: "\f105";
+}
+.posts-navigation .nav-next a:after {
+	content: "\f104";
+}
+*/
 
 .paged-last .nav-next,
 .paged-first .nav-previous {

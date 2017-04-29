@@ -54,10 +54,6 @@
 			right: -1px;
 			a {
 				padding: 1.5em 3em 1.5em 0;
-				&:before {
-					right: 1px;
-					content: '\f105';
-				}
 				&:hover {
 					padding-left: 1.5em;
 				}
@@ -67,14 +63,36 @@
 			left: -1px;
 			a {
 				padding: 1.5em 0 1.5em 3em;
-				&:before {
-					left: 1px;
-					content: '\f104';
-				}
 				&:hover {
 					padding-right: 1.5em;
 				}
 			}
 		}
 	}
+}
+
+@media screen and ( min-width: $sm ) {
+	/*rtl:begin:remove*/
+	.post-navigation .nav-next a:before {
+		right: 1px;
+		content: '\f105';
+	}
+
+	.post-navigation .nav-previous a:before {
+		left: 1px;
+		content: '\f104';
+	}
+	/*rtl:end:remove*/
+
+	/*rtl:raw:
+	.post-navigation .nav-next a:before {
+		left: 1px;
+		content: '\f104';
+	}
+
+	.post-navigation .nav-previous a:before {
+		right: 1px;
+		content: '\f105';
+	}
+	*/
 }

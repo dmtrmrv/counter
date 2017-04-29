@@ -49,11 +49,11 @@ msgstr ""
 msgid "Appears in the footer."
 msgstr ""
 
-#: functions.php:418
+#: functions.php:420
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:421
 msgid "Collapse child menu"
 msgstr ""
 

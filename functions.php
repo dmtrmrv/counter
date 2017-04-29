@@ -382,6 +382,8 @@ function counter_scripts() {
 		get_stylesheet_uri()
 	);
 
+	wp_style_add_data( 'counter-style', 'rtl', 'replace' );
+
 	wp_enqueue_script(
 		'jquery-scrollto',
 		get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ),
