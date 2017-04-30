@@ -291,9 +291,13 @@ function counter_footer_widget_areas_count() {
 }
 
 /**
- * Better excerpt look.
+ * Better excerpt.
  */
 function counter_excerpt_more() {
-	return ' ...';
+	$html = sprintf( '... <a href="%s">', get_the_permalink() ); // WPCS: XSS OK.
+	$html .= sprintf( __( 'Continue reading%s', 'counter' ), the_title( '<span class="screen-reader-text"> "', '"</span>', false ) ); // WPCS: XSS OK.
+	$html .= '</a>';
+
+	return $html;
 }
 add_filter( 'excerpt_more', 'counter_excerpt_more' );

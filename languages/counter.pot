@@ -62,7 +62,7 @@ msgid "Skip to content"
 msgstr ""
 
 #: header.php:46
-msgid "Primary Menu"
+msgid "Menu"
 msgstr ""
 
 #: inc/customizer.php:36
@@ -261,6 +261,10 @@ msgstr ""
 
 #: inc/extras.php:155
 msgid "Right"
+msgstr ""
+
+#: inc/extras.php:298
+msgid "Continue reading%s"
 msgstr ""
 
 #: inc/template-tags.php:139
