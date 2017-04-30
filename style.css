@@ -2818,6 +2818,7 @@ body {
 
 	.main-navigation ul ul {
 		position: absolute;
+		z-index: 60;
 		top: -9999em;
 		width: 12em;
 		margin: 0;
