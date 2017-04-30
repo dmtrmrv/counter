@@ -43,7 +43,7 @@
 
 		<button id="site-navigation-toggle" class="menu-toggle" >
 			<span class="menu-toggle-icon"></span>
-			<?php esc_html_e( 'Primary Menu', 'counter' ); ?>
+			<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'counter' ); ?></span>
 		</button><!-- #site-navigation-toggle -->
 
 		<?php endif; ?>

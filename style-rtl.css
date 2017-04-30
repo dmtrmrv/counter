@@ -1241,13 +1241,12 @@ body {
 	z-index: 50;
 	top: 1em;
 	left: 1em;
-	width: 1.5em;
 	height: 1.5em;
 	padding: 0;
-	border-color: transparent;
+	border: 0;
 	background-color: transparent;
+	line-height: 1rem;
 	text-align: right;
-	text-indent: -9999px;
 }
 
 .menu-toggle:hover,
@@ -1255,54 +1254,26 @@ body {
 	box-shadow: none;
 }
 
-.menu-toggle.toggled .menu-toggle-icon {
-	background-color: transparent;
-}
-
-.menu-toggle.toggled .menu-toggle-icon:before,
-.menu-toggle.toggled .menu-toggle-icon:after {
+.menu-toggle:before {
+	display: inline-block;
+	display: block;
+	position: absolute;
 	top: 0;
-	background-color: #1e1e1e;
+	right: -25px;
+	width: 21px;
+	height: 21px;
+	font: normal normal normal 18px/1.5 FontAwesome;
+	font-size: inherit;
+	text-align: center;
+	content: '\f0c9';
+
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.menu-toggle.toggled .menu-toggle-icon:before {
-	-ms-transform: rotate(-225deg);
-	    transform: rotate(-225deg);
-}
-
-.menu-toggle.toggled .menu-toggle-icon:after {
-	-ms-transform: rotate(225deg);
-	    transform: rotate(225deg);
-}
-
-.menu-toggle-icon {
-	display: block;
-	position: absolute;
-	top: 50%;
-	right: 50%;
-	width: 1.5em;
-	height: 1px;
-	margin-top: -1px;
-	margin-right: -0.75em;
-	background-color: #1e1e1e;
-}
-
-.menu-toggle-icon:before,
-.menu-toggle-icon:after {
-	display: block;
-	position: absolute;
-	width: 1.5em;
-	height: 1px;
-	background-color: #1e1e1e;
-	content: '';
-}
-
-.menu-toggle-icon:before {
-	top: -7px;
-}
-
-.menu-toggle-icon:after {
-	top: 7px;
+.menu-toggle.toggled:before {
+	content: '\f00d';
 }
 
 /* Dropdown Toggle */
