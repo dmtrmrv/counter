@@ -20,6 +20,7 @@
 		$navItemHasSubMenu = $navUl.find( '.menu-item-has-children' ),
 		$navItemHasSubMenuLink = $navUl.find( '.menu-item-has-children > a' ),
 		$navLink = $nav.find( 'a' ),
+		$navLinkEmpty = $nav.find( 'a[href="#"]' ),
 		$navLinkFirst = $navLink.first(),
 		$navLinkLast = $navLink.last(),
 		$navToggle = $header.find( '#site-navigation-toggle' );
@@ -35,6 +36,7 @@
 	$( document ).keyup( escClose );
 	$navToggle.on( 'keydown', resetNavFocusFirst );
 	$navLink.on( 'keydown', resetFocusLast );
+	$navLinkEmpty.on( 'click', toggleSubNavEmptyLink );
 	$nav.on( 'keydown', 'button', resetFocusLast );
 
 	/**
@@ -79,6 +81,16 @@
 		$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 		$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 		$this.html( $this.html() === counterScreenReaderText.expand ? counterScreenReaderText.collapse : counterScreenReaderText.expand );
+	}
+
+	function toggleSubNavEmptyLink( e ) {
+		e.preventDefault();
+		var $this = $( e.target ),
+			$dropdownToggle = $this.next( '.dropdown-toggle' );
+
+		if ( $dropdownToggle ) {
+			$dropdownToggle.trigger( 'click' );
+		}
 	}
 
 	/**
