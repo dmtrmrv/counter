@@ -417,7 +417,9 @@ function counter_scripts() {
 	);
 
 	wp_localize_script( 'counter-navigation', 'counterScreenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'Expand child menu', 'counter' ) . '</span>',
+		'menu' => esc_html__( 'Menu', 'counter' ),
+		'close' => esc_html__( 'Close', 'counter' ),	
+		'expand' => '<span class="screen-reader-text">' . esc_html__( 'Expand child menu', 'counter' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'Collapse child menu', 'counter' ) . '</span>',
 	) );
 

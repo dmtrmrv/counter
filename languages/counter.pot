@@ -49,20 +49,24 @@ msgstr ""
 msgid "Appears in the footer."
 msgstr ""
 
-#: functions.php:420
-msgid "Expand child menu"
+#: functions.php:420 header.php:35
+msgid "Menu"
 msgstr ""
 
 #: functions.php:421
+msgid "Close"
+msgstr ""
+
+#: functions.php:422
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:423
 msgid "Collapse child menu"
 msgstr ""
 
 #: header.php:21
 msgid "Skip to content"
-msgstr ""
-
-#: header.php:46
-msgid "Menu"
 msgstr ""
 
 #: inc/customizer.php:36

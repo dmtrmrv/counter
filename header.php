@@ -31,20 +31,21 @@
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button id="site-navigation-toggle" class="menu-toggle" >
+				<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'counter' ); ?></span>
+			</button><!-- #site-navigation-toggle -->
+
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'menu_id' => 'primary-menu',
-					'container' => false,
+					'menu_class' => 'nav-menu',
+					'container' => 'nav',
+					'container_id' => 'site-navigation',
+					'container_class' => 'main-navigation',
+					'item_spacing' => 'discard'
 				) );
 			?>
-		</nav><!-- #site-navigation -->
-
-		<button id="site-navigation-toggle" class="menu-toggle" >
-			<span class="menu-toggle-icon"></span>
-			<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'counter' ); ?></span>
-		</button><!-- #site-navigation-toggle -->
 
 		<?php endif; ?>
 
