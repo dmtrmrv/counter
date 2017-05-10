@@ -13,7 +13,7 @@
 }
 .fa {
   display: inline-block;
-  font: normal normal normal 18x/1.5 FontAwesome;
+  font: normal normal normal 18px/1.5 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

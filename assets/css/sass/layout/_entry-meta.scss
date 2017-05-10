@@ -8,13 +8,13 @@
 .entry-meta-item {
 	display: inline-block;
 	margin-right: 0.5em;
-	color: $color__text;
 	opacity: $opacity;
+	color: $color__text;
 	font-size: 0.8333333333em; // 15px
 	line-height: 1.5; // 22.5
 	&:after {
 		margin-left: 0.5em;
-		content:'\00B7';
+		content: '\00B7';
 	}
 	&.last,
 	&:last-child {

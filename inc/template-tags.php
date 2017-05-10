@@ -18,6 +18,13 @@ function counter_entry_meta_header() {
 	// Print the opening tag.
 	echo '<div class="entry-meta">';
 
+	/**
+	 * Sticky post badge.
+	 */
+	if ( is_sticky() ) {
+		printf( '<div class="entry-meta-item stiky-badge"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>', esc_html__( 'Pinned Post', 'counter' ) ); // WPCS: XSS OK.
+	}
+
 	/*
 	 * Category.
 	 *
