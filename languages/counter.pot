@@ -271,56 +271,60 @@ msgstr ""
 msgid "Continue reading%s"
 msgstr ""
 
-#: inc/template-tags.php:139
+#: inc/template-tags.php:25
+msgid "Pinned Post"
+msgstr ""
+
+#: inc/template-tags.php:146
 #. translators: used between list items, there is a space after the comma
 msgid "Older"
 msgstr ""
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:147
 msgid "Newer"
 msgstr ""
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:148
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:160
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:163
 msgid "Prev:"
 msgstr ""
 
-#: inc/template-tags.php:157
+#: inc/template-tags.php:164
 msgid "Next:"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:178
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:174
+#: inc/template-tags.php:181
 msgid "Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:182
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:187
+#: inc/template-tags.php:194
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:255
+#: inc/template-tags.php:262
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:274
+#: inc/template-tags.php:281
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:276
+#: inc/template-tags.php:283
 msgid "Customize"
 msgstr ""
 
