@@ -191,6 +191,7 @@ function counter_comment_navigation() {
  */
 function counter_footer_text() {
 	printf(
+		/* Translators: 1: name of the theme, 2: theme author */
 		esc_html__( '%1$s theme by %2$s', 'counter' ),
 		'Counter',
 		'<a href="' . esc_url( 'https://themepatio.com/' ) . '">ThemePatio</a>'
@@ -203,7 +204,10 @@ function counter_footer_text() {
  * @return bool
  */
 function counter_categorized_blog() {
-	if ( false === ( $categories = get_transient( 'counter_categories' ) ) ) {
+
+	$categories = get_transient( 'counter_categories' );
+
+	if ( false === $categories ) {
 		// Create an array of all the categories that are attached to posts.
 		$categories = get_categories( array(
 			'fields'     => 'ids',

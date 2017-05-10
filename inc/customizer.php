@@ -239,11 +239,11 @@ function counter_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'upgrade' , array(
 		'title' => __( 'Extra Features', 'counter' ),
 		'priority' => 300,
-		'description' => __( 'Like Counter? Then you might like the pro version even more. It has some extra features to help you make your website unique. Check them out:', 'counter' )
+		'description' => __( 'Like Counter? Then you might like the pro version even more. It has some extra features to help you make your website unique.', 'counter' ),
 	) );
 
 	$wp_customize->add_control(
-		new Counter_Message_Control(
+		new Counter_Customize_Control_Message(
 			$wp_customize,
 			'panels',
 			array(
@@ -256,7 +256,7 @@ function counter_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new Counter_Message_Control(
+		new Counter_Customize_Control_Message(
 			$wp_customize,
 			'colors',
 			array(
@@ -269,7 +269,7 @@ function counter_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new Counter_Message_Control(
+		new Counter_Customize_Control_Message(
 			$wp_customize,
 			'blog',
 			array(
@@ -282,7 +282,7 @@ function counter_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new Counter_Message_Control(
+		new Counter_Customize_Control_Message(
 			$wp_customize,
 			'footer',
 			array(

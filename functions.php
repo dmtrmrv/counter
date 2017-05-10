@@ -452,8 +452,8 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer.
  */
+require get_template_directory() . '/inc/class-counter-customize-control-message.php';
 require get_template_directory() . '/inc/customizer-sanitization.php';
-require get_template_directory() . '/inc/customizer-controls.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**

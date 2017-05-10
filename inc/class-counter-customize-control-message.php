@@ -12,7 +12,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 /**
  * Displays custom message with a call to action link.
  */
-class Counter_Message_Control extends WP_Customize_Control {
+class Counter_Customize_Control_Message extends WP_Customize_Control {
 
 	/**
 	 * Control type.

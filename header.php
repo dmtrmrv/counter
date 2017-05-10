@@ -43,7 +43,7 @@
 					'container' => 'nav',
 					'container_id' => 'site-navigation',
 					'container_class' => 'main-navigation',
-					'item_spacing' => 'discard'
+					'item_spacing' => 'discard',
 				) );
 			?>
 

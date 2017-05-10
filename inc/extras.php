@@ -203,6 +203,8 @@ function counter_panel_background( $i = 0 ) {
 
 /**
  * Creates panel class string.
+ *
+ * @param int $num Number of the panel.
  */
 function counter_panel_class( $num ) {
 	// Check if we have a user-defined panel class.
@@ -231,31 +233,6 @@ function counter_category_rel( $text ) {
 	return $text;
 }
 add_filter( 'the_category', 'counter_category_rel' );
-
-/**
- * Convert HEX to RGB.
- *
- * @param  string $color The original color, in 3 or 6-digit hexadecimal form.
- * @return array         Array containing RGB (red, green, and blue) values
- *                       for the given HEX code, empty array otherwise.
- */
-function counter_hex2rgb( $color ) {
-	$color = trim( $color, '#' );
-
-	if ( strlen( $color ) == 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
-	} else if ( strlen( $color ) == 6 ) {
-		$r = hexdec( substr( $color, 0, 2 ) );
-		$g = hexdec( substr( $color, 2, 2 ) );
-		$b = hexdec( substr( $color, 4, 2 ) );
-	} else {
-		return array();
-	}
-
-	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
-}
 
 /**
  * Checks if current page is the front page and not the blog.
@@ -295,7 +272,8 @@ function counter_footer_widget_areas_count() {
  */
 function counter_excerpt_more() {
 	$html = sprintf( '... <a href="%s">', get_the_permalink() ); // WPCS: XSS OK.
-	$html .= sprintf( __( 'Continue reading%s', 'counter' ), the_title( '<span class="screen-reader-text"> "', '"</span>', false ) ); // WPCS: XSS OK.
+	/* Translators: %s: the post title. */
+	$html .= sprintf( __( 'Continue reading %s', 'counter' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ); // WPCS: XSS OK.
 	$html .= '</a>';
 
 	return $html;

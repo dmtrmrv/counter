@@ -27,7 +27,8 @@ if ( post_password_required() ) {
 					);
 				} else {
 					printf( // WPCS: XSS OK.
-						esc_html( _nx( '%1$s Reply', '%1$s Replies', $comment_count, 'comments title', 'counter' ) ),
+						/* Translators: 1: number of comments. */
+						esc_html( _nx( '%s Reply', '%s Replies', $comment_count, 'comments title', 'counter' ) ),
 						number_format_i18n( $comment_count ),
 						'<span>' . get_the_title() . '</span>'
 					);
@@ -38,8 +39,8 @@ if ( post_password_required() ) {
 		<ul class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'       => 'ul',
-					'short_ping'  => true,
+					'style' => 'ul',
+					'short_ping' => true,
 					'avatar_size' => '96',
 				) );
 			?>
@@ -54,9 +55,10 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php comment_form( array(
-		'title_reply_to'    => __( 'Reply to %s', 'counter' ),
+		/* Translators: %s: name of the comment author. */
+		'title_reply_to' => __( 'Reply to %s', 'counter' ),
 		'cancel_reply_link' => __( 'Cancel', 'counter' ),
-		'class_submit'      => 'submit btn btn-default',
+		'class_submit' => 'submit btn btn-default',
 	) ); ?>
 
 </div><!-- #comments -->

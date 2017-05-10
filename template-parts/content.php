@@ -21,7 +21,10 @@
 
 	<div class="entry-content">
 
-		<?php the_content( sprintf( __( 'Read more %s', 'counter' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) ); ?>
+		<?php
+			/* Translators: %s: title of the post. */
+			the_content( sprintf( __( 'Continue reading %s', 'counter' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
+		?>
 
 		<?php
 			wp_link_pages( array(
