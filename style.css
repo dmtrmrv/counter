@@ -2013,8 +2013,7 @@ body {
 
 .gallery,
 #content .tiled-gallery {
-	margin: 0 -2px 27px;
-	margin: 0 -2px 1.5rem;
+	margin: 0 -2px 1.5em;
 }
 
 .gallery {
@@ -2073,6 +2072,10 @@ body {
 
 .gallery-columns-10 .gallery-item {
 	width: 10%;
+}
+
+.tiled-gallery .tiled-gallery-item a {
+	display: block;
 }
 
 .gallery-caption {
@@ -2134,8 +2137,14 @@ body {
 	list-style: none;
 }
 
-.widget.widget_text.textwidget p:last-child {
+.widget p:last-child,
+.widget p:only-child {
 	margin-bottom: 0;
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: 0.75em;
 }
 
 .widget.widget_search {
@@ -2194,16 +2203,12 @@ body {
 .widget.widget_recent_entries li,
 .widget.widget_rss li {
 	margin-bottom: 0.75em;
-	padding-bottom: 0.75em;
-	border-bottom: 1px solid;
-	border-bottom-color: #e6e6e6;
 }
 
 .widget.widget_recent_comments li:last-child,
 .widget.widget_recent_entries li:last-child,
 .widget.widget_rss li:last-child {
 	margin-bottom: 0;
-	border-bottom: none;
 }
 
 .widget_rss .widget-title a:first-child {
@@ -2247,9 +2252,141 @@ body {
 	margin: 0 0.4em;
 }
 
-.widget-title {
-	margin-top: 0;
+.widget.widget_image a {
+	display: block;
+}
+
+.widget.widget_image img,
+.widget.widget_image .wp-caption {
+	display: block;
+	margin: 0 0 !important;
+}
+
+.widget.widget_image figcaption {
+	margin-top: 0.25em;
+}
+
+.widget.widget_contact_info iframe,
+.widget.widget_contact_info > div {
 	margin-bottom: 0.75em;
+}
+
+.widget.widget_contact_info > div:last-child {
+	margin-bottom: 0;
+}
+
+.widget.widget_authors .widget-title {
+	margin-bottom: 1.5em;
+}
+
+.widget.widget_authors > ul > li {
+	margin-bottom: 1.5em;
+}
+
+.widget.widget_authors > ul > li:last-child {
+	margin: 0;
+}
+
+.widget.widget_authors > ul > li > a {
+	display: block;
+	margin-bottom: 0.75em;
+}
+
+.widget.widget_authors > ul > li img {
+	border-radius: 50%;
+}
+
+.widget.widget_authors > ul > li li {
+	margin-bottom: 0.75em;
+}
+
+.widget.widget_facebook_likebox,
+.widget.widget_googleplus_badge {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.widget.widget_facebook_likebox .widget-title,
+.widget.widget_googleplus_badge .widget-title {
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+}
+
+.widget.widget_facebook_likebox .widget-title:hover,
+.widget.widget_facebook_likebox .widget-title:active,
+.widget.widget_facebook_likebox .widget-title:focus,
+.widget.widget_googleplus_badge .widget-title:hover,
+.widget.widget_googleplus_badge .widget-title:active,
+.widget.widget_googleplus_badge .widget-title:focus {
+	display: block;
+	clip: auto !important;
+	z-index: 100000;
+	width: auto;
+	height: auto;
+}
+
+.widget .jetpack-display-remote-posts {
+	margin: 0;
+}
+
+.widget .jetpack-display-remote-posts h4 {
+	margin-bottom: 0.75rem;
+	font-size: inherit;
+	line-height: 1.5;
+}
+
+.widget .jetpack-display-remote-posts > a {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+#content .widget .tiled-gallery {
+	margin-bottom: 0;
+}
+
+.widget.widget-grofile h4 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.widget.widget-grofile .grofile-accounts {
+	margin-bottom: 1em;
+}
+
+.widget.widget_internet_defense_league_widget a,
+.widget.widget_internet_defense_league_widget img {
+	display: block;
+	margin: 0 auto;
+}
+
+.widget.milestone-widget {
+	margin: 0 0 2.5em;
+}
+
+.widget.widget_twitter_timeline {
+	padding: 0;
+}
+
+.widget.widget_twitter_timeline .widget-title {
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+}
+
+.widget.widget_twitter_timeline .widget-title:hover,
+.widget.widget_twitter_timeline .widget-title:active,
+.widget.widget_twitter_timeline .widget-title:focus {
+	display: block;
+	clip: auto !important;
+	z-index: 100000;
+	width: auto;
+	height: auto;
 }
 
 /**
@@ -2853,8 +2990,12 @@ body {
 
 	.gallery,
 	#content .tiled-gallery {
-		margin: 40.5px -2px 40.5px;
-		margin: 2.25rem -2px 2.25rem;
+		margin: 0.5em -2px 2.25em;
+	}
+
+	* + .gallery,
+	#content * + .tiled-gallery {
+		margin-top: 2.25em;
 	}
 
 	.post-navigation {
@@ -2967,6 +3108,10 @@ body {
 	*/
 
 	.widget {
+		margin: 0 0 3em;
+	}
+
+	.widget.milestone-widget {
 		margin: 0 0 3em;
 	}
 

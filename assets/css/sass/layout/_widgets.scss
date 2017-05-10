@@ -30,10 +30,15 @@
 			list-style: none;
 		}
 	}
+	p:last-child,
+	p:only-child {
+		margin-bottom: 0;
+	}
 }
 
-.widget.widget_text.textwidget p:last-child {
-	margin-bottom: 0;
+.widget-title {
+	margin-top: 0;
+	margin-bottom: 0.75em;
 }
 
 .widget.widget_search {
@@ -85,12 +90,8 @@
 .widget.widget_rss {
 	li {
 		margin-bottom: 0.75em;
-		padding-bottom: 0.75em;
-		border-bottom: 1px solid;
-		border-bottom-color: $color__gray;
 		&:last-child {
 			margin-bottom: 0;
-			border-bottom: none;
 		}
 	}
 }
@@ -124,7 +125,7 @@
 	ul ul {
 		margin-left: 1em;
 	}
-	[class^="menu-inline-"] {
+	[class^='menu-inline-'] {
 		ul ul {
 			display: inline;
 			margin-left: 0;
@@ -136,7 +137,126 @@
 	}
 }
 
-.widget-title {
-	margin-top: 0;
-	margin-bottom: 0.75em;
+// Image.
+.widget.widget_image {
+	a {
+		display: block;
+	}
+	img,
+	.wp-caption {
+		display: block;
+		margin: 0 0 !important;
+	}
+	figcaption {
+		margin-top: 0.25em;
+	}
+}
+
+// Contact Info.
+.widget.widget_contact_info {
+	iframe,
+	> div {
+		margin-bottom: 0.75em;
+	}
+	> div:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.widget.widget_authors {
+	.widget-title {
+		margin-bottom: 1.5em;
+	}
+	> ul {
+		> li {
+			margin-bottom: 1.5em;
+			&:last-child {
+				margin: 0;
+			}
+			> a {
+				display: block;
+				margin-bottom: 0.75em;
+			}
+			img {
+				border-radius: 50%;
+			}
+			li {
+				margin-bottom: 0.75em;
+			}
+		}
+	}
+}
+
+// Facebook, Twitter and Google +.
+.widget {
+	&.widget_facebook_likebox,
+ 	&.widget_googleplus_badge {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		.widget-title {
+			@include screen-reader-text;
+		}
+	}
+}
+
+// Jetpack Display Posts.
+.widget .jetpack-display-remote-posts {
+	margin: 0;
+	h4 {
+		font-size: inherit;
+		margin-bottom: 0.75rem;
+		line-height: 1.5;
+	}
+	> a {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+}
+
+// Flickr.
+// Waiting on https://github.com/Automattic/jetpack/issues/7089
+
+// Gallery.
+#content .widget .tiled-gallery {
+	margin-bottom: 0;
+}
+
+// Gravatar.
+.widget.widget-grofile {
+	h4 {
+		font-size: 1rem;
+		font-weight: 700;
+	}
+	.grofile-accounts {
+		margin-bottom: 1em;
+	}
+}
+
+// Internet Defense Badge.
+.widget.widget_internet_defense_league_widget {
+	a, img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+// Milestone.
+.widget.milestone-widget {
+	margin: 0 0 2.5em;
+	@media screen and ( min-width: $sm ) {
+		margin: 0 0 3em;
+	}
+}
+
+// Twitter.
+// Facebook, Twitter and Google +.
+.widget {
+	&.widget_twitter_timeline {
+		padding: 0;
+		// border: none;
+		.widget-title {
+			@include screen-reader-text;
+		}
+	}
 }

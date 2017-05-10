@@ -51,6 +51,23 @@
 	outline-offset: -2px;
 }
 
+@mixin screen-reader-text() {
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	&:hover,
+	&:active,
+	&:focus {
+		display: block;
+		clip: auto !important;
+		z-index: 100000; // Above WP toolbar.
+		width: auto;
+		height: auto;
+	}
+}
+
 // Using a mixin here to reuse it for editor CSS file. Since some of the
 // properties are getting overriden there.
 @mixin counter-playlist {

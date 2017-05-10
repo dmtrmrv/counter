@@ -6,11 +6,16 @@
 
 .gallery,
 #content .tiled-gallery {
-	margin: 0 -2px 27px;
-	margin: 0 -2px 1.5rem;
+	margin: 0 -2px 1.5em;
 	@media screen and ( min-width: $sm ) {
-		margin: 40.5px -2px 40.5px;
-		margin: 2.25rem -2px 2.25rem;
+		margin: 0.5em -2px 2.25em;
+	}
+}
+
+* + .gallery,
+#content * + .tiled-gallery {
+	@media screen and ( min-width: $sm ) {
+		margin-top: 2.25em;
 	}
 }
 
@@ -34,6 +39,9 @@
 			width: 100% / $i;
 		}
 	}
+}
+.tiled-gallery .tiled-gallery-item a {
+	display: block;
 }
 
 .gallery-caption {
