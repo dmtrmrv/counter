@@ -17,15 +17,16 @@ msgstr ""
 msgid "One Reply"
 msgstr ""
 
-#: comments.php:53
+#: comments.php:54
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:57
+#: comments.php:59
+#. Translators: %s: name of the comment author.
 msgid "Reply to %s"
 msgstr ""
 
-#: comments.php:58
+#: comments.php:60
 msgid "Cancel"
 msgstr ""
 
@@ -204,7 +205,7 @@ msgstr ""
 #: inc/customizer.php:242
 msgid ""
 "Like Counter? Then you might like the pro version even more. It has some "
-"extra features to help you make your website unique. Check them out:"
+"extra features to help you make your website unique."
 msgstr ""
 
 #: inc/customizer.php:250
@@ -267,8 +268,10 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/extras.php:298
-msgid "Continue reading%s"
+#: inc/extras.php:276 template-parts/content.php:26
+#. Translators: %s: the post title.
+#. Translators: %s: title of the post.
+msgid "Continue reading %s"
 msgstr ""
 
 #: inc/template-tags.php:25
@@ -312,23 +315,25 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:195
+#. Translators: 1: name of the theme, 2: theme author
 msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:262
+#: inc/template-tags.php:266
 msgid "Read more"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:285
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:283
+#: inc/template-tags.php:287
 msgid "Customize"
 msgstr ""
 
-#: search.php:15
+#: search.php:20
+#. Translators: %s: search query.
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -361,12 +366,8 @@ msgid ""
 msgstr ""
 
 #: template-parts/content-page.php:26 template-parts/content-single-post.php:28
-#: template-parts/content.php:28
+#: template-parts/content.php:31
 msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:24
-msgid "Read more %s"
 msgstr ""
 
 #: template-parts/panel-empty.php:18
@@ -395,10 +396,11 @@ msgstr ""
 msgid "https://themepatio.com"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:31
+#. Translators: 1: number of comments.
 msgctxt "comments title"
-msgid "%1$s Reply"
-msgid_plural "%1$s Replies"
+msgid "%s Reply"
+msgid_plural "%s Replies"
 msgstr[0] ""
 msgstr[1] ""
 

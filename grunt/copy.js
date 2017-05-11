@@ -17,7 +17,7 @@ module.exports = {
 			'./languages/readme.txt',
 			'./README.txt',
 			'./screenshot.png',
-			'./codesniffer.ruleset.xml'
+			// './codesniffer.ruleset.xml'
 		],
 		dest: '../build/<%= package.name %>',
 		expand: true

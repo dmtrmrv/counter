@@ -43,6 +43,16 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 ## Changelog
 
+### v1.3.0
+
+Improvement: Full support for tab navigation in a primary menu.  
+Improvement: Add styling to sticky post.  
+Improvement: Add support for Jetpack widgets.  
+Improvement: Add 'Continue reading' link after the excerpt.  
+Improvement: Add support for RTL languages.  
+Change: Replace Fontello with Font Awesome for more flexibility.
+Fix: Numerous minor styling fixes.  
+
 ### v1.2.4
 
 Improvement: Clean-up template files.  
