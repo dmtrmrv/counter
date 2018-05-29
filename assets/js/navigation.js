@@ -14,16 +14,16 @@
 	'use strict'
 
 	// Cache the DOM.
-	var $header = $( '#masthead' ),
-		$nav = $header.find( '#site-navigation' ),
-		$navUl = $nav.find( '#primary-menu' ),
-		$navItemHasSubMenu = $navUl.find( '.menu-item-has-children' ),
-		$navItemHasSubMenuLink = $navUl.find( '.menu-item-has-children > a' ),
-		$navLink = $nav.find( 'a' ),
-		$navLinkEmpty = $nav.find( 'a[href="#"]' ),
-		$navLinkFirst = $navLink.first(),
-		$navLinkLast = $navLink.last(),
-		$navToggle = $header.find( '#site-navigation-toggle' );
+	var $header = $( '#masthead' );
+	var $nav = $header.find( '#site-navigation' );
+	var $navUl = $nav.find( '#primary-menu' );
+	var $navItemHasSubMenu = $navUl.find( '.menu-item-has-children' );
+	var $navItemHasSubMenuLink = $navUl.find( '.menu-item-has-children > a' );
+	var $navLink = $nav.find( 'a' );
+	var $navLinkEmpty = $nav.find( 'a[href="#"]' );
+	var $navLinkFirst = $navLink.first();
+	var $navLinkLast = $navLink.last();
+	var $navToggle = $header.find( '#site-navigation-toggle' );
 
 	// Initial markup updates.
 	markupUpdate();
@@ -77,10 +77,17 @@
 	 */
 	function toggleSubNav( e ) {
 		var $this = $( e.target );
+		var $otherToggles = $navItemHasSubMenu.find( '.dropdown-toggle' ).not( e.target );
+		var $otherSubmenus = $otherToggles.closest( '.menu-item' ).find( '.sub-menu' );
+
+		// Close other submenus.
+		$otherToggles.removeClass( 'toggle-on' ).attr( 'aria-expanded', 'false' ).html( counterScreenReaderText.expand );
+		$otherSubmenus.removeClass( 'toggled-on' );
+
 		$this.toggleClass( 'toggle-on' );
-		$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 		$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 		$this.html( $this.html() === counterScreenReaderText.expand ? counterScreenReaderText.collapse : counterScreenReaderText.expand );
+		$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 	}
 
 	function toggleSubNavEmptyLink( e ) {
