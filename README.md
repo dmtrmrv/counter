@@ -43,6 +43,10 @@ Source: https://unsplash.com/photos/94taEmdowRw
 
 ## Changelog
 
+### v1.3.1
+
+Fix: Other submenus not closing on opening a submenu.
+
 ### v1.3.0
 
 Improvement: Full support for tab navigation in a primary menu.  
