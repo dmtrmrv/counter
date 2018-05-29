@@ -11,7 +11,6 @@
  * - Handles :focus nicely.
  */
 ( function( $ ) {
-	'use strict'
 
 	// Cache the DOM.
 	var $header = $( '#masthead' );
@@ -43,6 +42,7 @@
 	 * Add 'role' and 'aria' attributes.
 	 */
 	function markupUpdate() {
+
 		// Set 'role' attribute to 'navigation' on the <nav> element.
 		$nav.attr( 'role', 'navigation' );
 
@@ -84,16 +84,18 @@
 		$otherToggles.removeClass( 'toggle-on' ).attr( 'aria-expanded', 'false' ).html( counterScreenReaderText.expand );
 		$otherSubmenus.removeClass( 'toggled-on' );
 
+		// Toggle current item.
 		$this.toggleClass( 'toggle-on' );
-		$this.attr( 'aria-expanded', $this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+		$this.attr( 'aria-expanded', 'false' === $this.attr( 'aria-expanded' ) ? 'true' : 'false' );
 		$this.html( $this.html() === counterScreenReaderText.expand ? counterScreenReaderText.collapse : counterScreenReaderText.expand );
 		$this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 	}
 
 	function toggleSubNavEmptyLink( e ) {
 		e.preventDefault();
-		var $this = $( e.target ),
-			$dropdownToggle = $this.next( '.dropdown-toggle' );
+
+		var $this = $( e.target );
+		var $dropdownToggle = $this.next( '.dropdown-toggle' );
 
 		if ( $dropdownToggle ) {
 			$dropdownToggle.trigger( 'click' );
@@ -157,7 +159,7 @@
 	 * Closes the menu on 'esc' key press.
 	 */
 	function escClose( e ) {
-		if ( e.keyCode === 27 ) {
+		if ( 27 === e.keyCode ) {
 			closeNav();
 		}
 	}
@@ -175,7 +177,7 @@
 	 * Moves the focus to the hamburger icon.
 	 */
 	function resetFocusLast( e ) {
-		if ( 9 == e.keyCode && ! e.shiftKey && 768 > $( window ).width() ) {
+		if ( 9 === e.keyCode && ! e.shiftKey && 768 > $( window ).width() ) {
 			var $current = $( e.target ),
 				$focusables = getFocusables(),
 				$lastFocusable = $focusables.last();
@@ -203,6 +205,7 @@
 	 * Makes the menu sticky.
 	 */
 	function stickNav() {
+
 		// Quick return if on a small screen.
 		if ( 768 > $( window ).width() ) {
 			return;
@@ -223,4 +226,4 @@
 		}
 	}
 
-} )( jQuery );
+} ( jQuery ) );
